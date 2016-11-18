@@ -8,6 +8,8 @@
 |
 [Donations](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC)**
 
+Check the video tutorial about customization on [Youtube](https://youtu.be/oDu5NT5qdxU). More information also available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921).
+
 ## INSTALL, USE AND EDIT THEMES:
 
 - Install Filtration:

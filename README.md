@@ -11,13 +11,24 @@
 A general recommendation is to only use the leveling filter for races, start of a challenge league or when you level a new character. When you play with a fully geared character the Endgame filter will be much better. If you have a reasonable amount of magic find you can use the MF filter.
 
 - **Leveling filter** is good for the start of the league or first leveling in a new league. It includes the racing filter and all the way to level 100. Shows most items.
-- **Leveling filter - FOR CASTERS** is good for the start of the league or first leveling in a new league. Includes the racing filter and all the way to level 100. Shows most items. Same as the regular one except that normal and magic leveling weapons are hidden.
+- **Leveling filter - FOR CASTERS** Same as the regular leveling filter except that normal and magic leveling weapons are hidden.
 - **Endgame filter** is good for general use and racing (till a1m). It filters mediocre items. Use this when you try to power level or if you don't care so much about items anymore (use when you are resist. cap and have your basic flasks set up for maps).
 - **Magic Find (MF) filter** hides even more stuff. Use this if you really don't want to id more rares than you „have to“. It will hide all non top base rares, RGB items, all non unique flasks, hammers for chisel recipe, Scraps, Whetstones, Baubles, Wisdom and Portal Scrolls.
 This version is active when both the "Leveling" and "Endgame" blocks are disabled.
 
 ![Imgur](http://i.imgur.com/aU2jxMi.jpg)
 
+- **Don't think about it, just pick up green and Pink stuff.** Think about picking yellow and other stuff.
+- **Hear sounds for all drops that matter.** There are 4 different sounds for 4 tiers of drops (long sounds are good).
+1 additional sound just for Divination cards and 1 sound for top tier racing items for casters.
+- **You will always know if you drop identified or corrupted magic and rare items!** This filter will rarely come into effect but you'll be happy to know you can rely on this.
+- **Complete racing filter!** You can (should) customize for specific classes.
+- Lower bases and flasks get filtered out as you progress for less clutter.
+- Large text for many items; Easy pick up.
+- Hidden items labeling. Use the "Alt" key from time to time to find extra loot.
+- Easy customization.
+
+Detailed information is available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921). You can see the filter in action on my [Youtube channel](https://www.youtube.com/user/Filip303).
 
 
 ## INSTALL THE FILTER:
@@ -44,7 +55,7 @@ Check the video tutorial on [Youtube](https://youtu.be/oDu5NT5qdxU). More inform
 
 ## FILTRATION HIGHLIGTS:
 - "Section Browser" makes it easy to navigate trough the filter.
-- Use "Block Group Browser" to easily enable or disable parts (blocks).
+- Use "Block Group Browser" to easily enable or disable parts (blocks) of the filter.
 - Create, Edit and use the provided color themes.
 
 **Get [Filtration](https://github.com/ben-wallis/Filtration/releases).**
