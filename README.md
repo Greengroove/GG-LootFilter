@@ -22,6 +22,7 @@ This version is active when both the "Leveling" and "Endgame" blocks are disable
 
 ## INSTALL THE FILTER:
 
+- Download the Zip file.
 - Copy the filter file/s to "system drive":\Users\"Your username"\My Documents\My Games\Path of Exile
 - In game go to Options > UI > List of Item Filters.
 - Press reload if your filter is not present.

@@ -3,15 +3,31 @@ All notable changes to this project will be documented in this file. Please note
 In detail information about the filter can be found here:
 https://www.pathofexile.com/forum/view-thread/1566921
 
-## 2.4.1h [Unreleased]
+## 2.4.2b
 
-- Slightly changed the t2, identified items and Redblade Warbands drop colors to distinguish them better in the Zoisite theme.
+- Changed the section structure for magic and normal items slightly to better accommodate the addition of identified magic item filtration. 
+
+## 2.4.2a
+
+- **Added any identified magic item block. Warbands members now drop their signature items already identified. Display similar to the rare identified items but with a light blue font color.**
+- Chromatic items now use a grey background. Improvement to facilitate chromatic item detection for color blind people.
+- Updated all theme files.
+
+## 2.4.2
+
+- **The leveling versions of the filter now have a t4 sound also for Transmutation and Augmentation orbs.**
+- The large font size has ben changed to 45 from 60. Max font size is 45.
+- Updated the list of top base rare weapons and armour. New filters have been created. The items in this lists will show without any enhancements and can be hidden with the MF filter block. The items affected by this change are: "Spike-Point Arrow Quiver", "Gemini Claw", "Eclipse Staff", "Imperial Staff", "Maelström Staff", "Fleshripper", "Exquisite Blade" and "Saintly Chainmail".
+- Slightly changed the t2, identified items and Redblade Warbands drop colors to distinguish them better in the Zoisite theme. Updated the theme file.
+- Converted all Tabs and indents to use spaces, so that the code will show uniform on all platforms.
+- Added more blocks to the MF filter.
 - Added option for a sound effect for Transmutation and Augmentation orbs. Disabled by default.
+- Changed rare one hand swords in the Leveling Filter drop level >= 50 from 46. The progression remains the same.
 
 ## 2.4.1g
 
 - Moved Settings, Notes and To do sections to top, so that Filtration won't remove them  after editing.
-- Added identified items text color setting to Filtration.
+- Added identified items text color setting for color themes to Filtration.
 - Some minor changes / fixes.
 
 ## 2.4.1f
@@ -51,7 +67,7 @@ https://www.pathofexile.com/forum/view-thread/1566921
 - Added ilvl 84+ magic jewelry and armour bases to the endgame block (mf filter).
 - Magic jewels now drop with sound till item level 77 only.
 - The bases "Iron Ring", "Paua Ring" and "Moonstone Ring" will no longer show at item level 84+. These bases will retain the formatting with border when you press the „alt“ key.
-- **work in progress** Updated the list of top base rare weapons and armour. A second list has been created. The items in this list will show without any enhancements and can be hidden with the MF filter block. The items affected by this change are: "Piledriver",.
+- Updated the list of top base rare weapons. A second list has been created. The items in this list will show without any enhancements and can be hidden with the MF filter block. The item affected by this change is "Piledriver".
 - Item level 84 and higher diamond rings now drop with T3 sound and are labeled bigger.
 
 ## 2.3.6
@@ -81,7 +97,7 @@ https://www.pathofexile.com/forum/view-thread/1566921
 - Removed highlighting and sound to top base scepters.
 - Moved Normal ilvl >=75 Jewelry to Leveling block.
 
-## 2.3.2 *Beta
+## 2.3.2 [Beta]
 
 - Added 3 new color themes to use with Filtration.
 - Less desired rare items have now a slightly transparent background.
@@ -151,18 +167,18 @@ https://www.pathofexile.com/forum/view-thread/1566921
 - Normal diamond rings now show at >= 60 and have border at >= 75.
 - Some minor highlighting changes.
 
-## 2.0 BETA
+## 2.0 [Beta]
 
 - **Enabled Ascendancy filter.**
 - Some minor cosmetic changes.
 
-## 1.9.9 BETA
+## 1.9.9 [Beta]
 
 - Update for Ascendancy.
 - Big update to the leveling filter with Normal and Magic weapons separation.
 - Updated and extended sections.
 
-## 1.9.1 BETA
+## 1.9.1 [Beta]
 
 - Top tier items (including maps) now show with bright green background to pop out.
 - Extensive rework of the racing filter that now include all weapon classes.
@@ -175,16 +191,16 @@ https://www.pathofexile.com/forum/view-thread/1566921
 - Almost complete revision after extensive testing.
 - Some fixes.
 
-## 1.7.5 BETA
+## 1.7.5 [Beta]
 
 - Small tune up of the racing filter.
 
-## 1.7.4 BETA
+## 1.7.4 [Beta]
 
 - Further filter tuning.
 - Some fixes.
 
-## 1.7.3 BETA
+## 1.7.3 [Beta]
 
 - Added "settings" for easier style manipulation.
 - Introduced 1 setting for easy switching between leveling and endgame filter.
@@ -193,7 +209,7 @@ https://www.pathofexile.com/forum/view-thread/1566921
 - Improvements to the leveling filter.
 - Color changes.
 
-## 1.6.9 BETA
+## 1.6.9 [Beta]
 
 - Many changes to how items show up.
 - Updated how hidden items show up (Can be seen with "Alt" key pressed).
@@ -201,27 +217,27 @@ https://www.pathofexile.com/forum/view-thread/1566921
 - Added full support for leveling filter.
 - Some fixes.
 
-## 1.6.8 BETA
+## 1.6.8 [Beta]
 
 - Volume changes.
 - Added index.
 - Many improvements.
 - Some fixes.
 
-## 1.6.7 BETA
+## 1.6.7 [Beta]
 
 - Color changes.
 - Show less rare bases at 75+.
 - Added filtration support.
 - General improvements.
 
-## 1.6.4 BETA
+## 1.6.4 [Beta]
 
 - 4 tiers of sounds for drops (long sounds are good).
 - New pink color.
 - General improvements.
 
-## 1.6.3 BETA
+## 1.6.3 [Beta]
 
 - Ilvl 83 and 84+ items are labeled with border.
 - Maps are labeled with border for mid and high tier accordingly.
@@ -235,3 +251,7 @@ https://www.pathofexile.com/forum/view-thread/1566921
 - Implemented basic rare item filtering.
 - Added crafting items.
 - Changed sounds.
+
+## 1.0
+
+- Original Greendude's item filter script release.
