@@ -1,11 +1,19 @@
 # GREENGROOVE'S LOOT FILTER SCRIPTS - CHANGE LOG
+
 All notable changes to this project will be documented in this file. Please note that the log is referring to the endgame filter.
-In detail information about the filter can be found here:
-https://www.pathofexile.com/forum/view-thread/1566921
+
+In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
+
+## 2.4.3 [Unreleased]
+
+- Changed highlighting for some mediocre hybrid items. These items can now be hidden with the MF block.
+- Added Hideout Doodads & Microtransactions just in case.
+- Some minor changes to the 83/84+ crafting base blocks. Added normal jewlry and weapon crafting bases to the MF block.
+- Removed unnecessary white spaces, hash tags and 2 sections.
 
 ## 2.4.2b
 
-- Changed the section structure for magic and normal items slightly to better accommodate the addition of identified magic item filtration. 
+- Changed the section structure for magic and normal items slightly, to better accommodate the addition of identified magic item filtration. 
 
 ## 2.4.2a
 
@@ -16,7 +24,7 @@ https://www.pathofexile.com/forum/view-thread/1566921
 ## 2.4.2
 
 - **The leveling versions of the filter now have a t4 sound also for Transmutation and Augmentation orbs.**
-- The large font size has ben changed to 45 from 60. Max font size is 45.
+- The large font size has been changed to 45 from 60. Max font size is 45.
 - Updated the list of top base rare weapons and armour. New filters have been created. The items in this lists will show without any enhancements and can be hidden with the MF filter block. The items affected by this change are: "Spike-Point Arrow Quiver", "Gemini Claw", "Eclipse Staff", "Imperial Staff", "Maelström Staff", "Fleshripper", "Exquisite Blade" and "Saintly Chainmail".
 - Slightly changed the t2, identified items and Redblade Warbands drop colors to distinguish them better in the Zoisite theme. Updated the theme file.
 - Converted all Tabs and indents to use spaces, so that the code will show uniform on all platforms.

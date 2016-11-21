@@ -4,9 +4,13 @@
 |
 [Youtube](https://www.youtube.com/user/Filip303)
 |
+[Facebook](https://www.facebook.com/GreengroovePOE/)
+|
 [Twitter](https://twitter.com/GreengroovePOE)
 |
 [Donations](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC)**
+
+**The filter is currently not compatible with Filtration. Please read [this](https://github.com/Greengroove/GG-LootFilter/issues/1) if you want to edit the filter with Filtration!**
 
 A general recommendation is to only use the leveling filter for races, start of a challenge league or when you level a new character. When you play with a fully geared character the Endgame filter will be much better. If you have a reasonable amount of magic find you can use the MF filter.
 

@@ -1,7 +1,7 @@
 ﻿#-------------------------------------------------------------------------------#
-#                                                                               #
-#               Greengroove's Endgame Loot Filter Script v 2.4.2b               #
-#                                                                               #
+#
+#               Greengroove's Endgame Loot Filter Script v 2.4.3
+#
 #-------------------------------------------------------------------------------#
 #
 #               Updated for Atlas of Worlds 2.4.x
@@ -52,7 +52,7 @@
 #
 #   Filter:
 #
-#   QUEST
+#   QUEST & EXTRA
 #   LABYRINTH
 #   ESSENCE
 #   DIVINATION CARDS
@@ -66,12 +66,11 @@
 #   ALL 2.4 NEW BASES
 #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE
 #   VENDOR RECIPE ITEMS - CHISEL RECIPE
-#   RARE ITEMS
 #   RARE ITEMS - JEWELRY
 #   RARE ITEMS - WEAPONS - TOP WEAPONS BASES
 #   RARE ITEMS - WEAPONS - WANDS
 #   RARE ITEMS - TOP ARMOUR BASES
-#   RARE ITEMS - IDENTIFIED ITEMS
+#   RARE IDENTIFIED ITEMS
 #   RARE ITEMS - WEAPONS - BOW / QUIVER
 #   RARE ITEMS - WEAPONS - CLAW
 #   RARE ITEMS - WEAPONS - DAGGER
@@ -92,7 +91,6 @@
 #   VENDOR RECIPE ITEMS - RGB ITEMS <= MAGIC
 #   CRAFTING BASES - WEAPONS
 #   CRAFTING BASES - ARMOUR
-#   RACING
 #   RACING - ARMOUR - CHEST
 #   RACING - ARMOUR - BOOTS
 #   RACING - ARMOUR - GLOVES
@@ -132,7 +130,7 @@
 #   ANYTHING ELSE
 #
 #-------------------------------------------------------------------------------#
-#   SETTINGS                                                                    #
+#   SETTINGS
 #-------------------------------------------------------------------------------#
 #
 #   FIND AND REPLACE THE STRING TO CHANGE SETTINGS (Can also be edited in Filtration)
@@ -204,7 +202,7 @@
 #   * Both Endgame racing bases and the Warbands filter are recommended to stay disabled.
 #
 #-------------------------------------------------------------------------------#
-#   NOTES                                                                       #
+#   NOTES
 #-------------------------------------------------------------------------------#
 #
 #   Please use the forum thread for information, updates, feedback, questions and suggestions:
@@ -227,7 +225,7 @@
 #       and remove the item level restriction or set it to 100.
 #
 #-------------------------------------------------------------------------------#
-#   TO DO                                                                       #
+#   TO DO
 #-------------------------------------------------------------------------------#
 #
 #   Have Fun
@@ -235,7 +233,7 @@
 #-------------------------------------------------------------------------------#
 
 #-------------------------------------------------------------------------------#
-# Section:  #   QUEST                                                           #
+# Section:  #   QUEST & EXTRA
 #-------------------------------------------------------------------------------#
 
 Show
@@ -251,8 +249,17 @@ Show
     SetFontSize 45
     SetTextColor 74 230 58 # T1 drops color / Quest items
 
+# Hideout Doodads & Microtransactions
+Show # ON RECOMMENDED - Hideout Doodads & Microtransactions
+    Class "Hideout Doodads" "Microtransactions"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 280
+
 #-------------------------------------------------------------------------------#
-# Section:  #   LABYRINTH                                                       #
+# Section:  #   LABYRINTH
 #-------------------------------------------------------------------------------#
 
 Show
@@ -275,7 +282,7 @@ Show
     PlayAlertSound 2 80
 
 #-------------------------------------------------------------------------------#
-# Section:  #   ESSENCE                                                         #
+# Section:  #   ESSENCE
 #-------------------------------------------------------------------------------#
 
 Show
@@ -287,7 +294,7 @@ Show
     PlayAlertSound 7 200
 
 #-------------------------------------------------------------------------------#
-# Section:  #   DIVINATION CARDS                                                #
+# Section:  #   DIVINATION CARDS
 #-------------------------------------------------------------------------------#
 
 # Put here the divination cards that you don't want to drop with sound.         #
@@ -314,7 +321,7 @@ Show
     PlayAlertSound 4 120
 
 #-------------------------------------------------------------------------------#
-# Section:  #   CURRENCY                                                        #
+# Section:  #   CURRENCY
 #-------------------------------------------------------------------------------#
 
 Show
@@ -398,7 +405,7 @@ Show
     SetFontSize 45
 
 #-------------------------------------------------------------------------------#
-# Section:  #   MAPS                                                            #
+# Section:  #   MAPS
 #-------------------------------------------------------------------------------#
 
 Show
@@ -485,7 +492,7 @@ Show
     PlayAlertSound 7 200
 
 #-------------------------------------------------------------------------------#
-# Section:  #   GEMS                                                            #
+# Section:  #   GEMS
 #-------------------------------------------------------------------------------#
 
 Show
@@ -551,7 +558,7 @@ Show # ON RECOMMENDED - Gems with no quality  - Support gems
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   JEWELS                                                          #
+# Section:  #   JEWELS
 #-------------------------------------------------------------------------------#
 
 Show
@@ -590,7 +597,7 @@ Show
     PlayAlertSound 7 200
 
 #-------------------------------------------------------------------------------#
-# Section:  #   TALISMAN                                                        #
+# Section:  #   TALISMAN
 #-------------------------------------------------------------------------------#
 
 Show
@@ -618,7 +625,7 @@ Show
     PlayAlertSound 7 200
 
 #-------------------------------------------------------------------------------#
-# Section:  #   UNIQUE / OTHER ITEMS                                            #
+# Section:  #   UNIQUE / OTHER ITEMS
 #-------------------------------------------------------------------------------#
 
 Show
@@ -680,7 +687,7 @@ Show
     SetFontSize 45
 
 #-------------------------------------------------------------------------------#
-# Section:  #   CHANCE ITEMS                                                    #
+# Section:  #   CHANCE ITEMS
 #-------------------------------------------------------------------------------#
 
 Show
@@ -691,7 +698,7 @@ Show
     PlayAlertSound 2 80
 
 #-------------------------------------------------------------------------------#
-# Section:  #   ALL 2.4 NEW BASES                                               #
+# Section:  #   ALL 2.4 NEW BASES
 #-------------------------------------------------------------------------------#
 
 Show
@@ -716,7 +723,7 @@ Show
     PlayAlertSound 7 200
 
 #-------------------------------------------------------------------------------#
-# Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE                          #
+# Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE
 #-------------------------------------------------------------------------------#
 
 # Rare big RGB items show borders till ilvl 67 Lower rarities are covered down. #
@@ -749,7 +756,7 @@ Show
     PlayAlertSound 2 80
 
 #-------------------------------------------------------------------------------#
-# Section:  #   VENDOR RECIPE ITEMS - CHISEL RECIPE                             #
+# Section:  #   VENDOR RECIPE ITEMS - CHISEL RECIPE
 #-------------------------------------------------------------------------------#
 
 Show # Endgame Filter (DISABLE FOR MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
@@ -772,13 +779,9 @@ Show # Endgame Filter (DISABLE FOR MF) - Chisel recipe (Stone Hammer, Rock Break
     ItemLevel >= 33
     BaseType "Stone Hammer" "Rock Breaker" "Gavel"
     SetBorderColor 255 45 175 # T2 drops color
-    
-#-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS                                                      #
-#-------------------------------------------------------------------------------#
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - JEWELRY                                            #
+# Section:  #   RARE ITEMS - JEWELRY
 #-------------------------------------------------------------------------------#
 
 Show
@@ -790,7 +793,7 @@ Show
     SetFontSize 45
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - TOP WEAPONS BASES                        #
+# Section:  #   RARE ITEMS - WEAPONS - TOP WEAPONS BASES
 #-------------------------------------------------------------------------------#
 
 # All top weapon base rares.                                                    #
@@ -826,7 +829,7 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - WANDS                                    #
+# Section:  #   RARE ITEMS - WEAPONS - WANDS
 #-------------------------------------------------------------------------------#
 
 # Top base wands.                                                               #
@@ -858,7 +861,7 @@ Show
     SetFontSize 45
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - TOP ARMOUR BASES                                   #
+# Section:  #   RARE ITEMS - TOP ARMOUR BASES
 #-------------------------------------------------------------------------------#
 
 # Top base chest armour.                                                        #
@@ -880,19 +883,19 @@ Show
     SetFontSize 45
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - IDENTIFIED ITEMS                                   #
+# Section:  #   RARE IDENTIFIED ITEMS
 #-------------------------------------------------------------------------------#
 
 # Any identified rare item. Should also show any Corrupted item.                #
 Show # ON RECOMMENDED - identified rare items
-    Rarity >= Rare
+    Rarity = Rare
     Identified True
     SetTextColor 215 25 0 255 # identified rare items text
     SetBackgroundColor 0 0 0 155 # Lesser items
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - BOW / QUIVER                             #
+# Section:  #   RARE ITEMS - WEAPONS - BOW / QUIVER
 #-------------------------------------------------------------------------------#
 
 # These can have +3 to gems on them.                                            #
@@ -961,7 +964,7 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - CLAW                                     #
+# Section:  #   RARE ITEMS - WEAPONS - CLAW
 #-------------------------------------------------------------------------------#
 
 Show # Endgame Filter (DISABLE FOR MF) - Rare items - claw "Imperial Claw" "Gemini Claw"
@@ -1021,7 +1024,7 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - DAGGER                                   #
+# Section:  #   RARE ITEMS - WEAPONS - DAGGER
 #-------------------------------------------------------------------------------#
 
 Show
@@ -1067,7 +1070,7 @@ Show
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - ONE HAND AXE                             #
+# Section:  #   RARE ITEMS - WEAPONS - ONE HAND AXE
 #-------------------------------------------------------------------------------#
 
 
@@ -1128,7 +1131,7 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - ONE HAND MACE                            #
+# Section:  #   RARE ITEMS - WEAPONS - ONE HAND MACE
 #-------------------------------------------------------------------------------#
 
 Show # Endgame Filter (DISABLE FOR MF) - Rare items - one hand mace (drop level >=70) 
@@ -1181,7 +1184,7 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - ONE HAND SWORD                           #
+# Section:  #   RARE ITEMS - WEAPONS - ONE HAND SWORD
 #-------------------------------------------------------------------------------#
 
 Show # Endgame Filter (DISABLE FOR MF) - Rare items - one hand swords (drop level >=70)
@@ -1241,7 +1244,7 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - SCEPTRE                                  #
+# Section:  #   RARE ITEMS - WEAPONS - SCEPTRE
 #-------------------------------------------------------------------------------#
 
 # Lesser scepters that can still be good.                                       #
@@ -1266,7 +1269,7 @@ Hide # Leveling Filter - Rare Leveling - scepters (drop level >=41)
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - WEAPONS - TWO HAND / STAVES                        #
+# Section:  #   RARE ITEMS - WEAPONS - TWO HAND / STAVES
 #-------------------------------------------------------------------------------#
 
 Show # Endgame Filter (DISABLE FOR MF) - Rare items - Top base 2 hand items
@@ -1327,7 +1330,7 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - ARMOUR                                             #
+# Section:  #   RARE ITEMS - ARMOUR
 #-------------------------------------------------------------------------------#
 
 # Decent chest armour while leveling.                                           #
@@ -1362,8 +1365,16 @@ Hide # Leveling Filter - Rare Leveling - body armour (drop level >=56)
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - BOOTS                                              #
+# Section:  #   RARE ITEMS - BOOTS
 #-------------------------------------------------------------------------------#
+
+# Mediocre Hybrid bases.                                                        #
+Show # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre Hybrid bases - Hybrid Boots
+    Rarity = Rare
+    Class "Boots"
+    BaseType "Murder Boots" "Crusader Boots" "Assassin's Boots" "Legion Boots" "Carnal Boots"
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Decent bases.                                                                 #
 Show # Endgame Filter (DISABLE FOR MF) - Rare items - Decent Boots
@@ -1389,8 +1400,16 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - GLOVES                                             #
+# Section:  #   RARE ITEMS - GLOVES
 #-------------------------------------------------------------------------------#
+
+# Mediocre Hybrid bases.                                                        #
+Show # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre Hybrid bases - Hybrid Gloves
+    Rarity = Rare
+    Class "Gloves"
+    BaseType "Murder Mitts" "Crusader Gloves" "Assassin's Mitts" "Legion Gloves"
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Decent bases.                                                                 #
 Show # Endgame Filter (DISABLE FOR MF) - Rare items - Decent Gloves
@@ -1416,8 +1435,16 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - HELM                                               #
+# Section:  #   RARE ITEMS - HELM
 #-------------------------------------------------------------------------------#
+
+# Mediocre Hybrid bases.                                                        #
+Show # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre Hybrid bases - Hybrid Helmets
+    Rarity = Rare
+    Class "Helm"
+    BaseType "Prophet Crown" "Vaal Mask" "Magistrate Crown" "Harlequin Mask"
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Decent bases.                                                                 #
 Show # Endgame Filter (DISABLE FOR MF) - Rare items - Decent Helmets
@@ -1443,7 +1470,7 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - SHIELD                                             #
+# Section:  #   RARE ITEMS - SHIELD
 #-------------------------------------------------------------------------------#
 
 #   Ok-ish caster shields (present in the Leveling Filter).                     #
@@ -1454,7 +1481,7 @@ Hide # Leveling Filter - Rare Leveling - shields - Lower caster bases
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Ok general shields (highest bases)                                            #
-Show # Endgame Filter (DISABLE FOR MF) - Rare items - Shield
+Show # Endgame Filter (DISABLE FOR MF) - Rare items - Non top base shields
     Rarity = Rare
     DropLevel >= 67
     Class "Shield"
@@ -1498,7 +1525,7 @@ Show
     SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
-# Section:  #   FLASKS                                                          #
+# Section:  #   FLASKS
 #-------------------------------------------------------------------------------#
 
 # Utility flasks exposed till level 66.                                         #
@@ -1641,7 +1668,7 @@ Show
     SetFontSize 45
 
 #-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - JEWELRY                                        #
+# Section:  #   CRAFTING BASES - JEWELRY
 #-------------------------------------------------------------------------------#
 
 # We don't ever want to see these.                                              #
@@ -1673,14 +1700,14 @@ Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Magic items - Belts
     BaseType "Rustic Sash" "Leather Belt"
     SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Normal items - Rings and amulets
     Rarity = Normal
     ItemLevel >= 84
     Class "Ring" "Amulet"
     SetBorderColor 74 230 58 # T1 drops color / Quest items
     PlayAlertSound 2 80
 
-Show
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Normal items - Belts
     Rarity = Normal
     ItemLevel >= 84
     Class "Belt"
@@ -1689,13 +1716,13 @@ Show
     PlayAlertSound 2 80
 
 # Diamond ring for alching.                                                     #
-Show
+Show # Endgame Filter (DISABLE FOR MF) - ilvl >= 72 Normal Diamond Ring
     ItemLevel >= 72
     Rarity = Normal
     BaseType "Diamond Ring"
     SetBorderColor 255 45 175 # T2 drops color
     SetBackgroundColor 0 0 0 155 # Lesser items
-    PlayAlertSound 2 80
+#   PlayAlertSound 2 80
 
 # Diamond ring for alching present in the Leveling Filter.                      #
 Hide # Leveling Filter - Crafting Items - 60+ Diamond Rings
@@ -1749,24 +1776,31 @@ Hide # Leveling Filter - Crafting Items - normal jewelry ilvl 64+ - "Rustic Sash
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - TOP ITEMS                                      #
+# Section:  #   CRAFTING BASES - TOP ITEMS
 #-------------------------------------------------------------------------------#
 
-Show
-    Rarity <= Magic
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Magic items - Weapon crafting bases
+    Rarity = Magic
     ItemLevel >= 83
 #   PLEASE REMOVE UNWANTED BASES-   -   -   -   -   -   -   -   #   #   #   #   # "Imperial Claw" "Behemoth Mace" "Tiger Hook" "Sambar Sceptre" "Dragoon Sword" "Piledriver" "Imperial Staff" "Profane Wand" "Gemini Claw" "Runic Hatchet"
     BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" "Ambusher" "Eclipse Staff" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand" 
     SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Magic items - Armour bases
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Normal items - Weapon crafting bases
+    Rarity = Normal
+    ItemLevel >= 83
+#   PLEASE REMOVE UNWANTED BASES-   -   -   -   -   -   -   -   #   #   #   #   # "Imperial Claw" "Behemoth Mace" "Tiger Hook" "Sambar Sceptre" "Dragoon Sword" "Piledriver" "Imperial Staff" "Profane Wand" "Gemini Claw" "Runic Hatchet"
+    BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" "Ambusher" "Eclipse Staff" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand" 
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Magic items - Armour crafting bases
     Rarity = Magic
     ItemLevel >= 84
 #   PLEASE REMOVE UNWANTED BASES-   -   -   -   -   -   -   -   #   #   #   #   # "Zodiac Leather" "Triumphant Lamellar" "Glorious Plate" "Slink Gloves" "Nightmare Bascinet" "Royal Burgonet" "Imperial Buckler" "Elegant Round Shield" "Supreme Spiked Shield" "Pinnacle Tower Shield" "Archon Kite Shield" "Two-Point Arrow Quiver" "Broadhead Arrow Quiver" "Spike-Point Arrow Quiver"
     BaseType "Assassin's Garb" "Astral Plate" "Vaal Regalia" "Slink Boots" "Titan Greaves" "Sorcerer Boots" "Titan Gauntlets" "Sorcerer Gloves" "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Titanium Spirit Shield"
     SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Normal items - Armour crafting bases
     Rarity = Normal
     ItemLevel >= 84
 #   PLEASE REMOVE UNWANTED BASES-   -   -   -   -   -   -   -   #   #   #   #   # "Zodiac Leather" "Triumphant Lamellar" "Glorious Plate" "Slink Gloves" "Nightmare Bascinet" "Royal Burgonet" "Imperial Buckler" "Elegant Round Shield" "Supreme Spiked Shield" "Pinnacle Tower Shield" "Archon Kite Shield" "Two-Point Arrow Quiver" "Broadhead Arrow Quiver" "Spike-Point Arrow Quiver"
@@ -1775,19 +1809,19 @@ Show
     PlayAlertSound 2 80
 
 #-------------------------------------------------------------------------------#
-# Section:  #   MAGIC IDENTIFIED ITEMS                                          #
+# Section:  #   MAGIC IDENTIFIED ITEMS
 #-------------------------------------------------------------------------------#
 
 # Any identified magic item. Should also show any Corrupted item.                #
 Show # ON RECOMMENDED - identified magic items
-    Rarity >= Magic
+    Rarity = Magic
     Identified True
     SetTextColor 0 200 255 255 # identified magic items text
     SetBackgroundColor 0 0 0 155 # Lesser items
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS <= MAGIC                        #
+# Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS <= MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Endgame Filter (DISABLE FOR MF) - RGB items
@@ -1814,7 +1848,7 @@ Show
     SetBackgroundColor 75 75 75 # Chromatic background
 
 #-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - WEAPONS                                        #
+# Section:  #   CRAFTING BASES - WEAPONS
 #-------------------------------------------------------------------------------#
 
 Hide
@@ -1921,7 +1955,7 @@ Hide # Leveling Filter - Crafting Items - 59+ Daggers
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - ARMOUR                                         #
+# Section:  #   CRAFTING BASES - ARMOUR
 #-------------------------------------------------------------------------------#
 
 # Crafting bases present in the Leveling Filter.                                #
@@ -1999,11 +2033,7 @@ Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Sh
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING                                                          #
-#-------------------------------------------------------------------------------#
-
-#-------------------------------------------------------------------------------#
-# Section:  #   RACING - ARMOUR - CHEST                                         #
+# Section:  #   RACING - ARMOUR - CHEST
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - Armour - Chest (item level <= 63) - Magic
@@ -2043,7 +2073,7 @@ Hide # Racing Filter - Endgame - Crafting Items - Armour - Endgame magic chest
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - ARMOUR - BOOTS                                         #
+# Section:  #   RACING - ARMOUR - BOOTS
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - Armour - Boots - Normal
@@ -2103,7 +2133,7 @@ Show # Racing Filter - normal races - Armour - Boots - Magic
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - ARMOUR - GLOVES                                        #
+# Section:  #   RACING - ARMOUR - GLOVES
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - Armour - Gloves - Normal
@@ -2171,7 +2201,7 @@ Show # Racing Filter - normal races - Armour - Gloves - Magic
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - ARMOUR - HELM                                          #
+# Section:  #   RACING - ARMOUR - HELM
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - Armour - Helm - Normal
@@ -2231,7 +2261,7 @@ Show # Racing Filter - normal races - Armour - Helm - Magic
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - ARMOUR - SHIELD                                        #
+# Section:  #   RACING - ARMOUR - SHIELD
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races -  Shield - Magic
@@ -2278,7 +2308,7 @@ Hide # Racing Filter - Endgame - Crafting Items - Armour - Shield - early Endgam
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - ARMOUR - ENDGAME CRAFTING ITEMS                        #
+# Section:  #   RACING - ARMOUR - ENDGAME CRAFTING ITEMS
 #-------------------------------------------------------------------------------#
 
 # Can be turned on manually within Endgame racing block.                        #
@@ -2294,21 +2324,21 @@ Hide # Racing Filter - Endgame - Crafting Items - Armour - All crafting bases
     BaseType "Assassin's Garb" "Glorious Plate" "Carnal Armour" "Vaal Regalia" "Zodiac Leather" "Slink Boots" "Titan Greaves" "Sorcerer Boots" "Dragonscale Boots" "Vaal Greaves" "Stealth Boots" "Slink Gloves" "Titan Gauntlets" "Sorcerer Gloves" "Dragonscale Gauntlets" "Vaal Gauntlets" "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Nightmare Bascinet" "Royal Burgonet"
     SetBackgroundColor 0 0 0 155 # Lesser items
 
-# Any magic Amulet.                                                         #
+# Any magic Amulet.                                                             #
 Hide # Racing Filter - Endgame - Crafting Items - Magic jewelry ilvl 64+ - Amulets
     ItemLevel >= 64
     Rarity = Magic
     Class "Amulet"
     SetBackgroundColor 0 0 0 155 # Lesser items
 
-# Any magic Ring.                                                           #
+# Any magic Ring.                                                               #
 Hide # Racing Filter - Endgame - Crafting Items - Magic jewelry ilvl 64+ - Rings
     ItemLevel >= 64
     Rarity = Magic
     Class "Ring"
     SetBackgroundColor 0 0 0 155 # Lesser items
 
-# Any magic Rustic Sash and Leather Belt.                                   #
+# Any magic Rustic Sash and Leather Belt.                                       #
 Hide # Racing Filter - Endgame - Crafting Items - Magic jewelry ilvl 64+ - Rustic Sash, Leather Belt
     ItemLevel >= 64
     Rarity = Magic
@@ -2317,7 +2347,7 @@ Hide # Racing Filter - Endgame - Crafting Items - Magic jewelry ilvl 64+ - Rusti
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - JEWELRY                                                #
+# Section:  #   RACING - JEWELRY
 #-------------------------------------------------------------------------------#
 
 Show
@@ -2367,7 +2397,7 @@ Show
     SetFontSize 45
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - CASTER                                                 #
+# Section:  #   RACING - CASTER
 #-------------------------------------------------------------------------------#
 
 Show
@@ -2435,7 +2465,7 @@ Show
     SetFontSize 45
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - CLAW - NORMAL                                 #
+# Section:  #   RACING - 1 HAND - CLAW - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - Claw - Normal
@@ -2511,7 +2541,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - Claw - Norm
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - CLAW - MAGIC                                  #
+# Section:  #   RACING - 1 HAND - CLAW - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - Claw - Magic
@@ -2587,7 +2617,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - Claw - Magi
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - DAGGER - NORMAL                               #
+# Section:  #   RACING - 1 HAND - DAGGER - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - Dagger - Normal
@@ -2662,7 +2692,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - Dagger - No
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - DAGGER - MAGIC                                #
+# Section:  #   RACING - 1 HAND - DAGGER - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - Dagger - Magic
@@ -2737,7 +2767,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - Dagger - Ma
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - ONE HAND AXE - NORMAL                         #
+# Section:  #   RACING - 1 HAND - ONE HAND AXE - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - One Hand Axe - Normal
@@ -2819,7 +2849,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - One Hand Ax
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - ONE HAND AXE - MAGIC                          #
+# Section:  #   RACING - 1 HAND - ONE HAND AXE - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - One Hand Axe - Magic
@@ -2901,7 +2931,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - One Hand Ax
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - ONE HAND MACE - NORMAL                        #
+# Section:  #   RACING - 1 HAND - ONE HAND MACE - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - One Hand Mace - Normal
@@ -2983,7 +3013,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - One Hand Ma
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - ONE HAND MACE - MAGIC                         #
+# Section:  #   RACING - 1 HAND - ONE HAND MACE - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - One Hand Mace - Magic
@@ -3065,7 +3095,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - One Hand Ma
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - ONE HAND SWORD - NORMAL                       #
+# Section:  #   RACING - 1 HAND - ONE HAND SWORD - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - One Hand Sword - Normal
@@ -3140,7 +3170,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - One Hand Sw
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - ONE HAND SWORD - MAGIC                        #
+# Section:  #   RACING - 1 HAND - ONE HAND SWORD - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - One Hand Sword - Magic
@@ -3215,7 +3245,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - One Hand Sw
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - SCEPTRE - NORMAL                              #
+# Section:  #   RACING - 1 HAND - SCEPTRE - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - Sceptre - Normal
@@ -3283,7 +3313,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - Sceptre - N
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - SCEPTRE - MAGIC                               #
+# Section:  #   RACING - 1 HAND - SCEPTRE - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - Sceptre - Magic
@@ -3351,7 +3381,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - Sceptre - M
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - THRUSTING ONE HAND SWORD - NORMAL             #
+# Section:  #   RACING - 1 HAND - THRUSTING ONE HAND SWORD - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - Thrusting One Hand Sword - Normal
@@ -3419,7 +3449,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - Thrusting O
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - THRUSTING ONE HAND SWORD - MAGIC              #
+# Section:  #   RACING - 1 HAND - THRUSTING ONE HAND SWORD - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 1 Hand Weapons For Racing - Thrusting One Hand Sword - Magic
@@ -3487,7 +3517,7 @@ Hide # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - Thrusting O
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 2 HAND - STAFF - NORMAL                                #
+# Section:  #   RACING - 2 HAND - STAFF - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 2 Hand Weapons For Racing - Staff - Normal
@@ -3576,7 +3606,7 @@ Hide # Racing Filter - Endgame - 2 Hand Weapons For Racing Endgame - Staff - Nor
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 2 HAND - STAFF - MAGIC                                 #
+# Section:  #   RACING - 2 HAND - STAFF - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 2 Hand Weapons For Racing - Staff - Magic
@@ -3665,7 +3695,7 @@ Hide # Racing Filter - Endgame - 2 Hand Weapons For Racing Endgame - Staff - Mag
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 2 HAND - TWO HAND AXE - NORMAL                         #
+# Section:  #   RACING - 2 HAND - TWO HAND AXE - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 2 Hand Weapons For Racing - Two Hand Axe - Normal
@@ -3761,7 +3791,7 @@ Hide # Racing Filter - Endgame - 2 Hand Weapons For Racing Endgame - Two Hand Ax
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 2 HAND - TWO HAND AXE - MAGIC                          #
+# Section:  #   RACING - 2 HAND - TWO HAND AXE - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 2 Hand Weapons For Racing - Two Hand Axe - Magic
@@ -3857,7 +3887,7 @@ Hide # Racing Filter - Endgame - 2 Hand Weapons For Racing Endgame - Two Hand Ax
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 2 HAND - TWO HAND MACE - NORMAL                        #
+# Section:  #   RACING - 2 HAND - TWO HAND MACE - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 2 Hand Weapons For Racing - Two Hand Mace - Normal
@@ -3953,7 +3983,7 @@ Hide # Racing Filter - Endgame - 2 Hand Weapons For Racing Endgame - Two Hand Ma
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 2 HAND - TWO HAND MACE - MAGIC                         #
+# Section:  #   RACING - 2 HAND - TWO HAND MACE - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 2 Hand Weapons For Racing - Two Hand Mace - Magic
@@ -4049,7 +4079,7 @@ Hide # Racing Filter - Endgame - 2 Hand Weapons For Racing Endgame - Two Hand Ma
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 2 HAND - TWO HAND SWORD - NORMAL                       #
+# Section:  #   RACING - 2 HAND - TWO HAND SWORD - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 2 Hand Weapons For Racing - Two Hand Sword - Normal
@@ -4145,7 +4175,7 @@ Hide # Racing Filter - Endgame - 2 Hand Weapons For Racing Endgame - Two Hand Sw
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 2 HAND - TWO HAND SWORD - MAGIC                        #
+# Section:  #   RACING - 2 HAND - TWO HAND SWORD - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - 2 Hand Weapons For Racing - Two Hand Sword - Magic
@@ -4241,7 +4271,7 @@ Hide # Racing Filter - Endgame - 2 Hand Weapons For Racing Endgame - Two Hand Sw
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - BOW - NORMAL                                           #
+# Section:  #   RACING - BOW - NORMAL
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - Bow For Racing - Normal
@@ -4338,7 +4368,7 @@ Hide # Racing Filter - Endgame - Bow For Racing Endgame - Normal
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - BOW - MAGIC                                            #
+# Section:  #   RACING - BOW - MAGIC
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - Bow For Racing - Magic
@@ -4435,7 +4465,7 @@ Hide # Racing Filter - Endgame - Bow For Racing Endgame - Magic
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - QUIVER                                                 #
+# Section:  #   RACING - QUIVER
 #-------------------------------------------------------------------------------#
 
 Show # Racing Filter - normal races - Quivers For Racing
@@ -4465,7 +4495,7 @@ Hide # Racing Filter - Endgame - Quivers For Racing Endgame
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   EXTRAS                                                          #
+# Section:  #   EXTRAS
 #-------------------------------------------------------------------------------#
 
 # Recipe item (Hyrri's bite recipe) can be turned on - recipe items or manually.#
@@ -4489,7 +4519,7 @@ Show # Extras - Any Crude bow ilvl >=50
 #   PlayAlertSound 7 200
 
 #-------------------------------------------------------------------------------#
-# Section:  #   WARBANDS                                                        #
+# Section:  #   WARBANDS
 #-------------------------------------------------------------------------------#
 
 Hide # Extras - Warbands filter - Boots
@@ -4511,7 +4541,7 @@ Hide # Extras - Warbands filter - Gloves
     SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   HIDDEN ITEMS                                                    #
+# Section:  #   HIDDEN ITEMS
 #-------------------------------------------------------------------------------#
 
 # Identify RGB items when "Alt" key is pressed. Present in the Leveling Filter. #
@@ -4566,7 +4596,7 @@ Hide
     SetFontSize 23
 
 #-------------------------------------------------------------------------------#
-# Section:  #   ANYTHING ELSE                                                   #
+# Section:  #   ANYTHING ELSE
 #-------------------------------------------------------------------------------#
 
 # If you see this it means that the loot filter is out of date or broken. Should never happen.
