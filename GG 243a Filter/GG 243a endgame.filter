@@ -1,6 +1,6 @@
 ﻿#-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 2.4.3
+#               Greengroove's Endgame Loot Filter Script v 2.4.3a
 #
 #-------------------------------------------------------------------------------#
 #
@@ -9,6 +9,7 @@
 #
 #           
 #               > Leveling version: Shows most items. Good for starting a new character or racing.
+#               > Leveling CASTERS: Same as the regular leveling filter except that normal and magic leveling weapons are hidden.
 #               > Endgame version: Hides flasks with quality lower than 10%, utility flasks, all mediocre rares and big chromatic items. 
 #               > MF version: Shows least items. Additionally hides all chromatic items and rare bases that are not the best or meta.
 #
@@ -213,10 +214,6 @@
 #
 #   -   You can use Filtration for easier customization:
 #       https://www.pathofexile.com/forum/view-thread/1287447/
-#
-#   -   Summoners; if you want to see flasks that match the "Of Animation" affix criteria for flasks till ilvl 67:
-#       Search "Summoners" and remove all the "#" for the entry.
-#       Unfortunately I was unable to find a better solution for this so far.
 #
 #   -   Big RGB items may sometimes not show with border after item level 67 in the Endgame filter.
 #       This has given me quite a headache but I don't think there is a way to make it reliable
@@ -1476,7 +1473,7 @@ Show
 #   Ok-ish caster shields (present in the Leveling Filter).                     #
 Hide # Leveling Filter - Rare Leveling - shields - Lower caster bases
     Rarity = Rare
-    BaseType "Lacewood Spirit Shield" "Thorium Spirit Shield" "Ancient Spirit Shield" "Walnut Spirit Shield" "Brass Spirit Shield" "Jingling Spirit Shield" "Bone Spirit Shield" "Twig Spirit Shield"
+    BaseType "Lacewood Spirit Shield" "Thorium Spirit Shield" "Ancient Spirit Shield" "Walnut Spirit Shield" "Brass Spirit Shield" "Jingling Spirit Shield"
     SetTextColor 255 255 119
     SetBackgroundColor 0 0 0 155 # Lesser items
 
@@ -1510,6 +1507,14 @@ Show
     Class "Shield"
     SetTextColor 255 255 119
 
+# Bone Spirit Shield (Of animation flask recipe) fixed in progression.          #
+Show
+    Rarity = Rare
+    ItemLevel <= 29
+    BaseType "Bone Spirit Shield"
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+
 Show
     Rarity = Rare
     DropLevel >= 11
@@ -1523,6 +1528,14 @@ Show
     ItemLevel <= 16
     Class "Shield"
     SetTextColor 255 255 119
+
+# Bone Spirit Shield (Of animation flask recipe for summoners)                  #
+Hide # Extras - Recipe items - Bone Spirit Shield (Of animation flask recipe summoners) - Rare
+    Rarity = Rare
+    BaseType "Bone Spirit Shield"
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
 
 #-------------------------------------------------------------------------------#
 # Section:  #   FLASKS
@@ -1548,14 +1561,6 @@ Show
     Quality >= 10
     Class "Flask"
     SetBorderColor 255 45 175 # T2 drops color
-
-#   Summoners please remove all the "#" for the following entry if you want to see flasks that match the "Of Animation" affix criteria for flasks till ilvl 67!
-#Show - Extras - Of Animation Flask till ilvl 67
-#   Rarity = Magic
-#   DropLevel >= 10
-#   ItemLevel <= 67
-#   BaseType "Life Flask" "Hybrid Flask"
-#   SetFontSize 45
 
 # Any quality flask will show with the Leveling Filter.                         #
 Hide # Leveling Filter - Flasks - Flasks with quality (<=9)
@@ -1687,27 +1692,27 @@ Show
     SetFontSize 45
     PlayAlertSound 1 140
 
-Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Magic items - Rings and amulets
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Rings and amulets
     Rarity = Magic
     ItemLevel >= 84
     Class "Ring" "Amulet"
     SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Magic items - Belts
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Belts
     Rarity = Magic
     ItemLevel >= 84
     Class "Belt"
     BaseType "Rustic Sash" "Leather Belt"
     SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Normal items - Rings and amulets
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Rings and amulets
     Rarity = Normal
     ItemLevel >= 84
     Class "Ring" "Amulet"
     SetBorderColor 74 230 58 # T1 drops color / Quest items
     PlayAlertSound 2 80
 
-Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Normal items - Belts
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Belts
     Rarity = Normal
     ItemLevel >= 84
     Class "Belt"
@@ -1779,28 +1784,28 @@ Hide # Leveling Filter - Crafting Items - normal jewelry ilvl 64+ - "Rustic Sash
 # Section:  #   CRAFTING BASES - TOP ITEMS
 #-------------------------------------------------------------------------------#
 
-Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Magic items - Weapon crafting bases
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Weapon crafting bases
     Rarity = Magic
     ItemLevel >= 83
 #   PLEASE REMOVE UNWANTED BASES-   -   -   -   -   -   -   -   #   #   #   #   # "Imperial Claw" "Behemoth Mace" "Tiger Hook" "Sambar Sceptre" "Dragoon Sword" "Piledriver" "Imperial Staff" "Profane Wand" "Gemini Claw" "Runic Hatchet"
     BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" "Ambusher" "Eclipse Staff" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand" 
     SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Normal items - Weapon crafting bases
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Weapon crafting bases
     Rarity = Normal
     ItemLevel >= 83
 #   PLEASE REMOVE UNWANTED BASES-   -   -   -   -   -   -   -   #   #   #   #   # "Imperial Claw" "Behemoth Mace" "Tiger Hook" "Sambar Sceptre" "Dragoon Sword" "Piledriver" "Imperial Staff" "Profane Wand" "Gemini Claw" "Runic Hatchet"
     BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" "Ambusher" "Eclipse Staff" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand" 
     SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Magic items - Armour crafting bases
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Armour crafting bases
     Rarity = Magic
     ItemLevel >= 84
 #   PLEASE REMOVE UNWANTED BASES-   -   -   -   -   -   -   -   #   #   #   #   # "Zodiac Leather" "Triumphant Lamellar" "Glorious Plate" "Slink Gloves" "Nightmare Bascinet" "Royal Burgonet" "Imperial Buckler" "Elegant Round Shield" "Supreme Spiked Shield" "Pinnacle Tower Shield" "Archon Kite Shield" "Two-Point Arrow Quiver" "Broadhead Arrow Quiver" "Spike-Point Arrow Quiver"
     BaseType "Assassin's Garb" "Astral Plate" "Vaal Regalia" "Slink Boots" "Titan Greaves" "Sorcerer Boots" "Titan Gauntlets" "Sorcerer Gloves" "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Titanium Spirit Shield"
     SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show # Endgame Filter (DISABLE FOR MF) - ilvl 84+ Normal items - Armour crafting bases
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Armour crafting bases
     Rarity = Normal
     ItemLevel >= 84
 #   PLEASE REMOVE UNWANTED BASES-   -   -   -   -   -   -   -   #   #   #   #   # "Zodiac Leather" "Triumphant Lamellar" "Glorious Plate" "Slink Gloves" "Nightmare Bascinet" "Royal Burgonet" "Imperial Buckler" "Elegant Round Shield" "Supreme Spiked Shield" "Pinnacle Tower Shield" "Archon Kite Shield" "Two-Point Arrow Quiver" "Broadhead Arrow Quiver" "Spike-Point Arrow Quiver"
@@ -2278,6 +2283,14 @@ Show # Racing Filter - normal races -  Shield - Magic
     Class "Shield"
     SetBackgroundColor 0 0 0 155 # Lesser items
 
+# Bone Spirit Shield (Of animation flask recipe) fixed in progression.          #
+Show
+    Rarity <= Magic
+    ItemLevel <= 29
+    BaseType "Bone Spirit Shield"
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+
 Show # Racing Filter - normal races -  Shield - Magic
     Rarity = Magic
     DropLevel >= 11
@@ -2291,6 +2304,14 @@ Show # Racing Filter - normal races -  Shield - Magic
     ItemLevel <= 16
     Class "Shield"
     SetBackgroundColor 0 0 0 155 # Lesser items
+
+# Bone Spirit Shield (Of animation flask recipe for summoners)                  #
+Hide # Extras - Recipe items - Bone Spirit Shield (Of animation flask recipe summoners) - <= Magic
+    Rarity <= Magic
+    BaseType "Bone Spirit Shield"
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
 
 # Can be turned on manually within Endgame racing block.                        #
 Hide # Racing Filter - Endgame - Crafting Items - Armour - Shield - crafting bases
@@ -4510,8 +4531,8 @@ Hide # Extras - Recipe items - Normal Elegant Sword (The Goddess Scorned)
     SetBorderColor 74 230 58 # T1 drops color / Quest items
     SetFontSize 45
 
-# Any crude bow. Meta for SRS summoners.
-Show # Extras - Any Crude bow ilvl >=50
+# Any crude bow. Essence crafting for summoners.
+Show # Extras - Any Crude bow ilvl >=50 (Essence crafting)
     BaseType "Crude Bow"
     ItemLevel >= 50
     SetFontSize 45

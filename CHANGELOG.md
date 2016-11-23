@@ -4,9 +4,10 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
-## 2.4.3 [Unreleased]
+## 2.4.3a
 
 - Changed highlighting for some mediocre hybrid items. These items can now be hidden with the MF block.
+- Added Bone Spirit Shield as extra for the "Of animation flask" recipe. The flask is then used to make a +1 to Level of Minion Gems helmet.
 - Added Hideout Doodads & Microtransactions just in case.
 - Some minor changes to the 83/84+ crafting base blocks. Added normal jewlry and weapon crafting bases to the MF block.
 - Removed unnecessary white spaces, hash tags and 2 sections.
