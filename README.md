@@ -2,7 +2,7 @@
 
 **[Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921)
 |
-[Youtube](youtube.com/c/GreengroovePOE)
+[Youtube](https://www.youtube.com/c/GreengroovePOE)
 |
 [Facebook](https://www.facebook.com/GreengroovePOE/)
 |
@@ -30,7 +30,7 @@ A general recommendation is to only use the leveling filter for races, start of 
 - Hidden items labeling. Use the "Alt" key from time to time to find extra loot.
 - Easy customization.
 
-Detailed information is available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921). You can see the filter in action on my [Youtube channel](youtube.com/c/GreengroovePOE).
+Detailed information is available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921). You can see the filter in action on my [Youtube channel](https://www.youtube.com/c/GreengroovePOE).
 
 
 ## INSTALL THE FILTER:
