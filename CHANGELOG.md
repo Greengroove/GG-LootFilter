@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.4.3b
+
+- The racing filter is now disabled by default in the Endgame version of the filter.
+- Some minor changes to the racing filter. Reworked some magic weapon progressions in the racing filter.
+
 ## 2.4.3a
 
 - Changed highlighting for some mediocre hybrid items. These items can now be hidden with the MF block.
