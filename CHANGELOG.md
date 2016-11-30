@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.5.0a
+
+- Separated Breachstones and added corrected class "Map Fragment".
+
 ## 2.5.0
 
 - Added extra highlighting for the new Vaal Breach gem.
