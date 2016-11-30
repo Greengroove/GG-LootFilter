@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.5.0
+
+- Added extra highlighting for the new Vaal Breach gem.
+- Enabled the Breach filters.
+
+## 2.4.8
+
+- Added announced items for Path of Exile 2.5 Breach.
+- Moved the Essence blok above the Currency block.
+- Renamed section "ALL 2.4 NEW BASES"
+
 ## 2.4.3b
 
 - The racing filter is now disabled by default in the Endgame version of the filter.
