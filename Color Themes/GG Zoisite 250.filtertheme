@@ -48,13 +48,13 @@
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>27</R>
-        <G>162</G>
-        <B>155</B>
+        <R>255</R>
+        <G>45</G>
+        <B>175</B>
         <ScA>1</ScA>
-        <ScR>0.0109600937</ScR>
-        <ScG>0.3613068</ScG>
-        <ScB>0.3277781</ScB>
+        <ScR>1</ScR>
+        <ScG>0.0262412224</ScG>
+        <ScB>0.4286905</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -118,13 +118,13 @@
       <ComponentType>BorderColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>27</R>
-        <G>162</G>
-        <B>155</B>
+        <R>255</R>
+        <G>45</G>
+        <B>175</B>
         <ScA>1</ScA>
-        <ScR>0.0109600937</ScR>
-        <ScG>0.3613068</ScG>
-        <ScB>0.3277781</ScB>
+        <ScR>1</ScR>
+        <ScG>0.0262412224</ScG>
+        <ScB>0.4286905</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -170,7 +170,7 @@
       </Color>
     </ThemeComponent>
     <ThemeComponent>
-      <ComponentName>identified rare items text</ComponentName>
+      <ComponentName>Corrupted items text</ComponentName>
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
@@ -258,13 +258,13 @@
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>27</R>
-        <G>162</G>
-        <B>155</B>
+        <R>255</R>
+        <G>45</G>
+        <B>175</B>
         <ScA>1</ScA>
-        <ScR>0.0109600937</ScR>
-        <ScG>0.3613068</ScG>
-        <ScB>0.3277781</ScB>
+        <ScR>1</ScR>
+        <ScG>0.0262412224</ScG>
+        <ScB>0.4286905</ScB>
       </Color>
     </ThemeComponent>
   </Components>

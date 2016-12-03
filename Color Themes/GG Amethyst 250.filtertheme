@@ -170,7 +170,7 @@
       </Color>
     </ThemeComponent>
     <ThemeComponent>
-      <ComponentName>identified rare items text</ComponentName>
+      <ComponentName>Corrupted items text</ComponentName>
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>

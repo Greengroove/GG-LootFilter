@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.5.0c
+
+- Changed "rare identified items" to "rare corrupted items".
+- Added <= Magic corrupted items. Now all corrupted items are covered by the filter.
+- Optimized line ordering within each entry for most blocks in the filter. Especially the Racing block is now more optimal. These improvements are of minor positive impact to prerformance. Please note that the versions edited with Filtration may be less optimized.
+- **Warband drops (Identified items) are handled a bit better. The block will display non corrupted identified items, of any item class that can be dropped by Warbands. The top bases are handled separately so this only affects lower bases. In the MF filter this will be hidden, but can be still seen when pressing the "Alt" key.**
+- updated themes to reflect the above changes.
+- Fixed Bone Spirit Shield showing as rare when magic or lower.
+- Added "Spiraled Foil" to top bases.
+- Changed some highlightings in the racing block.
+- Added a Sockets >= 2 Special exclusion to most white and magic armour drops to reduce clutter. This can be manually adjusted across the board.
+- Magic and Normal Gold ring, Paua Ring, Moonstone Ring, Coral Amulet, Gold Amulet, Studded Belt and Cloth Belt bases are now hidden while leveling.
+- Reworked the caster racing block and added coresponing block group, for editing in Filtration. Removed drop sounds. **Warning: Disabling in this block will hide some daggers and scepters!**
+- Improved flask progression for leveling.
+
 ## 2.5.0a
 
 - Separated Breachstones and added corrected class "Map Fragment".

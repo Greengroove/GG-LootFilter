@@ -14,7 +14,7 @@
 
 A general recommendation is to only use the leveling filter for races, start of a challenge league or when you level a new character. When you play with a fully geared character the Endgame filter will be much better. If you have a reasonable amount of magic find you can use the MF filter.
 
-- **Leveling filter** is good for the start of the league, first leveling in a new league and Racing. It includes the racing filter and all the way to level 100. Shows most items.
+- **Leveling filter** is good for the start of the league, first leveling in a new league and Racing. It includes the racing filter and all the way to level 100. Shows a lot of items. Customization is encouraged.
 - **Leveling filter - FOR CASTERS** Same as the regular leveling filter except that normal and magic leveling weapons are hidden.
 - **Endgame filter** is good for general use (avoid for racing). It filters mediocre items. Use this when you try to power level or if you don't care so much about items anymore. Use when you are resist. cap and have your basic flasks set up for maps.
 - **Magic Find (MF) filter** hides even more stuff. Use this if you really don't want to id more rares than you „have to“. It will hide all non top base rares, 83 / 84+ crafting items, RGB items, all non unique flasks, hammers for chisel recipe, Scraps, Whetstones, Baubles, Wisdom and Portal Scrolls. This version is active when both the "Leveling" and "Endgame" blocks are disabled.
@@ -35,11 +35,13 @@ Detailed information is available on the [Official forum thread](https://www.pat
 
 ## INSTALL THE FILTER:
 
-- Download the Zip file.
+- Download the Zip file [here](https://github.com/Greengroove/GG-LootFilter/releases).
 - Copy the filter file/s to "system drive":\Users\"Your username"\My Documents\My Games\Path of Exile
 - In game go to Options > UI > List of Item Filters.
 - Press reload if your filter is not present.
 - Select filter; If the status message says „Item Filter loaded successfully“ you are done. If you get an error message there must be an error in the filter on the line described by the error message.
+
+Downloading the files is always the best choice. But **If you copy and paste the code to Notepad make sure sure you save as with UTF-8 encoding and NOT ASCII.** If you save the code as ASCII the filter will return an error and it won't work.
 
 
 
