@@ -13,10 +13,10 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - updated themes to reflect the above changes.
 - Fixed Bone Spirit Shield showing as rare when magic or lower.
 - Added "Spiraled Foil" to top bases.
-- Changed some highlightings in the racing block.
+- Changed some highlighting in the racing block.
 - Added a Sockets >= 2 Special exclusion to most white and magic armour drops to reduce clutter. This can be manually adjusted across the board.
 - Magic and Normal Gold ring, Paua Ring, Moonstone Ring, Coral Amulet, Gold Amulet, Studded Belt and Cloth Belt bases are now hidden while leveling.
-- Reworked the caster racing block and added coresponing block group, for editing in Filtration. Removed drop sounds. **Warning: Disabling in this block will hide some daggers and scepters!**
+- Reworked the caster racing block and added corresponding block group, for editing in Filtration. Removed drop sounds. **Warning: Disabling in this block will hide some daggers and scepters!**
 - Improved flask progression for leveling.
 
 ## 2.5.0a
