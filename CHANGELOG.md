@@ -4,12 +4,29 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.5.0e
+
+- Added exclusion for Normal and Magic Coral Amulet at level >= 72. Some other bases were already excluded.
+- Added ability to hide top base scepters.
+- Fixed a labeling issue with Shaper's orb introduced after filter optimization.
+- Fixed the Breachstones not showing properly due to game bug or wrong information from GGG's side.
+
+## 2.5.0d
+
+- Added a game like color theme.
+- Added ability to togle wisdom scrolls and portal scrols separately.
+- Removed a redundant entry in the jewelry racing block. Added Paua Amulet, Amethyst and Unset Ring to exclusions. These bases will not be displayed. Added ability to toggle other magic and normal jewelry.
+- Separated Life, mana and Hybrid flask progression and added ability to toggle blocks.
+- Slightly modified hierarchy in the Flask block.
+- Lesser items now have slightly more transparent background.
+- Added to leveling block ability to hide (non rare) large RGB items ilvl <= 67.
+
 ## 2.5.0c
 
 - Changed "rare identified items" to "rare corrupted items".
 - Added <= Magic corrupted items. Now all corrupted items are covered by the filter.
-- Optimized line ordering within each entry for most blocks in the filter. Especially the Racing block is now more optimal. These improvements are of minor positive impact to prerformance. Please note that the versions edited with Filtration may be less optimized.
-- **Warband drops (Identified items) are handled a bit better. The block will display non corrupted identified items, of any item class that can be dropped by Warbands. The top bases are handled separately so this only affects lower bases. In the MF filter this will be hidden, but can be still seen when pressing the "Alt" key.**
+- Optimized line ordering within each entry for most blocks in the filter. Especially the Racing block is now more optimal. These improvements are of minor positive impact to performance. Please note that the versions edited with Filtration may be less optimized.
+- **Warband drops (Identified items) are handled a bit better. The block will display non corrupted identified items, of any item class that can be dropped by Warbands. The top bases are handled separately so this only affects lower bases. In the Endgame filter this will be hidden by default, but can be still seen when pressing the "Alt" key, after you fight a Warband.**
 - updated themes to reflect the above changes.
 - Fixed Bone Spirit Shield showing as rare when magic or lower.
 - Added "Spiraled Foil" to top bases.

@@ -1,0 +1,2154 @@
+﻿# Script edited with Filtration - https://github.com/ben-wallis/Filtration
+# -------------------------------------------------------------------------------#
+# 
+# Greengroove's Endgame Loot Filter Script v 2.5.0e
+#
+# This is my personal version. It is based on the endgame filter but it's even stricter, but not as strict as the MF version.
+# Perfect for running Breaches. The racing filter was removed to make the script lighter.
+# 
+# -------------------------------------------------------------------------------#
+# 
+# Updated for Atlas of Worlds 2.5.x
+# 
+# 
+# 
+# > Leveling version: Shows most items. Good for starting a new character or racing.
+# > Leveling CASTERS: Same as the regular leveling filter except that normal and magic leveling weapons are hidden.
+# > Endgame version: Hides flasks with quality lower than 10%, utility flasks, all mediocre rares and big chromatic items.
+# > MF version: Shows least items. Additionally hides all chromatic items and rare bases that are not the best or meta.
+# 
+# 
+# 
+# You can see the hidden items by pressing "Alt" key.
+# The Endgame filter is meant to be used when you have "everything you need" for mapping.
+# The racing filter works up to act 1 Merciless. After that you can enable the Endgame racing filtering (optional).
+# Use the Leveling Filter for racing.
+# 
+# 
+# 
+# FEATURES:   > Pick up green stuff! Pink is good. Take it.
+# > Complete detailed racing filter!
+# > Border around labels to distinguish better drops.
+# > Rely on sounds for all drops that matter.
+# > There are 4 different sounds for 4 tiers of drops. (long sounds are good)
+# > 1 additional sound just for Divination cards.
+# > Lower base rares get filtered as you progress for less clutter.
+# > Large text for all - easy pick up.
+# > Crafting bases show at appropriate levels.
+# > Includes chancing items
+# > Flasks filtering
+# > Hidden items further filtration (Endgame version - Use "Alt" key)
+# > Filtration integration
+# 
+# 
+# 
+# Use the forum thread for information, updates, feedback, questions and suggestions:
+# https://www.pathofexile.com/forum/view-thread/1566921
+# 
+# -------------------------------------------------------------------------------#
+# 
+# Content:
+# 
+# SETTINGS
+# NOTES
+# TO DO
+# 
+# 
+# 
+# Filter:
+# 
+# QUEST & EXTRA
+# LABYRINTH
+# DIVINATION CARDS
+# BREACH
+# ESSENCE
+# CURRENCY
+# MAPS
+# GEMS
+# JEWELS
+# TALISMAN
+# UNIQUE / OTHER ITEMS
+# CHANCE ITEMS
+# ALL 2.4 AND HIGHER NEW BASES
+# VENDOR RECIPE ITEMS - RGB ITEMS = RARE
+# VENDOR RECIPE ITEMS - CHISEL RECIPE
+# RARE ITEMS - JEWELRY
+# RARE ITEMS - WEAPONS - TOP WEAPONS BASES
+# RARE ITEMS - WEAPONS - WANDS
+# RARE ITEMS - TOP ARMOUR BASES
+# RARE CORRUPTED ITEMS
+# RARE ITEMS - WEAPONS - BOW / QUIVER
+# RARE ITEMS - WEAPONS - CLAW
+# RARE ITEMS - WEAPONS - DAGGER
+# RARE ITEMS - WEAPONS - ONE HAND AXE
+# RARE ITEMS - WEAPONS - ONE HAND MACE
+# RARE ITEMS - WEAPONS - ONE HAND SWORD
+# RARE ITEMS - WEAPONS - SCEPTRE
+# RARE ITEMS - WEAPONS - TWO HAND / STAVES
+# RARE ITEMS - ARMOUR
+# RARE ITEMS - BOOTS
+# RARE ITEMS - GLOVES
+# RARE ITEMS - HELM
+# RARE ITEMS - SHIELD
+# FLASKS
+# <= MAGIC CORRUPTED ITEMS
+# CRAFTING BASES - JEWELRY
+# CRAFTING BASES - TOP ITEMS
+# MAGIC IDENTIFIED ITEMS (WARBANDS)
+# VENDOR RECIPE ITEMS - RGB ITEMS <= MAGIC
+# CRAFTING BASES - WEAPONS
+# CRAFTING BASES - ARMOUR
+# RACING - ARMOUR - CHEST
+# RACING - ARMOUR - BOOTS
+# RACING - ARMOUR - GLOVES
+# RACING - ARMOUR - HELM
+# RACING - ARMOUR - SHIELD
+# RACING - ARMOUR - ENDGAME CRAFTING ITEMS
+# RACING - JEWELRY
+# RACING - CASTER
+# RACING - 1 HAND - CLAW - NORMAL
+# RACING - 1 HAND - CLAW - MAGIC
+# RACING - 1 HAND - DAGGER - NORMAL
+# RACING - 1 HAND - DAGGER - MAGIC
+# RACING - 1 HAND - ONE HAND AXE - NORMAL
+# RACING - 1 HAND - ONE HAND AXE - MAGIC
+# RACING - 1 HAND - ONE HAND MACE - NORMAL
+# RACING - 1 HAND - ONE HAND MACE - MAGIC
+# RACING - 1 HAND - ONE HAND SWORD - NORMAL
+# RACING - 1 HAND - ONE HAND SWORD - MAGIC
+# RACING - 1 HAND - SCEPTRE - NORMAL
+# RACING - 1 HAND - SCEPTRE - MAGIC
+# RACING - 1 HAND - THRUSTING ONE HAND SWORD - NORMAL
+# RACING - 1 HAND - THRUSTING ONE HAND SWORD - MAGIC
+# RACING - 2 HAND - STAFF - NORMAL
+# RACING - 2 HAND - STAFF - MAGIC
+# RACING - 2 HAND - TWO HAND AXE - NORMAL
+# RACING - 2 HAND - TWO HAND AXE - MAGIC
+# RACING - 2 HAND - TWO HAND MACE - NORMAL
+# RACING - 2 HAND - TWO HAND MACE - MAGIC
+# RACING - 2 HAND - TWO HAND SWORD - NORMAL
+# RACING - 2 HAND - TWO HAND SWORD - MAGIC
+# RACING - BOW - NORMAL
+# RACING - BOW - MAGIC
+# RACING - QUIVER
+# EXTRAS
+# LEGACY WARBANDS FILTER
+# HIDDEN ITEMS
+# ANYTHING ELSE
+# 
+# -------------------------------------------------------------------------------#
+# SETTINGS
+# -------------------------------------------------------------------------------#
+# 
+# FIND AND REPLACE THE STRING TO CHANGE SETTINGS (Can also be edited in Filtration)
+# 
+# -------------------------------------------------------------------------------#
+# 
+# > COLOR SCHEME
+# 
+# Tier 1 drops / Quest items:     74 230 58 # T1 drops color / Quest items
+# Tier 2 drops:                   255 45 175 # T2 drops color
+# Unique items:                   175 96 37 # Unique items color
+# Rare items:                     255 255 119                             (WARNING: some items may still retain default color. Mostly items connected to racing using >= Normal and >= Magic arguments)
+# Rare identified items:          215 25 0 255 # Corrupted items text
+# Magic identified items:         0 200 255 255 # identified magic items text
+# Gems:                           27 162 155 # Gems color
+# 
+# Normal / Magic helmets:         215 25 0 255 # Helmets border color
+# Normal / Magic gloves:          0 200 255 255 # Gloves border color
+# Normal / Magic boots:           74 230 58 # Boots border color          (WARNING: same border color as tier 1 drops)
+# 
+# -------------------------------------------------------------------------------#
+# 
+# > FONT SIZE                         18-45 (default: 32)
+# 
+# Large:                          SetFontSize 45
+# Small:                          SetFontSize 23
+# 
+# -------------------------------------------------------------------------------#
+# 
+# > BACKGROUND
+# 
+# Transparency 0%:                SetBackgroundColor 0 0 0 255
+# Transparency 39%:               SetBackgroundColor 0 0 0 140 # Lesser items
+# Transparency 79%:               SetBackgroundColor 0 0 0 55 # Uber trash
+# 
+# Chromatic items background:     SetBackgroundColor 75 75 75 # Chromatic background
+# Top tier drops:                 SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+# Map background color:           SetBackgroundColor 44 44 44 # Map Background Color
+# 
+# -------------------------------------------------------------------------------#
+# 
+# > SOUNDS
+# 
+# Tier 1:                         PlayAlertSound 8 280
+# Tier 2:                         PlayAlertSound 7 200
+# Tier 3:                         PlayAlertSound 1 140
+# Tier 4:                         PlayAlertSound 2 80
+# Divination card:                PlayAlertSound 4 120
+# Caster racing 3 links:          PlayAlertSound 3 120
+# 
+# -------------------------------------------------------------------------------#
+# 
+# > EDIT BLOCKS
+# 
+# Setting for Leveling Filter:    "Show # Leveling Filter"
+# Setting for Endgame filter:     "Hide # Leveling Filter"
+# 
+# Setting for Endgame filter:     "Show # Endgame Filter"
+# Setting for MF filter:          "Hide # Endgame Filter"
+# 
+# * Note that for MF version both Leveling and the Endgame components should be disabled.
+# 
+# Reduce less useful normal armour drops in the racing filter. BE CAREFUL WHEN YOU CHANGE THIS: Sockets >= 2
+# 
+# Turn off Endgame racing bases:  "Hide # Racing Filter - Endgame"
+# Turn on Endgame racing bases:   "Hide # Racing Filter - Endgame"
+# 
+# Turn off legacy Warbands filter:       "Hide # Warbands filter"
+# Turn on legacy Warbands filter:        "Show # Warbands filter"
+# 
+# * Both Endgame racing bases and the Warbands filter are recommended to stay disabled.
+# 
+# -------------------------------------------------------------------------------#
+# NOTES
+# -------------------------------------------------------------------------------#
+# 
+# Please use the forum thread for information, updates, feedback, questions and suggestions:
+# https://www.pathofexile.com/forum/view-thread/1566921
+# 
+# -   I strongly recommend customization of the filter. Especially for racers.
+# Please refer to the above forum thread for details.
+# 
+# -   You can use Filtration for easier customization:
+# https://www.pathofexile.com/forum/view-thread/1287447/
+# 
+# -   Big RGB items may sometimes not show with border after item level 67 in the Endgame filter.
+# This has given me quite a headache but I don't think there is a way to make it reliable
+# without compromising other parts of the Endgame filter.
+# A way to make sure to always see them even if they are big is search for "RGB ITEMS WITH BORDERS"
+# and remove the item level restriction or set it to 100.
+# 
+# -------------------------------------------------------------------------------#
+# TO DO
+# -------------------------------------------------------------------------------#
+# 
+# Have Fun
+# 
+# -------------------------------------------------------------------------------#
+
+# Section: #   QUEST & EXTRA
+
+Show
+    Class "Quest"
+    BaseType "Shaper's Orb"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 280
+
+Show
+    Class "Quest"
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+
+# Hideout Doodads & Microtransactions
+Show # ON RECOMMENDED - Hideout Doodads & Microtransactions
+    Class "Hideout Doodads" "Microtransactions"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 280
+
+# Section: #   LABYRINTH
+
+Show
+    BaseType "Silver Key" "Golden Key" "Treasure Key"
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+Show
+    BaseType "Offering to the Goddess"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    Class "Trinket"
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Section: #   DIVINATION CARDS
+
+Show
+    BaseType "Stacked Deck"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+# The divination cards that you don't want to drop with sound in endgame.       #
+Hide # Leveling Filter - Bad divination cards
+    Class "Divination"
+    BaseType "The Carrion Crow" "The King's Blade" "Death" "Light and Truth" "The Lion" "The Lunaris Priestess" "A Mother's Parting Gift" "The Scarred Meadow" "Thunderous Skies" "Turn the Other Cheek" "The Wolf's Shadow" "Lantador's Lost Love" "The Oath"
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+Show
+    Class "Divination"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 4 120
+
+# Section: #   BREACH
+
+Show # ON RECOMMENDED - Breach items - Splinter
+    Class "Stackable Currency"
+    BaseType "Splinter"
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+Show # ON RECOMMENDED - Breach items - Blessing - Breachstone
+    Class "Stackable Currency"
+    BaseType "Blessing"
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show # ON RECOMMENDED - Breach items - Blessing - Breachstone
+#    Class "Map Fragment"
+    BaseType "Breachstone"
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+# Section: #   ESSENCE
+
+Show
+    Class "Currency"
+    BaseType "Essence" "Remnant of Corruption"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+# Section: #   CURRENCY
+
+Hide # Endgame Filter (DISABLE FOR MF) - Low currency - Wisdom Scrolls
+    Class "Currency"
+    BaseType "Scroll of Wisdom"
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+Show # Endgame Filter (DISABLE FOR MF) - Low currency - Portal Scrolls
+    Class "Currency"
+    BaseType "Portal Scroll"
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+Show # Endgame Filter (DISABLE FOR MF) - Low currency - Scraps, Whetstones, Baubles
+    Class "Currency"
+    BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Glassblower's Bauble"
+    SetFontSize 45
+
+Show
+    Class "Currency"
+    BaseType "Orb of Transmutation" "Orb of Augmentation"
+    SetFontSize 45
+
+Show
+    Class "Currency"
+    BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Cartographer's Chisel" "Orb of Alchemy"
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+Show
+    Class "Currency"
+    BaseType "Regal Orb" "Blessed Orb" "Gemcutter's Prism" "Orb of Regret" "Vaal Orb" "Chaos Orb" "Orb of Fusing" "Orb of Scouring"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 1 140
+
+Show # ON RECOMMENDED - Prophecy items - Coins
+    Class "Currency"
+    BaseType "Silver Coin"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    Class "Currency"
+    BaseType "Cartographer's Sextant" "Cartographer's Seal" "Unshaping Orb"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    Class "Currency"
+    BaseType "Master Cartographer's Sextant" "Master Cartographer's Seal"
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    Class "Currency"
+    BaseType "Exalted Orb" "Divine Orb" "Albino Rhoa Feather" "Mirror of Kalandra" "Eternal Orb"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 280
+
+Show # ON RECOMMENDED - Perandus items - Perandus Coin
+    Class "Currency"
+    BaseType "Perandus Coin"
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+Show # ON RECOMMENDED - Prophecy items - Sealed Prophecies
+    Class "Currency"
+    BaseType "Prophecy"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+# Present in the Leveling Filter.                                               #
+Hide # Leveling Filter - Shard / fragments
+    BaseType "Transmutation Shard" "Scroll Fragment"
+
+Show
+    Class "Stackable Currency"
+    SetFontSize 45
+
+Show
+    Class "Currency"
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Section: #   MAPS
+
+Show
+    DropLevel >= 79
+    Class "Maps"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 280
+
+Show
+    Class "Maps"
+    Rarity = Unique
+    SetTextColor 175 96 37 # Unique items color
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetBorderColor 175 96 37 # Unique items color
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    DropLevel >= 78
+    Class "Maps"
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    DropLevel >= 76
+    Class "Maps"
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 1 140
+
+# maps DropLevel >= 73 use T3 sound till ItemLevel <= 78                        #
+Show
+    DropLevel >= 73
+    Class "Maps"
+    ItemLevel <= 78
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 1 140
+
+Show
+    DropLevel >= 73
+    Class "Maps"
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Low level maps in low level maps.                                             #
+Show
+    Class "Maps"
+    ItemLevel <= 76
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetFontSize 45
+    PlayAlertSound 1 140
+
+# Low level maps in high level maps.                                            #
+Show
+    Class "Maps"
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetFontSize 45
+
+Show # ON RECOMMENDED - Prophecy items - Council keys
+    BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    Class "Fragment" "Map Fragments"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBackgroundColor 44 44 44 # Map Background Color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+# Section: #   GEMS
+
+# Vaal Breach.                                                                  #
+Show
+    Class "Gem"
+    BaseType "Vaal Breach"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 280
+
+Show
+    Quality = 20
+    Class "Gem"
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+# Drop only gems.                                                               #
+Show
+    Class "Gem"
+    BaseType "Portal" "Empower" "Enlighten" "Enhance" "Detonate Mines" "Item Quantity" "Vaal Haste" "Vaal Breach"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    Quality >= 16
+    Class "Gem"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    Quality >= 8
+    Class "Gem"
+    SetTextColor 27 162 155 # Gems color
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 1 140
+
+Show
+    Quality >= 1
+    Class "Gem"
+    SetTextColor 27 162 155 # Gems color
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Gems that could have some value.                                              #
+Show
+    Class "Gem"
+    BaseType "Vaal" "Added Chaos Damage" "Multistrike" "Less Duration" "Increased Duration" "Blood Magic" "Increased Area of Effect" "Concentrated Effect" "Immortal Call" "Phase Run" "Cast when Damage Taken"
+    SetTextColor 27 162 155 # Gems color
+    SetBorderColor 27 162 155 # Gems color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+Show # ON RECOMMENDED - Gems with no quality - Active Skill Gems
+    Class "Active Skill Gems"
+    SetTextColor 27 162 155 # Gems color
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show # ON RECOMMENDED - Gems with no quality - Support gems
+    Class "Support Skill Gems"
+    SetTextColor 27 162 155 # Gems color
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Section: #   JEWELS
+
+Show
+    Class "Jewel"
+    Rarity = Magic
+    ItemLevel <= 77
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+Hide # Endgame Filter (DISABLE FOR MF) - Magic jewels ItemLevel > 77
+    Class "Jewel"
+    Rarity = Magic
+    SetFontSize 45
+
+Show
+    Class "Jewel"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 1 140
+
+Show
+    Class "Jewel"
+    Rarity = Unique
+    SetTextColor 175 96 37 # Unique items color
+    SetBorderColor 175 96 37 # Unique items color
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    Class "Jewel"
+    Rarity = Normal
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 1 140
+
+# Section: #   TALISMAN
+
+Show
+    BaseType "Talisman"
+    Rarity = Rare
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 255 255 119
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    BaseType "Talisman"
+    Rarity = Magic
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 136 136 255
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    BaseType "Talisman"
+    Rarity = Normal
+    SetTextColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 200 200 200
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+# Section: #   UNIQUE / OTHER ITEMS
+
+Show
+    BaseType "Fishing Rod"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 280
+
+Show
+    LinkedSockets = 6
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 280
+
+Show
+    Rarity = Unique
+    SetTextColor 175 96 37 # Unique items color
+    SetBorderColor 175 96 37 # Unique items color
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    LinkedSockets = 5
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    Sockets = 6
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 1 140
+
+Show
+    BaseType "Sacrificial Garb"
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Any 4 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 66        #
+Show
+    LinkedSockets = 4
+    Class "Body Armour" "Boots" "Gloves" "Helmet"
+    ItemLevel <= 66
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Any 3 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 24        #
+Show
+    LinkedSockets = 3
+    Class "Boots" "Gloves" "Helmet"
+    ItemLevel <= 24
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Section: #   CHANCE ITEMS
+
+Show
+    BaseType "Sorcerer Boots"
+    Rarity = Normal
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Section: #   ALL 2.4 AND HIGHER NEW BASES
+
+Show
+    DropLevel >= 46
+    Class "Amulet" "Belt" "Ring"
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    DropLevel >= 73
+    Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show
+    DropLevel >= 72
+    Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield"
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+# Section: #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE
+
+# Rare big RGB items show borders till ilvl 67 Lower rarities are covered down. #
+Show
+    SocketGroup "RGB"
+    Rarity = Rare
+    ItemLevel <= 67
+    SetTextColor 255 255 119
+    SetBackgroundColor 75 75 75 # Chromatic background
+    SetBorderColor 255 45 175 # T2 drops color
+    PlayAlertSound 2 80
+
+Show
+    SocketGroup "RGB"
+    Height <= 2
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 75 75 75 # Chromatic background
+    SetBorderColor 255 45 175 # T2 drops color
+    PlayAlertSound 2 80
+
+Show
+    SocketGroup "RGB"
+    Width = 1
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 75 75 75 # Chromatic background
+    SetBorderColor 255 45 175 # T2 drops color
+    PlayAlertSound 2 80
+
+# Section: #   VENDOR RECIPE ITEMS - CHISEL RECIPE
+
+Show # Endgame Filter (DISABLE FOR MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
+    BaseType "Stone Hammer" "Rock Breaker" "Gavel"
+    Rarity = Normal
+    ItemLevel >= 33
+    SetBorderColor 255 45 175 # T2 drops color
+
+Show # Endgame Filter (DISABLE FOR MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
+    Quality >= 12
+    BaseType "Stone Hammer" "Rock Breaker" "Gavel"
+    Rarity = Magic
+    ItemLevel >= 33
+    SetBorderColor 255 45 175 # T2 drops color
+
+Show # Endgame Filter (DISABLE FOR MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
+    Quality >= 16
+    BaseType "Stone Hammer" "Rock Breaker" "Gavel"
+    Rarity = Rare
+    ItemLevel >= 33
+    SetBorderColor 255 45 175 # T2 drops color
+
+# Section: #   RARE ITEMS - JEWELRY
+
+Show
+    Class "Belt" "Amulet" "Ring"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Section: #   RARE ITEMS - WEAPONS - TOP WEAPONS BASES
+
+# All top weapon base rares.                                                    #
+Show
+    BaseType "Harbinger Bow" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Coronal Maul" "Imbued Wand" "Prophecy Wand" "Profane Wand"
+    Rarity >= Rare
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Top base daggers.                                                             #
+Show
+    Class "Dagger"
+    BaseType "Copper Kris" "Imp Dagger" "Golden Kris" "Fiend Dagger" "Ambusher" "Platinum Kris" "Demon Dagger" "Sai"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+Show
+    DropLevel >= 47
+    Class "Dagger"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# Top base scepters.                                                            #
+Show
+    BaseType "Sambar Sceptre" "Void Sceptre" "Carnal Sceptre" "Vaal Sceptre" "Platinum Sceptre" "Opal Sceptre" "Stag Sceptre" "Abyssal Sceptre" "Crystal Sceptre"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - WEAPONS - WANDS
+
+# Top base wands.                                                               #
+Show
+    Class "Wand"
+    Rarity = Rare
+    ItemLevel >= 45
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Top base wands while Leveling.                                                #
+Show
+    DropLevel <= 63
+    Class "Wand"
+    Rarity = Rare
+    ItemLevel <= 44
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# All other wands.                                                              #
+Show
+    Class "Wand"
+    Rarity = Rare
+    ItemLevel <= 44
+    SetTextColor 255 255 119
+    SetFontSize 45
+
+# Section: #   RARE ITEMS - TOP ARMOUR BASES
+
+# Top base chest armour.                                                        #
+Show
+    BaseType "Carnal Armour" "Assassin's Garb" "Glorious Plate" "Vaal Regalia" "Zodiac Leather" "Widowsilk Robe" "Astral Plate" "Slink Boots" "Titan Greaves" "Sorcerer Boots" "Slink Gloves" "Titan Gauntlets" "Sorcerer Gloves" "Vaal Gauntlets" "Stealth Gloves" "Arcanist Gloves" "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Royal Burgonet" "Mind Cage" "Sinner Tricorne"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Top bases caster shields.                                                     #
+Show
+    BaseType "Titanium Spirit Shield" "Harmonic Spirit Shield" "Vaal Spirit Shield" "Fossilised Spirit Shield" "Chiming Spirit Shield" "Ivory Spirit Shield"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Section: #   RARE CORRUPTED ITEMS
+
+# Any corrupted rare item.                                                      #
+Show # ON RECOMMENDED - Corrupted rare items
+    Corrupted True
+    Rarity = Rare
+    SetTextColor 215 25 0 # Corrupted items text
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 23
+
+# Section: #   RARE ITEMS - WEAPONS - BOW / QUIVER
+
+# These can have +3 to gems on them.                                            #
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - +3 Bows
+    BaseType "Thicket Bow" "Grove Bow" "Maraketh Bow"
+    Rarity = Rare
+    ItemLevel >= 64
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Top base rare quivers. none                                                   #
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - Quivers
+    BaseType "Spike-Point Arrow Quiver" "Broadhead Arrow Quiver" "Two-Point Arrow Quiver" "Broadhead Arrow Quiver"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# All other rare quivers are displayed in the Leveling Filter.                  #
+Hide # Leveling Filter - Rare Leveling - rare quivers
+    Class "Quiver"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# These are ok for leveling.                                                    #
+Hide # Leveling Filter - Rare Leveling - bows (drop level >=53)
+    DropLevel >= 53
+    Class "Bow"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show
+    DropLevel >= 44
+    Class "Bow"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 32
+    Class "Bow"
+    Rarity = Rare
+    ItemLevel <= 49
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 23
+    Class "Bow"
+    Rarity = Rare
+    ItemLevel <= 36
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 9
+    Class "Bow"
+    Rarity = Rare
+    ItemLevel <= 27
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 1
+    Class "Bow"
+    Rarity = Rare
+    ItemLevel <= 13
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - WEAPONS - CLAW
+
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - claw "Imperial Claw" "Gemini Claw"
+    Class "Claw"
+    BaseType "Imperial Claw" "Gemini Claw"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# These are ok for Leveling.                                                    #
+Hide # Leveling Filter - Rare Leveling - claws (drop level >=49)
+    DropLevel >= 49
+    Class "Claw"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show
+    DropLevel >= 43
+    Class "Claw"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 30
+    Class "Claw"
+    Rarity = Rare
+    ItemLevel <= 48
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 22
+    Class "Claw"
+    Rarity = Rare
+    ItemLevel <= 35
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 17
+    Class "Claw"
+    Rarity = Rare
+    ItemLevel <= 33
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 7
+    Class "Claw"
+    Rarity = Rare
+    ItemLevel <= 21
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 1
+    Class "Claw"
+    Rarity = Rare
+    ItemLevel <= 11
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - WEAPONS - DAGGER
+
+Show
+    DropLevel >= 44
+    Class "Dagger"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 28
+    Class "Dagger"
+    Rarity = Rare
+    ItemLevel <= 49
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 15
+    Class "Dagger"
+    Rarity = Rare
+    ItemLevel <= 31
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 5
+    Class "Dagger"
+    Rarity = Rare
+    ItemLevel <= 19
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 1
+    Class "Dagger"
+    Rarity = Rare
+    ItemLevel <= 14
+    SetTextColor 255 255 119
+
+# Less desired daggers but could still be good                                  #
+Show
+    Class "Dagger"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Section: #   RARE ITEMS - WEAPONS - ONE HAND AXE
+
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - one hand axe (drop level >=70)
+    DropLevel >= 70
+    Class "One Hand Axe"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# These are ok for Leveling.                                                    #
+Hide # Leveling Filter - Rare Leveling - one hand axes (drop level >=45)
+    DropLevel >= 45
+    Class "One Hand Axe"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show
+    DropLevel >= 42
+    Class "One Hand Axe"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 33
+    Class "One Hand Axe"
+    Rarity = Rare
+    ItemLevel <= 42
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 21
+    Class "One Hand Axe"
+    Rarity = Rare
+    ItemLevel <= 35
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 11
+    Class "One Hand Axe"
+    Rarity = Rare
+    ItemLevel <= 28
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 6
+    Class "One Hand Axe"
+    Rarity = Rare
+    ItemLevel <= 20
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 1
+    Class "One Hand Axe"
+    Rarity = Rare
+    ItemLevel <= 15
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - WEAPONS - ONE HAND MACE
+
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - one hand mace (drop level >=70)
+    DropLevel >= 70
+    Class "One Hand Mace"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# These are ok for Leveling.                                                    #
+Hide # Leveling Filter - Rare Leveling - one hand maces (drop level >=50)
+    DropLevel >= 50
+    Class "One Hand Mace"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show
+    DropLevel >= 44
+    Class "One Hand Mace"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 24
+    Class "One Hand Mace"
+    Rarity = Rare
+    ItemLevel <= 46
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 10
+    Class "One Hand Mace"
+    Rarity = Rare
+    ItemLevel <= 27
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 5
+    Class "One Hand Mace"
+    Rarity = Rare
+    ItemLevel <= 23
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 1
+    Class "One Hand Mace"
+    Rarity = Rare
+    ItemLevel <= 14
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - WEAPONS - ONE HAND SWORD
+
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - one hand swords (drop level >=70)
+    DropLevel >= 70
+    Class "One Hand Sword"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# These are ok for Leveling.                                                    #
+Hide # Leveling Filter - Rare Leveling - one hand swords (drop level >=50)
+    DropLevel >= 50
+    Class "One Hand Sword"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show
+    DropLevel >= 44
+    Class "One Hand Sword"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 32
+    Class "One Hand Sword"
+    Rarity = Rare
+    ItemLevel <= 52
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 24
+    Class "One Hand Sword"
+    Rarity = Rare
+    ItemLevel <= 40
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 10
+    Class "One Hand Sword"
+    Rarity = Rare
+    ItemLevel <= 31
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 5
+    Class "One Hand Sword"
+    Rarity = Rare
+    ItemLevel <= 21
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 1
+    Class "One Hand Sword"
+    Rarity = Rare
+    ItemLevel <= 14
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - WEAPONS - SCEPTRE
+
+# Lesser scepters that can still be good.                                       #
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre scepters
+    BaseType "Platinum Sceptre" "Tyrant's Sekhem" "Karui Sceptre" "Royal Sceptre"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# Any rare sceptre will show till level 63.                                     #
+Show
+    DropLevel >= 1
+    Class "Sceptre"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+# All rare scepters will show up with the Leveling Filter.                      #
+Hide # Leveling Filter - Rare Leveling - scepters (drop level >=41)
+    Class "Sceptre"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Section: #   RARE ITEMS - WEAPONS - TWO HAND / STAVES
+
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - Top base 2 hand items
+    Class "Two Hand" "Staves"
+    BaseType "Eclipse Staff" "Imperial Staff" "Maelström Staff" "Fleshripper" "Vaal Axe" "Coronal Maul" "Exquisite Blade"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# Any staff that can craft +3 to gems.                                          #
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - +3 Staves
+    Class "Staves"
+    Rarity >= Rare
+    ItemLevel >= 55
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# These are ok for Leveling.                                                    #
+Hide # Leveling Filter - Rare Leveling - two hand weapons (drop level >=49)
+    DropLevel >= 49
+    Class "Two Hand" "Staves"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show
+    DropLevel >= 44
+    Class "Two Hand" "Staves"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 34
+    Class "Two Hand" "Staves"
+    Rarity = Rare
+    ItemLevel <= 48
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 23
+    Class "Two Hand" "Staves"
+    Rarity = Rare
+    ItemLevel <= 36
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 13
+    Class "Two Hand" "Staves"
+    Rarity = Rare
+    ItemLevel <= 27
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 1
+    Class "Two Hand" "Staves"
+    Rarity = Rare
+    ItemLevel <= 16
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - ARMOUR
+
+# Decent chest armour while leveling.                                           #
+Show
+    DropLevel >= 63
+    Class "Body Armour"
+    Rarity = Rare
+    ItemLevel <= 67
+    SetTextColor 255 255 119
+
+# Decent chest armour.                                                          #
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - Chest Armour
+    DropLevel >= 65
+    Class "Body Armour"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Any chest armour can be good while Leveling. These show till item level 63.   #
+Show
+    Class "Body Armour"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+# Any rare chest armour for Leveling Filter.                                    #
+Hide # Leveling Filter - Rare Leveling - body armour (drop level >=56)
+    Class "Body Armour"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Section: #   RARE ITEMS - BOOTS
+
+# Mediocre Hybrid bases.                                                        #
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre Hybrid bases - Hybrid Boots
+    Class "Boots"
+    BaseType "Murder Boots" "Crusader Boots" "Assassin's Boots" "Legion Boots" "Carnal Boots"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Decent bases.                                                                 #
+Show # Endgame Filter (DISABLE FOR MF) - Rare items - Decent Boots
+    DropLevel >= 51
+    Class "Boots"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# Any base can be useful for Leveling (Leveling Filter).                        #
+Hide # Leveling Filter - Rare Leveling - boots (drop level >=42)
+    Class "Boots"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Any base can be useful for Leveling till item level 63.                       #
+Show
+    DropLevel >= 1
+    Class "Boots"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - GLOVES
+
+# Mediocre Hybrid bases.                                                        #
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre Hybrid bases - Hybrid Gloves
+    Class "Gloves"
+    BaseType "Murder Mitts" "Crusader Gloves" "Assassin's Mitts" "Legion Gloves"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Decent bases.                                                                 #
+Show # Endgame Filter (DISABLE FOR MF) - Rare items - Decent Gloves
+    DropLevel >= 53
+    Class "Gloves"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# Any base can be useful for Leveling (Leveling Filter).                        #
+Hide # Leveling Filter - Rare Leveling - gloves (drop level >=43)
+    Class "Gloves"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Any base can be useful for Leveling till item level 63.                       #
+Show
+    DropLevel >= 1
+    Class "Gloves"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - HELM
+
+# Mediocre Hybrid bases.                                                        #
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre Hybrid bases - Hybrid Helmets
+    Class "Helm"
+    BaseType "Prophet Crown" "Vaal Mask" "Magistrate Crown" "Harlequin Mask"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Decent bases.                                                                 #
+Show # Endgame Filter (DISABLE FOR MF) - Rare items - Decent Helmets
+    DropLevel >= 55
+    Class "Helm"
+    Rarity = Rare
+    SetTextColor 255 255 119
+
+# Any base can be useful for Leveling (Leveling Filter).                        #
+Hide # Leveling Filter - Rare Leveling - helmets (drop level >=40)
+    Class "Helm"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Any base can be useful for Leveling till item level 63.                       #
+Show
+    DropLevel >= 1
+    Class "Helm"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+# Section: #   RARE ITEMS - SHIELD
+
+# Ok-ish caster shields (present in the Leveling Filter).                     #
+Hide # Leveling Filter - Rare Leveling - shields - Lower caster bases
+    BaseType "Lacewood Spirit Shield" "Thorium Spirit Shield" "Ancient Spirit Shield" "Walnut Spirit Shield" "Brass Spirit Shield" "Jingling Spirit Shield"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Ok general shields (highest bases)                                            #
+Hide # Endgame Filter (DISABLE FOR MF) - Rare items - Non top base shields
+    DropLevel >= 67
+    Class "Shield"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Lesser but still in the upper bracket (present in the Leveling Filter).       #
+Hide # Leveling Filter - Rare Leveling - shields - (drop level >=47)
+    DropLevel >= 47
+    Class "Shield"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show
+    DropLevel >= 42
+    Class "Shield"
+    Rarity = Rare
+    ItemLevel <= 63
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 24
+    Class "Shield"
+    Rarity = Rare
+    ItemLevel <= 46
+    SetTextColor 255 255 119
+
+# Bone Spirit Shield (Of animation flask recipe) fixed in progression.          #
+Show
+    BaseType "Bone Spirit Shield"
+    Rarity = Rare
+    ItemLevel <= 29
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+
+Show
+    DropLevel >= 11
+    Class "Shield"
+    Rarity = Rare
+    ItemLevel <= 29
+    SetTextColor 255 255 119
+
+Show
+    DropLevel >= 1
+    Class "Shield"
+    Rarity = Rare
+    ItemLevel <= 16
+    SetTextColor 255 255 119
+
+# Bone Spirit Shield (Of animation flask recipe for summoners)                  #
+Hide # Extras - Recipe items - Bone Spirit Shield (Of animation flask recipe summoners) - Rare
+    BaseType "Bone Spirit Shield"
+    Rarity = Rare
+    SetTextColor 255 255 119
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Section: #   FLASKS
+
+# Utility flasks exposed till level 66.                                         #
+Show
+    Class "Utility Flasks"
+    ItemLevel <= 66
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 80
+
+# Any quality flask will show till level 67.                                    #
+Show
+    Quality >= 1
+    Class "Flask"
+    ItemLevel <= 67
+    SetBorderColor 255 45 175 # T2 drops color
+
+Show
+    Quality >= 10
+    Class "Flask"
+    SetBorderColor 255 45 175 # T2 drops color
+
+# Any quality flask will show with the Leveling Filter.                         #
+Hide # Leveling Filter - Flasks - Flasks with quality (<=9)
+    Quality >= 1
+    Class "Flask"
+    SetBorderColor 255 45 175 # T2 drops color
+
+# All utility flasks will show in Endgame but without highlights.               #
+Show # Endgame Filter (DISABLE FOR MF) - Flasks - Utility flasks (ilvl >=67)
+    Class "Utility Flasks"
+
+# Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
+Hide # Leveling Filter - Flasks - Top Bases - Life flasks (ilvl 42+) - Hallowed Life Flask
+    BaseType "Hallowed Life Flask"
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+# Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
+Hide # Leveling Filter - Flasks - Top Bases - Life flasks (ilvl 42+) - Sanctified Life Flask
+    BaseType "Sanctified Life Flask"
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+# Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
+Hide # Leveling Filter - Flasks - Top Bases - Life flasks (ilvl 42+) - Divine Life Flask
+    BaseType "Divine Life Flask"
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+# Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
+Hide # Leveling Filter - Flasks - Top Bases - Life flasks (ilvl 42+) - Eternal Life Flask
+    BaseType "Eternal Life Flask"
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+# Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
+Hide # Leveling Filter - Flasks - Top Bases - Hybrid flasks (ilvl 60+)
+    BaseType "Hallowed Hybrid Flask"
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+# Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
+Hide # Leveling Filter - Flasks - Top Bases - Mana flasks (ilvl 50+) - Sanctified Mana Flask
+    BaseType "Sanctified Mana Flask"
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+# Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
+Hide # Leveling Filter - Flasks - Top Bases - Mana flasks (ilvl 50+) - Divine Mana Flask
+    BaseType "Divine Mana Flask"
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+# Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
+Hide # Leveling Filter - Flasks - Top Bases - Mana flasks (ilvl 50+) - Eternal Mana Flask
+    BaseType "Eternal Mana Flask"
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Life Flask
+    DropLevel >= 30
+    BaseType "Life Flask"
+    Rarity <= Magic
+    ItemLevel <= 41
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Life Flask
+    DropLevel >= 24
+    BaseType "Life Flask"
+    Rarity <= Magic
+    ItemLevel <= 35
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Life Flask
+    DropLevel >= 12
+    BaseType "Life Flask"
+    Rarity <= Magic
+    ItemLevel <= 23
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Life Flask
+    BaseType "Life Flask"
+    Rarity <= Magic
+    ItemLevel <= 11
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Mana Flask
+    DropLevel >= 30
+    BaseType "Mana Flask"
+    Rarity <= Magic
+    ItemLevel <= 41
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Mana Flask
+    DropLevel >= 24
+    BaseType "Mana Flask"
+    Rarity <= Magic
+    ItemLevel <= 35
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Mana Flask
+    DropLevel >= 12
+    BaseType "Mana Flask"
+    Rarity <= Magic
+    ItemLevel <= 23
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Mana Flask
+    BaseType "Mana Flask"
+    Rarity <= Magic
+    ItemLevel <= 11
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Hybrid Flask
+    DropLevel >= 30
+    BaseType "Hybrid Flask"
+    Rarity <= Magic
+    ItemLevel <= 41
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Hybrid Flask
+    DropLevel >= 24
+    BaseType "Hybrid Flask"
+    Rarity <= Magic
+    ItemLevel <= 35
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Hybrid Flask
+    DropLevel >= 12
+    BaseType "Hybrid Flask"
+    Rarity <= Magic
+    ItemLevel <= 23
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Flask progression.                                                            #
+Hide # Leveling Filter - Flasks - Progression - Hybrid Flask
+    BaseType "Hybrid Flask"
+    Rarity <= Magic
+    ItemLevel <= 11
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+
+# Section: #   <= MAGIC CORRUPTED ITEMS
+
+# Any corrupted item.                                                           #
+Show # ON RECOMMENDED - Corrupted <= Magic items
+    Corrupted True
+    SetTextColor 215 25 0 # Corrupted items text
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 23
+
+# Section: #   CRAFTING BASES - JEWELRY
+
+# Bad base exclusion. We don't ever want to see these.                          #
+Hide
+    Class "Ring"
+    BaseType "Iron Ring" "Paua Ring" "Moonstone Ring"
+    Rarity <= Magic
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Bad base exclusion. We don't ever want to see these.                          #
+Hide
+    Class "Amulet"
+    BaseType "Coral Amulet"
+    Rarity <= Magic
+    ItemLevel >= 12
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show
+    Class "Ring"
+    BaseType "Diamond Ring"
+    ItemLevel >= 84
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 1 140
+
+Hide # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Rings and amulets
+    Class "Ring" "Amulet"
+    Rarity = Magic
+    ItemLevel >= 84
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Hide # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Belts
+    Class "Belt"
+    BaseType "Rustic Sash" "Leather Belt"
+    Rarity = Magic
+    ItemLevel >= 84
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Rings and amulets
+    Class "Ring" "Amulet"
+    Rarity = Normal
+    ItemLevel >= 84
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    PlayAlertSound 2 80
+
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Belts
+    Class "Belt"
+    BaseType "Rustic Sash" "Leather Belt"
+    Rarity = Normal
+    ItemLevel >= 84
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    PlayAlertSound 2 80
+
+# Diamond ring for alching.                                                     #
+Hide # Endgame Filter (DISABLE FOR MF) - ilvl >= 72 Normal Diamond Ring
+    BaseType "Diamond Ring"
+    Rarity = Normal
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetBorderColor 255 45 175 # T2 drops color
+
+# Diamond ring for alching present in the Leveling Filter.                      #
+Hide # Leveling Filter - Crafting Items - 60+ Diamond Rings
+    BaseType "Diamond Ring"
+    Rarity = Normal
+    ItemLevel >= 60
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Jewelry for regal recipe is present in the Leveling Filter.                   #
+Hide # Leveling Filter - Crafting Items - Normal jewelry <=75 - Amulets
+    Class "Amulet"
+    Rarity = Normal
+    ItemLevel >= 75
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Jewelry for regal recipe is present in the Leveling Filter.                   #
+Hide # Leveling Filter - Crafting Items - Normal jewelry <=75 - Rings
+    Class "Ring"
+    Rarity = Normal
+    ItemLevel >= 75
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Jewelry for regal recipe is present in the Leveling Filter.                   #
+Hide # Leveling Filter - Crafting Items - Normal jewelry <=75 - "Rustic Sash" "Leather Belt"
+    Class "Belt"
+    BaseType "Rustic Sash" "Leather Belt"
+    Rarity = Normal
+    ItemLevel >= 75
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Jewelry for chaos recipe is present in the Leveling Filter.                   #
+Hide # Leveling Filter - Crafting Items - normal jewelry ilvl 64+ - Amulets
+    Class "Amulet"
+    Rarity = Normal
+    ItemLevel >= 64
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Jewelry for chaos recipe is present in the Leveling Filter.                   #
+Hide # Leveling Filter - Crafting Items - normal jewelry ilvl 64+ - Rings
+    Class "Ring"
+    Rarity = Normal
+    ItemLevel >= 64
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Jewelry for chaos recipe is present in the Leveling Filter.                   #
+Hide # Leveling Filter - Crafting Items - normal jewelry ilvl 64+ - "Rustic Sash" "Leather Belt"
+    Class "Belt"
+    BaseType "Rustic Sash" "Leather Belt"
+    Rarity = Normal
+    ItemLevel >= 64
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Section: #   CRAFTING BASES - TOP ITEMS
+
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Weapon crafting bases
+    BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" "Ambusher" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand"
+    Rarity = Magic
+    ItemLevel >= 83
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Weapon crafting bases
+    BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" "Ambusher" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand"
+    Rarity = Normal
+    ItemLevel >= 83
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Armour crafting bases
+    BaseType "Assassin's Garb" "Astral Plate" "Vaal Regalia" "Slink Boots" "Titan Greaves" "Sorcerer Boots" "Titan Gauntlets" "Sorcerer Gloves" "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Titanium Spirit Shield"
+    Rarity = Magic
+    ItemLevel >= 84
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Armour crafting bases
+    BaseType "Assassin's Garb" "Astral Plate" "Vaal Regalia" "Slink Boots" "Titan Greaves" "Sorcerer Boots" "Titan Gauntlets" "Sorcerer Gloves" "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Titanium Spirit Shield"
+    Rarity = Normal
+    ItemLevel >= 84
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+    PlayAlertSound 2 80
+
+# Section: #   MAGIC IDENTIFIED ITEMS (WARBANDS)
+
+# Warband filter. Any identified - non corrupted - non top magic item.          #
+Hide # Leveling Filter - identified magic "Warbands" items - Mutewind
+    Identified True
+    Corrupted False
+    Class "Boots"
+    Rarity = Magic
+    SetTextColor 0 200 255 # identified magic items text
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetBorderColor 74 230 58 # Boots border color
+    SetFontSize 23
+
+# Warband filter. Any identified - non corrupted - non top magic item.          #
+Hide # Leveling Filter - identified magic "Warbands" items - Brinerot
+    Identified True
+    Corrupted False
+    Class "Gloves"
+    Rarity = Magic
+    SetTextColor 0 200 255 # identified magic items text
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetBorderColor 0 200 255 # Gloves border color
+    SetFontSize 23
+
+# Warband filter. Any identified - non corrupted - non top magic item.          #
+Hide # Leveling Filter - identified magic "Warbands" items - Redblade
+    Identified True
+    Corrupted False
+    Class "Helm"
+    Rarity = Magic
+    SetTextColor 0 200 255 # identified magic items text
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetBorderColor 215 25 0 # Helmets border color
+    SetFontSize 23
+
+# Warband filter. Any identified - non corrupted - non top magic item.          #
+Hide # Leveling Filter - identified magic "Warbands" items - Renegade
+    Identified True
+    Corrupted False
+    Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
+    Rarity = Magic
+    SetTextColor 0 200 255 # identified magic items text
+    SetBackgroundColor 0 0 0 140 # Lesser items
+    SetFontSize 23
+
+# Section: #   VENDOR RECIPE ITEMS - RGB ITEMS <= MAGIC
+
+Hide # Endgame Filter (DISABLE FOR MF) - RGB items - Height <= 2
+    SocketGroup "RGB"
+    Height <= 2
+    Rarity <= Magic
+    SetBackgroundColor 75 75 75 # Chromatic background
+    SetBorderColor 255 45 175 # T2 drops color
+
+Show # Endgame Filter (DISABLE FOR MF) - RGB items - Width = 1
+    SocketGroup "RGB"
+    Width = 1
+    Rarity <= Magic
+    SetBackgroundColor 75 75 75 # Chromatic background
+    SetBorderColor 255 45 175 # T2 drops color
+
+# Big RGB items are shown only till item level 67.                              #
+Hide # Leveling Filter - Big RGB items ItemLevel <= 67
+    SocketGroup "RGB"
+    Rarity <= Magic
+    ItemLevel <= 67
+    SetBackgroundColor 75 75 75 # Chromatic background
+    SetBorderColor 255 45 175 # T2 drops color
+
+# Section: #   CRAFTING BASES - WEAPONS
+
+Hide # Leveling Filter - Crafting Items - ItemLevel 83+ Sai dagger.
+    Class "Dagger"
+    BaseType "Sai"
+    Rarity <= Magic
+    ItemLevel >= 83
+    SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 73+ weapon crafting bases - Normal
+    BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" "Ambusher" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand"
+    Rarity = Normal
+    ItemLevel >= 73
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 73+ weapon crafting bases - Normal
+    Class "Dagger"
+    BaseType "Sai"
+    Rarity = Normal
+    ItemLevel >= 73
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 76+ imbued wands - Normal
+    BaseType "Imbued Wand"
+    Rarity = Normal
+    ItemLevel >= 76
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 73+ weapon crafting bases - Magic
+    BaseType "Harbinger Bow" "Maraketh Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Runic Hatchet" "Imperial Staff" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Profane Wand"
+    Rarity = Magic
+    ItemLevel >= 73
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 73+ weapon crafting bases - Magic
+    Class "Dagger"
+    BaseType "Sai"
+    Rarity = Magic
+    ItemLevel >= 73
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 76+ imbued wands - Magic
+    BaseType "Imbued Wand"
+    Rarity = Magic
+    ItemLevel >= 76
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - Bows for +3 crafting 64+ - Normal
+    BaseType "Short Bow" "Grove Bow" "Thicket Bow"
+    Rarity = Normal
+    ItemLevel >= 64
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - Bows for +3 crafting 64+ - Magic
+    BaseType "Short Bow" "Grove Bow" "Thicket Bow"
+    Rarity = Magic
+    ItemLevel >= 64
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - staves for +3 crafting 55+ - Normal
+    BaseType "Maelström Staff"
+    Rarity = Normal
+    ItemLevel >= 55
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - staves for +3 crafting 55+ - Magic
+    BaseType "Maelström Staff"
+    Rarity = Magic
+    ItemLevel >= 55
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - Quivers
+    BaseType "Two-Point Arrow Quiver" "Fire Arrow Quiver" "Broadhead Arrow Quiver" "Spike-Point Arrow Quiver"
+    Rarity <= Magic
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 59+ Daggers
+    BaseType "Platinum Kris" "Golden Kris" "Copper Kris"
+    Rarity <= Magic
+    ItemLevel >= 59
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Section: #   CRAFTING BASES - ARMOUR
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Armour
+    BaseType "Assassin's Garb" "Astral Plate" "Vaal Regalia"
+    Rarity = Normal
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Boots
+    BaseType "Slink Boots" "Titan Greaves" "Sorcerer Boots"
+    Rarity = Normal
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Gloves
+    BaseType "Slink Gloves" "Titan Gauntlets" "Sorcerer Gloves"
+    Rarity = Normal
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Helmets
+    BaseType "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Nightmare Bascinet" "Royal Burgonet"
+    Rarity = Normal
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Shields
+    BaseType "Titanium Spirit Shield"
+    Rarity = Normal
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Armour
+    BaseType "Assassin's Garb" "Astral Plate" "Vaal Regalia"
+    Rarity = Magic
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Boots
+    BaseType "Slink Boots" "Titan Greaves" "Sorcerer Boots"
+    Rarity = Magic
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Gloves
+    BaseType "Slink Gloves" "Titan Gauntlets" "Sorcerer Gloves"
+    Rarity = Magic
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Helmets
+    BaseType "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Nightmare Bascinet" "Royal Burgonet"
+    Rarity = Magic
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Hide # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Shields
+    BaseType "Titanium Spirit Shield"
+    Rarity = Magic
+    ItemLevel >= 72
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Section: #   HIDDEN ITEMS
+
+# Identify RGB items when "Alt" key is pressed. Present in the Leveling Filter. #
+Hide # Leveling Filter - Big RGB items
+    SocketGroup "RGB"
+    SetBackgroundColor 75 75 75 # Chromatic background
+    SetBorderColor 255 45 175 # T2 drops color
+
+# Present in the Leveling Filter. Blacksmith's Whetstone recipe.                #
+Hide # Leveling Filter - 20% quality weapons
+    Quality = 20
+    Class "One Hand" "Two Hand"
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Filtering starts at level 1. Normal items that are not Caught get filtered.   #
+Hide
+    Rarity = Normal
+    SetTextColor 200 200 200 155
+    SetBackgroundColor 0 0 0 55 # Uber trash
+    SetFontSize 23
+
+# Filtering starts at level 1. Magic items that are not Caught get filtered.    #
+Hide
+    Rarity = Magic
+    SetTextColor 136 136 255 155
+    SetBackgroundColor 0 0 0 55 # Uber trash
+    SetFontSize 23
+
+# Filtering starts at level 1. Magic items that are not Caught get filtered.    #
+Hide
+    Rarity = Rare
+    ItemLevel >= 1
+    SetTextColor 255 255 119
+    SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Filtering starts at level 1. Flasks that are not Caught get filtered.         #
+Hide
+    Class "Flask"
+    Rarity <= Magic
+
+# Section: #   ANYTHING ELSE
+
+# If you see this it means that the loot filter is out of date or broken. Should never happen.
+Show # ON RECOMMENDED - Just in case anything falls trough warning highlight
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 45 175 # T2 drops color
+    SetBorderColor 255 45 175 # T2 drops color
+    SetFontSize 45
+

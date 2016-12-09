@@ -24,22 +24,25 @@ The other options regarding themes are self explanatory.
 
 ## THEME SAMPLES
 
-**Amethyst**
+**Amethyst** - Purple shades.
 
 ![Imgur](http://i.imgur.com/6Mccuuy.jpg)
 
-**Bloodstone**
+**Bloodstone** - Performs great.
 
 ![Imgur](http://i.imgur.com/f1altgo.jpg)
 
-**Jade**
+**Jade** - Classy and easy on the eyes.
 
 ![Imgur](http://i.imgur.com/fGwPcde.jpg)
 
-**Zoisite (Default)**
+**Zoisite (Default)** - Performs the best.
 
 ![Imgur](http://i.imgur.com/tnMqJRi.jpg)
 
+**Game like** - This theme uses colors similar to the game originals.
+
+![Imgur](http://i.imgur.com/Y0dwGPV.jpg)
 
 ## FILTRATION HIGHLIGTS:
 - "Section Browser" makes it easy to navigate trough the filter.
