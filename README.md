@@ -35,6 +35,9 @@ Detailed information is available on the [Official forum thread](https://www.pat
 
 - **Download the Zip file [here](https://github.com/Greengroove/GG-LootFilter/releases).**
 - Copy the filter file/s to "system drive":\Users\"Your username"\My Documents\My Games\Path of Exile
+
+You can also access this folder from the game's UI options. On the very bottom see the button "Show folder" If you click that, the folder will open in a new window.
+
 - In game go to Options > UI > List of Item Filters.
 - Press reload if your filter is not present.
 - Select filter; If the status message says „Item Filter loaded successfully“ you are done. If you get an error message there must be an error in the filter on the line described by the error message.

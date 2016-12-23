@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.5.0f
+
+- From this version on, the "default" versions will use a fixed name for better integration with GIT. Note that in the future releases I may release some additional non "standard" versions depending on meta and or personal preference. These versions may be specific for a challenge league and not permanent.
+- Added ability to toggle low level maps in high level maps (Endgame Filter block).
+- Added ability to toggle rare wands DropLevel <= 44 and moved this block to a new section (Endgame Filter block). Also fixed minor issue with this blocks where DropLevel and ItemLevel were inverted.
+- Added ability to toggle lower base rare daggers (Endgame Filter block).
+- Added ability to toggle rare body armour (ItemLevel <= 63) in the leveling block.
+- Magic jewels can now be hidden in yellow and red maps (T6 and higher). Previously this only affected jewels in red maps.
+- Improved, renamed and fixed many labels in the block group browser.
+- Moved Crude bow (Essence crafting) to the leveling block.
+- Slightly reworked the "Quivers for racing" block.
+- Removed reddundant entry for quivers and daggers in the leveling block. Note that the bases "Golden Kris" and "Copper Kris" will not show if Normal or Magic after item level 63. The switch for these is in: Racing Filter > Normal Races > Caster Items  > Dagger.
+
 ## 2.5.0e
 
 - Added exclusion for Normal and Magic Coral Amulet at level >= 72. Some other bases were already excluded.
@@ -14,7 +27,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 ## 2.5.0d
 
 - Added a game like color theme.
-- Added ability to togle wisdom scrolls and portal scrols separately.
+- Added ability to toggle wisdom scrolls and portal scrolls separately.
 - Removed a redundant entry in the jewelry racing block. Added Paua Amulet, Amethyst and Unset Ring to exclusions. These bases will not be displayed. Added ability to toggle other magic and normal jewelry.
 - Separated Life, mana and Hybrid flask progression and added ability to toggle blocks.
 - Slightly modified hierarchy in the Flask block.
