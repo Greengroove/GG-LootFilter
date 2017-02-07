@@ -6,13 +6,13 @@
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>238</R>
-        <G>130</G>
-        <B>238</B>
+        <R>74</R>
+        <G>230</G>
+        <B>58</B>
         <ScA>1</ScA>
-        <ScR>0.8549926</ScR>
-        <ScG>0.223227963</ScG>
-        <ScB>0.8549926</ScB>
+        <ScR>0.06847817</ScR>
+        <ScG>0.7912979</ScG>
+        <ScB>0.04231141</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -20,13 +20,13 @@
       <ComponentType>BorderColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>238</R>
-        <G>130</G>
-        <B>238</B>
+        <R>74</R>
+        <G>230</G>
+        <B>58</B>
         <ScA>1</ScA>
-        <ScR>0.8549926</ScR>
-        <ScG>0.223227963</ScG>
-        <ScB>0.8549926</ScB>
+        <ScR>0.06847817</ScR>
+        <ScG>0.7912979</ScG>
+        <ScB>0.04231141</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -34,13 +34,13 @@
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>238</R>
-        <G>130</G>
-        <B>238</B>
+        <R>74</R>
+        <G>230</G>
+        <B>58</B>
         <ScA>1</ScA>
-        <ScR>0.8549926</ScR>
-        <ScG>0.223227963</ScG>
-        <ScB>0.8549926</ScB>
+        <ScR>0.06847817</ScR>
+        <ScG>0.7912979</ScG>
+        <ScB>0.04231141</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -48,13 +48,27 @@
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>160</R>
-        <G>32</G>
-        <B>240</B>
+        <R>215</R>
+        <G>25</G>
+        <B>0</B>
         <ScA>1</ScA>
-        <ScR>0.3515326</ScR>
-        <ScG>0.0144438436</ScG>
-        <ScB>0.8713671</ScB>
+        <ScR>0.6795425</ScR>
+        <ScG>0.009721218</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
+      <ComponentName>Map Background Color</ComponentName>
+      <ComponentType>BackgroundColor</ComponentType>
+      <Color>
+        <A>255</A>
+        <R>44</R>
+        <G>44</G>
+        <B>44</B>
+        <ScA>1</ScA>
+        <ScR>0.02518686</ScR>
+        <ScG>0.02518686</ScG>
+        <ScB>0.02518686</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -86,20 +100,6 @@
       </Color>
     </ThemeComponent>
     <ThemeComponent>
-      <ComponentName>Map Background Color</ComponentName>
-      <ComponentType>BackgroundColor</ComponentType>
-      <Color>
-        <A>255</A>
-        <R>44</R>
-        <G>44</G>
-        <B>44</B>
-        <ScA>1</ScA>
-        <ScR>0.02518686</ScR>
-        <ScG>0.02518686</ScG>
-        <ScB>0.02518686</ScB>
-      </Color>
-    </ThemeComponent>
-    <ThemeComponent>
       <ComponentName>Unique items color</ComponentName>
       <ComponentType>BorderColor</ComponentType>
       <Color>
@@ -118,13 +118,13 @@
       <ComponentType>BorderColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>160</R>
-        <G>32</G>
-        <B>240</B>
+        <R>215</R>
+        <G>25</G>
+        <B>0</B>
         <ScA>1</ScA>
-        <ScR>0.3515326</ScR>
-        <ScG>0.0144438436</ScG>
-        <ScB>0.8713671</ScB>
+        <ScR>0.6795425</ScR>
+        <ScG>0.009721218</ScG>
+        <ScB>0</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -174,13 +174,41 @@
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>215</R>
-        <G>25</G>
+        <R>255</R>
+        <G>199</G>
+        <B>119</B>
+        <ScA>1</ScA>
+        <ScR>1</ScR>
+        <ScG>0.571124852</ScG>
+        <ScB>0.18447499</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
+      <ComponentName>Animate weapon text</ComponentName>
+      <ComponentType>TextColor</ComponentType>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
         <B>0</B>
         <ScA>1</ScA>
-        <ScR>0.6795425</ScR>
-        <ScG>0.009721218</ScG>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
         <ScB>0</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
+      <ComponentName>Animate weapon items</ComponentName>
+      <ComponentType>BackgroundColor</ComponentType>
+      <Color>
+        <A>155</A>
+        <R>0</R>
+        <G>200</G>
+        <B>255</B>
+        <ScA>0.607843161</ScA>
+        <ScR>0</ScR>
+        <ScG>0.577580452</ScG>
+        <ScB>1</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -195,20 +223,6 @@
         <ScR>0</ScR>
         <ScG>0.577580452</ScG>
         <ScB>1</ScB>
-      </Color>
-    </ThemeComponent>
-    <ThemeComponent>
-      <ComponentName>Uber trash</ComponentName>
-      <ComponentType>BackgroundColor</ComponentType>
-      <Color>
-        <A>0</A>
-        <R>0</R>
-        <G>0</G>
-        <B>0</B>
-        <ScA>0</ScA>
-        <ScR>0</ScR>
-        <ScG>0</ScG>
-        <ScB>0</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -254,17 +268,31 @@
       </Color>
     </ThemeComponent>
     <ThemeComponent>
+      <ComponentName>Uber trash</ComponentName>
+      <ComponentType>BackgroundColor</ComponentType>
+      <Color>
+        <A>0</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>0</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
       <ComponentName>T2 drops color</ComponentName>
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>160</R>
-        <G>32</G>
-        <B>240</B>
+        <R>215</R>
+        <G>25</G>
+        <B>0</B>
         <ScA>1</ScA>
-        <ScR>0.3515326</ScR>
-        <ScG>0.0144438436</ScG>
-        <ScB>0.8713671</ScB>
+        <ScR>0.6795425</ScR>
+        <ScG>0.009721218</ScG>
+        <ScB>0</ScB>
       </Color>
     </ThemeComponent>
   </Components>

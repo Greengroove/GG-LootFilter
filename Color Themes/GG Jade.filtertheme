@@ -48,13 +48,27 @@
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>255</R>
-        <G>45</G>
-        <B>175</B>
+        <R>27</R>
+        <G>162</G>
+        <B>155</B>
         <ScA>1</ScA>
-        <ScR>1</ScR>
-        <ScG>0.0262412224</ScG>
-        <ScB>0.4286905</ScB>
+        <ScR>0.0109600937</ScR>
+        <ScG>0.3613068</ScG>
+        <ScB>0.3277781</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
+      <ComponentName>Map Background Color</ComponentName>
+      <ComponentType>BackgroundColor</ComponentType>
+      <Color>
+        <A>255</A>
+        <R>44</R>
+        <G>44</G>
+        <B>44</B>
+        <ScA>1</ScA>
+        <ScR>0.02518686</ScR>
+        <ScG>0.02518686</ScG>
+        <ScB>0.02518686</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -100,31 +114,17 @@
       </Color>
     </ThemeComponent>
     <ThemeComponent>
-      <ComponentName>Map Background Color</ComponentName>
-      <ComponentType>BackgroundColor</ComponentType>
-      <Color>
-        <A>255</A>
-        <R>44</R>
-        <G>44</G>
-        <B>44</B>
-        <ScA>1</ScA>
-        <ScR>0.02518686</ScR>
-        <ScG>0.02518686</ScG>
-        <ScB>0.02518686</ScB>
-      </Color>
-    </ThemeComponent>
-    <ThemeComponent>
       <ComponentName>T2 drops color</ComponentName>
       <ComponentType>BorderColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>255</R>
-        <G>45</G>
-        <B>175</B>
+        <R>27</R>
+        <G>162</G>
+        <B>155</B>
         <ScA>1</ScA>
-        <ScR>1</ScR>
-        <ScG>0.0262412224</ScG>
-        <ScB>0.4286905</ScB>
+        <ScR>0.0109600937</ScR>
+        <ScG>0.3613068</ScG>
+        <ScB>0.3277781</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -184,6 +184,34 @@
       </Color>
     </ThemeComponent>
     <ThemeComponent>
+      <ComponentName>Animate weapon text</ComponentName>
+      <ComponentType>TextColor</ComponentType>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
+      <ComponentName>Animate weapon items</ComponentName>
+      <ComponentType>BackgroundColor</ComponentType>
+      <Color>
+        <A>155</A>
+        <R>0</R>
+        <G>200</G>
+        <B>255</B>
+        <ScA>0.607843161</ScA>
+        <ScR>0</ScR>
+        <ScG>0.577580452</ScG>
+        <ScB>1</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
       <ComponentName>identified magic items text</ComponentName>
       <ComponentType>TextColor</ComponentType>
       <Color>
@@ -195,20 +223,6 @@
         <ScR>0</ScR>
         <ScG>0.577580452</ScG>
         <ScB>1</ScB>
-      </Color>
-    </ThemeComponent>
-    <ThemeComponent>
-      <ComponentName>Uber trash</ComponentName>
-      <ComponentType>BackgroundColor</ComponentType>
-      <Color>
-        <A>55</A>
-        <R>0</R>
-        <G>0</G>
-        <B>0</B>
-        <ScA>0.215686277</ScA>
-        <ScR>0</ScR>
-        <ScG>0</ScG>
-        <ScB>0</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -254,17 +268,31 @@
       </Color>
     </ThemeComponent>
     <ThemeComponent>
+      <ComponentName>Uber trash</ComponentName>
+      <ComponentType>BackgroundColor</ComponentType>
+      <Color>
+        <A>55</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>0.215686277</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
       <ComponentName>T2 drops color</ComponentName>
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>255</R>
-        <G>45</G>
-        <B>175</B>
+        <R>27</R>
+        <G>162</G>
+        <B>155</B>
         <ScA>1</ScA>
-        <ScR>1</ScR>
-        <ScG>0.0262412224</ScG>
-        <ScB>0.4286905</ScB>
+        <ScR>0.0109600937</ScR>
+        <ScG>0.3613068</ScG>
+        <ScB>0.3277781</ScB>
       </Color>
     </ThemeComponent>
   </Components>

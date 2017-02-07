@@ -4,9 +4,27 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.5.2d
+
+- **Added advanced syntax (|Comment) to 320 entries in the racing block.** This is only a partial implementation. Full implementation to be completed when Filtration gets updated to support the advanced syntax.
+- Revamped and improved customization for top crafting bases.
+- Added toggle switches and advanced syntax (|Comment) to some jewelry in the racing block.
+- Added ability to toggle Transmutation, Augmentation orbs.
+- **Added Animate Weapon support.**
+- **Renamed some entries related to Top base items. You can now search for "Top base" in Notepad to edit the lists of top base items.**
+
+## 2.5.1
+
+- Separated Armourer's Scrap, Whetstones and Baubles to separate entries.
+- Enhanced display of normal corrupted jewelry, to better distinguish them from the other corrupted drops.
+- removed the divination cards "The Lion" and "A Mother's Parting Gift" from the bad card list.
+- The crude bow for Essence crafting is now hidden by default in the endgame version.
+- Added ability to hide all quality flasks and slightly improved the order of entries. Added advanced syntax for utility flasks.
+- Fixed a minor error in smart blocks for Breach related items.
+
 ## 2.5.0f
 
-- From this version on, the "default" versions will use a fixed name for better integration with GIT. Note that in the future releases I may release some additional non "standard" versions depending on meta and or personal preference. These versions may be specific for a challenge league and not permanent.
+- **From this version on, the "default" versions will use a fixed name for better integration with GIT.** Note that in the future releases I may release some additional non "standard" versions depending on meta and or personal preference. These versions may be specific for a challenge league and not permanent.
 - Added ability to toggle low level maps in high level maps (Endgame Filter block).
 - Added ability to toggle rare wands DropLevel <= 44 and moved this block to a new section (Endgame Filter block). Also fixed minor issue with this blocks where DropLevel and ItemLevel were inverted.
 - Added ability to toggle lower base rare daggers (Endgame Filter block).
@@ -178,7 +196,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Implemented a MF filter block (optional). Hide ilvl 75+ normal jewelry (and only show ilvl83+/84+). This doesn't affect Diamond rings.
 - Added ability to hide even more rare items that are not top bases. All chromatic items can also be hidden. Furthermore these are customizable with filtration blocks. This setting is to be used if MF or if you really don't want to pick up bigger items such as staves etc.
 - The items that make it to the end of the filter (trash of the trash) will now barely be seen. Thus enhancing the option to view hidden items.
-- Temporary extended normal crafting items from the leveling filter to the endgame filter. Updated list of items and added ability to hide magic crafting bases.
+- Extended normal crafting items from the leveling filter to the endgame filter. Updated list of items and added ability to hide magic crafting bases.
 - Removed some old useless annotations.
 - Changed encoding to UTF-8 BOM.
 - Updated the tittle and settings sections.
