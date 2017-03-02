@@ -4,6 +4,74 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.6.0b
+
+- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/) instead.**
+- **A total of 491 entries currently use the "|Comment" syntax for better performance.**
+- The filter will now be automatically updated on Filterblast whenever a new release is available.
+- Updated Legacy challenge league items according to GGG's informations. 
+- Added anotations to top level branches.
+- Added ability to hide chancing items.
+- Changed the section "VENDOR RECIPE ITEMS - RGB ITEMS <= MAGIC" to "VENDOR RECIPE ITEMS - RGB ITEMS" and enhanced both RGB sections.
+- Updated the "JEWELS" section.
+- Added class "Amulet" to Talismans and added ability to hide them.
+
+## 2.6.0a
+
+- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/) instead.**
+- **A total of 479 entries currently use the "|Comment" syntax for better performance.**
+- The "Sai" dagger is now included in the crafting weapons list. Redundant entries have been removed.
+- Added ability to hide magic items from 2.4 release (Bone Helmet, Fingerless Silk Gloves, Gripped Gloves, Spiked Gloves, Two-Toned Boots) if ItemLevel <= 83.
+- Added sound for all remaining 3 linked racing caster items.
+- Removed 2 redundant entries for "Imbued Wand".
+- Removed the redundant old Warbands filter.
+- Minor change to order of some blocks and 2 sections.
+- Minor update to quivers for racing and some other improvements to the most useless part of the filter. The Endgame racing block.
+
+## 2.6.0
+
+
+- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/) instead.**
+- **Added all Legacy challenge league items.**
+- Removed "Chiming Spirit Shield" and "Ivory Spirit Shield" from the top caster shield list and created a new block in the endgame branch.
+- Added ability to hide rare RGB items in the endgame branch.
+- Added ability to hide all magic jewels.
+- Made the worst rare items slightly smaller and more transparent.
+- Enhanced the animate weapon block.
+- Expanded the shield section in the racing filter.
+- Re evaluated  and changed the order of the lists in the advanced options, for easier customization.
+- Removed redundant warning sign for the caster racing items.
+
+## 2.5.2h
+
+- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/) instead.**
+- **Added "|Comment" to many entries in the rare items progressions (leveling rares). A total of 460 entries currently use the syntax.**
+- Maps up to (and including) T8 are now hidden by default in the MF filter.
+- Added ability to hide Gems with quality lower than 15. The switch is in the "ON RECOMMENDED" block.
+- Some minor changes to descriptions and fixed a bug with endgame racing daggers.
+
+## 2.5.2g
+
+- **Added advanced options for Filterblast users. You can now edit some of the base type lists and socket colors for racing caster items.**
+- **Added "|Comment" to many entries. A total of 403 entries currently use the syntax. This can potentially improve performance drastically.**
+- Added ability to hide yellow maps up to T10 in "ON RECOMMENDED" block.
+- Fixed Animate weapons entries to show up in the "Extras" smart block like intended.
+- Separated Scepters, daggers and wands in the racing filter.
+- Removed some redundant annotations and unused attributes.
+- Sai dagger for crafting was moved back to the endgame filter.
+- Separated Vaal gems from other useful and drop only gems. Added ability to hide these blocks. The switch is in the endgame block.
+- Added ability to hide Gems with quality lower than 8. The switch is in the endgame block.
+- Added ability to hide all non top wands in the endgame block.
+
+## 2.5.2e
+
+- **Added advanced option text fields for chance items.**
+- Separated magic and normal corrupted items.
+- Added ability to hide DropLevel >= 47 daggers. This way you only see the top base daggers. This switch is currently in the endgame block.
+- Added ability to hide Gems with quality lower than 14. The switch is in the "ON RECOMMENDED" block.
+- Added ability to hide alteration, chance, chromatic and Jeweller's Orb as well as some generic currency blocks. The switches are in the "ON RECOMMENDED" block.
+- Added ability to hide non top base rare belts. The switches are in the "endgame" block.
+
 ## 2.5.2d
 
 - **Added advanced syntax (|Comment) to 320 entries in the racing block.** This is only a partial implementation. Full implementation to be completed when Filtration gets updated to support the advanced syntax.
@@ -33,7 +101,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Improved, renamed and fixed many labels in the block group browser.
 - Moved Crude bow (Essence crafting) to the leveling block.
 - Slightly reworked the "Quivers for racing" block.
-- Removed reddundant entry for quivers and daggers in the leveling block. Note that the bases "Golden Kris" and "Copper Kris" will not show if Normal or Magic after item level 63. The switch for these is in: Racing Filter > Normal Races > Caster Items  > Dagger.
+- Removed redundant entry for quivers and daggers in the leveling block. Note that the bases "Golden Kris" and "Copper Kris" will not show if Normal or Magic after item level 63. The switch for these is in: Racing Filter > Normal Races > Caster Items  > Dagger.
 
 ## 2.5.0e
 
@@ -79,7 +147,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 ## 2.4.8
 
 - Added announced items for Path of Exile 2.5 Breach.
-- Moved the Essence blok above the Currency block.
+- Moved the Essence block above the Currency block.
 - Renamed section "ALL 2.4 NEW BASES"
 
 ## 2.4.3b
@@ -92,7 +160,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Changed highlighting for some mediocre hybrid items. These items can now be hidden with the MF block.
 - Added Bone Spirit Shield as extra for the "Of animation flask" recipe. The flask is then used to make a +1 to Level of Minion Gems helmet.
 - Added Hideout Doodads & Microtransactions just in case.
-- Some minor changes to the 83/84+ crafting base blocks. Added normal jewlry and weapon crafting bases to the MF block.
+- Some minor changes to the 83/84+ crafting base blocks. Added normal jewelry and weapon crafting bases to the MF block.
 - Removed unnecessary white spaces, hash tags and 2 sections.
 
 ## 2.4.2b

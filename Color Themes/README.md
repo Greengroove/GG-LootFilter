@@ -8,7 +8,7 @@
 |
 [Donations](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC)**
 
-Check the video tutorial about customization on [Youtube](https://youtu.be/oDu5NT5qdxU). More information also available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921).
+Check the video tutorials on [Youtube](https://www.youtube.com/watch?v=gP0_bVXU_jw&list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x). More information also available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921).
 
 ## INSTALL, USE AND EDIT THEMES:
 

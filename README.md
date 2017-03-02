@@ -10,6 +10,8 @@
 |
 [Donations](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC)**
 
+- Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/advanced/Greengroove/). **FILTRATION IS NO LONGER SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
+
 A general recommendation is to only use the leveling filter for races, start of a challenge league or when you level a new character. When you play with a fully geared character the Endgame filter will be much better. If you have a reasonable amount of magic find you can use the MF filter.
 
 - **Leveling filter** is good for the start of the league, first leveling in a new league and Racing. It includes the racing filter and all the way to level 100. Shows a lot of items. **Customization is encouraged.**
@@ -48,21 +50,10 @@ Downloading the files is always the best choice. But **If you copy and paste the
 
 ## CUSTOMIZATION:
 
-- Fully compatible with Filtration. 
+- Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/advanced/Greengroove/). **FILTRATION IS NO LONGER SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
 - Customization also possible with Notepad (or similar) with find and replace function.
-- Filter comes with 4 different color themes
+- Filter comes with 5 different color themes
 
 
 
-Check the video tutorial on [Youtube](https://youtu.be/oDu5NT5qdxU). More information also available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921).
-
-
-
-## FILTRATION HIGHLIGTS:
-- "Section Browser" makes it easy to navigate trough the filter.
-- Use "Block Group Browser" to easily enable or disable parts (blocks) of the filter.
-- Create, Edit and use the provided color themes.
-
-**Get [Filtration](https://github.com/ben-wallis/Filtration/releases).**
-
-![Image](http://i.imgur.com/1KeRa4b.png)
+Check the video tutorials on [Youtube](https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x). More information also available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921).

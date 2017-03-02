@@ -1,10 +1,10 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 2.6.0b
+#               Greengroove's Endgame Loot Filter Script v 2.5.2h
 #
 #-------------------------------------------------------------------------------#
 #
-#               Updated for Atlas of Worlds (Legacy) 2.6.x
+#               Updated for Atlas of Worlds 2.5.x
 #
 #
 #           
@@ -43,18 +43,19 @@
 #
 #-------------------------------------------------------------------------------#
 #
-#   > Content:
+#   Content:
 #
 #   SETTINGS
 #   NOTES
 #   TO DO
 #
-#   > Filter:
+#
+#
+#   Filter:
 #
 #   QUEST & EXTRA
 #   LABYRINTH
 #   DIVINATION CARDS
-#   LEGACY
 #   BREACH
 #   ESSENCE
 #   CURRENCY
@@ -64,7 +65,7 @@
 #   TALISMAN
 #   UNIQUE / OTHER ITEMS
 #   CHANCE ITEMS
-#   ALL 2.4 AND HIGHER BASES
+#   ALL 2.4 AND HIGHER NEW BASES
 #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE
 #   VENDOR RECIPE ITEMS - CHISEL RECIPE
 #   RARE ITEMS - JEWELRY
@@ -91,10 +92,10 @@
 #   <= MAGIC CORRUPTED ITEMS
 #   CRAFTING BASES - JEWELRY
 #   CRAFTING BASES - TOP ITEMS - WEAPONS
-#   CRAFTING BASES - TOP ITEMS - ARMOUR - NORMAL
 #   CRAFTING BASES - TOP ITEMS - ARMOUR - MAGIC
+#   CRAFTING BASES - TOP ITEMS - ARMOUR - NORMAL
 #   MAGIC IDENTIFIED ITEMS (WARBANDS)
-#   VENDOR RECIPE ITEMS - RGB ITEMS
+#   VENDOR RECIPE ITEMS - RGB ITEMS <= MAGIC
 #   CRAFTING BASES - WEAPONS
 #   CRAFTING BASES - ARMOUR
 #   RACING - ARMOUR - CHEST
@@ -133,6 +134,7 @@
 #   RACING - BOW - MAGIC
 #   RACING - QUIVER
 #   EXTRAS
+#   LEGACY WARBANDS FILTER
 #   HIDDEN ITEMS
 #   ANYTHING ELSE
 #
@@ -206,6 +208,11 @@
 #       Turn off Endgame racing bases:  "Hide # Racing Filter - Endgame"
 #       Turn on Endgame racing bases:   "Hide # Racing Filter - Endgame"
 #
+#       Turn off legacy Warbands filter:       "Hide # Warbands filter"
+#       Turn on legacy Warbands filter:        "Show # Warbands filter"
+#
+#   * Both Endgame racing bases and the Warbands filter are recommended to stay disabled.
+#
 #-------------------------------------------------------------------------------#
 #
 #   > ADVANCED OPTIONS
@@ -261,7 +268,7 @@ Show
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 
 # Hideout Doodads & Microtransactions
-Show  # ON RECOMMENDED - Extras - Hideout Doodads & Microtransactions |Comment
+Show  # ON RECOMMENDED - Extras - Hideout Doodads & Microtransactions
 	Class "Hideout Doodads" Microtransactions
 	SetFontSize 45
 	SetTextColor 0 0 0
@@ -305,7 +312,7 @@ Show
 	PlayAlertSound 7 200
 
 # The divination cards that you don't want to drop with sound in endgame.       #
-Show  # Leveling Filter (Enable for leveling and races) - Bad divination cards
+Show  # Leveling Filter - Bad divination cards
 	Class Divination
 	BaseType "The Carrion Crow" "The King's Blade" Death "Light and Truth" "The Lunaris Priestess" "The Scarred Meadow" "Thunderous Skies" "Turn the Other Cheek" "The Wolf's Shadow" "Lantador's Lost Love" "The Oath"
 	SetFontSize 45
@@ -317,46 +324,6 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 4 120
-
-#-------------------------------------------------------------------------------#
-# Section:  #   LEGACY
-#-------------------------------------------------------------------------------#
-
-Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Rare |Comment
-	Class Leaguestone
-	Rarity = Rare
-	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
-	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 200
-
-Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Magic |Comment
-	Class Leaguestone
-	Rarity = Magic
-	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
-	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 200
-
-Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Normal |Comment
-	Class Leaguestone
-	Rarity = Normal
-	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
-	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 200
-
-Show
-	Class "Misc Map Items"
-	BaseType "Ancient Reliquary"
-	SetFontSize 45
-	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280
 
 #-------------------------------------------------------------------------------#
 # Section:  #   BREACH
@@ -378,8 +345,7 @@ Show  # ON RECOMMENDED - Extras - Breach items - Blessing
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 7 200
 
-Show  # ON RECOMMENDED - Extras - Breach items - Breachstone |Comment
-	Class "Misc Map Items"
+Show  # ON RECOMMENDED - Extras - Breach items - Breachstone
 	BaseType Breachstone
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
@@ -403,29 +369,29 @@ Show
 # Section:  #   CURRENCY
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls
+Show  # Endgame Filter (DISABLE FOR MF) - Low currency - Wisdom Scrolls
 	Class Currency
 	BaseType "Scroll of Wisdom"
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Endgame Filter (Disable for MF) - Low currency - Portal Scrolls
+Show  # Endgame Filter (DISABLE FOR MF) - Low currency - Portal Scrolls
 	Class Currency
 	BaseType "Portal Scroll"
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Endgame Filter (Disable for MF) - Low currency - Armourer's Scrap
+Show  # Endgame Filter (DISABLE FOR MF) - Low currency - Armourer's Scrap
 	Class Currency
 	BaseType "Armourer's Scrap"
 	SetFontSize 45
 
-Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone
+Show  # Endgame Filter (DISABLE FOR MF) - Low currency - Blacksmith's Whetstone
 	Class Currency
 	BaseType "Blacksmith's Whetstone"
 	SetFontSize 45
 
-Show  # Endgame Filter (Disable for MF) - Low currency - Glassblower's Bauble
+Show  # Endgame Filter (DISABLE FOR MF) - Low currency - Glassblower's Bauble
 	Class Currency
 	BaseType "Glassblower's Bauble"
 	SetFontSize 45
@@ -518,14 +484,14 @@ Show
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 8 280
 
-Show  # ON RECOMMENDED - Currency - Perandus Coin |Comment
+Show  # ON RECOMMENDED - Currency - Perandus Coin
 	Class Currency
 	BaseType "Perandus Coin"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 80
 
-Show  # ON RECOMMENDED - Extras - Prophecy items - Sealed Prophecies |Comment
+Show  # ON RECOMMENDED - Extras - Prophecy items - Sealed Prophecies
 	Class Currency
 	BaseType Prophecy
 	SetFontSize 45
@@ -534,13 +500,19 @@ Show  # ON RECOMMENDED - Extras - Prophecy items - Sealed Prophecies |Comment
 	PlayAlertSound 7 200
 
 # Present in the Leveling Filter.                                               #
-Show  # Leveling Filter (Enable for leveling and races) - Alchemy Shard, Alteration Shard, Transmutation Shard / Scroll Fragment |Comment
+Show  # Leveling Filter - Alchemy Shard, Alteration Shard, Transmutation Shard / Scroll Fragment
 	BaseType "Alchemy Shard" "Alteration Shard" "Transmutation Shard" "Scroll Fragment"
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # ON RECOMMENDED - Currency - Generic currency (catch all)
-	Class Currency "Stackable Currency"
+Show  # ON RECOMMENDED - Currency - Stackable Currency
+	Class "Stackable Currency"
 	SetFontSize 45
+
+Show  # ON RECOMMENDED - Currency - Currency (generic) |Comment
+	Class Currency
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 80
 
 #-------------------------------------------------------------------------------#
 # Section:  #   MAPS
@@ -590,7 +562,7 @@ Show  # ON RECOMMENDED - Maps - Yellow T9 |Comment
 	PlayAlertSound 1 140
 
 # Maps DropLevel >= 73 use T3 sound till ItemLevel <= 78                        #
-Show  # Endgame Filter (Disable for MF) - Maps - Yellow T8 and lower |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Maps - Yellow T8 and lower |Comment
 	DropLevel >= 73
 	Class Maps
 	ItemLevel <= 78
@@ -600,14 +572,14 @@ Show  # Endgame Filter (Disable for MF) - Maps - Yellow T8 and lower |Comment
 	PlayAlertSound 1 140
 
 # Low level maps in low level maps.                                             #
-Show  # Endgame Filter (Disable for MF) - Maps - Yellow T8 and lower |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Maps - Yellow T8 and lower |Comment
 	Class Maps
 	ItemLevel <= 76
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	PlayAlertSound 1 140
 
-Show  # Endgame Filter (Disable for MF) - Maps - Yellow T8 and lower |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Maps - Yellow T8 and lower |Comment
 	DropLevel >= 73
 	Class Maps
 	SetFontSize 45
@@ -616,7 +588,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Yellow T8 and lower |Comment
 	PlayAlertSound 2 80
 
 # Low level maps in high level maps.                                            #
-Show  # Endgame Filter (Disable for MF) - Maps - Low level maps in high level maps 
+Show  # Endgame Filter (DISABLE FOR MF) - Maps - Low level maps in high level maps 
 	Class Maps
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
@@ -674,7 +646,7 @@ Show  # ON RECOMMENDED - Gems - Gems (Quality <= 13) |Comment
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 1 140
 
-Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality <= 7) |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Gems - Gems (Quality <= 7) |Comment
 	Quality >= 1
 	Class Gem
 	SetFontSize 45
@@ -683,7 +655,7 @@ Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality <= 7) |Comment
 	PlayAlertSound 2 80
 
 # Gems that could have some value.                                              #
-Show  # Endgame Filter (Disable for MF) - Gems - Useful and drop only gems |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Gems - Useful and drop only gems |Comment
 	Class Gem
 	BaseType "Added Chaos Damage" Multistrike "Less Duration" "Increased Duration" "Blood Magic" "Increased Area of Effect" "Concentrated Effect" "Immortal Call" "Phase Run" "Cast when Damage Taken"
 	SetFontSize 45
@@ -692,7 +664,7 @@ Show  # Endgame Filter (Disable for MF) - Gems - Useful and drop only gems |Comm
 	PlayAlertSound 2 80
 
 # Gems that could have some value.                                              #
-Show  # Endgame Filter (Disable for MF) - Gems - Vaal gems |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Gems - Vaal gems |Comment
 	Class Gem
 	BaseType Vaal
 	SetFontSize 45
@@ -716,23 +688,31 @@ Show  # ON RECOMMENDED - Gems - No quality  - Support gems
 
 Show
 	Class Jewel
+	Rarity = Magic
+	ItemLevel <= 72
+	SetFontSize 45
+	PlayAlertSound 2 80
+
+Show  # Endgame Filter (DISABLE FOR MF) - Jewels (Magic, T6 and above maps)
+	Class Jewel
+	Rarity = Magic
+	SetFontSize 45
+
+Show
+	Class Jewel
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 1 140
 
-Show  # Endgame Filter (Disable for MF) - Jewels - Magic (ItemLevel <= 72) |Comment
+Show
 	Class Jewel
-	Rarity = Magic
-	ItemLevel <= 72
+	Rarity = Unique
 	SetFontSize 45
-	PlayAlertSound 2 80
-
-Show  # Endgame Filter (Disable for MF) - Jewels - Magic (Any)
-	Class Jewel
-	Rarity = Magic
-	SetFontSize 45
+	SetTextColor 175 96 37 # Unique items color
+	SetBorderColor 175 96 37 # Unique items color
+	PlayAlertSound 7 200
 
 Show
 	Class Jewel
@@ -745,8 +725,7 @@ Show
 # Section:  #   TALISMAN
 #-------------------------------------------------------------------------------#
 
-Show  # ON RECOMMENDED - Extras - Talisman - Rare |Comment
-	Class Amulet
+Show
 	BaseType Talisman
 	Rarity = Rare
 	SetFontSize 45
@@ -754,8 +733,7 @@ Show  # ON RECOMMENDED - Extras - Talisman - Rare |Comment
 	SetBorderColor 255 255 119
 	PlayAlertSound 7 200
 
-Show  # ON RECOMMENDED - Extras - Talisman - Magic |Comment
-	Class Amulet
+Show
 	BaseType Talisman
 	Rarity = Magic
 	SetFontSize 45
@@ -763,8 +741,7 @@ Show  # ON RECOMMENDED - Extras - Talisman - Magic |Comment
 	SetBorderColor 136 136 255
 	PlayAlertSound 7 200
 
-Show  # ON RECOMMENDED - Extras - Talisman - Normal |Comment
-	Class Amulet
+Show
 	BaseType Talisman
 	Rarity = Normal
 	SetFontSize 45
@@ -817,7 +794,7 @@ Show
 	SetBorderColor 255 45 175 # T2 drops color
 
 # Any 4 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 66        #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linked armour (3,4 link, ItemLevel <= 66) |Comment
+Show  # Leveling Filter - Crafting Items - Linked armour (3,4 link, ItemLevel <= 66) |Comment
 	LinkedSockets = 4
 	Class "Body Armour" Boots Gloves Helmet
 	ItemLevel <= 66
@@ -825,7 +802,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linke
 	SetBorderColor 255 45 175 # T2 drops color
 
 # Any 3 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 24        #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linked armour (3,4 link, ItemLevel <= 66) |Comment
+Show  # Leveling Filter - Crafting Items - Linked armour (3,4 link, ItemLevel <= 66) |Comment
 	LinkedSockets = 3
 	Class Boots Gloves Helmet
 	ItemLevel <= 24
@@ -836,7 +813,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linke
 # Section:  #   CHANCE ITEMS
 #-------------------------------------------------------------------------------#
 
-Show  # ON RECOMMENDED - Chance items |Comment
+Show
 	BaseType "Sorcerer Boots"
 	Rarity = Normal
 	SetFontSize 45
@@ -844,7 +821,7 @@ Show  # ON RECOMMENDED - Chance items |Comment
 	PlayAlertSound 2 80
 
 #-------------------------------------------------------------------------------#
-# Section:  #   ALL 2.4 AND HIGHER BASES
+# Section:  #   ALL 2.4 AND HIGHER NEW BASES
 #-------------------------------------------------------------------------------#
 
 Show
@@ -854,92 +831,16 @@ Show
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 7 200
 
-#Show # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) (Currently unnused base types) |Comment
-#    DropLevel >= 73
-#    Class "Body Armour" "Shield" "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
-#    SetBorderColor 74 230 58 # T1 drops color / Quest items
-#    SetFontSize 45
-#    PlayAlertSound 7 200
-
 Show
-	DropLevel >= 72
-	Class Boots Gloves Helmet
-	Rarity = Normal
-	ItemLevel <= 83
-	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 200
-
-Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Boots (Magic, ItemLevel <= 83) |Comment
-	DropLevel >= 72
-	Class Boots
-	Rarity = Magic
-	ItemLevel <= 83
-	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 200
-
-Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Helmet (Magic, ItemLevel <= 83) |Comment
-	DropLevel >= 72
-	Class Helmet
-	Rarity = Magic
-	ItemLevel <= 83
-	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 200
-
-Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Fingerless Silk Gloves |Comment
-	DropLevel >= 72
-	Class Gloves
-	BaseType "Fingerless Silk Gloves"
-	Rarity = Magic
-	ItemLevel <= 83
-	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 200
-
-Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Gripped Gloves |Comment
-	DropLevel >= 72
-	Class Gloves
-	BaseType "Gripped Gloves"
-	Rarity = Magic
-	ItemLevel <= 83
-	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 200
-
-Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Spiked Gloves |Comment
-	DropLevel >= 72
-	Class Gloves
-	BaseType "Spiked Gloves"
-	Rarity = Magic
-	ItemLevel <= 83
-	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 200
-
-# This entry will catch any specified class in case they get commented, to retain original style.
-Hide
-	DropLevel >= 72
-	Class Boots Gloves Helmet
-	Rarity = Magic
-	ItemLevel <= 83
-	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-
-Show
-	DropLevel >= 72
-	Class Boots Gloves Helmet
-	Rarity = Rare
-	ItemLevel <= 83
+	DropLevel >= 73
+	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 7 200
 
 Show
 	DropLevel >= 72
-	Class Boots Gloves Helmet
-	ItemLevel >= 84
+	Class "Body Armour" Boots Gloves Helmet Shield
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 7 200
@@ -949,17 +850,18 @@ Show
 #-------------------------------------------------------------------------------#
 
 # Rare big RGB items show borders till ilvl 67 Lower rarities are covered down. #
-Show  # Endgame Filter (Disable for MF) - RGB items - Rare - All (ItemLevel <= 67) |Comment
+Show
 	SocketGroup RGB
 	Rarity = Rare
-	ItemLevel <= 67
+	ItemLevel <= 67 
+#   REMOVE ABOVE ENTRY IF YOU WANT TO SEE ALL RARE RGB ITEMS WITH BORDERS   -   #
 	SetTextColor 255 255 119
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 80
 
-Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Height = 2 |Comment
-	Height = 2
+Show
+	Height <= 2
 	SocketGroup RGB
 	Rarity = Rare
 	SetTextColor 255 255 119
@@ -967,7 +869,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Height = 2 |Comment
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 80
 
-Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Width = 1 |Comment
+Show
 	Width = 1
 	SocketGroup RGB
 	Rarity = Rare
@@ -980,20 +882,20 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Width = 1 |Comment
 # Section:  #   VENDOR RECIPE ITEMS - CHISEL RECIPE
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
+Show  # Endgame Filter (DISABLE FOR MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
 	BaseType "Stone Hammer" "Rock Breaker" Gavel
 	Rarity = Normal
 	ItemLevel >= 33
 	SetBorderColor 255 45 175 # T2 drops color
 
-Show  # Endgame Filter (Disable for MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
+Show  # Endgame Filter (DISABLE FOR MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
 	Quality >= 12
 	BaseType "Stone Hammer" "Rock Breaker" Gavel
 	Rarity = Magic
 	ItemLevel >= 33
 	SetBorderColor 255 45 175 # T2 drops color
 
-Show  # Endgame Filter (Disable for MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
+Show  # Endgame Filter (DISABLE FOR MF) - Chisel recipe (Stone Hammer, Rock Breaker, Gavel)
 	Quality >= 16
 	BaseType "Stone Hammer" "Rock Breaker" Gavel
 	Rarity = Rare
@@ -1021,7 +923,7 @@ Show
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 80
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Belts (non top) |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Belts (non top) |Comment
 	Class Belt
 	Rarity = Rare
 	SetFontSize 45
@@ -1045,21 +947,21 @@ Show
 # Top base daggers.                                                             #
 Show
 	Class Dagger
-	BaseType "Copper Kris" "Imp Dagger" "Golden Kris" "Fiend Dagger" "Demon Dagger" Ambusher "Platinum Kris" Sai
+	BaseType "Copper Kris" "Imp Dagger" "Golden Kris" "Fiend Dagger" Ambusher "Platinum Kris" "Demon Dagger" Sai
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 80
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Daggers (DropLevel >= 47)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Daggers (DropLevel >= 47)
 	DropLevel >= 47
 	Class Dagger
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # Top base scepters.                                                            #
-Show  # Endgame Filter (Disable for MF) - Rare items - Scepters (Top)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Scepters (Top)
 	BaseType "Sambar Sceptre" "Void Sceptre" "Carnal Sceptre" "Vaal Sceptre" "Platinum Sceptre" "Opal Sceptre" "Stag Sceptre" "Abyssal Sceptre" "Crystal Sceptre"
 	Rarity = Rare
 	SetTextColor 255 255 119
@@ -1069,7 +971,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Scepters (Top)
 #-------------------------------------------------------------------------------#
 
 # Top base wands.                                                               #
-Show  # Endgame Filter (Disable for MF) - Rare items - Wands (Decent)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Wands (Decent)
 	DropLevel >= 45
 	Class Wand
 	Rarity = Rare
@@ -1079,7 +981,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Wands (Decent)
 	PlayAlertSound 2 80
 
 # Top leveling wands.                                                           #
-Show  # Endgame Filter (Disable for MF) - Rare items - Wands (Decent)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Wands (Decent)
 	DropLevel <= 44
 	Class Wand
 	Rarity = Rare
@@ -1094,7 +996,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Wands (Decent)
 
 # Top base armour.                                                              #
 Show
-	BaseType "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Carnal Armour"
+	BaseType "Carnal Armour" "Assassin's Garb" "Glorious Plate" "Vaal Regalia" "Zodiac Leather" "Widowsilk Robe" "Astral Plate" "Slink Boots" "Titan Greaves" "Sorcerer Boots" "Slink Gloves" "Titan Gauntlets" "Sorcerer Gloves" "Vaal Gauntlets" "Stealth Gloves" "Arcanist Gloves" "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Royal Burgonet" "Mind Cage" "Sinner Tricorne"
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
@@ -1103,7 +1005,7 @@ Show
 
 # Top base caster shields.                                                     #
 Show
-	BaseType "Titanium Spirit Shield" "Harmonic Spirit Shield" "Vaal Spirit Shield" "Fossilised Spirit Shield"
+	BaseType "Titanium Spirit Shield" "Harmonic Spirit Shield" "Vaal Spirit Shield" "Fossilised Spirit Shield" "Chiming Spirit Shield" "Ivory Spirit Shield"
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
@@ -1127,7 +1029,7 @@ Show  # ON RECOMMENDED - Corrupted items - Rare items
 #-------------------------------------------------------------------------------#
 
 # These can have +3 to gems on them.                                            #
-Show  # Endgame Filter (Disable for MF) - Rare items - Bows (+3)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Bows (+3)
 	BaseType "Thicket Bow" "Grove Bow" "Maraketh Bow"
 	Rarity = Rare
 	ItemLevel >= 64
@@ -1135,56 +1037,56 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bows (+3)
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Top base rare quivers.                                                        #
-Show  # Endgame Filter (Disable for MF) - Rare items - Quivers (Top)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Quivers (Top)
 	BaseType "Spike-Point Arrow Quiver" "Broadhead Arrow Quiver" "Two-Point Arrow Quiver"
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # All other rare quivers are displayed in the Leveling Filter.                  #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - rare quivers
+Show  # Leveling Filter - Rare Leveling - rare quivers
 	Class Quiver
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # These are ok for leveling.                                                    #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - bows (drop level >=53)
+Show  # Leveling Filter - Rare Leveling - bows (drop level >=53)
 	DropLevel >= 53
 	Class Bow
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
 	DropLevel >= 44
 	Class Bow
 	Rarity = Rare
 	ItemLevel <= 63
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
 	DropLevel >= 32
 	Class Bow
 	Rarity = Rare
 	ItemLevel <= 49
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
 	DropLevel >= 23
 	Class Bow
 	Rarity = Rare
 	ItemLevel <= 36
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
 	DropLevel >= 9
 	Class Bow
 	Rarity = Rare
 	ItemLevel <= 27
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
 	DropLevel >= 1
 	Class Bow
 	Rarity = Rare
@@ -1195,56 +1097,56 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 # Section:  #   RARE ITEMS - WEAPONS - CLAW
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Claw ("Imperial Claw" "Gemini Claw")
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Claw ("Imperial Claw" "Gemini Claw")
 	Class Claw
 	BaseType "Imperial Claw" "Gemini Claw"
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # These are ok for Leveling.                                                    #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - claws (drop level >=49)
+Show  # Leveling Filter - Rare Leveling - claws (drop level >=49)
 	DropLevel >= 49
 	Class Claw
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
 	DropLevel >= 43
 	Class Claw
 	Rarity = Rare
 	ItemLevel <= 63
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
 	DropLevel >= 30
 	Class Claw
 	Rarity = Rare
 	ItemLevel <= 48
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
 	DropLevel >= 22
 	Class Claw
 	Rarity = Rare
 	ItemLevel <= 35
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
 	DropLevel >= 17
 	Class Claw
 	Rarity = Rare
 	ItemLevel <= 33
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
 	DropLevel >= 7
 	Class Claw
 	Rarity = Rare
 	ItemLevel <= 21
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
 	DropLevel >= 1
 	Class Claw
 	Rarity = Rare
@@ -1255,35 +1157,35 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 # Section:  #   RARE ITEMS - WEAPONS - DAGGER
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
 	DropLevel >= 44
 	Class Dagger
 	Rarity = Rare
 	ItemLevel <= 63
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
 	DropLevel >= 28
 	Class Dagger
 	Rarity = Rare
 	ItemLevel <= 49
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
 	DropLevel >= 15
 	Class Dagger
 	Rarity = Rare
 	ItemLevel <= 31
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
 	DropLevel >= 5
 	Class Dagger
 	Rarity = Rare
 	ItemLevel <= 19
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Dagger |Comment
 	DropLevel >= 1
 	Class Dagger
 	Rarity = Rare
@@ -1291,7 +1193,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 	SetTextColor 255 255 119
 
 # Less desired daggers but could still be good                                  #
-Show  # Endgame Filter (Disable for MF) - Rare items - Daggers (Mediocre)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Daggers (Mediocre)
 	Class Dagger
 	Rarity = Rare
 	SetTextColor 255 255 119
@@ -1301,56 +1203,56 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Daggers (Mediocre)
 # Section:  #   RARE ITEMS - WEAPONS - ONE HAND AXE
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Rare items - One hand axe (Drop level >=70) 
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - One hand axe (Drop level >=70) 
 	DropLevel >= 70
 	Class "One Hand Axe"
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # These are ok for Leveling.                                                    #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - One hand axes (drop level >=45)
+Show  # Leveling Filter - Rare Leveling - One hand axes (drop level >=45)
 	DropLevel >= 45
 	Class "One Hand Axe"
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
 	DropLevel >= 42
 	Class "One Hand Axe"
 	Rarity = Rare
 	ItemLevel <= 63
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
 	DropLevel >= 33
 	Class "One Hand Axe"
 	Rarity = Rare
 	ItemLevel <= 42
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
 	DropLevel >= 21
 	Class "One Hand Axe"
 	Rarity = Rare
 	ItemLevel <= 35
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
 	DropLevel >= 11
 	Class "One Hand Axe"
 	Rarity = Rare
 	ItemLevel <= 28
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
 	DropLevel >= 6
 	Class "One Hand Axe"
 	Rarity = Rare
 	ItemLevel <= 20
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
 	DropLevel >= 1
 	Class "One Hand Axe"
 	Rarity = Rare
@@ -1361,49 +1263,49 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 # Section:  #   RARE ITEMS - WEAPONS - ONE HAND MACE
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Rare items - One hand mace (Drop level >=70)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - One hand mace (Drop level >=70)
 	DropLevel >= 70
 	Class "One Hand Mace"
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # These are ok for Leveling.                                                    #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - One hand maces (drop level >=50)
+Show  # Leveling Filter - Rare Leveling - One hand maces (drop level >=50)
 	DropLevel >= 50
 	Class "One Hand Mace"
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
 	DropLevel >= 44
 	Class "One Hand Mace"
 	Rarity = Rare
 	ItemLevel <= 63
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
 	DropLevel >= 24
 	Class "One Hand Mace"
 	Rarity = Rare
 	ItemLevel <= 46
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
 	DropLevel >= 10
 	Class "One Hand Mace"
 	Rarity = Rare
 	ItemLevel <= 27
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
 	DropLevel >= 5
 	Class "One Hand Mace"
 	Rarity = Rare
 	ItemLevel <= 23
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
 	DropLevel >= 1
 	Class "One Hand Mace"
 	Rarity = Rare
@@ -1414,56 +1316,56 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 # Section:  #   RARE ITEMS - WEAPONS - ONE HAND SWORD
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Rare items - One hand swords (Drop level >=70)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - One hand swords (Drop level >=70)
 	DropLevel >= 70
 	Class "One Hand Sword"
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # These are ok for Leveling.                                                    #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - One hand swords (drop level >=50)
+Show  # Leveling Filter - Rare Leveling - One hand swords (drop level >=50)
 	DropLevel >= 50
 	Class "One Hand Sword"
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
 	DropLevel >= 44
 	Class "One Hand Sword"
 	Rarity = Rare
 	ItemLevel <= 63
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
 	DropLevel >= 32
 	Class "One Hand Sword"
 	Rarity = Rare
 	ItemLevel <= 52
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
 	DropLevel >= 24
 	Class "One Hand Sword"
 	Rarity = Rare
 	ItemLevel <= 40
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
 	DropLevel >= 10
 	Class "One Hand Sword"
 	Rarity = Rare
 	ItemLevel <= 31
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
 	DropLevel >= 5
 	Class "One Hand Sword"
 	Rarity = Rare
 	ItemLevel <= 21
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
 	DropLevel >= 1
 	Class "One Hand Sword"
 	Rarity = Rare
@@ -1475,7 +1377,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 #-------------------------------------------------------------------------------#
 
 # All other wands.                                                              #
-Show  # Endgame Filter (Disable for MF) - Rare items - Wands (Mediocre)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Wands (Mediocre)
 	DropLevel <= 44
 	Class Wand
 	Rarity = Rare
@@ -1487,13 +1389,13 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Wands (Mediocre)
 #-------------------------------------------------------------------------------#
 
 # Lesser scepters that can still be good.                                       #
-Show  # Endgame Filter (Disable for MF) - Rare items - Scepters (Mediocre)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Scepters (Mediocre)
 	BaseType "Platinum Sceptre" "Tyrant's Sekhem" "Karui Sceptre" "Royal Sceptre"
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # Any rare sceptre will show till level 63.                                     #
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Sceptre |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Sceptre |Comment
 	DropLevel >= 1
 	Class Sceptre
 	Rarity = Rare
@@ -1501,7 +1403,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 	SetTextColor 255 255 119
 
 # All rare scepters will show up with the Leveling Filter.                      #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Scepters
+Show  # Leveling Filter - Rare Leveling - Scepters
 	Class Sceptre
 	Rarity = Rare
 	SetTextColor 255 255 119
@@ -1511,14 +1413,14 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Scepte
 # Section:  #   RARE ITEMS - WEAPONS - TWO HAND / STAVES
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Rare items - 2 hand items (Top)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - 2 hand items (Top)
 	Class "Two Hand" Staves
 	BaseType "Eclipse Staff" "Imperial Staff" "Maelström Staff" Fleshripper "Vaal Axe" "Coronal Maul" "Exquisite Blade"
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # Any staff that can craft +3 to gems.                                          #
-Show  # Endgame Filter (Disable for MF) - Rare items - Staves (+3)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Staves (+3)
 	Class Staves
 	Rarity >= Rare
 	ItemLevel >= 55
@@ -1526,42 +1428,42 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Staves (+3)
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # These are ok for Leveling.                                                    #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Two hand weapons (drop level >=49)
+Show  # Leveling Filter - Rare Leveling - Two hand weapons (drop level >=49)
 	DropLevel >= 49
 	Class "Two Hand" Staves
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
 	DropLevel >= 44
 	Class "Two Hand" Staves
 	Rarity = Rare
 	ItemLevel <= 63
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
 	DropLevel >= 34
 	Class "Two Hand" Staves
 	Rarity = Rare
 	ItemLevel <= 48
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
 	DropLevel >= 23
 	Class "Two Hand" Staves
 	Rarity = Rare
 	ItemLevel <= 36
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
 	DropLevel >= 13
 	Class "Two Hand" Staves
 	Rarity = Rare
 	ItemLevel <= 27
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand, Staves |Comment
 	DropLevel >= 1
 	Class "Two Hand" Staves
 	Rarity = Rare
@@ -1573,7 +1475,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 #-------------------------------------------------------------------------------#
 
 # Decent chest armour while leveling.                                           #
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Body Armour |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Armour - Body Armour |Comment
 	DropLevel >= 63
 	Class "Body Armour"
 	Rarity = Rare
@@ -1581,7 +1483,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 	SetTextColor 255 255 119
 
 # Decent chest armour.                                                          #
-Show  # Endgame Filter (Disable for MF) - Rare items - Chest armour (Non top)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Chest armour (Non top)
 	DropLevel >= 65
 	Class "Body Armour"
 	Rarity = Rare
@@ -1589,14 +1491,14 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Chest armour (Non top)
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Any chest armour can be good while Leveling. These show till item level 63.   #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Body armour (ItemLevel <= 63)
+Show  # Leveling Filter - Rare Leveling - Body armour (ItemLevel <= 63)
 	Class "Body Armour"
 	Rarity = Rare
 	ItemLevel <= 63
 	SetTextColor 255 255 119
 
 # Any rare chest armour for Leveling Filter.                                    #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Body armour (any)
+Show  # Leveling Filter - Rare Leveling - Body armour (any)
 	Class "Body Armour" 
 #   DropLevel >= 54
 	Rarity = Rare
@@ -1608,7 +1510,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Body a
 #-------------------------------------------------------------------------------#
 
 # Mediocre Hybrid bases.                                                        #
-Show  # Endgame Filter (Disable for MF) - Rare items - Mediocre Hybrid bases - Boots
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre Hybrid bases - Boots
 	Class Boots
 	BaseType "Murder Boots" "Crusader Boots" "Assassin's Boots" "Legion Boots" "Carnal Boots"
 	Rarity = Rare
@@ -1616,14 +1518,14 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Mediocre Hybrid bases - B
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Decent bases.                                                                 #
-Show  # Endgame Filter (Disable for MF) - Rare items - Boots (Decent)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Boots (Decent)
 	DropLevel >= 51
 	Class Boots
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # Any base can be useful for Leveling (Leveling Filter).                        #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - boots (drop level >=42)
+Show  # Leveling Filter - Rare Leveling - boots (drop level >=42)
 	Class Boots
 	Rarity = Rare 
 #   DropLevel >= 42
@@ -1631,7 +1533,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - boots 
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Any base can be useful for Leveling till item level 63.                       #
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Boots |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Armour - Boots |Comment
 	DropLevel >= 1
 	Class Boots
 	Rarity = Rare
@@ -1643,7 +1545,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 #-------------------------------------------------------------------------------#
 
 # Mediocre Hybrid bases.                                                        #
-Show  # Endgame Filter (Disable for MF) - Rare items - Mediocre Hybrid bases - Gloves
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre Hybrid bases - Gloves
 	Class Gloves
 	BaseType "Murder Mitts" "Crusader Gloves" "Assassin's Mitts" "Legion Gloves"
 	Rarity = Rare
@@ -1651,14 +1553,14 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Mediocre Hybrid bases - G
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Decent bases.                                                                 #
-Show  # Endgame Filter (Disable for MF) - Rare items - Gloves (Decent)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Gloves (Decent)
 	DropLevel >= 53
 	Class Gloves
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # Any base can be useful for Leveling (Leveling Filter).                        #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - gloves (drop level >=43)
+Show  # Leveling Filter - Rare Leveling - gloves (drop level >=43)
 	Class Gloves
 	Rarity = Rare 
 #   DropLevel >= 43
@@ -1666,7 +1568,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - gloves
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Any base can be useful for Leveling till item level 63.                       #
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Gloves |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Armour - Gloves |Comment
 	DropLevel >= 1
 	Class Gloves
 	Rarity = Rare
@@ -1678,7 +1580,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 #-------------------------------------------------------------------------------#
 
 # Mediocre Hybrid bases.                                                        #
-Show  # Endgame Filter (Disable for MF) - Rare items - Mediocre Hybrid bases - Helmets
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Mediocre Hybrid bases - Helmets
 	Class Helm
 	BaseType "Prophet Crown" "Vaal Mask" "Magistrate Crown" "Harlequin Mask"
 	Rarity = Rare
@@ -1686,14 +1588,14 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Mediocre Hybrid bases - H
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Decent bases.                                                                 #
-Show  # Endgame Filter (Disable for MF) - Rare items - Helmets (Decent)
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Helmets (Decent)
 	DropLevel >= 55
 	Class Helm
 	Rarity = Rare
 	SetTextColor 255 255 119
 
 # Any base can be useful for Leveling (Leveling Filter).                        #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - helmets (drop level >=40)
+Show  # Leveling Filter - Rare Leveling - helmets (drop level >=40)
 	Class Helm
 	Rarity = Rare 
 #   DropLevel >= 40
@@ -1701,7 +1603,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - helmet
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Any base can be useful for Leveling till item level 63.                       #
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Helm |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Armour - Helm |Comment
 	DropLevel >= 1
 	Class Helm
 	Rarity = Rare
@@ -1712,21 +1614,15 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 # Section:  #   RARE ITEMS - SHIELD
 #-------------------------------------------------------------------------------#
 
-#   Ok-ish caster shields (present in the Endgame Filter).                     #
-Show  # Endgame Filter (Disable for MF) - Rare items - Shields - Caster shields (Mediocre)
-	BaseType "Chiming Spirit Shield" "Ivory Spirit Shield"
-	Rarity = Rare
-	SetTextColor 255 255 119
-
 #   Ok-ish caster shields (present in the Leveling Filter).                     #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - shields - Lower caster bases
+Show  # Leveling Filter - Rare Leveling - shields - Lower caster bases
 	BaseType "Lacewood Spirit Shield" "Thorium Spirit Shield" "Ancient Spirit Shield" "Walnut Spirit Shield" "Brass Spirit Shield" "Jingling Spirit Shield"
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Ok general shields (highest bases)                                            #
-Show  # Endgame Filter (Disable for MF) - Rare items - Shields - DropLevel >= 67
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Shields (DropLevel >= 67)
 	DropLevel >= 67
 	Class Shield
 	Rarity = Rare
@@ -1734,21 +1630,21 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Shields - DropLevel >= 67
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Lesser but still in the upper bracket (present in the Leveling Filter).       #
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - shields - Drop level >=47
+Show  # Leveling Filter - Rare Leveling - shields -(drop level >=47)
 	DropLevel >= 47
 	Class Shield
 	Rarity = Rare
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
 	DropLevel >= 42
 	Class Shield
 	Rarity = Rare
 	ItemLevel <= 63
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
 	DropLevel >= 24
 	Class Shield
 	Rarity = Rare
@@ -1756,21 +1652,21 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 	SetTextColor 255 255 119
 
 # Bone Spirit Shield (Of animation flask recipe) fixed in progression.          #
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
 	BaseType "Bone Spirit Shield"
 	Rarity = Rare
 	ItemLevel <= 29
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
 	DropLevel >= 11
 	Class Shield
 	Rarity = Rare
 	ItemLevel <= 29
 	SetTextColor 255 255 119
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
 	DropLevel >= 1
 	Class Shield
 	Rarity = Rare
@@ -1792,7 +1688,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling ra
 #-------------------------------------------------------------------------------#
 
 # Utility flasks exposed till level 66.                                         #
-Show  # Endgame Filter (Disable for MF) - Flasks - Utility flasks
+Show  # Endgame Filter (DISABLE FOR MF) - Flasks - Utility flasks
 	Class "Utility Flasks"
 	ItemLevel <= 66
 	SetFontSize 45
@@ -1800,85 +1696,85 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility flasks
 	PlayAlertSound 2 80
 
 # Any quality flask will show till level 67.                                    #
-Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with quality |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Flasks - Flasks with quality |Comment
 	Quality >= 1
 	Class Flask
 	ItemLevel <= 67
 	SetBorderColor 255 45 175 # T2 drops color
 
 # All utility flasks will show in Endgame but without highlights.               #
-Show  # Endgame Filter (Disable for MF) - Flasks - Utility flasks
+Show  # Endgame Filter (DISABLE FOR MF) - Flasks - Utility flasks
 	Class "Utility Flasks"
 
-Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with quality |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Flasks - Flasks with quality |Comment
 	Quality >= 10
 	Class Flask
 	SetBorderColor 255 45 175 # T2 drops color
 
 # Any quality flask will show with the Leveling Filter.                         #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with quality (<=9)
+Show  # Leveling Filter - Flasks - Flasks with quality (<=9)
 	Quality >= 1
 	Class Flask
 	SetBorderColor 255 45 175 # T2 drops color
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Hallowed Life Flask |Comment
+Show  # Leveling Filter - Flasks - Top - Life flasks (ilvl 42+) - Hallowed Life Flask |Comment
 	BaseType "Hallowed Life Flask"
 	Rarity <= Magic
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Sanctified Life Flask |Comment
+Show  # Leveling Filter - Flasks - Top - Life flasks (ilvl 42+) - Sanctified Life Flask |Comment
 	BaseType "Sanctified Life Flask"
 	Rarity <= Magic
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Divine Life Flask |Comment
+Show  # Leveling Filter - Flasks - Top - Life flasks (ilvl 42+) - Divine Life Flask |Comment
 	BaseType "Divine Life Flask"
 	Rarity <= Magic
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Eternal Life Flask |Comment
+Show  # Leveling Filter - Flasks - Top - Life flasks (ilvl 42+) - Eternal Life Flask |Comment
 	BaseType "Eternal Life Flask"
 	Rarity <= Magic
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Hybrid flasks (ilvl 60+) |Comment
+Show  # Leveling Filter - Flasks - Top - Hybrid flasks (ilvl 60+) |Comment
 	BaseType "Hallowed Hybrid Flask"
 	Rarity <= Magic
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Mana flasks (ilvl 50+) - Sanctified Mana Flask |Comment
+Show  # Leveling Filter - Flasks - Top - Mana flasks (ilvl 50+) - Sanctified Mana Flask |Comment
 	BaseType "Sanctified Mana Flask"
 	Rarity <= Magic
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Mana flasks (ilvl 50+) - Divine Mana Flask |Comment
+Show  # Leveling Filter - Flasks - Top - Mana flasks (ilvl 50+) - Divine Mana Flask |Comment
 	BaseType "Divine Mana Flask"
 	Rarity <= Magic
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Mana flasks (ilvl 50+) - Eternal Mana Flask |Comment
+Show  # Leveling Filter - Flasks - Top - Mana flasks (ilvl 50+) - Eternal Mana Flask |Comment
 	BaseType "Eternal Mana Flask"
 	Rarity <= Magic
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Life Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Life Flask |Comment
 	DropLevel >= 30
 	BaseType "Life Flask"
 	Rarity <= Magic
@@ -1887,7 +1783,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Life Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Life Flask |Comment
 	DropLevel >= 24
 	BaseType "Life Flask"
 	Rarity <= Magic
@@ -1896,7 +1792,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Life Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Life Flask |Comment
 	DropLevel >= 12
 	BaseType "Life Flask"
 	Rarity <= Magic
@@ -1905,7 +1801,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Life Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Life Flask |Comment
 	BaseType "Life Flask"
 	Rarity <= Magic
 	ItemLevel <= 11
@@ -1913,7 +1809,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Mana Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Mana Flask |Comment
 	DropLevel >= 30
 	BaseType "Mana Flask"
 	Rarity <= Magic
@@ -1922,7 +1818,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Mana Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Mana Flask |Comment
 	DropLevel >= 24
 	BaseType "Mana Flask"
 	Rarity <= Magic
@@ -1931,7 +1827,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Mana Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Mana Flask |Comment
 	DropLevel >= 12
 	BaseType "Mana Flask"
 	Rarity <= Magic
@@ -1940,7 +1836,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Mana Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Mana Flask |Comment
 	BaseType "Mana Flask"
 	Rarity <= Magic
 	ItemLevel <= 11
@@ -1948,7 +1844,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Hybrid Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Hybrid Flask |Comment
 	DropLevel >= 30
 	BaseType "Hybrid Flask"
 	Rarity <= Magic
@@ -1957,7 +1853,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Hybrid Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Hybrid Flask |Comment
 	DropLevel >= 24
 	BaseType "Hybrid Flask"
 	Rarity <= Magic
@@ -1966,7 +1862,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Hybrid Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Hybrid Flask |Comment
 	DropLevel >= 12
 	BaseType "Hybrid Flask"
 	Rarity <= Magic
@@ -1975,7 +1871,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	SetTextColor 255 45 175 # T2 drops color
 
 # Flask progression.                                                            #
-Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Hybrid Flask |Comment
+Show  # Leveling Filter - Flasks - Progression - Hybrid Flask |Comment
 	BaseType "Hybrid Flask"
 	Rarity <= Magic
 	ItemLevel <= 11
@@ -1988,7 +1884,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 
 #Disabled Block Start
 
-#Show  # Extras - Animate Weapon - Normal - Weapons (1x3) |Comment
+#Show  # Extras - Animate Weapon - Normal weapons |Comment
 #	Corrupted False
 #	Height = 3
 #	Width = 1
@@ -2002,19 +1898,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 
 #Disabled Block Start
 
-#Show  # Extras - Animate Weapon - Normal - Weapons (2x2) |Comment
-#	Corrupted False
-#	Class Claw
-#	Rarity = Normal
-#	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 145 # Animate weapon items
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#Disabled Block End
-
-#Disabled Block Start
-
-#Show  # Extras - Animate Weapon - Normal - weapons (All) |Comment
+#Show  # Extras - Animate Weapon - Normal weapons |Comment
 #	Corrupted False
 #	Class Dagger Claw "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Normal
@@ -2025,7 +1909,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 
 #Disabled Block Start
 
-#Show  # Extras - Animate Weapon - Magic - Weapons (1x3) |Comment
+#Show  # Extras - Animate Weapon - Magic weapons |Comment
 #	Corrupted False
 #	Identified True
 #	Height = 3
@@ -2040,20 +1924,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 
 #Disabled Block Start
 
-#Show  # Extras - Animate Weapon - Magic - Weapons (2x2) |Comment
-#	Corrupted False
-#	Identified True
-#	Class Claw
-#	Rarity = Magic
-#	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 145 # Animate weapon items
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#Disabled Block End
-
-#Disabled Block Start
-
-#Show  # Extras - Animate Weapon - Magic - weapons (All) |Comment
+#Show  # Extras - Animate Weapon - Magic weapons |Comment
 #	Corrupted False
 #	Identified True
 #	Class Dagger Claw "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
@@ -2076,17 +1947,17 @@ Show  # ON RECOMMENDED - Corrupted items - Normal jewelry
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
 # Any corrupted item.                                                           #
-Show  # ON RECOMMENDED - Corrupted items - Normal
+Show  # ON RECOMMENDED - Corrupted items - Magic
 	Corrupted True
-	Rarity = Normal
+	Rarity = Magic
 	SetFontSize 23
 	SetTextColor 215 25 0 255 # Corrupted items text
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Any corrupted item.                                                           #
-Show  # ON RECOMMENDED - Corrupted items - Magic
+Show  # ON RECOMMENDED - Corrupted items - Normal
 	Corrupted True
-	Rarity = Magic
+	Rarity = Normal
 	SetFontSize 23
 	SetTextColor 215 25 0 255 # Corrupted items text
 	SetBackgroundColor 0 0 0 140 # Lesser items
@@ -2121,27 +1992,27 @@ Show
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 1 140
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Rings and Amulets
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Rings and Amulets
 	Class Ring Amulet
 	Rarity = Magic
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Belts
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Belts
 	Class Belt
 	BaseType "Rustic Sash" "Leather Belt"
 	Rarity = Magic
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Rings and Amulets
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Rings and Amulets
 	Class Ring Amulet
 	Rarity = Normal
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 2 80
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Belts
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Belts
 	Class Belt
 	BaseType "Rustic Sash" "Leather Belt"
 	Rarity = Normal
@@ -2150,7 +2021,7 @@ Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Belts
 	PlayAlertSound 2 80
 
 # Diamond ring for alching.                                                     #
-Show  # Endgame Filter (Disable for MF) - Diamond ring (ilvl >= 72, Normal) |Comment
+Show  # Endgame Filter (DISABLE FOR MF) - Diamond ring (ilvl >= 72, Normal)
 	BaseType "Diamond Ring"
 	Rarity = Normal
 	ItemLevel >= 72
@@ -2158,28 +2029,28 @@ Show  # Endgame Filter (Disable for MF) - Diamond ring (ilvl >= 72, Normal) |Com
 	SetBorderColor 255 45 175 # T2 drops color
 
 # Diamond ring for alching present in the Leveling Filter.                      #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 60+ Diamond Rings |Comment
+Show  # Leveling Filter - Crafting Items - 60+ Diamond Rings
 	BaseType "Diamond Ring"
 	Rarity = Normal
 	ItemLevel >= 60
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Jewelry for chaos / regal recipe is present in the Leveling Filter.                   #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Normal jewelry ItemLevel >= 72 - Amulets |Comment
+Show  # Leveling Filter - Crafting Items - Normal jewelry ItemLevel >= 72 - Amulets |Comment
 	Class Amulet
 	Rarity = Normal
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Jewelry for chaos / regal recipe is present in the Leveling Filter.                   #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Normal jewelry ItemLevel >= 72 - Rings |Comment
+Show  # Leveling Filter - Crafting Items - Normal jewelry ItemLevel >= 72 - Rings |Comment
 	Class Ring
 	Rarity = Normal
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Jewelry for chaos / regal recipe is present in the Leveling Filter.                   #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Normal jewelry ItemLevel >= 72 - "Rustic Sash" "Leather Belt" |Comment
+Show  # Leveling Filter - Crafting Items - Normal jewelry ItemLevel >= 72 - "Rustic Sash" "Leather Belt" |Comment
 	Class Belt
 	BaseType "Rustic Sash" "Leather Belt"
 	Rarity = Normal
@@ -2187,21 +2058,21 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Norma
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Jewelry for chaos recipe is present in the Leveling Filter.                   #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - normal jewelry ilvl 64+ - Amulets |Comment
+Show  # Leveling Filter - Crafting Items - normal jewelry ilvl 64+ - Amulets |Comment
 	Class Amulet
 	Rarity = Normal
 	ItemLevel >= 64
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Jewelry for chaos recipe is present in the Leveling Filter.                   #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - normal jewelry ilvl 64+ - Rings |Comment
+Show  # Leveling Filter - Crafting Items - normal jewelry ilvl 64+ - Rings |Comment
 	Class Ring
 	Rarity = Normal
 	ItemLevel >= 64
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Jewelry for chaos recipe is present in the Leveling Filter.                   #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - normal jewelry ilvl 64+ - "Rustic Sash" "Leather Belt" |Comment
+Show  # Leveling Filter - Crafting Items - normal jewelry ilvl 64+ - "Rustic Sash" "Leather Belt" |Comment
 	Class Belt
 	BaseType "Rustic Sash" "Leather Belt"
 	Rarity = Normal
@@ -2212,109 +2083,121 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - norma
 # Section:  #   CRAFTING BASES - TOP ITEMS - WEAPONS
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Weapon crafting bases
-	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
-	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
-	Rarity = Normal
-	ItemLevel >= 83
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Weapon crafting bases
-	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
-	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Sai
+	Class Dagger
+	BaseType Sai
 	Rarity = Magic
 	ItemLevel >= 83
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-#-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - TOP ITEMS - ARMOUR - NORMAL
-#-------------------------------------------------------------------------------#
-
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Vaal Regalia
-	BaseType "Vaal Regalia"
-	Rarity = Normal
-	ItemLevel >= 84
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Weapon crafting bases
+	BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" Ambusher "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
+	Rarity = Magic
+	ItemLevel >= 83
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Sorcerer Gloves
-	BaseType "Sorcerer Gloves"
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Sai
+	Class Dagger
+	BaseType Sai
 	Rarity = Normal
-	ItemLevel >= 84
+	ItemLevel >= 83
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Hubris Circlet
-	BaseType "Hubris Circlet"
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Weapon crafting bases
+	BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" Ambusher "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
 	Rarity = Normal
-	ItemLevel >= 84
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Titanium Spirit Shield
-	BaseType "Titanium Spirit Shield"
-	Rarity = Normal
-	ItemLevel >= 84
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Sorcerer Boots
-	BaseType "Sorcerer Boots"
-	Rarity = Normal
-	ItemLevel >= 84
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Evasion bases
-	BaseType "Assassin's Garb" "Slink Boots" "Lion Pelt"
-	Rarity = Normal
-	ItemLevel >= 84
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Armour bases
-	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet"
-	Rarity = Normal
-	ItemLevel >= 84
+	ItemLevel >= 83
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   CRAFTING BASES - TOP ITEMS - ARMOUR - MAGIC
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Vaal Regalia
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Vaal Regalia
 	BaseType "Vaal Regalia"
 	Rarity = Magic
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Sorcerer Gloves
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Sorcerer Gloves
 	BaseType "Sorcerer Gloves"
 	Rarity = Magic
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Hubris Circlet
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Hubris Circlet
 	BaseType "Hubris Circlet"
 	Rarity = Magic
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Titanium Spirit Shield
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Titanium Spirit Shield
 	BaseType "Titanium Spirit Shield"
 	Rarity = Magic
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Sorcerer Boots
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Energy shield bases - Sorcerer Boots
 	BaseType "Sorcerer Boots"
 	Rarity = Magic
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Evasion bases
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Evasion bases
 	BaseType "Assassin's Garb" "Slink Boots" "Lion Pelt"
 	Rarity = Magic
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Armour bases
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Magic items - Armour crafting bases - Armour bases
 	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet"
 	Rarity = Magic
+	ItemLevel >= 84
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+#-------------------------------------------------------------------------------#
+# Section:  #   CRAFTING BASES - TOP ITEMS - ARMOUR - NORMAL
+#-------------------------------------------------------------------------------#
+
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Vaal Regalia
+	BaseType "Vaal Regalia"
+	Rarity = Normal
+	ItemLevel >= 84
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Sorcerer Gloves
+	BaseType "Sorcerer Gloves"
+	Rarity = Normal
+	ItemLevel >= 84
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Hubris Circlet
+	BaseType "Hubris Circlet"
+	Rarity = Normal
+	ItemLevel >= 84
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Titanium Spirit Shield
+	BaseType "Titanium Spirit Shield"
+	Rarity = Normal
+	ItemLevel >= 84
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Energy shield bases - Sorcerer Boots
+	BaseType "Sorcerer Boots"
+	Rarity = Normal
+	ItemLevel >= 84
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Evasion bases
+	BaseType "Assassin's Garb" "Slink Boots" "Lion Pelt"
+	Rarity = Normal
+	ItemLevel >= 84
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+
+Show  # Endgame Filter (DISABLE FOR MF) - ilvl 83 / 84+ Normal items - Armour crafting bases - Armour bases
+	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet"
+	Rarity = Normal
 	ItemLevel >= 84
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
@@ -2323,7 +2206,7 @@ Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Armour cra
 #-------------------------------------------------------------------------------#
 
 # Warband filter. Any identified - non corrupted - non top magic item.          #
-Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warbands" items - Mutewind
+Show  # Leveling Filter - Identified magic "Warbands" items - Mutewind
 	Corrupted False
 	Identified True
 	Class Boots
@@ -2334,7 +2217,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	SetBorderColor 74 230 58 # Boots border color
 
 # Warband filter. Any identified - non corrupted - non top magic item.          #
-Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warbands" items - Brinerot
+Show  # Leveling Filter - Identified magic "Warbands" items - Brinerot
 	Corrupted False
 	Identified True
 	Class Gloves
@@ -2345,7 +2228,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	SetBorderColor 0 200 255 255 # Gloves border color
 
 # Warband filter. Any identified - non corrupted - non top magic item.          #
-Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warbands" items - Redblade
+Show  # Leveling Filter - Identified magic "Warbands" items - Redblade
 	Corrupted False
 	Identified True
 	Class Helm
@@ -2356,7 +2239,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	SetBorderColor 215 25 0 255 # Helmets border color
 
 # Warband filter. Any identified - non corrupted - non top magic item.          #
-Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warbands" items - Renegade
+Show  # Leveling Filter - Identified magic "Warbands" items - Renegade
 	Corrupted False
 	Identified True
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
@@ -2366,28 +2249,28 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS
+# Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS <= MAGIC
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - RGB items - Any rarity - Height = 2
-	Height = 2 
-#    Rarity <= Magic
+Show  # Endgame Filter (DISABLE FOR MF) - RGB items - Height <= 2
+	Height <= 2
 	SocketGroup RGB
+	Rarity <= Magic
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 
-Show  # Endgame Filter (Disable for MF) - RGB items - Any rarity - Width = 1
-	Width = 1 
-#    Rarity <= Magic
+Show  # Endgame Filter (DISABLE FOR MF) - RGB items - Width = 1
+	Width = 1
 	SocketGroup RGB
+	Rarity <= Magic
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 
 # Big RGB items are shown only till item level 67.                              #
-Show  # Leveling Filter (Enable for leveling and races) - Big RGB items ItemLevel <= 67
+Show  # Leveling Filter - Big RGB items ItemLevel <= 67
 	SocketGroup RGB
-	ItemLevel <= 67 
-#    Rarity <= Magic
+	Rarity <= Magic
+	ItemLevel <= 67
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 
@@ -2396,44 +2279,72 @@ Show  # Leveling Filter (Enable for leveling and races) - Big RGB items ItemLeve
 #-------------------------------------------------------------------------------#
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 73+ weapon crafting bases - Normal |Comment
-	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
-	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
+Show  # Leveling Filter - Crafting Items - 73+ weapon crafting bases - Normal |Comment
+	BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" Ambusher "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
 	Rarity = Normal
 	ItemLevel >= 73
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 73+ weapon crafting bases - Magic |Comment
-	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
-	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
+Show  # Leveling Filter - Crafting Items - 73+ weapon crafting bases - Normal |Comment
+	Class Dagger
+	BaseType Sai
+	Rarity = Normal
+	ItemLevel >= 73
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Show  # Leveling Filter - Crafting Items - 76+ imbued wands - Normal |Comment
+	BaseType "Imbued Wand"
+	Rarity = Normal
+	ItemLevel >= 76
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Show  # Leveling Filter - Crafting Items - 73+ weapon crafting bases - Magic |Comment
+	BaseType "Harbinger Bow" "Maraketh Bow" "Platinum Kris" Ambusher "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
 	Rarity = Magic
 	ItemLevel >= 73
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Bows for +3 crafting 64+ - Normal |Comment
+Show  # Leveling Filter - Crafting Items - 73+ weapon crafting bases - Magic |Comment
+	Class Dagger
+	BaseType Sai
+	Rarity = Magic
+	ItemLevel >= 73
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Show  # Leveling Filter - Crafting Items - 76+ imbued wands - Magic |Comment
+	BaseType "Imbued Wand"
+	Rarity = Magic
+	ItemLevel >= 76
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Crafting bases present in the Leveling Filter.                                #
+Show  # Leveling Filter - Crafting Items - Bows for +3 crafting 64+ - Normal |Comment
 	BaseType "Short Bow" "Grove Bow" "Thicket Bow"
 	Rarity = Normal
 	ItemLevel >= 64
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Bows for +3 crafting 64+ - Magic |Comment
+Show  # Leveling Filter - Crafting Items - Bows for +3 crafting 64+ - Magic |Comment
 	BaseType "Short Bow" "Grove Bow" "Thicket Bow"
 	Rarity = Magic
 	ItemLevel >= 64
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - staves for +3 crafting 55+ - Normal |Comment
+Show  # Leveling Filter - Crafting Items - staves for +3 crafting 55+ - Normal |Comment
 	BaseType "Maelström Staff"
 	Rarity = Normal
 	ItemLevel >= 55
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - staves for +3 crafting 55+ - Magic |Comment
+Show  # Leveling Filter - Crafting Items - staves for +3 crafting 55+ - Magic |Comment
 	BaseType "Maelström Staff"
 	Rarity = Magic
 	ItemLevel >= 55
@@ -2444,70 +2355,70 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - stave
 #-------------------------------------------------------------------------------#
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Normal - Armour |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Armour |Comment
 	BaseType "Assassin's Garb" "Astral Plate" "Vaal Regalia"
 	Rarity = Normal
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Normal - Boots |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Boots |Comment
 	BaseType "Slink Boots" "Titan Greaves" "Sorcerer Boots"
 	Rarity = Normal
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Normal - Gloves |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Gloves |Comment
 	BaseType "Slink Gloves" "Titan Gauntlets" "Sorcerer Gloves"
 	Rarity = Normal
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Normal - Helmets |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Helmets |Comment
 	BaseType "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Nightmare Bascinet" "Royal Burgonet"
 	Rarity = Normal
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Normal - Shields |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Normal - Shields |Comment
 	BaseType "Titanium Spirit Shield"
 	Rarity = Normal
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Magic - Armour |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Armour |Comment
 	BaseType "Assassin's Garb" "Astral Plate" "Vaal Regalia"
 	Rarity = Magic
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Magic - Boots |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Boots |Comment
 	BaseType "Slink Boots" "Titan Greaves" "Sorcerer Boots"
 	Rarity = Magic
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Magic - Gloves |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Gloves |Comment
 	BaseType "Slink Gloves" "Titan Gauntlets" "Sorcerer Gloves"
 	Rarity = Magic
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Magic - Helmets |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Helmets |Comment
 	BaseType "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Nightmare Bascinet" "Royal Burgonet"
 	Rarity = Magic
 	ItemLevel >= 72
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.                                #
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 72+ armour crafting bases - Magic - Shields |Comment
+Show  # Leveling Filter - Crafting Items - 72+ armour crafting bases - Magic - Shields |Comment
 	BaseType "Titanium Spirit Shield"
 	Rarity = Magic
 	ItemLevel >= 72
@@ -2549,18 +2460,7 @@ Show  # Racing Filter - Normal Races - Armour - Chest (item level <= 63) - Norma
 
 # Can be turned on manually within Endgame racing block.                        #
 #Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Armour - Chest armour - (DropLevel >= 54, Normal) |Comment
-#	Sockets >= 2
-#	DropLevel >= 54
-#	Class "Body Armour"
-#	Rarity = Normal
-#	SetFontSize 23
-#	SetBackgroundColor 0 0 0 55 # Uber trash
-#Disabled Block End
-
-# Can be turned on manually within Endgame racing block.                        #
-#Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Armour - Chest armour - (DropLevel >= 54, magic) |Comment
+#Show  # Racing Filter - Endgame - Crafting Items - Armour - Chest armour (Endgame, magic) |Comment
 #	Sockets >= 2
 #	DropLevel >= 54
 #	Class "Body Armour"
@@ -2777,47 +2677,7 @@ Show  # Racing Filter - Normal Races - Armour - Helm - Magic |Comment
 # Section:  #   RACING - ARMOUR - SHIELD
 #-------------------------------------------------------------------------------#
 
-Show  # Racing Filter - Normal Races - Armour -  Shield - Normal |Comment
-	Sockets >= 2
-	DropLevel >= 42
-	Class Shield
-	Rarity = Normal
-	ItemLevel <= 63
-	SetBackgroundColor 0 0 0 140 # Lesser items
-
-Show  # Racing Filter - Normal Races - Armour -  Shield - Normal |Comment
-	Sockets >= 2
-	DropLevel >= 24
-	Class Shield
-	Rarity = Normal
-	ItemLevel <= 46
-	SetBackgroundColor 0 0 0 140 # Lesser items
-
-# Bone Spirit Shield (Of animation flask recipe) fixed in progression.          #
-#Disabled Block Start
-#Show  # Extras - Recipe items - Bone Spirit Shield (Of animation flask recipe summoners) - Normal |Comment
-#	BaseType "Bone Spirit Shield"
-#	Rarity = Normal
-#	ItemLevel <= 29
-#	SetBorderColor 255 45 175 # T2 drops color
-#Disabled Block End
-
-Show  # Racing Filter - Normal Races - Armour -  Shield - Normal |Comment
-	Sockets >= 2
-	DropLevel >= 11
-	Class Shield
-	Rarity = Normal
-	ItemLevel <= 29
-	SetBackgroundColor 0 0 0 140 # Lesser items
-
-Show  # Racing Filter - Normal Races - Armour -  Shield - Normal |Comment
-	DropLevel >= 1
-	Class Shield
-	Rarity = Normal
-	ItemLevel <= 16
-	SetBackgroundColor 0 0 0 140 # Lesser items
-
-Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
+Show  # Racing Filter - Normal Races -  Shield - Magic |Comment
 	Sockets >= 2
 	DropLevel >= 42
 	Class Shield
@@ -2825,7 +2685,7 @@ Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
 	ItemLevel <= 63
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
+Show  # Racing Filter - Normal Races -  Shield - Magic |Comment
 	Sockets >= 2
 	DropLevel >= 24
 	Class Shield
@@ -2835,14 +2695,14 @@ Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
 
 # Bone Spirit Shield (Of animation flask recipe) fixed in progression.          #
 #Disabled Block Start
-#Show  # Extras - Recipe items - Bone Spirit Shield (Of animation flask recipe summoners) - Magic |Comment
+#Show  # Extras - Recipe items - Bone Spirit Shield (Of animation flask recipe summoners) - <= Magic |Comment
 #	BaseType "Bone Spirit Shield"
-#	Rarity = Magic
+#	Rarity <= Magic
 #	ItemLevel <= 29
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
-Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
+Show  # Racing Filter - Normal Races -  Shield - Magic |Comment
 	Sockets >= 2
 	DropLevel >= 11
 	Class Shield
@@ -2850,7 +2710,7 @@ Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
 	ItemLevel <= 29
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
+Show  # Racing Filter - Normal Races -  Shield - Magic |Comment
 	DropLevel >= 1
 	Class Shield
 	Rarity = Magic
@@ -2859,16 +2719,7 @@ Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
 
 # Bone Spirit Shield (Of animation flask recipe for summoners)                  #
 #Disabled Block Start
-#Show  # Extras - Recipe items - Bone Spirit Shield (Of animation flask recipe summoners) - Normal |Comment
-#	BaseType "Bone Spirit Shield"
-#	Rarity <= Normal
-#	SetFontSize 45
-#	SetBorderColor 255 45 175 # T2 drops color
-#Disabled Block End
-
-# Bone Spirit Shield (Of animation flask recipe for summoners)                  #
-#Disabled Block Start
-#Show  # Extras - Recipe items - Bone Spirit Shield (Of animation flask recipe summoners) - Magic |Comment
+#Show  # Extras - Recipe items - Bone Spirit Shield (Of animation flask recipe summoners) - <= Magic |Comment
 #	BaseType "Bone Spirit Shield"
 #	Rarity <= Magic
 #	SetFontSize 45
@@ -2901,7 +2752,7 @@ Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
 
 # Can be turned on manually within Endgame racing block.                        #
 #Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Armour - 4 link armour (Itemlevel 66+) |Comment
+#Show  # Racing Filter - Endgame - Crafting Items - 4 link armour (Itemlevel 66+) |Comment
 #	LinkedSockets = 4
 #	Class "Body Armour" Boots Gloves Helmet
 #	Rarity >= Normal
@@ -2909,43 +2760,15 @@ Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
 
 # Can be turned on manually within Endgame racing block.                        #
 #Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Armour - All crafting bases |Comment
-#	BaseType "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Carnal Armour"
+#Show  # Racing Filter - Endgame - Crafting Items - Armour - Chest armour (All crafting bases) |Comment
+#	BaseType "Assassin's Garb" "Glorious Plate" "Carnal Armour" "Vaal Regalia" "Zodiac Leather" "Slink Boots" "Titan Greaves" "Sorcerer Boots" "Dragonscale Boots" "Vaal Greaves" "Stealth Boots" "Slink Gloves" "Titan Gauntlets" "Sorcerer Gloves" "Dragonscale Gauntlets" "Vaal Gauntlets" "Lion Pelt" "Hubris Circlet" "Eternal Burgonet" "Nightmare Bascinet" "Royal Burgonet"
 #	Rarity <= Magic
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#Disabled Block End
-
-# Any Normal Amulet.                                                             #
-#Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Jewelry (ilvl 64+) - Normal - Amulets |Comment
-#	Class Amulet
-#	Rarity = Normal
-#	ItemLevel >= 64
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#Disabled Block End
-
-# Any Normal Ring.                                                               #
-#Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Jewelry (ilvl 64+) - Normal - Rings |Comment
-#	Class Ring
-#	Rarity = Normal
-#	ItemLevel >= 64
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#Disabled Block End
-
-# Any Normal Rustic Sash and Leather Belt.                                       #
-#Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Jewelry (ilvl 64+) - Normal - Rustic Sash, Leather Belt |Comment
-#	Class Belt
-#	BaseType "Rustic Sash" "Leather Belt"
-#	Rarity = Normal
-#	ItemLevel >= 64
 #	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 # Any magic Amulet.                                                             #
 #Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Jewelry (ilvl 64+) - Magic - Amulets |Comment
+#Show  # Racing Filter - Endgame - Crafting Items - Jewelry (Magic, ilvl 64+) - Amulets |Comment
 #	Class Amulet
 #	Rarity = Magic
 #	ItemLevel >= 64
@@ -2954,7 +2777,7 @@ Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
 
 # Any magic Ring.                                                               #
 #Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Jewelry (ilvl 64+) - Magic - Rings |Comment
+#Show  # Racing Filter - Endgame - Crafting Items - Jewelry (Magic, ilvl 64+) - Rings |Comment
 #	Class Ring
 #	Rarity = Magic
 #	ItemLevel >= 64
@@ -2963,7 +2786,7 @@ Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
 
 # Any magic Rustic Sash and Leather Belt.                                       #
 #Disabled Block Start
-#Show  # Racing Filter - Endgame - Crafting Items - Jewelry (ilvl 64+) - Magic - Rustic Sash, Leather Belt |Comment
+#Show  # Racing Filter - Endgame - Crafting Items - Jewelry (Magic, ilvl 64+) - Rustic Sash, Leather Belt |Comment
 #	Class Belt
 #	BaseType "Rustic Sash" "Leather Belt"
 #	Rarity = Magic
@@ -3041,7 +2864,7 @@ Show  # Racing Filter - Normal Races - Jewelry - Amulet, Belt, Ring - Magic |Com
 # Section:  #   RACING - CASTER - SCEPTRE
 #-------------------------------------------------------------------------------#
 
-Show  # Racing Filter - Normal Races - Caster Items - Sceptre - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Sceptre - 3 links |Comment
 	LinkedSockets = 3
 	SocketGroup BB
 	DropLevel <= 40
@@ -3052,7 +2875,7 @@ Show  # Racing Filter - Normal Races - Caster Items - Sceptre - 3 links |Comment
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #    PlayAlertSound 3 120
 
-Show  # Racing Filter - Normal Races - Caster Items - Sceptre - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Sceptre - 3 links |Comment
 	LinkedSockets = 3
 	SocketGroup BB
 	DropLevel >= 41
@@ -3063,32 +2886,32 @@ Show  # Racing Filter - Normal Races - Caster Items - Sceptre - 3 links |Comment
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #    PlayAlertSound 3 120
 
-Show  # Racing Filter - Normal Races - Caster Items - Sceptre - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Sceptre - 3 links |Comment
 	LinkedSockets = 3
-	DropLevel <= 40
+	DropLevel <= 40 
+#    PlayAlertSound 2 80
 	Class Sceptre
 	ItemLevel <= 63
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80
 
-Show  # Racing Filter - Normal Races - Caster Items - Sceptre - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Sceptre - 3 links |Comment
 	LinkedSockets = 3
-	DropLevel >= 41
+	DropLevel >= 41 
+#    PlayAlertSound 2 80
 	Class Sceptre
 	ItemLevel <= 63
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80
 
-Show  # Racing Filter - Normal Races - Caster Items - Sceptre - Magic |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Sceptre - Magic |Comment
 	Class Sceptre
 	Rarity = Magic
 	ItemLevel <= 63
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Racing Filter - Normal Races - Caster Items - Sceptre - Any (lvl <= 7) |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Sceptre - Any (lvl <= 7) |Comment
 	Class Sceptre
 	ItemLevel <= 7
 	SetFontSize 45
@@ -3098,7 +2921,7 @@ Show  # Racing Filter - Normal Races - Caster Items - Sceptre - Any (lvl <= 7) |
 # Section:  #   RACING - CASTER - DAGGER
 #-------------------------------------------------------------------------------#
 
-Show  # Racing Filter - Normal Races - Caster Items - Dagger - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Dagger - 3 links |Comment
 	LinkedSockets = 3
 	SocketGroup BB
 	DropLevel <= 40
@@ -3109,7 +2932,7 @@ Show  # Racing Filter - Normal Races - Caster Items - Dagger - 3 links |Comment
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #    PlayAlertSound 3 120
 
-Show  # Racing Filter - Normal Races - Caster Items - Dagger - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Dagger - 3 links |Comment
 	LinkedSockets = 3
 	SocketGroup BB
 	DropLevel >= 41
@@ -3120,25 +2943,25 @@ Show  # Racing Filter - Normal Races - Caster Items - Dagger - 3 links |Comment
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #    PlayAlertSound 3 120
 
-Show  # Racing Filter - Normal Races - Caster Items - Dagger - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Dagger - 3 links |Comment
 	LinkedSockets = 3
-	DropLevel <= 40
+	DropLevel <= 40 
+#    PlayAlertSound 2 80
 	Class Dagger
 	ItemLevel <= 63
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80
 
-Show  # Racing Filter - Normal Races - Caster Items - Dagger - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Dagger - 3 links |Comment
 	LinkedSockets = 3
-	DropLevel >= 41
+	DropLevel >= 41 
+#    PlayAlertSound 2 80
 	Class Dagger
 	ItemLevel <= 63
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80
 
-Show  # Racing Filter - Normal Races - Caster Items - Dagger - Top (Magic, ilvl <= 63) |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Dagger - Top (Magic, ilvl <= 63) |Comment
 	BaseType "Platinum Kris" "Golden Kris" "Copper Kris"
 	Rarity = Magic
 	ItemLevel <= 63
@@ -3146,14 +2969,14 @@ Show  # Racing Filter - Normal Races - Caster Items - Dagger - Top (Magic, ilvl 
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 255 45 175 # T2 drops color
 
-Show  # Racing Filter - Normal Races - Caster Items - Dagger - Magic |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Dagger - Magic |Comment
 	Class Dagger
 	Rarity = Magic
 	ItemLevel <= 63
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Racing Filter - Normal Races - Caster Items - Dagger - Any (lvl <= 7) |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Dagger - Any (lvl <= 7) |Comment
 	Class Dagger
 	ItemLevel <= 7
 	SetFontSize 45
@@ -3163,7 +2986,7 @@ Show  # Racing Filter - Normal Races - Caster Items - Dagger - Any (lvl <= 7) |C
 # Section:  #   RACING - CASTER - WAND
 #-------------------------------------------------------------------------------#
 
-Show  # Racing Filter - Normal Races - Caster Items - Wand - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Wand - 3 links |Comment
 	LinkedSockets = 3
 	SocketGroup BB
 	DropLevel <= 40
@@ -3174,7 +2997,7 @@ Show  # Racing Filter - Normal Races - Caster Items - Wand - 3 links |Comment
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #    PlayAlertSound 3 120
 
-Show  # Racing Filter - Normal Races - Caster Items - Wand - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Wand - 3 links |Comment
 	LinkedSockets = 3
 	SocketGroup BB
 	DropLevel >= 41
@@ -3185,32 +3008,32 @@ Show  # Racing Filter - Normal Races - Caster Items - Wand - 3 links |Comment
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #    PlayAlertSound 3 120
 
-Show  # Racing Filter - Normal Races - Caster Items - Wand - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Wand - 3 links |Comment
 	LinkedSockets = 3
-	DropLevel <= 40
+	DropLevel <= 40 
+#    PlayAlertSound 2 80
 	Class Wand
 	ItemLevel <= 63
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80
 
-Show  # Racing Filter - Normal Races - Caster Items - Wand - 3 links |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Wand - 3 links |Comment
 	LinkedSockets = 3
-	DropLevel >= 41
+	DropLevel >= 41 
+#    PlayAlertSound 2 80
 	Class Wand
 	ItemLevel <= 63
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80
 
-Show  # Racing Filter - Normal Races - Caster Items - Wand - Magic |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Wand - Magic |Comment
 	Class Wand
 	Rarity = Magic
 	ItemLevel <= 63
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Racing Filter - Normal Races - Caster Items - Wand - Any (lvl <= 7) |Comment
+Show  # Racing Filter - Normal Races - Caster Items ***WARNING*** DISABLING THIS WILL HIDE SOME DAGGERS AND SCEPTERS! - Wand - Any (lvl <= 7) |Comment
 	Class Wand
 	ItemLevel <= 7
 	SetFontSize 45
@@ -3494,7 +3317,6 @@ Show  # Racing Filter - Normal Races - Caster Items - Wand - Any (lvl <= 7) |Com
 # Can be turned on manually within Endgame racing block.                        #
 #Disabled Block Start
 #Show  # Racing Filter - Endgame - 1 Hand Weapons For Racing Endgame - Dagger - Normal |Comment
-#	Class Dagger
 #	BaseType Trisula "Gutting Knife" "Slaughter Knife" Ambusher "Ezomyte Dagger" "Platinum Kris" "Imperial Skean" "Demon Dagger" Sai
 #	Rarity = Normal
 #	ItemLevel <= 72
@@ -5721,7 +5543,8 @@ Show  # Racing Filter - Normal Races - Caster Items - Wand - Any (lvl <= 7) |Com
 #-------------------------------------------------------------------------------#
 
 #Disabled Block Start
-#Show  # Racing Filter - Normal Races - Quivers For Racing - ItemLevel <= 15 |Comment
+#Show  # Racing Filter - Normal Races - Quivers For Racing |Comment
+#	DropLevel <= 9
 #	Class Quiver
 #	ItemLevel <= 15
 #	SetFontSize 45
@@ -5747,18 +5570,9 @@ Show  # Racing Filter - Normal Races - Caster Items - Wand - Any (lvl <= 7) |Com
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Normal Races - Quivers For Racing - Any Normal quiver |Comment
-#	Class Quiver
-#	Rarity = Normal
-#	ItemLevel <= 63
-#	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#Disabled Block End
-
-#Disabled Block Start
 #Show  # Racing Filter - Normal Races - Quivers For Racing - Any Magic quiver |Comment
 #	Class Quiver
-#	Rarity = Magic
+#	Rarity >= Magic
 #	ItemLevel <= 63
 #	SetFontSize 45
 #	SetBackgroundColor 0 0 0 140 # Lesser items
@@ -5799,12 +5613,40 @@ Hide  # Extras - Recipe items - Normal Elegant Sword (The Goddess Scorned)
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
 # Any crude bow. Essence crafting for summoners.
-Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Crude bow (ilvl >=50, Essence crafting)
+Show  # Leveling Filter - Crafting Items - Crude bow (ilvl >=50, Essence crafting)
 	BaseType "Crude Bow"
 	ItemLevel >= 50
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #   PlayAlertSound 7 200
+
+#-------------------------------------------------------------------------------#
+# Section:  #   LEGACY WARBANDS FILTER
+#-------------------------------------------------------------------------------#
+
+#Disabled Block Start
+#Show  # Extras - Warbands filter (Legacy) - Boots |Comment
+#	Class Boots
+#	Rarity = Magic
+#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBorderColor 74 230 58 # Boots border color
+#Disabled Block End
+
+#Disabled Block Start
+#Show  # Extras - Warbands filter (Legacy) - Helm |Comment
+#	Class Helm
+#	Rarity = Magic
+#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBorderColor 215 25 0 255 # Helmets border color
+#Disabled Block End
+
+#Disabled Block Start
+#Show  # Extras - Warbands filter (Legacy) - Gloves |Comment
+#	Class Gloves
+#	Rarity = Magic
+#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBorderColor 0 200 255 255 # Gloves border color
+#Disabled Block End
 
 #-------------------------------------------------------------------------------#
 # Section:  #   HIDDEN ITEMS
@@ -5817,7 +5659,7 @@ Hide
 	SetBorderColor 255 45 175 # T2 drops color
 
 # Present in the Leveling Filter. Blacksmith's Whetstone recipe.                #
-Show  # Leveling Filter (Enable for leveling and races) - 20% quality weapons |Comment
+Show  # Leveling Filter - 20% quality weapons
 	Quality = 20
 	Class "One Hand" "Two Hand"
 	SetBackgroundColor 0 0 0 140 # Lesser items
@@ -5839,8 +5681,8 @@ Hide
 # Filtering starts at level 1. Rare items that are not Caught get filtered.    #
 Hide
 	Rarity = Rare
-	SetFontSize 18
-	SetTextColor 255 255 119 185
+	SetFontSize 23
+	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 55 # Uber trash
 
 # Filtering starts at level 1. Flasks that are not Caught get filtered.         #
@@ -5854,7 +5696,7 @@ Hide
 #-------------------------------------------------------------------------------#
 
 # If you see this it means that the loot filter is out of date or broken. Should never happen.
-Show  # ON RECOMMENDED - Extras - Just in case anything falls trough warning highlight |Comment
+Show  # ON RECOMMENDED - Extras - Just in case anything falls trough warning highlight
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 255 45 175 # T2 drops color
