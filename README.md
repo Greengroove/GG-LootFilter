@@ -10,14 +10,14 @@
 |
 [Donations](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC)**
 
-- Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/advanced/Greengroove/). **FILTRATION IS NO LONGER SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
+- Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTRATION IS NO LONGER SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
 
 A general recommendation is to only use the leveling filter for races, start of a challenge league or when you level a new character. When you play with a fully geared character the Endgame filter will be much better. If you have a reasonable amount of magic find you can use the MF filter.
 
 - **Leveling filter** is good for the start of the league, first leveling in a new league and Racing. It includes the racing filter and all the way to level 100. Shows a lot of items. **Customization is encouraged.**
 - **Leveling filter - FOR CASTERS** Same as the regular leveling filter except that normal and magic leveling weapons are hidden.
 - **Endgame filter** is good for general use (avoid for racing). It filters mediocre items. Use this when you try to power level or if you don't care so much about items anymore. Use when you are resist. cap and have your basic flasks set up for maps.
-- **Magic Find (MF) filter** hides even more stuff. Use this if you really don't want to id more rares than you „have to“. It will hide all non top base rares, 83 / 84+ crafting items, RGB items, all non unique flasks, hammers for chisel recipe, Scraps, Whetstones, Baubles, Wisdom and Portal Scrolls. This version is active when both the "Leveling" and "Endgame" blocks are disabled.
+- **Magic Find (MF) filter** hides even more stuff. Use this if you really don't want to id more rares than you „have to“. It will hide all non top base rares, 83 / 84+ crafting items, RGB items, all non unique flasks, hammers for chisel recipe, Scraps, Whetstones, Baubles, Wisdom and Portal Scrolls and more... This version is active when both the "Leveling" and "Endgame" blocks are disabled.
 
 ![Imgur](http://i.imgur.com/aU2jxMi.jpg)
 
@@ -50,7 +50,7 @@ Downloading the files is always the best choice. But **If you copy and paste the
 
 ## CUSTOMIZATION:
 
-- Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/advanced/Greengroove/). **FILTRATION IS NO LONGER SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
+- Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTRATION IS NO LONGER SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
 - Customization also possible with Notepad (or similar) with find and replace function.
 - Filter comes with 5 different color themes
 

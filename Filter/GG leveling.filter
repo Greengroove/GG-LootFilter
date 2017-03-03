@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 2.6.0b
+#               Greengroove's Endgame Loot Filter Script v 2.6.0c
 #
 #-------------------------------------------------------------------------------#
 #
@@ -40,6 +40,10 @@
 #
 #   Use the forum thread for information, updates, feedback, questions and suggestions:
 #   https://www.pathofexile.com/forum/view-thread/1566921
+#
+#   Download:
+#   http://filterblast.oversoul.xyz/Greengroove/
+#   https://github.com/Greengroove/GG-LootFilter/releases
 #
 #-------------------------------------------------------------------------------#
 #
@@ -210,7 +214,19 @@
 #
 #   > ADVANCED OPTIONS
 #
+# //! SetConfig $SmartBlocks_Position top
+
+# //! SetOption $Welcome link [Donate] [https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC]  # Control what gets displayed by editing the settings. The boxes below are general options for advanced users. Feel free to edit these lists as you please. The block switches provide even better customization options. Both go hand in hand. Remember to give feedback on the forum if you like the filter or if you have any suggestions or requests. Enjoy the game and good hunting!
 #
+# //! SetOption $Chance_bases textarea ["Sorcerer Boots" "Leather Belt"] # If empty default value will be used.
+# //! SetOption $Bad_cards textarea ["The Carrion Crow" "The King's Blade" "Death" "Light and Truth" "The Lunaris Priestess" "The Scarred Meadow" "Thunderous Skies" "Turn the Other Cheek" "The Wolf's Shadow" "Lantador's Lost Love" "The Oath"] # These Divination cards will be hidden in the endgame block. If empty default value will be used.
+# //! SetOption $Top_rare_weapons textarea ["Harbinger Bow" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Coronal Maul" "Imbued Wand" "Prophecy Wand" "Profane Wand"] # If empty default value will be used.
+# //! SetOption $Top_rare_daggers textarea ["Copper Kris" "Imp Dagger" "Golden Kris" "Fiend Dagger" "Demon Dagger" "Ambusher" "Platinum Kris" "Sai"] # If empty default value will be used.
+# //! SetOption $Top_rare_caster_shield textarea ["Titanium Spirit Shield" "Harmonic Spirit Shield" "Vaal Spirit Shield" "Fossilised Spirit Shield"] # If empty default value will be used.
+# //! SetOption $Top_rare_armour textarea ["Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Carnal Armour"] # If empty default value will be used.
+# //! SetOption $Top_crafting_weapons textarea ["Maraketh Bow" "Harbinger Bow" "Platinum Kris" "Ambusher" "Sai" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"] # This list applies to all crafting weapons. If empty default value will be used.
+# //! SetOption $Racing_caster_colors input ["BB"] # Here you can set a RGB value for races with a caster. Maximum 3 characters. If empty default value will be used.
+# //! SetOption $Racing_currency_volume switch [ 0] [80] # Toggle sounds for low currency (Whetstone, Transmutation, Augmentation orbs). Only enable for races or leveling in a new league, 0 = disabled (Default).
 #
 #-------------------------------------------------------------------------------#
 #
@@ -307,7 +323,8 @@ Show
 # The divination cards that you don't want to drop with sound in endgame.       #
 Show  # Leveling Filter (Enable for leveling and races) - Bad divination cards
 	Class Divination
-	BaseType "The Carrion Crow" "The King's Blade" Death "Light and Truth" "The Lunaris Priestess" "The Scarred Meadow" "Thunderous Skies" "Turn the Other Cheek" "The Wolf's Shadow" "Lantador's Lost Love" "The Oath"
+	BaseType "The Carrion Crow" "The King's Blade" Death "Light and Truth" "The Lunaris Priestess" "The Scarred Meadow" "Thunderous Skies" "Turn the Other Cheek" "The Wolf's Shadow" "Lantador's Lost Love" "The Oath" 
+# //$ $Bad_cards
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 
@@ -322,13 +339,13 @@ Show
 # Section:  #   LEGACY
 #-------------------------------------------------------------------------------#
 
-Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Rare |Comment
+Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Normal |Comment
 	Class Leaguestone
-	Rarity = Rare
+	Rarity = Normal
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 200 200 200
 	PlayAlertSound 7 200
 
 Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Magic |Comment
@@ -337,17 +354,26 @@ Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Magic |Comment
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 136 136 255
 	PlayAlertSound 7 200
 
-Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Normal |Comment
+Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Rare |Comment
 	Class Leaguestone
-	Rarity = Normal
+	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 255 255 119
 	PlayAlertSound 7 200
+
+Show  # ON RECOMMENDED - Extras - Legacy items - Leaguestone - Unique |Comment
+	Class Leaguestone
+	Rarity = Unique
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	PlayAlertSound 8 280
 
 Show
 	Class "Misc Map Items"
@@ -424,6 +450,9 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone
 	Class Currency
 	BaseType "Blacksmith's Whetstone"
 	SetFontSize 45
+	PlayAlertSound 2 80 
+# //$ 2 $Racing_currency_volume
+# //$ 2 $Racing_currency_volume
 
 Show  # Endgame Filter (Disable for MF) - Low currency - Glassblower's Bauble
 	Class Currency
@@ -433,14 +462,18 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Glassblower's Bauble
 Show  # ON RECOMMENDED - Currency - Orb of Transmutation
 	Class Currency
 	BaseType "Orb of Transmutation"
-	SetFontSize 45 
-#   PlayAlertSound 2 80
+	SetFontSize 45
+	PlayAlertSound 2 80 
+# //$ 2 $Racing_currency_volume
+# //$ 2 $Racing_currency_volume
 
 Show  # ON RECOMMENDED - Currency - Orb of Augmentation
 	Class Currency
 	BaseType "Orb of Augmentation"
-	SetFontSize 45 
-#   PlayAlertSound 2 80
+	SetFontSize 45
+	PlayAlertSound 2 80 
+# //$ 2 $Racing_currency_volume
+# //$ 2 $Racing_currency_volume
 
 Show  # ON RECOMMENDED - Currency - Orb of Alteration |Comment
 	Class Currency
@@ -837,7 +870,8 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linke
 #-------------------------------------------------------------------------------#
 
 Show  # ON RECOMMENDED - Chance items |Comment
-	BaseType "Sorcerer Boots"
+	BaseType "Sorcerer Boots" "Leather Belt" 
+# //$ $Chance_bases
 	Rarity = Normal
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
@@ -1035,7 +1069,8 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Belts (non top) |Comment
 
 # All top weapon base rares.                                                    #
 Show
-	BaseType "Harbinger Bow" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Coronal Maul" "Imbued Wand" "Prophecy Wand" "Profane Wand"
+	BaseType "Harbinger Bow" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Coronal Maul" "Imbued Wand" "Prophecy Wand" "Profane Wand" 
+# //$ $Top_rare_weapons
 	Rarity >= Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
@@ -1045,7 +1080,8 @@ Show
 # Top base daggers.                                                             #
 Show
 	Class Dagger
-	BaseType "Copper Kris" "Imp Dagger" "Golden Kris" "Fiend Dagger" "Demon Dagger" Ambusher "Platinum Kris" Sai
+	BaseType "Copper Kris" "Imp Dagger" "Golden Kris" "Fiend Dagger" "Demon Dagger" Ambusher "Platinum Kris" Sai 
+# //$ $Top_rare_daggers
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
@@ -1094,7 +1130,8 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Wands (Decent)
 
 # Top base armour.                                                              #
 Show
-	BaseType "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Carnal Armour"
+	BaseType "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Carnal Armour" 
+# //$ $Top_rare_armour
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
@@ -1103,7 +1140,8 @@ Show
 
 # Top base caster shields.                                                     #
 Show
-	BaseType "Titanium Spirit Shield" "Harmonic Spirit Shield" "Vaal Spirit Shield" "Fossilised Spirit Shield"
+	BaseType "Titanium Spirit Shield" "Harmonic Spirit Shield" "Vaal Spirit Shield" "Fossilised Spirit Shield" 
+# //$ $Top_rare_caster_shield
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
@@ -2214,14 +2252,16 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - norma
 
 Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Normal items - Weapon crafting bases
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
-	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
+	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
+# //$ $Top_crafting_weapons
 	Rarity = Normal
 	ItemLevel >= 83
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
 Show  # Endgame Filter (Disable for MF) - ilvl 83 / 84+ Magic items - Weapon crafting bases
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
-	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
+	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
+# //$ $Top_crafting_weapons
 	Rarity = Magic
 	ItemLevel >= 83
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
@@ -2398,7 +2438,8 @@ Show  # Leveling Filter (Enable for leveling and races) - Big RGB items ItemLeve
 # Crafting bases present in the Leveling Filter.                                #
 Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 73+ weapon crafting bases - Normal |Comment
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
-	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
+	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
+# //$ $Top_crafting_weapons
 	Rarity = Normal
 	ItemLevel >= 73
 	SetBackgroundColor 0 0 0 140 # Lesser items
@@ -2406,7 +2447,8 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 73+ w
 # Crafting bases present in the Leveling Filter.                                #
 Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - 73+ weapon crafting bases - Magic |Comment
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
-	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"
+	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
+# //$ $Top_crafting_weapons
 	Rarity = Magic
 	ItemLevel >= 73
 	SetBackgroundColor 0 0 0 140 # Lesser items
@@ -2540,11 +2582,11 @@ Show  # Racing Filter - Normal Races - Armour - Chest (item level <= 63) - Magic
 	ItemLevel <= 32
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-Show  # Racing Filter - Normal Races - Armour - Chest (item level <= 63) - Normal (item level <=14) |Comment
-	DropLevel >= 1
+# Exception for racing and leveling. Vendor food.                                #
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal - normal exception - Body Armour |Comment
 	Class "Body Armour"
 	Rarity = Normal
-	ItemLevel <= 14
+	ItemLevel <= 9
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Can be turned on manually within Endgame racing block.                        #
@@ -2605,6 +2647,14 @@ Show  # Racing Filter - Normal Races - Armour - Boots - Normal |Comment
 	Class Boots
 	Rarity = Normal
 	ItemLevel <= 63
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 74 230 58 # Boots border color
+
+# Exception for racing and leveling. Vendor food.                                #
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal - normal exception - Boots |Comment
+	Class Boots
+	Rarity = Normal
+	ItemLevel <= 10
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 74 230 58 # Boots border color
 
@@ -2682,6 +2732,14 @@ Show  # Racing Filter - Normal Races - Armour - Gloves - Normal |Comment
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 0 200 255 255 # Gloves border color 
 
+# Exception for racing and leveling. Vendor food.                                #
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal - normal exception - Gloves |Comment
+	Class Gloves
+	Rarity = Normal
+	ItemLevel <= 10
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 0 200 255 255 # Gloves border color 
+
 Show  # Racing Filter - Normal Races - Armour - Gloves - Magic |Comment
 	DropLevel <= 22
 	Class Gloves
@@ -2744,6 +2802,14 @@ Show  # Racing Filter - Normal Races - Armour - Helm - Normal |Comment
 	Class Helm
 	Rarity = Normal
 	ItemLevel <= 63
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 215 25 0 255 # Helmets border color
+
+# Exception for racing and leveling. Vendor food.                                #
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal - normal exception - Helm |Comment
+	Class Helm
+	Rarity = Normal
+	ItemLevel <= 10
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 215 25 0 255 # Helmets border color
 
@@ -2910,7 +2976,8 @@ Show  # Racing Filter - Normal Races - Armour -  Shield - Magic |Comment
 # Can be turned on manually within Endgame racing block.                        #
 #Disabled Block Start
 #Show  # Racing Filter - Endgame - Crafting Items - Armour - All crafting bases |Comment
-#	BaseType "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Carnal Armour"
+#	BaseType "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Carnal Armour" 
+# //$ $Top_rare_armour
 #	Rarity <= Magic
 #	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
@@ -3041,25 +3108,27 @@ Show  # Racing Filter - Normal Races - Jewelry - Amulet, Belt, Ring - Magic |Com
 
 Show  # Racing Filter - Normal Races - Caster Items - Sceptre - 3 links |Comment
 	LinkedSockets = 3
-	SocketGroup BB
-	DropLevel <= 40
+	SocketGroup BB 
+# //$ $Racing_caster_colors
+	DropLevel <= 40 
+#    PlayAlertSound 3 120
 	Class Sceptre
 	ItemLevel <= 63
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#    PlayAlertSound 3 120
 
 Show  # Racing Filter - Normal Races - Caster Items - Sceptre - 3 links |Comment
 	LinkedSockets = 3
-	SocketGroup BB
-	DropLevel >= 41
+	SocketGroup BB 
+# //$ $Racing_caster_colors
+	DropLevel >= 41 
+#    PlayAlertSound 3 120
 	Class Sceptre
 	ItemLevel <= 63
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#    PlayAlertSound 3 120
 
 Show  # Racing Filter - Normal Races - Caster Items - Sceptre - 3 links |Comment
 	LinkedSockets = 3
@@ -3098,25 +3167,27 @@ Show  # Racing Filter - Normal Races - Caster Items - Sceptre - Any (lvl <= 7) |
 
 Show  # Racing Filter - Normal Races - Caster Items - Dagger - 3 links |Comment
 	LinkedSockets = 3
-	SocketGroup BB
-	DropLevel <= 40
+	SocketGroup BB 
+# //$ $Racing_caster_colors
+	DropLevel <= 40 
+#    PlayAlertSound 3 120
 	Class Dagger
 	ItemLevel <= 63
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#    PlayAlertSound 3 120
 
 Show  # Racing Filter - Normal Races - Caster Items - Dagger - 3 links |Comment
 	LinkedSockets = 3
-	SocketGroup BB
-	DropLevel >= 41
+	SocketGroup BB 
+# //$ $Racing_caster_colors
+	DropLevel >= 41 
+#    PlayAlertSound 3 120
 	Class Dagger
 	ItemLevel <= 63
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#    PlayAlertSound 3 120
 
 Show  # Racing Filter - Normal Races - Caster Items - Dagger - 3 links |Comment
 	LinkedSockets = 3
@@ -3163,25 +3234,27 @@ Show  # Racing Filter - Normal Races - Caster Items - Dagger - Any (lvl <= 7) |C
 
 Show  # Racing Filter - Normal Races - Caster Items - Wand - 3 links |Comment
 	LinkedSockets = 3
-	SocketGroup BB
-	DropLevel <= 40
+	SocketGroup BB 
+# //$ $Racing_caster_colors
+	DropLevel <= 40 
+#    PlayAlertSound 3 120
 	Class Wand
 	ItemLevel <= 63
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#    PlayAlertSound 3 120
 
 Show  # Racing Filter - Normal Races - Caster Items - Wand - 3 links |Comment
 	LinkedSockets = 3
-	SocketGroup BB
-	DropLevel >= 41
+	SocketGroup BB 
+# //$ $Racing_caster_colors
+	DropLevel >= 41 
+#    PlayAlertSound 3 120
 	Class Wand
 	ItemLevel <= 63
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#    PlayAlertSound 3 120
 
 Show  # Racing Filter - Normal Races - Caster Items - Wand - 3 links |Comment
 	LinkedSockets = 3
@@ -5340,6 +5413,19 @@ Hide
 	SetFontSize 18
 	SetTextColor 200 200 200 100
 	SetBackgroundColor 0 0 0 55 # Uber trash
+
+# Exception for racing and leveling. Vendor food.                                #
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal - Small magic item exception |Comment
+	Width = 1
+	Rarity = Magic
+	ItemLevel <= 13
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Exception for racing and leveling. Vendor food.                                #
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal - Any magic item exception |Comment
+	Rarity = Magic
+	ItemLevel <= 9
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Filtering starts at level 1. Magic items that are not Caught get filtered.    #
 Hide

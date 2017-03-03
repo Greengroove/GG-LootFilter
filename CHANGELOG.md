@@ -4,9 +4,21 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.6.0c
+
+- Added the advanced options back in as supposed.
+- Added ability to enable or disable low level currency sounds (Blacksmith's Whetstone, Orb of Transmutation, Orb of Augmentation). This is useful for races or leveling in a new league.
+- Changed leaguestones to have border color represent the rarity and added unique leaguestones just in case.
+- Added "Leather Belt" to the chance bases.
+- Added exception for low level magic items. Any magic item will now be displayed till level 9. Smaller magic items till level 13. Both by default in the leveling filter.
+- Added exception for all low level normal armour items. These will now be displayed till level 10 by default in the leveling filter.
+- The smart block section is now above the advanced options in Filterblast UI.
+- Added download links in the filter files.
+- Added link for donations in Filterblast.
+
 ## 2.6.0b
 
-- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/) instead.**
+- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/Greengroove/) instead.**
 - **A total of 491 entries currently use the "|Comment" syntax for better performance.**
 - The filter will now be automatically updated on Filterblast whenever a new release is available.
 - Updated Legacy challenge league items according to GGG's informations. 
@@ -18,7 +30,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 2.6.0a
 
-- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/) instead.**
+- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/Greengroove/) instead.**
 - **A total of 479 entries currently use the "|Comment" syntax for better performance.**
 - The "Sai" dagger is now included in the crafting weapons list. Redundant entries have been removed.
 - Added ability to hide magic items from 2.4 release (Bone Helmet, Fingerless Silk Gloves, Gripped Gloves, Spiked Gloves, Two-Toned Boots) if ItemLevel <= 83.
@@ -30,8 +42,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 2.6.0
 
-
-- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/) instead.**
+- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/Greengroove/) instead.**
 - **Added all Legacy challenge league items.**
 - Removed "Chiming Spirit Shield" and "Ivory Spirit Shield" from the top caster shield list and created a new block in the endgame branch.
 - Added ability to hide rare RGB items in the endgame branch.
@@ -44,10 +55,9 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 2.5.2h
 
-- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/) instead.**
+- **THIS VERSION IS NOT COMPATIBLE WITH FILTRATION! Use [Filterblast](http://filterblast.oversoul.xyz/Greengroove/) instead.**
 - **Added "|Comment" to many entries in the rare items progressions (leveling rares). A total of 460 entries currently use the syntax.**
 - Maps up to (and including) T8 are now hidden by default in the MF filter.
-- Added ability to hide Gems with quality lower than 15. The switch is in the "ON RECOMMENDED" block.
 - Some minor changes to descriptions and fixed a bug with endgame racing daggers.
 
 ## 2.5.2g
