@@ -2,7 +2,7 @@
 
 **[Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921)
 |
-[Youtube](https://www.youtube.com/c/GreengroovePOE)
+[Youtube](https://www.youtube.com/GreengroovePOE)
 |
 [Facebook](https://www.facebook.com/GreengroovePOE/)
 |

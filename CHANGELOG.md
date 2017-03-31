@@ -4,6 +4,43 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.6.0g
+
+- Added a customizable list for maps and moved higher map filters to the Endgame branch. 
+- Added list option for gems to be highlighted.
+- Added ability to toggle all bases of magic jewels individually.
+- Updated various entries in the racing filter.
+- Many minor label changes.
+
+## 2.6.0f
+
+- Moved the endgame crafting items to a top branch, added ability to choose crafting items item level and removed redundant entries. 
+- Changed to only use 2 list for top rare bases.
+- Added ability to toggle max item level for racing items, removed Endgame racing branch and added a second 4 link armour entry for races in high level areas.
+- Added ability to toggle sound for best in slot caster items for races.
+- Added Normal chest armour progression for racing.
+- Renamed some and moved most branches in the Racing filter.
+- Improved the quivers for racing section.
+- Some other minor spelling changes and minor adjustments.
+
+## 2.6.0e
+
+- Added an an adaptive filter for shaped maps with option in Filterblast UI.
+- Changed animate weapon items text to be completely transparent.
+
+## 2.6.0d
+
+- Removed "|Comment" syntax on some useless jewelry items, that are meant to be excluded permanently. **A total of 524 entries currently use this syntax.**
+- Added ability to toggle mediocre Energy shield bases.
+- Added ability to choose which utility flasks to highlight. Added option for drop sound and removed some old redundant entries.
+- Added ability to choose normal or magic top flask bases separately and added 3 new sections related to this.
+- Added exception for wands with cast speed in the Extras branch.
+- Changed the 83/84 crafting bases to 84. Even tho most weapons only need ilvl 83, I choose to use 84 to simplify the filter in endgame.
+- Expanded the top rare quiver block.
+- Added links to change log, Github and social channels.
+- Added ranged weapons to the animate weapon block.
+- Added empty lines in the advanced options for better readability.
+
 ## 2.6.0c
 
 - Added the advanced options back in as supposed.
