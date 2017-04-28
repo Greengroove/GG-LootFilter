@@ -4,6 +4,37 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.6.0i
+
+- Added tags to sounds to support the sound editor on Filterblast.
+- **Added the color and sound theme tabs.**
+- **Redesigned UI and added notes tab.**
+- Added ability to choose up to 4 color combinations for ideal >=4 links in races, with special drop sound.
+- Expanded the filtering for rare two hand items.
+- Small change to chest armour for racing and many other small adjustments.
+- Added option to show small or any rare item till a certain level. The level can be set in the racing tab.
+- Added text area in the notes tab to write your own notes.
+- Added warning "~" sign to some blosks that are more sensible.
+- Added Chain belt exlusion (Rarity <= Magic) and added all exclusions to the extra block.
+- Adjusted the T3 and Racing items sound volume.
+- Changed Filterblast UI to use some sliders instead of switches.
+
+## 2.6.0h
+
+- Changed formatting of the advanced Filterblast options to use tabs and default values.
+- Added all maps with nice layout to list of custom maps.
+- Added filter to show any corrupted map.
+- Added new file for referencing default entries in the lists.
+- Added ability to set item levels for crafting weapons and armour separately.
+- Moved all gem and currency entries from the On recommended to the Endgame (MF) filter branch.
+- Added "Lacquered Buckler" to all top base lists.
+- Added ability to change the largest font size.
+- Expanded the filter for corrupted items.
+- Changed highlighting for some rare wands.
+- Added some notes in the Filterblast UI.
+- Added a second strict adaptive filter for Body armour racing purposes. Updated filter index.
+- Small adjustments to the racing filter.
+
 ## 2.6.0g
 
 - Added a customizable list for maps and moved higher map filters to the Endgame branch. 
