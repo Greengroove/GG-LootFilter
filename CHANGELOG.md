@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.6.0j
+
+- Updated the filterblast.config file to use color themes.
+- Added the @ sign in front of blocks that are associated with custom UI options.
+- Changed the Youtube link to the loot filter tutorial playlist.
+
 ## 2.6.0i
 
 - Added tags to sounds to support the sound editor on Filterblast.

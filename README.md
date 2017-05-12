@@ -1,8 +1,10 @@
 # Greengroove's Loot Filter Scripts for Path of Exile
 
-**[Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921)
+**[Filterblast](http://filterblast.oversoul.xyz/Greengroove/)
 |
-[Youtube](https://www.youtube.com/GreengroovePOE)
+[Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921)
+|
+[Youtube](https://www.youtube.com/watch?v=oXnp566lb94&list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x)
 |
 [Facebook](https://www.facebook.com/GreengroovePOE/)
 |
@@ -10,7 +12,7 @@
 |
 [Donations](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC)**
 
-- Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTRATION IS NO LONGER SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
+- Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTRATION IS CURRENTLY NOT SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
 
 A general recommendation is to only use the leveling filter for races, start of a challenge league or when you level a new character. When you play with a fully geared character the Endgame filter will be much better. If you have a reasonable amount of magic find you can use the MF filter.
 

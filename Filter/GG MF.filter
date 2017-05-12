@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 2.6.0i
+#               Greengroove's Endgame Loot Filter Script v 2.6.0j
 #
 #-------------------------------------------------------------------------------#
 #
@@ -280,7 +280,7 @@
 # //! SetOption $Unique_url info # Filterblast adds a unique url each time you parse or refresh preview if you made any changes. Use it to store and share your presets. The same url is also stored on the top of the downloaded file.
 # //! SetOption $Editing_lists info # The lists should include all potential candidates. It's up to you to narrow down the choice, or perhaps add something of your own. Generally you only need to remove entries.
 # //! SetOption $Notes textarea [] # Add your notes here:
-# //! SetOption $Links link [Forum thread] [https://www.pathofexile.com/forum/view-thread/1566921] [Changelog] [https://github.com/Greengroove/GG-LootFilter/blob/master/CHANGELOG.md] [Github] [https://github.com/Greengroove/GG-LootFilter] [Youtube] [https://www.youtube.com/GreengroovePOE] [Facebook] [https://www.facebook.com/GreengroovePOE/] [Twitter] [https://twitter.com/GreengroovePOE] [Donate] [https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC]  # Remember to give feedback on the forum if you like the filter and if you have any suggestions or requests. Enjoy the game and good hunting!
+# //! SetOption $Links link [Forum thread] [https://www.pathofexile.com/forum/view-thread/1566921] [Changelog] [https://github.com/Greengroove/GG-LootFilter/blob/master/CHANGELOG.md] [Github] [https://github.com/Greengroove/GG-LootFilter] [Youtube] [https://www.youtube.com/watch?v=oXnp566lb94&list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x] [Facebook] [https://www.facebook.com/GreengroovePOE/] [Twitter] [https://twitter.com/GreengroovePOE] [Donate] [https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC]  # Detailed information can be found on the official forum and there's video tutorials on Youtube. Remember to give feedback on the forum if you like the filter and if you have any suggestions or requests. Enjoy the game and good hunting!
 # //! SetTab [None]
 
 # //! SetOption $EmptyLine
@@ -375,7 +375,7 @@ Show
 	PlayAlertSound 7 200 # Tier 2
 
 # The divination cards that you don't want to drop with sound in endgame.       #
-Hide  # Leveling Filter (Enable for leveling and races) - Bad divination cards
+Hide  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 	Class Divination
 	BaseType "The Carrion Crow" "The King's Blade" Death "Light and Truth" "The Lunaris Priestess" "The Scarred Meadow" "Thunderous Skies" "Turn the Other Cheek" "The Wolf's Shadow" "Lantador's Lost Love" "The Oath" 
 # //$ $Bad_Divination_cards
@@ -487,13 +487,13 @@ Hide  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls
 	Class Currency
 	BaseType "Scroll of Wisdom"
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 Hide  # Endgame Filter (Disable for MF) - Low currency - Portal Scrolls
 	Class Currency
 	BaseType "Portal Scroll"
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 Hide  # Endgame Filter (Disable for MF) - Low currency - Armourer's Scrap
 	Class Currency
@@ -638,7 +638,7 @@ Show  # ON RECOMMENDED - ~Extras - Prophecy items - Sealed Prophecies |Comment
 #Disabled Block Start
 #Show  # Leveling Filter (Enable for leveling and races) - Alchemy Shard, Alteration Shard, Transmutation Shard / Scroll Fragment |Comment
 #	BaseType "Alchemy Shard" "Alteration Shard" "Transmutation Shard" "Scroll Fragment"
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 Hide  # Endgame Filter (Disable for MF) - Currency - Generic currency (catch all)
@@ -710,7 +710,7 @@ Show
 
 # Custom list of maps
 #Disabled Block Start
-#Show  # Endgame Filter (Disable for MF) - Maps - Custom maps |Comment
+#Show  # Endgame Filter (Disable for MF) - Maps - @Custom maps |Comment
 #	Class Maps
 #	BaseType "Jungle Valley" Beach Oasis "Arid Lake" Channel "Acid Lakes" Graveyard Phantasmagoria Dunes Mesa Peninsula Canyon Strand "Arachnid Tomb" "Ashen Wood" "Castle Ruins" "Mud Geyser" Atoll Bog Cemetery Shore "Tropical Island" Coves Promenade Reef Colonnade Courtyard Quay "Underground River" 
 # //$ $Custom_maps
@@ -832,7 +832,7 @@ Show
 
 # Gems that could have some value.                                              #
 #Disabled Block Start
-#Show  # Endgame Filter (Disable for MF) - Gems - Useful and drop only gems |Comment
+#Show  # Endgame Filter (Disable for MF) - Gems - @Useful and drop only gems |Comment
 #	Class Gem
 #	BaseType "Added Chaos Damage" Multistrike "Less Duration" "Increased Duration" "Blood Magic" "Increased Area of Effect" "Concentrated Effect" "Immortal Call" "Phase Run" "Cast when Damage Taken" 
 # //$ $Useful_and_drop_only_gems
@@ -856,12 +856,12 @@ Show
 Hide  # Endgame Filter (Disable for MF) - Gems - No quality  - Active Skill Gems
 	Class "Active Skill Gems"
 	SetTextColor 27 162 155 # Gems color
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 Hide  # Endgame Filter (Disable for MF) - Gems - No quality  - Support gems
 	Class "Support Skill Gems"
 	SetTextColor 27 162 155 # Gems color
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   JEWELS
@@ -990,7 +990,7 @@ Show
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.                            #
 #Disabled Block Start
-#Show  # Racing Filter - Armour - Linked armour Slot 1 |Comment
+#Show  # Racing Filter - Armour - @Linked armour Slot 1 |Comment
 #	LinkedSockets >= 4
 #	SocketGroup RGB 
 # //$ $Linked_armour_slot_1
@@ -1005,7 +1005,7 @@ Show
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.                            #
 #Disabled Block Start
-#Show  # Racing Filter - Armour - Linked armour Slot 2 |Comment
+#Show  # Racing Filter - Armour - @Linked armour Slot 2 |Comment
 #	LinkedSockets >= 4
 #	SocketGroup RGB 
 # //$ $Linked_armour_slot_2
@@ -1020,7 +1020,7 @@ Show
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.                            #
 #Disabled Block Start
-#Show  # Racing Filter - Armour - Linked armour Slot 3 |Comment
+#Show  # Racing Filter - Armour - @Linked armour Slot 3 |Comment
 #	LinkedSockets >= 4
 #	SocketGroup RGB 
 # //$ $Linked_armour_slot_3
@@ -1035,7 +1035,7 @@ Show
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.                            #
 #Disabled Block Start
-#Show  # Racing Filter - Armour - Linked armour Slot 4 |Comment
+#Show  # Racing Filter - Armour - @Linked armour Slot 4 |Comment
 #	LinkedSockets >= 4
 #	SocketGroup RGB 
 # //$ $Linked_armour_slot_4
@@ -1073,7 +1073,7 @@ Show
 # Section:  #   CHANCE ITEMS
 #-------------------------------------------------------------------------------#
 
-Show  # ON RECOMMENDED - ~Extras - Chance bases |Comment
+Show  # ON RECOMMENDED - ~Extras - @Chance bases |Comment
 	BaseType "Sorcerer Boots" "Leather Belt" 
 # //$ $Chance_bases
 	Rarity = Normal
@@ -1396,7 +1396,7 @@ Show  # ON RECOMMENDED - Corrupted items - Jewelry - Rare
 	Class Ring Amulet Belt
 	Rarity = Rare
 	SetFontSize 45
-	SetTextColor 215 25 0 255 # Corrupted items text
+	SetTextColor 215 25 0 # Corrupted items text
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
 # Rare weapons (Good bases) corrupted item.                                   #
@@ -1406,8 +1406,8 @@ Show  # ON RECOMMENDED - Corrupted items - Weapons (Good bases) - Rare |Comment
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand Quiver
 	Rarity = Rare
 	SetFontSize 23
-	SetTextColor 215 25 0 255 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetTextColor 215 25 0 # Corrupted items text
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Rare armour (Good bases) corrupted item.                                    #
 Show  # ON RECOMMENDED - Corrupted items - Armour (Good bases) - Rare |Comment
@@ -1416,16 +1416,16 @@ Show  # ON RECOMMENDED - Corrupted items - Armour (Good bases) - Rare |Comment
 	Class "Body Armour" Boots Gloves Helmet Shield
 	Rarity = Rare
 	SetFontSize 23
-	SetTextColor 215 25 0 255 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetTextColor 215 25 0 # Corrupted items text
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Any corrupted rare item.                                                      #
 Show  # ON RECOMMENDED - Corrupted items - Any item - Rare
 	Corrupted True
 	Rarity = Rare
 	SetFontSize 23
-	SetTextColor 215 25 0 255 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetTextColor 215 25 0 # Corrupted items text
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - ANY RARE FOR LEVELING
@@ -1433,34 +1433,34 @@ Show  # ON RECOMMENDED - Corrupted items - Any item - Rare
 
 # All other rare quivers are displayed in the Leveling Filter.                  #
 #Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Rares for vendoring - Width = 1 |Comment
+#Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares for vendoring - Width = 1 |Comment
 #	Width = 1
 #	Rarity = Rare
 #	ItemLevel <= 15 
 # //$ <= $Rares_for_vendoring
 #	SetTextColor 255 255 119
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # All other rare quivers are displayed in the Leveling Filter.                  #
 #Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Rares for vendoring - Height = 2 |Comment
+#Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares for vendoring - Height = 2 |Comment
 #	Height = 2
 #	Rarity = Rare
 #	ItemLevel <= 15 
 # //$ <= $Rares_for_vendoring
 #	SetTextColor 255 255 119
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # All other rare quivers are displayed in the Leveling Filter.                  #
 #Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Rares for vendoring - Any |Comment
+#Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares for vendoring - Any |Comment
 #	Rarity = Rare
 #	ItemLevel <= 15 
 # //$ <= $Rares_for_vendoring
 #	SetTextColor 255 255 119
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -1473,35 +1473,35 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Weapons - Bows (+3)
 	Rarity = Rare
 	ItemLevel >= 64
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Top base rare quivers.                                                        #
 Hide  # Endgame Filter (Disable for MF) - Rare items - Quivers - Spike-Point Arrow Quiver
 	BaseType "Spike-Point Arrow Quiver"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Top base rare quivers.                                                        #
 Hide  # Endgame Filter (Disable for MF) - Rare items - Quivers - Broadhead Arrow Quiver
 	BaseType "Broadhead Arrow Quiver"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Top base rare quivers.                                                        #
 Hide  # Endgame Filter (Disable for MF) - Rare items - Quivers - Two-Point Arrow Quiver
 	BaseType "Two-Point Arrow Quiver"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # All other rare quivers are displayed in the Leveling Filter.                  #
 Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - rare quivers
 	Class Quiver
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # These are ok for leveling.                                                    #
 Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - bows (drop level >=53)
@@ -1509,7 +1509,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - bows (
 	Class Bow
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Bow |Comment
@@ -1572,7 +1572,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - claws 
 	Class Claw
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Claw |Comment
@@ -1682,7 +1682,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Weapons - Daggers (Medioc
 	Class Dagger
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - ONE HAND AXE
@@ -1700,7 +1700,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - One ha
 	Class "One Hand Axe"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Axe |Comment
@@ -1772,7 +1772,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - One ha
 	Class "One Hand Mace"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Mace |Comment
@@ -1835,7 +1835,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - One ha
 	Class "One Hand Sword"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - One Hand Sword |Comment
@@ -1902,7 +1902,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Weapons - Wands (Mediocre
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - SCEPTRE
@@ -1929,7 +1929,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Scepte
 	Class Sceptre
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - STAVES
@@ -1947,7 +1947,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Weapons - Staves (+3)
 	Rarity >= Rare
 	ItemLevel >= 55
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # These are ok for Leveling.                                                    #
 Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Staves (drop level >=49)
@@ -1955,7 +1955,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Staves
 	Class Staves
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Staves |Comment
@@ -2018,7 +2018,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Two Ha
 	Class "Two Hand Axe"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand Axe |Comment
@@ -2081,7 +2081,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Two Ha
 	Class "Two Hand Mace"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand Mace |Comment
@@ -2144,7 +2144,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Two Ha
 	Class "Two Hand Sword"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Weapons - Two Hand Sword |Comment
@@ -2202,7 +2202,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Two Ha
 #	BaseType "Occultist's Vestment"
 #	Rarity = Rare
 #	SetTextColor 255 255 119
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Mediocre Energy shield bases.                                                        #
@@ -2212,7 +2212,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Two Ha
 #	BaseType "Necromancer Silks"
 #	Rarity = Rare
 #	SetTextColor 255 255 119
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Decent chest armour while leveling.                                           #
@@ -2231,7 +2231,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Chest armour (Non top)
 	Class "Body Armour"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Any chest armour can be good while Leveling. These show till item level 63.   #
 Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Body armour
@@ -2245,7 +2245,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Body a
 	Class "Body Armour"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - BOOTS
@@ -2258,7 +2258,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Body a
 #	BaseType "Conjurer Boots" "Samite Slippers"
 #	Rarity = Rare
 #	SetTextColor 255 255 119
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Mediocre Hybrid bases.                                                        #
@@ -2267,7 +2267,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Mediocre Hybrid bases - B
 	BaseType "Murder Boots" "Crusader Boots" "Assassin's Boots" "Legion Boots" "Carnal Boots"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Decent bases.                                                                 #
 Hide  # Endgame Filter (Disable for MF) - Rare items - Boots (Decent)
@@ -2282,7 +2282,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Boots
 	Rarity = Rare 
 #   DropLevel >= 42
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Any base can be useful for Leveling till item level 63.                       #
 #Disabled Block Start
@@ -2305,7 +2305,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Boots
 #	BaseType "Conjurer Gloves" "Samite Gloves"
 #	Rarity = Rare
 #	SetTextColor 255 255 119
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Mediocre Hybrid bases.                                                        #
@@ -2314,7 +2314,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Mediocre Hybrid bases - G
 	BaseType "Murder Mitts" "Crusader Gloves" "Assassin's Mitts" "Legion Gloves"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Decent bases.                                                                 #
 Hide  # Endgame Filter (Disable for MF) - Rare items - Gloves (Decent)
@@ -2329,7 +2329,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Gloves
 	Rarity = Rare 
 #   DropLevel >= 43
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Any base can be useful for Leveling till item level 63.                       #
 #Disabled Block Start
@@ -2352,7 +2352,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Gloves
 #	BaseType "Solaris Circlet" "Necromancer Circlet"
 #	Rarity = Rare
 #	SetTextColor 255 255 119
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Mediocre Hybrid bases.                                                        #
@@ -2361,7 +2361,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Mediocre Hybrid bases - H
 	BaseType "Prophet Crown" "Vaal Mask" "Magistrate Crown" "Harlequin Mask"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Decent bases.                                                                 #
 Hide  # Endgame Filter (Disable for MF) - Rare items - Helm (Decent)
@@ -2376,7 +2376,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Helm
 	Rarity = Rare 
 #   DropLevel >= 40
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Any base can be useful for Leveling till item level 63.                       #
 #Disabled Block Start
@@ -2403,7 +2403,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - shield
 	BaseType "Lacewood Spirit Shield" "Thorium Spirit Shield" "Ancient Spirit Shield" "Walnut Spirit Shield" "Brass Spirit Shield" "Jingling Spirit Shield"
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Ok general shields (highest bases)                                            #
 Hide  # Endgame Filter (Disable for MF) - Rare items - Shields - DropLevel >= 67
@@ -2411,7 +2411,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Shields - DropLevel >= 67
 	Class Shield
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Lesser but still in the upper bracket (present in the Leveling Filter).       #
 Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - shields - Drop level >=47
@@ -2419,7 +2419,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - shield
 	Class Shield
 	Rarity = Rare
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Rare items - Progressions (leveling rares) - Armour - Shield |Comment
@@ -2656,7 +2656,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Hallowed Life Flask"
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2665,7 +2665,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Sanctified Life Flask"
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2674,7 +2674,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Divine Life Flask"
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2683,7 +2683,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Eternal Life Flask"
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2692,7 +2692,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Hallowed Hybrid Flask"
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2701,7 +2701,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Sanctified Mana Flask"
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2710,7 +2710,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Divine Mana Flask"
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2719,7 +2719,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Eternal Mana Flask"
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -2732,7 +2732,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Hallowed Life Flask"
 #	Rarity = Magic
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2741,7 +2741,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Sanctified Life Flask"
 #	Rarity = Magic
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2750,7 +2750,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Divine Life Flask"
 #	Rarity = Magic
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2759,7 +2759,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Eternal Life Flask"
 #	Rarity = Magic
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2768,7 +2768,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Hallowed Hybrid Flask"
 #	Rarity = Magic
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2777,7 +2777,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Sanctified Mana Flask"
 #	Rarity = Magic
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2786,7 +2786,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Divine Mana Flask"
 #	Rarity = Magic
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.       #
@@ -2795,7 +2795,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	BaseType "Eternal Mana Flask"
 #	Rarity = Magic
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -2944,8 +2944,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Class Dagger "One Hand Mace" "One Hand Sword"
 #	Rarity = Normal
 #	SetFontSize 23
-#	SetTextColor 110 200 255 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 145 # Animate weapon items
+#	SetTextColor 0 0 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 155 # Animate weapon items
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
@@ -2956,8 +2956,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Class Claw
 #	Rarity = Normal
 #	SetFontSize 23
-#	SetTextColor 110 200 255 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 145 # Animate weapon items
+#	SetTextColor 0 0 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 155 # Animate weapon items
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #Disabled Block End
 
@@ -2968,8 +2968,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Class Dagger Claw "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Normal
 #	SetFontSize 23
-#	SetTextColor 110 200 255 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 145 # Animate weapon items
+#	SetTextColor 0 0 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 155 # Animate weapon items
 #Disabled Block End
 
 #Disabled Block Start
@@ -2982,8 +2982,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Class Dagger "One Hand Mace" "One Hand Sword"
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 110 200 255 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 145 # Animate weapon items
+#	SetTextColor 0 0 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 155 # Animate weapon items
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
@@ -2995,8 +2995,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Class Claw
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 110 200 255 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 145 # Animate weapon items
+#	SetTextColor 0 0 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 155 # Animate weapon items
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #Disabled Block End
 
@@ -3008,8 +3008,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Class Dagger Claw "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 110 200 255 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 145 # Animate weapon items
+#	SetTextColor 0 0 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 155 # Animate weapon items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3019,7 +3019,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Class Bow Wand
 #	Rarity = Normal
 #	SetFontSize 23
-#	SetTextColor 110 200 255 0 # Animate weapon text
+#	SetTextColor 0 0 0 # Animate weapon text
 #	SetBackgroundColor 74 230 58 145 # Animate weapon ranged items
 #Disabled Block End
 
@@ -3030,7 +3030,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Class Bow Wand
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 110 200 255 0 # Animate weapon text
+#	SetTextColor 0 0 0 # Animate weapon text
 #	SetBackgroundColor 74 230 58 145 # Animate weapon ranged items
 #Disabled Block End
 
@@ -3044,7 +3044,7 @@ Show  # ON RECOMMENDED - Corrupted items - Jewelry - Normal
 	Class Ring Amulet Belt
 	Rarity = Normal
 	SetFontSize 45
-	SetTextColor 215 25 0 255 # Corrupted items text
+	SetTextColor 215 25 0 # Corrupted items text
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
 # Magic corrupted jewelry.                                                      #
@@ -3053,7 +3053,7 @@ Show  # ON RECOMMENDED - Corrupted items - Jewelry - Magic
 	Class Ring Amulet Belt
 	Rarity = Magic
 	SetFontSize 45
-	SetTextColor 215 25 0 255 # Corrupted items text
+	SetTextColor 215 25 0 # Corrupted items text
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
 # Normal weapons (Good bases) corrupted item.                                   #
@@ -3063,8 +3063,8 @@ Show  # ON RECOMMENDED - Corrupted items - Weapons (Good bases) - Normal |Commen
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand Quiver
 	Rarity = Normal
 	SetFontSize 23
-	SetTextColor 215 25 0 255 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetTextColor 215 25 0 # Corrupted items text
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Magic weapons (Good bases) corrupted item.                                   #
 Show  # ON RECOMMENDED - Corrupted items - Weapons (Good bases) - Magic |Comment
@@ -3073,8 +3073,8 @@ Show  # ON RECOMMENDED - Corrupted items - Weapons (Good bases) - Magic |Comment
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand Quiver
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 215 25 0 255 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetTextColor 215 25 0 # Corrupted items text
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Normal armour (Good bases) corrupted item.                                    #
 Show  # ON RECOMMENDED - Corrupted items - Armour (Good bases) - Normal |Comment
@@ -3083,8 +3083,8 @@ Show  # ON RECOMMENDED - Corrupted items - Armour (Good bases) - Normal |Comment
 	Class "Body Armour" Boots Gloves Helmet Shield
 	Rarity = Normal
 	SetFontSize 23
-	SetTextColor 215 25 0 255 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetTextColor 215 25 0 # Corrupted items text
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Magic armour (Good bases) corrupted item.                                    #
 Show  # ON RECOMMENDED - Corrupted items - Armour (Good bases) - Magic |Comment
@@ -3093,24 +3093,24 @@ Show  # ON RECOMMENDED - Corrupted items - Armour (Good bases) - Magic |Comment
 	Class "Body Armour" Boots Gloves Helmet Shield
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 215 25 0 255 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetTextColor 215 25 0 # Corrupted items text
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Any corrupted item.                                                           #
 Show  # ON RECOMMENDED - Corrupted items - Any item - Normal
 	Corrupted True
 	Rarity = Normal
 	SetFontSize 23
-	SetTextColor 215 25 0 255 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetTextColor 215 25 0 # Corrupted items text
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 # Any corrupted item.                                                           #
 Show  # ON RECOMMENDED - Corrupted items - Any item - Magic
 	Corrupted True
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 215 25 0 255 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetTextColor 215 25 0 # Corrupted items text
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   CRAFTING BASES - JEWELRY
@@ -3189,7 +3189,7 @@ Hide  # Crafting Filter - Magic items - Belts
 #	BaseType "Diamond Ring"
 #	Rarity = Normal
 #	ItemLevel >= 72
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
@@ -3199,7 +3199,7 @@ Hide  # Crafting Filter - Magic items - Belts
 #	BaseType "Diamond Ring"
 #	Rarity = Normal
 #	ItemLevel >= 60
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Jewelry for chaos / regal recipe is present in the Leveling Filter.                   #
@@ -3208,7 +3208,7 @@ Hide  # Crafting Filter - Magic items - Belts
 #	Class Amulet
 #	Rarity = Normal
 #	ItemLevel >= 72
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Jewelry for chaos / regal recipe is present in the Leveling Filter.                   #
@@ -3217,7 +3217,7 @@ Hide  # Crafting Filter - Magic items - Belts
 #	Class Ring
 #	Rarity = Normal
 #	ItemLevel >= 72
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Jewelry for chaos / regal recipe is present in the Leveling Filter.                   #
@@ -3227,7 +3227,7 @@ Hide  # Crafting Filter - Magic items - Belts
 #	BaseType "Rustic Sash" "Leather Belt"
 #	Rarity = Normal
 #	ItemLevel >= 72
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Jewelry for chaos recipe is present in the Leveling Filter.                   #
@@ -3236,7 +3236,7 @@ Hide  # Crafting Filter - Magic items - Belts
 #	Class Amulet
 #	Rarity = Normal
 #	ItemLevel >= 64
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Jewelry for chaos recipe is present in the Leveling Filter.                   #
@@ -3245,7 +3245,7 @@ Hide  # Crafting Filter - Magic items - Belts
 #	Class Ring
 #	Rarity = Normal
 #	ItemLevel >= 64
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Jewelry for chaos recipe is present in the Leveling Filter.                   #
@@ -3255,14 +3255,14 @@ Hide  # Crafting Filter - Magic items - Belts
 #	BaseType "Rustic Sash" "Leather Belt"
 #	Rarity = Normal
 #	ItemLevel >= 64
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
 # Section:  #   CRAFTING BASES - TOP ITEMS - WEAPONS
 #-------------------------------------------------------------------------------#
 
-Hide  # Crafting Filter - Normal items - Weapon crafting bases
+Hide  # Crafting Filter - Normal items - @Weapon crafting bases
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand Quiver
 	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
@@ -3271,7 +3271,7 @@ Hide  # Crafting Filter - Normal items - Weapon crafting bases
 # //$ >= $Crafting_weapons_level
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Hide  # Crafting Filter - Magic items - Weapon crafting bases
+Hide  # Crafting Filter - Magic items - @Weapon crafting bases
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand Quiver
 	BaseType "Maraketh Bow" "Harbinger Bow" "Platinum Kris" Ambusher Sai "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
@@ -3284,7 +3284,7 @@ Hide  # Crafting Filter - Magic items - Weapon crafting bases
 # Section:  #   CRAFTING BASES - TOP ITEMS - ARMOUR
 #-------------------------------------------------------------------------------#
 
-Hide  # Crafting Filter - Normal items - Armour crafting bases
+Hide  # Crafting Filter - Normal items - @Armour crafting bases
 	Class "Body Armour" Boots Gloves Helmet Shield Amulet Belt Ring Quiver
 	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Titanium Spirit Shield" "Lacquered Buckler" 
 # //$ $Armour_crafting_bases
@@ -3293,7 +3293,7 @@ Hide  # Crafting Filter - Normal items - Armour crafting bases
 # //$ >= $Crafting_armour_level
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 
-Hide  # Crafting Filter - Magic items - Armour crafting bases
+Hide  # Crafting Filter - Magic items - @Armour crafting bases
 	Class "Body Armour" Boots Gloves Helmet Shield Amulet Belt Ring Quiver
 	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Titanium Spirit Shield" "Lacquered Buckler" 
 # //$ $Armour_crafting_bases
@@ -3314,7 +3314,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Rarity = Magic
 	SetFontSize 23
 	SetTextColor 0 200 255 255 # Identified magic items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 	SetBorderColor 74 230 58 # Boots border color
 
 # Warband filter. Any identified - non corrupted - non top magic item.          #
@@ -3325,8 +3325,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Rarity = Magic
 	SetFontSize 23
 	SetTextColor 0 200 255 255 # Identified magic items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 255 # Gloves border color
+	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBorderColor 0 200 255 # Gloves border color
 
 # Warband filter. Any identified - non corrupted - non top magic item.          #
 Hide  # Leveling Filter (Enable for leveling and races) - Identified magic "Warbands" items - Redblade
@@ -3336,8 +3336,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Rarity = Magic
 	SetFontSize 23
 	SetTextColor 0 200 255 255 # Identified magic items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 215 25 0 255 # Helmets border color
+	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBorderColor 215 25 0 # Helmets border color
 
 # Warband filter. Any identified - non corrupted - non top magic item.          #
 Hide  # Leveling Filter (Enable for leveling and races) - Identified magic "Warbands" items - Renegade
@@ -3347,7 +3347,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Rarity = Magic
 	SetFontSize 23
 	SetTextColor 0 200 255 255 # Identified magic items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS
@@ -3385,7 +3385,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Short Bow" "Grove Bow" "Thicket Bow"
 #	Rarity = Normal
 #	ItemLevel >= 64
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Crafting bases present in the Leveling Filter.                                #
@@ -3394,7 +3394,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Short Bow" "Grove Bow" "Thicket Bow"
 #	Rarity = Magic
 #	ItemLevel >= 64
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Crafting bases present in the Leveling Filter.                                #
@@ -3403,7 +3403,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Maelström Staff"
 #	Rarity = Normal
 #	ItemLevel >= 55
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Crafting bases present in the Leveling Filter.                                #
@@ -3412,7 +3412,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Maelström Staff"
 #	Rarity = Magic
 #	ItemLevel >= 55
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -3425,7 +3425,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Scale Vest"
 #	Rarity = Normal
 #	ItemLevel <= 9
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3434,7 +3434,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType Chestplate "Light Brigandine"
 #	Rarity = Normal
 #	ItemLevel <= 16
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3443,7 +3443,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Scale Doublet"
 #	Rarity = Normal
 #	ItemLevel <= 20
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3452,7 +3452,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Infantry Brigandine"
 #	Rarity = Normal
 #	ItemLevel <= 27
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3461,7 +3461,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Full Scale Armour"
 #	Rarity = Normal
 #	ItemLevel <= 31
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3470,7 +3470,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Soldier's Brigandine"
 #	Rarity = Normal
 #	ItemLevel <= 34
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3479,7 +3479,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Field Lamellar"
 #	Rarity = Normal
 #	ItemLevel <= 37
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3488,7 +3488,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Wyrmscale Doublet" "Hussar Brigandine"
 #	Rarity = Normal
 #	ItemLevel <= 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3497,7 +3497,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Full Wyrmscale" "Commander's Brigandine"
 #	Rarity = Normal
 #	ItemLevel <= 53
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3506,7 +3506,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Battle Lamellar" "Dragonscale Doublet"
 #	Rarity = Normal
 #	ItemLevel <= 59
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3515,7 +3515,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Desert Brigandine"
 #	Rarity = Normal
 #	ItemLevel <= 61
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3525,7 +3525,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Normal
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3534,7 +3534,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Scale Vest"
 #	Rarity = Magic
 #	ItemLevel <= 9
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3543,7 +3543,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType Chestplate "Light Brigandine"
 #	Rarity = Magic
 #	ItemLevel <= 16
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3552,7 +3552,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Scale Doublet"
 #	Rarity = Magic
 #	ItemLevel <= 20
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3561,7 +3561,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Infantry Brigandine"
 #	Rarity = Magic
 #	ItemLevel <= 27
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3570,7 +3570,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Full Scale Armour"
 #	Rarity = Magic
 #	ItemLevel <= 31
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3579,7 +3579,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Soldier's Brigandine"
 #	Rarity = Magic
 #	ItemLevel <= 34
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3588,7 +3588,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Field Lamellar"
 #	Rarity = Magic
 #	ItemLevel <= 37
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3597,7 +3597,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Wyrmscale Doublet" "Hussar Brigandine"
 #	Rarity = Magic
 #	ItemLevel <= 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3606,7 +3606,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Full Wyrmscale" "Commander's Brigandine"
 #	Rarity = Magic
 #	ItemLevel <= 53
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3615,7 +3615,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Battle Lamellar" "Dragonscale Doublet"
 #	Rarity = Magic
 #	ItemLevel <= 59
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3624,7 +3624,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	BaseType "Desert Brigandine"
 #	Rarity = Magic
 #	ItemLevel <= 61
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3634,7 +3634,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Magic
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -3649,7 +3649,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Normal
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3659,7 +3659,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 55
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3669,7 +3669,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 37
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3679,7 +3679,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 17
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3690,7 +3690,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Magic
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3700,7 +3700,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class "Body Armour"
 #	Rarity = Magic
 #	ItemLevel <= 44
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3709,7 +3709,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class "Body Armour"
 #	Rarity = Magic
 #	ItemLevel <= 32
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Exception for racing and leveling. Vendor food.                                #
@@ -3729,7 +3729,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Boots
 #	Rarity = Normal
 #	ItemLevel <= 13
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 74 230 58 # Boots border color
 #Disabled Block End
 
@@ -3740,7 +3740,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Boots
 #	Rarity = Normal
 #	ItemLevel <= 20
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 74 230 58 # Boots border color
 #Disabled Block End
 
@@ -3751,7 +3751,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Boots
 #	Rarity = Normal
 #	ItemLevel <= 44
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 74 230 58 # Boots border color
 #Disabled Block End
 
@@ -3763,7 +3763,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Normal
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 74 230 58 # Boots border color
 #Disabled Block End
 
@@ -3773,7 +3773,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Boots
 #	Rarity = Normal
 #	ItemLevel <= 10
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 74 230 58 # Boots border color
 #Disabled Block End
 
@@ -3783,7 +3783,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Boots
 #	Rarity = Magic
 #	ItemLevel <= 25
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 74 230 58 # Boots border color
 #Disabled Block End
 
@@ -3794,7 +3794,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Magic 
 #    Sockets >= 2
 #	ItemLevel <= 44
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 74 230 58 # Boots border color
 #Disabled Block End
 
@@ -3806,7 +3806,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #    Sockets >= 2
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 74 230 58 # Boots border color
 #Disabled Block End
 
@@ -3820,8 +3820,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Gloves
 #	Rarity = Normal
 #	ItemLevel <= 13
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 0 200 255 255 # Gloves border color 
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 0 200 255 # Gloves border color 
 #Disabled Block End
 
 #Disabled Block Start
@@ -3831,8 +3831,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Gloves
 #	Rarity = Normal
 #	ItemLevel <= 20
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 0 200 255 255 # Gloves border color 
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 0 200 255 # Gloves border color 
 #Disabled Block End
 
 #Disabled Block Start
@@ -3842,8 +3842,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Gloves
 #	Rarity = Normal
 #	ItemLevel <= 23
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 0 200 255 255 # Gloves border color 
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 0 200 255 # Gloves border color 
 #Disabled Block End
 
 #Disabled Block Start
@@ -3853,8 +3853,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Gloves
 #	Rarity = Normal
 #	ItemLevel <= 44
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 0 200 255 255 # Gloves border color 
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 0 200 255 # Gloves border color 
 #Disabled Block End
 
 #Disabled Block Start
@@ -3865,8 +3865,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Normal
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 0 200 255 255 # Gloves border color 
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 0 200 255 # Gloves border color 
 #Disabled Block End
 
 # Exception for racing and leveling. Vendor food.                                #
@@ -3875,8 +3875,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Gloves
 #	Rarity = Normal
 #	ItemLevel <= 10
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 0 200 255 255 # Gloves border color 
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 0 200 255 # Gloves border color 
 #Disabled Block End
 
 #Disabled Block Start
@@ -3885,8 +3885,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Gloves
 #	Rarity = Magic
 #	ItemLevel <= 25
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 0 200 255 255 # Gloves border color 
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 0 200 255 # Gloves border color 
 #Disabled Block End
 
 #Disabled Block Start
@@ -3896,8 +3896,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Gloves
 #	Rarity = Magic
 #	ItemLevel <= 44
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 0 200 255 255 # Gloves border color 
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 0 200 255 # Gloves border color 
 #Disabled Block End
 
 #Disabled Block Start
@@ -3908,8 +3908,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Magic
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 0 200 255 255 # Gloves border color 
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 0 200 255 # Gloves border color 
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -3922,8 +3922,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Helm
 #	Rarity = Normal
 #	ItemLevel <= 13
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 215 25 0 255 # Helmets border color
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 215 25 0 # Helmets border color
 #Disabled Block End
 
 #Disabled Block Start
@@ -3933,8 +3933,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Helm
 #	Rarity = Normal
 #	ItemLevel <= 20
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 215 25 0 255 # Helmets border color
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 215 25 0 # Helmets border color
 #Disabled Block End
 
 #Disabled Block Start
@@ -3944,8 +3944,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Helm
 #	Rarity = Normal
 #	ItemLevel <= 44
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 215 25 0 255 # Helmets border color
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 215 25 0 # Helmets border color
 #Disabled Block End
 
 #Disabled Block Start
@@ -3956,8 +3956,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Normal
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 215 25 0 255 # Helmets border color
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 215 25 0 # Helmets border color
 #Disabled Block End
 
 # Exception for racing and leveling. Vendor food.                                #
@@ -3966,8 +3966,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Helm
 #	Rarity = Normal
 #	ItemLevel <= 10
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 215 25 0 255 # Helmets border color
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 215 25 0 # Helmets border color
 #Disabled Block End
 
 #Disabled Block Start
@@ -3976,8 +3976,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Helm
 #	Rarity = Magic
 #	ItemLevel <= 25
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 215 25 0 255 # Helmets border color
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 215 25 0 # Helmets border color
 #Disabled Block End
 
 #Disabled Block Start
@@ -3987,8 +3987,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Helm
 #	Rarity = Magic
 #	ItemLevel <= 44
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 215 25 0 255 # Helmets border color
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 215 25 0 # Helmets border color
 #Disabled Block End
 
 #Disabled Block Start
@@ -3999,8 +3999,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Magic
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#	SetBorderColor 215 25 0 255 # Helmets border color
+#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBorderColor 215 25 0 # Helmets border color
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4015,7 +4015,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Normal
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4025,7 +4025,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Shield
 #	Rarity = Normal
 #	ItemLevel <= 46
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Bone Spirit Shield (Of animation flask recipe) fixed in progression.          #
@@ -4044,7 +4044,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Shield
 #	Rarity = Normal
 #	ItemLevel <= 29
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4052,7 +4052,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Shield
 #	Rarity = Normal
 #	ItemLevel <= 16
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4063,7 +4063,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Rarity = Magic
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4073,7 +4073,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Shield
 #	Rarity = Magic
 #	ItemLevel <= 46
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Bone Spirit Shield (Of animation flask recipe) fixed in progression.          #
@@ -4092,7 +4092,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Shield
 #	Rarity = Magic
 #	ItemLevel <= 29
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4100,7 +4100,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 #	Class Shield
 #	Rarity = Magic
 #	ItemLevel <= 16
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Bone Spirit Shield (Of animation flask recipe for summoners)                  #
@@ -4191,7 +4191,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4200,7 +4200,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4209,7 +4209,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4218,7 +4218,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4227,7 +4227,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4236,7 +4236,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4244,7 +4244,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #-------------------------------------------------------------------------------#
 
 #Disabled Block Start
-#Show  # Racing Filter - Caster Items - Sceptre - 3 links |Comment
+#Show  # Racing Filter - Caster Items - Sceptre - @3 links |Comment
 #	LinkedSockets = 3
 #	SocketGroup BB 
 # //$ $Caster_Items
@@ -4259,7 +4259,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Caster Items - Sceptre - 3 links |Comment
+#Show  # Racing Filter - Caster Items - Sceptre - @3 links |Comment
 #	LinkedSockets = 3
 #	SocketGroup BB 
 # //$ $Caster_Items
@@ -4304,7 +4304,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4312,7 +4312,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Class Sceptre
 #	ItemLevel <= 7
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4320,7 +4320,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #-------------------------------------------------------------------------------#
 
 #Disabled Block Start
-#Show  # Racing Filter - Caster Items - Dagger - 3 links |Comment
+#Show  # Racing Filter - Caster Items - Dagger - @3 links |Comment
 #	LinkedSockets = 3
 #	SocketGroup BB 
 # //$ $Caster_Items
@@ -4335,7 +4335,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Caster Items - Dagger - 3 links |Comment
+#Show  # Racing Filter - Caster Items - Dagger - @3 links |Comment
 #	LinkedSockets = 3
 #	SocketGroup BB 
 # //$ $Caster_Items
@@ -4380,7 +4380,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
@@ -4391,7 +4391,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
@@ -4402,7 +4402,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4410,7 +4410,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Class Dagger
 #	ItemLevel <= 7
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4418,7 +4418,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #-------------------------------------------------------------------------------#
 
 #Disabled Block Start
-#Show  # Racing Filter - Caster Items - Wand - 3 links |Comment
+#Show  # Racing Filter - Caster Items - Wand - @3 links |Comment
 #	LinkedSockets = 3
 #	SocketGroup BB 
 # //$ $Caster_Items
@@ -4433,7 +4433,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Caster Items - Wand - 3 links |Comment
+#Show  # Racing Filter - Caster Items - Wand - @3 links |Comment
 #	LinkedSockets = 3
 #	SocketGroup BB 
 # //$ $Caster_Items
@@ -4478,7 +4478,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4486,7 +4486,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Class Wand
 #	ItemLevel <= 7
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4499,7 +4499,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 6
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4508,7 +4508,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4517,7 +4517,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4526,7 +4526,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4535,7 +4535,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 25
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4544,7 +4544,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4553,7 +4553,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 39
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4562,7 +4562,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4571,7 +4571,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4581,7 +4581,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4594,7 +4594,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4603,7 +4603,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4612,7 +4612,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 25
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4621,7 +4621,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 29
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4630,7 +4630,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4639,7 +4639,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 42
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4648,7 +4648,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4657,7 +4657,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4666,7 +4666,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 59
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4676,7 +4676,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4689,7 +4689,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4698,7 +4698,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4707,7 +4707,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4716,7 +4716,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4725,7 +4725,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4734,7 +4734,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4743,7 +4743,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 42
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4752,7 +4752,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4761,7 +4761,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4771,7 +4771,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4784,7 +4784,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4793,7 +4793,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4802,7 +4802,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4811,7 +4811,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4820,7 +4820,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4829,7 +4829,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4838,7 +4838,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4847,7 +4847,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4856,7 +4856,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4866,7 +4866,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4879,7 +4879,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 5
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4888,7 +4888,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 10
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4897,7 +4897,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 15
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4906,7 +4906,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 20
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4915,7 +4915,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 24
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4924,7 +4924,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 28
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4933,7 +4933,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4942,7 +4942,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 41
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4951,7 +4951,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4960,7 +4960,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4970,7 +4970,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4983,7 +4983,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 15
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4992,7 +4992,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 20
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5001,7 +5001,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 24
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5010,7 +5010,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5019,7 +5019,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5028,7 +5028,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 38
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5037,7 +5037,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 41
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5046,7 +5046,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5055,7 +5055,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 60
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5064,7 +5064,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5074,7 +5074,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5087,7 +5087,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5096,7 +5096,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5105,7 +5105,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5114,7 +5114,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5123,7 +5123,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5132,7 +5132,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5141,7 +5141,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 33
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5150,7 +5150,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5159,7 +5159,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 46
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5168,7 +5168,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5178,7 +5178,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5191,7 +5191,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5200,7 +5200,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5209,7 +5209,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5218,7 +5218,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5227,7 +5227,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5236,7 +5236,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 37
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5245,7 +5245,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5254,7 +5254,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5263,7 +5263,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 59
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5272,7 +5272,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5282,7 +5282,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5295,7 +5295,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5304,7 +5304,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5313,7 +5313,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5322,7 +5322,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5331,7 +5331,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5340,7 +5340,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5349,7 +5349,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5358,7 +5358,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5367,7 +5367,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5377,7 +5377,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5390,7 +5390,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5399,7 +5399,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5408,7 +5408,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5417,7 +5417,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5426,7 +5426,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5435,7 +5435,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5444,7 +5444,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5453,7 +5453,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 59
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5463,7 +5463,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5476,7 +5476,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5485,7 +5485,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5494,7 +5494,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5503,7 +5503,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5512,7 +5512,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5521,7 +5521,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5530,7 +5530,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5539,7 +5539,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5549,7 +5549,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5562,7 +5562,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5571,7 +5571,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5580,7 +5580,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5589,7 +5589,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 37
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5598,7 +5598,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5607,7 +5607,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5616,7 +5616,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5625,7 +5625,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5635,7 +5635,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5648,7 +5648,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 6
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5657,7 +5657,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5666,7 +5666,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5675,7 +5675,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5684,7 +5684,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 25
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5693,7 +5693,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5702,7 +5702,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5711,7 +5711,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5721,7 +5721,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5734,7 +5734,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5743,7 +5743,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5752,7 +5752,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5761,7 +5761,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 33
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5770,7 +5770,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5779,7 +5779,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 42
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5788,7 +5788,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5797,7 +5797,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5807,7 +5807,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5820,7 +5820,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 8
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5829,7 +5829,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 12
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5838,7 +5838,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5847,7 +5847,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5856,7 +5856,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5865,7 +5865,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5874,7 +5874,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5883,7 +5883,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5892,7 +5892,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5901,7 +5901,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 51
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5910,7 +5910,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5920,7 +5920,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5933,7 +5933,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 12
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5942,7 +5942,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5951,7 +5951,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5960,7 +5960,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5969,7 +5969,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5978,7 +5978,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5987,7 +5987,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5996,7 +5996,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6005,7 +6005,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6014,7 +6014,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6023,7 +6023,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6033,7 +6033,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6046,7 +6046,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 8
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6055,7 +6055,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 12
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6064,7 +6064,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6073,7 +6073,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6082,7 +6082,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6091,7 +6091,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6100,7 +6100,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6109,7 +6109,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6118,7 +6118,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6127,7 +6127,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6136,7 +6136,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6145,7 +6145,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6155,7 +6155,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6168,7 +6168,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 12
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6177,7 +6177,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6186,7 +6186,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6195,7 +6195,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6204,7 +6204,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6213,7 +6213,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6222,7 +6222,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6231,7 +6231,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6240,7 +6240,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6249,7 +6249,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 63
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6258,7 +6258,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6268,7 +6268,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6281,7 +6281,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 7
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6290,7 +6290,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6299,7 +6299,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6308,7 +6308,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6317,7 +6317,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 26
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6326,7 +6326,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6335,7 +6335,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 33
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6344,7 +6344,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6353,7 +6353,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6362,7 +6362,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 47
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6371,7 +6371,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6380,7 +6380,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6390,7 +6390,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6403,7 +6403,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6412,7 +6412,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6421,7 +6421,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6430,7 +6430,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 26
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6439,7 +6439,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 33
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6448,7 +6448,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6457,7 +6457,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6466,7 +6466,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 47
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6475,7 +6475,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 53
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6484,7 +6484,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6493,7 +6493,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6503,7 +6503,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6516,7 +6516,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 7
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6525,7 +6525,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6534,7 +6534,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6543,7 +6543,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6552,7 +6552,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 26
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6561,7 +6561,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6570,7 +6570,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6579,7 +6579,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6588,7 +6588,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 47
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6597,7 +6597,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6606,7 +6606,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 53
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6615,7 +6615,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6625,7 +6625,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6638,7 +6638,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6647,7 +6647,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6656,7 +6656,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 26
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6665,7 +6665,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6674,7 +6674,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 39
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6683,7 +6683,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6692,7 +6692,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6701,7 +6701,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 53
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6710,7 +6710,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6719,7 +6719,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 60
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6728,7 +6728,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6738,7 +6738,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6751,7 +6751,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6760,7 +6760,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 8
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6769,7 +6769,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 13
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6778,7 +6778,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6787,7 +6787,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6796,7 +6796,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6805,7 +6805,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6814,7 +6814,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 37
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6823,7 +6823,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6832,7 +6832,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6841,7 +6841,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Normal
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6851,7 +6851,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6864,7 +6864,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 13
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6873,7 +6873,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6882,7 +6882,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6891,7 +6891,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6900,7 +6900,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6909,7 +6909,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6918,7 +6918,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6927,7 +6927,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6936,7 +6936,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6945,7 +6945,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 61
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6954,7 +6954,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Rarity = Magic
 #	ItemLevel <= 63
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6964,7 +6964,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6976,7 +6976,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	Class Quiver
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6986,7 +6986,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6996,7 +6996,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -7006,7 +7006,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -7016,7 +7016,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -7026,7 +7026,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -7036,7 +7036,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -7046,7 +7046,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -7056,7 +7056,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -7066,7 +7066,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -7076,7 +7076,7 @@ Hide  # ~Extras - Bad base exclusions (Rarity <= Magic) - Studded Belt, Cloth Be
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -7120,7 +7120,7 @@ Hide
 #Show  # Leveling Filter (Enable for leveling and races) - 20% quality weapons |Comment
 #	Quality = 20
 #	Class "One Hand" "Two Hand"
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Filtering starts at level 1. Normal items that are not Caught get filtered.   #
@@ -7136,7 +7136,7 @@ Hide
 #	Width = 1
 #	Rarity = Magic
 #	ItemLevel <= 13
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Exception for racing and leveling. Vendor food.                                #
@@ -7144,7 +7144,7 @@ Hide
 #Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal items - Magic - Any magic item |Comment
 #	Rarity = Magic
 #	ItemLevel <= 9
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetBackgroundColor 0 0 0 155 # Lesser items
 #Disabled Block End
 
 # Filtering starts at level 1. Magic items that are not Caught get filtered.    #
@@ -7165,7 +7165,7 @@ Hide
 Hide
 	Class Flask
 	Rarity <= Magic
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 155 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   ANYTHING ELSE
