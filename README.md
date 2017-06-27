@@ -4,13 +4,15 @@
 |
 [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921)
 |
-[Youtube](https://www.youtube.com/watch?v=oXnp566lb94&list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x)
+[Youtube](https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x)
 |
 [Facebook](https://www.facebook.com/GreengroovePOE/)
 |
 [Twitter](https://twitter.com/GreengroovePOE)
 |
-[Donations](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ENRA8DXJ9TSBC)**
+[Reddit](https://www.reddit.com/user/Greengroove/)
+|
+[Donations](https://www.pathofexile.com/forum/view-thread/1566921/page/1/#p12940460)**
 
 - Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTRATION IS CURRENTLY NOT SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
 

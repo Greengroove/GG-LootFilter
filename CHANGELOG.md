@@ -4,9 +4,21 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 2.6.2
+
+- Added "Divine Vessel" (Shows in the previous versions of the filter as well, but can be enabled for beta users to use additional highlighting).
+- Updated and added links to PoE Wiki.
+- Added transparent blue background for identified magic items.
+- Updated the entry for 20% quality weapons to show all weapons as it was originally intended.
+- Added magic Prismatic Jewel definition, so that it can't ever be hidden.
+- Adjusted the filters for corrupted items, to work with Monstrous Treasure race type. Note that these items will now be removed instead of being hidden.
+- Enhanced Linked armour Slots, so that they also work with 3 links till item level 24.
+- Rearranged some blocks and advanced menu options. Separated Armour and Weapons in some blocks for rare items.
+- Fixed: Diamond/Topaz Flasks missing in the Flask Block (issue 9).
+
 ## 2.6.0j
 
-- Updated the filterblast.config file to use color themes.
+- **Updated the filterblast.config file to use color themes.**
 - Added the @ sign in front of blocks that are associated with custom UI options.
 - Changed the Youtube link to the loot filter tutorial playlist.
 
@@ -21,7 +33,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Added option to show small or any rare item till a certain level. The level can be set in the racing tab.
 - Added text area in the notes tab to write your own notes.
 - Added warning "~" sign to some blosks that are more sensible.
-- Added Chain belt exlusion (Rarity <= Magic) and added all exclusions to the extra block.
+- Added Chain belt exclusion (Rarity <= Magic) and added all exclusions to the extra block.
 - Adjusted the T3 and Racing items sound volume.
 - Changed Filterblast UI to use some sliders instead of switches.
 
