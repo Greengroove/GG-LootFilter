@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.0.0
+
+- Added items for Harbinger challenge league.
+- Updated entries related to rare shields and added top shield bases to the armour crafting list.
+- Added a new adaptive filter with advanced UI options for rare endgame weapons.
+- Added ability to select crafting jewelry, removed and adapted old options accordingly.
+- Added ability to target specific classes in the linked armour slots.
+- Updated the lists for top rare items.
+- Enabled highlighting for "Divine Vessel".
+- Added sound for leveling rare boots.
+- Removed "leather belt" from chancing bases.
+- The filter now uses |Disable instead of |Comment comands.
+- Added transparency to background for flask progressions to distinguish drops from currency.
+- Added big label for Quicksilver flasks in races.
+- Many small adjustments and few fixes.
+
 ## 2.6.2
 
 - Added "Divine Vessel" (Shows in the previous versions of the filter as well, but can be enabled for beta users to use additional highlighting).
