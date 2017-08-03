@@ -15,7 +15,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Enabled highlighting for "Divine Vessel".
 - Added sound for leveling rare boots.
 - Removed "leather belt" from chancing bases.
-- The filter now uses |Disable instead of |Comment comands.
+- The filter now uses |Disable instead of |Comment commands.
 - Added transparency to background for flask progressions to distinguish drops from currency.
 - Added big label for Quicksilver flasks in races.
 - Many small adjustments and few fixes.
@@ -48,7 +48,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Small change to chest armour for racing and many other small adjustments.
 - Added option to show small or any rare item till a certain level. The level can be set in the racing tab.
 - Added text area in the notes tab to write your own notes.
-- Added warning "~" sign to some blosks that are more sensible.
+- Added warning "~" sign to some blocks that are more sensible.
 - Added Chain belt exclusion (Rarity <= Magic) and added all exclusions to the extra block.
 - Adjusted the T3 and Racing items sound volume.
 - Changed Filterblast UI to use some sliders instead of switches.

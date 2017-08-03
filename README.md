@@ -40,7 +40,7 @@ Detailed information is available on the [Official forum thread](https://www.pat
 ## INSTALL THE FILTER:
 
 - **Download the Zip file [here](https://github.com/Greengroove/GG-LootFilter/releases).**
-- Copy the filter file/s to "system drive":\Users\"Your username"\My Documents\My Games\Path of Exile
+- Copy the filter file/s to "system drive":\Users\\"Your username"\My Documents\My Games\Path of Exile
 
 You can also access this folder from the game's UI options. On the very bottom see the button "Show folder" If you click that, the folder will open in a new window.
 
