@@ -25,7 +25,7 @@ A general recommendation is to only use the leveling filter for races, start of 
 
 ![Imgur](http://i.imgur.com/aU2jxMi.jpg)
 
-- **Don't think about it, just pick up green and Pink stuff.** Think about picking yellow and other stuff.
+- **Don't think about it, just pick up green and pink stuff.** Think about picking yellow and other things.
 - **Hear sounds for all drops that matter.** There are 4 different sounds for 4 tiers of drops (long sounds are good). 1 additional sound just for Divination cards and 1 sound for top tier racing items for casters.
 - **You will always know if you drop identified or corrupted magic and rare items!** This filter will rarely come into effect but you'll be happy to know you can rely on this.
 - **Complete racing filter!** You can (should) customize for specific classes.
@@ -56,7 +56,7 @@ Downloading the files is always the best choice. But **If you copy and paste the
 
 - Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTRATION IS NO LONGER SUPPORTED. DON'T USE IT TO CUSTOMIZE THIS FILTER!** If you do the filter may not work properly. 
 - Customization also possible with Notepad (or similar) with find and replace function.
-- Filter comes with 5 different color themes
+- Filter comes with a few color themes.
 
 
 

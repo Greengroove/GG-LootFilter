@@ -6,13 +6,13 @@
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>74</R>
+        <R>71</R>
         <G>230</G>
-        <B>58</B>
+        <B>118</B>
         <ScA>1</ScA>
-        <ScR>0.06847817</ScR>
+        <ScR>0.0630100146</ScR>
         <ScG>0.7912979</ScG>
-        <ScB>0.04231141</ScB>
+        <ScB>0.18116425</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -20,13 +20,13 @@
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>74</R>
+        <R>71</R>
         <G>230</G>
-        <B>58</B>
+        <B>118</B>
         <ScA>1</ScA>
-        <ScR>0.06847817</ScR>
+        <ScR>0.0630100146</ScR>
         <ScG>0.7912979</ScG>
-        <ScB>0.04231141</ScB>
+        <ScB>0.18116425</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -34,13 +34,13 @@
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>215</R>
-        <G>25</G>
-        <B>0</B>
+        <R>182</R>
+        <G>35</G>
+        <B>255</B>
         <ScA>1</ScA>
-        <ScR>0.6795425</ScR>
-        <ScG>0.009721218</ScG>
-        <ScB>0</ScB>
+        <ScR>0.4677838</ScR>
+        <ScG>0.0168073755</ScG>
+        <ScB>1</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -48,13 +48,13 @@
       <ComponentType>BorderColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>74</R>
+        <R>71</R>
         <G>230</G>
-        <B>58</B>
+        <B>118</B>
         <ScA>1</ScA>
-        <ScR>0.06847817</ScR>
+        <ScR>0.0630100146</ScR>
         <ScG>0.7912979</ScG>
-        <ScB>0.04231141</ScB>
+        <ScB>0.18116425</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -118,13 +118,13 @@
       <ComponentType>BorderColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>215</R>
-        <G>25</G>
-        <B>0</B>
+        <R>182</R>
+        <G>35</G>
+        <B>255</B>
         <ScA>1</ScA>
-        <ScR>0.6795425</ScR>
-        <ScG>0.009721218</ScG>
-        <ScB>0</ScB>
+        <ScR>0.4677838</ScR>
+        <ScG>0.0168073755</ScG>
+        <ScB>1</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -174,13 +174,13 @@
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>255</R>
-        <G>199</G>
-        <B>119</B>
+        <R>215</R>
+        <G>25</G>
+        <B>0</B>
         <ScA>1</ScA>
-        <ScR>1</ScR>
-        <ScG>0.571124852</ScG>
-        <ScB>0.18447499</ScB>
+        <ScR>0.6795425</ScR>
+        <ScG>0.009721218</ScG>
+        <ScB>0</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -201,11 +201,11 @@
       <ComponentName>Animate weapon items</ComponentName>
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
-        <A>155</A>
+        <A>145</A>
         <R>0</R>
         <G>200</G>
         <B>255</B>
-        <ScA>0.607843161</ScA>
+        <ScA>0.5686275</ScA>
         <ScR>0</ScR>
         <ScG>0.577580452</ScG>
         <ScB>1</ScB>
@@ -216,13 +216,13 @@
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
         <A>145</A>
-        <R>74</R>
+        <R>71</R>
         <G>230</G>
-        <B>58</B>
+        <B>118</B>
         <ScA>0.5686275</ScA>
-        <ScR>0.06847817</ScR>
+        <ScR>0.0630100146</ScR>
         <ScG>0.7912979</ScG>
-        <ScB>0.04231141</ScB>
+        <ScB>0.18116425</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -258,13 +258,13 @@
       <ComponentType>BorderColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>74</R>
+        <R>71</R>
         <G>230</G>
-        <B>58</B>
+        <B>118</B>
         <ScA>1</ScA>
-        <ScR>0.06847817</ScR>
+        <ScR>0.0630100146</ScR>
         <ScG>0.7912979</ScG>
-        <ScB>0.04231141</ScB>
+        <ScB>0.18116425</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -314,13 +314,13 @@
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
         <A>255</A>
-        <R>215</R>
-        <G>25</G>
-        <B>0</B>
+        <R>182</R>
+        <G>35</G>
+        <B>255</B>
         <ScA>1</ScA>
-        <ScR>0.6795425</ScR>
-        <ScG>0.009721218</ScG>
-        <ScB>0</ScB>
+        <ScR>0.4677838</ScR>
+        <ScG>0.0168073755</ScG>
+        <ScB>1</ScB>
       </Color>
     </ThemeComponent>
   </Components>

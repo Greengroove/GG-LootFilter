@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.0.1
+
+- **Introduced a new (necro) color theme named Atlantisite.**
+- Slightly enhanced the map drop progression and reworked the Custom maps list.
+- Silver Coin now use the T4 drop sound instead T2.
+- Added ability to hide 5 socket 5 links.
+- Merged the rare weapon progression blocks with the rare weapons in the leveling filter (simplification).
+- Added ability to change drop sound for Exalts, Mirrors and introduced a switch to globally change the new positional drop sounds (off by default).
+- Changed the slider Large font size to Maximum font size. It now affects all font sizes and will reduce them proportionally.
+- Added a link to the Vendor recipe Wiki page and PoEAffix.
+- Added transparent background to Perandus coins.
+- Added new Filterblast option "# no title" to the racing tab armour slots.
+- Updated all color themes.
+- Sound volume and some other small adjustments.
+
 ## 3.0.0
 
 - Added items for Harbinger challenge league.
@@ -18,6 +33,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - The filter now uses |Disable instead of |Comment commands.
 - Added transparency to background for flask progressions to distinguish drops from currency.
 - Added big label for Quicksilver flasks in races.
+- Removed drop sound for Perandus coins.
 - Many small adjustments and few fixes.
 
 ## 2.6.2

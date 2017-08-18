@@ -17,20 +17,6 @@
     </ThemeComponent>
     <ThemeComponent>
       <ComponentName>T1 drops color / Quest items</ComponentName>
-      <ComponentType>BorderColor</ComponentType>
-      <Color>
-        <A>255</A>
-        <R>170</R>
-        <G>230</G>
-        <B>230</B>
-        <ScA>1</ScA>
-        <ScR>0.401977777</ScR>
-        <ScG>0.7912979</ScG>
-        <ScB>0.7912979</ScB>
-      </Color>
-    </ThemeComponent>
-    <ThemeComponent>
-      <ComponentName>T1 drops color / Quest items</ComponentName>
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
@@ -58,6 +44,20 @@
       </Color>
     </ThemeComponent>
     <ThemeComponent>
+      <ComponentName>T1 drops color / Quest items</ComponentName>
+      <ComponentType>BorderColor</ComponentType>
+      <Color>
+        <A>255</A>
+        <R>170</R>
+        <G>230</G>
+        <B>230</B>
+        <ScA>1</ScA>
+        <ScR>0.401977777</ScR>
+        <ScG>0.7912979</ScG>
+        <ScB>0.7912979</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
       <ComponentName>Map Background Color</ComponentName>
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
@@ -75,11 +75,11 @@
       <ComponentName>Lesser items</ComponentName>
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
-        <A>155</A>
+        <A>140</A>
         <R>0</R>
         <G>0</G>
         <B>0</B>
-        <ScA>0.607843161</ScA>
+        <ScA>0.549019635</ScA>
         <ScR>0</ScR>
         <ScG>0</ScG>
         <ScB>0</ScB>
@@ -187,14 +187,14 @@
       <ComponentName>Animate weapon text</ComponentName>
       <ComponentType>TextColor</ComponentType>
       <Color>
-        <A>255</A>
-        <R>0</R>
-        <G>0</G>
-        <B>0</B>
-        <ScA>1</ScA>
-        <ScR>0</ScR>
-        <ScG>0</ScG>
-        <ScB>0</ScB>
+        <A>0</A>
+        <R>110</R>
+        <G>200</G>
+        <B>255</B>
+        <ScA>0</ScA>
+        <ScR>0.155926466</ScR>
+        <ScG>0.577580452</ScG>
+        <ScB>1</ScB>
       </Color>
     </ThemeComponent>
     <ThemeComponent>
@@ -212,7 +212,21 @@
       </Color>
     </ThemeComponent>
     <ThemeComponent>
-      <ComponentName>identified magic items text</ComponentName>
+      <ComponentName>Animate weapon ranged items</ComponentName>
+      <ComponentType>BackgroundColor</ComponentType>
+      <Color>
+        <A>145</A>
+        <R>74</R>
+        <G>230</G>
+        <B>58</B>
+        <ScA>0.5686275</ScA>
+        <ScR>0.06847817</ScR>
+        <ScG>0.7912979</ScG>
+        <ScB>0.04231141</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
+      <ComponentName>Identified magic items text</ComponentName>
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>255</A>
@@ -220,6 +234,20 @@
         <G>200</G>
         <B>255</B>
         <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0.577580452</ScG>
+        <ScB>1</ScB>
+      </Color>
+    </ThemeComponent>
+    <ThemeComponent>
+      <ComponentName>Identified magic items background</ComponentName>
+      <ComponentType>BackgroundColor</ComponentType>
+      <Color>
+        <A>70</A>
+        <R>0</R>
+        <G>200</G>
+        <B>255</B>
+        <ScA>0.274509817</ScA>
         <ScR>0</ScR>
         <ScG>0.577580452</ScG>
         <ScB>1</ScB>

@@ -22,18 +22,22 @@ All themes are available on [Filterblast](http://filterblast.oversoul.xyz/Greeng
 
 ![Imgur](http://i.imgur.com/6Mccuuy.jpg)
 
-**Bloodstone** - Performs great.
+**Atlantisite** - Necro themed.
+
+![Imgur](http://i.imgur.com/nxLrsQD.jpg)
+
+**Bloodstone** - Green and red, great performance.
 
 ![Imgur](http://i.imgur.com/f1altgo.jpg)
-
-**Jade** - Classy and easy on the eyes.
-
-![Imgur](http://i.imgur.com/fGwPcde.jpg)
-
-**Zoisite (Default)** - Performs the best.
-
-![Imgur](http://i.imgur.com/tnMqJRi.jpg)
 
 **Game like** - This theme uses colors similar to the game originals.
 
 ![Imgur](http://i.imgur.com/Y0dwGPV.jpg)
+
+**Jade** - Green shades, classy and easy on the eyes.
+
+![Imgur](http://i.imgur.com/fGwPcde.jpg)
+
+**Zoisite (Default)** - Green and pink, performs the best.
+
+![Imgur](http://i.imgur.com/tnMqJRi.jpg)
