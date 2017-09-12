@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
-## 3.0.3
+## 3.0.1d
 
 - **Introducing Sound Themes!** Two brand new themes and enhanced sound options.
 - Added a link to the Unique items Wiki page.
