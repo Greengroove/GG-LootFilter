@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.0.3
+
+- **Introducing Sound Themes!** Two brand new themes and enhanced sound options.
+- Added a link to the Unique items Wiki page.
+- Some small adjustments, due to the addition of sound themes.
+
 ## 3.0.1
 
 - **Introduced a new (necro) color theme named Atlantisite.**

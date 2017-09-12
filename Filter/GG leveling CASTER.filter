@@ -1,10 +1,10 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.0.1
+#               Greengroove's Endgame Loot Filter Script v 3.0.1d
 #
 #-------------------------------------------------------------------------------#
 #
-#               Updated for Atlas of Worlds (Fall of Oriath) 3.0
+#               Updated for Atlas of Worlds (Fall of Oriath) 3.0.x
 #
 #
 #           
@@ -22,18 +22,19 @@
 #
 #
 #   FEATURES:   > Pick up green stuff! Pink is good. Take it.
-#               > Complete detailed racing filter!
+#               > Complete, detailed racing filter.
+#               > Color and sound themes!
 #               > Border around labels to distinguish better drops.
 #               > Rely on sounds for all drops that matter.
-#               > There are 4 different sounds for 4 tiers of drops. (long sounds are good)
+#               > There are 4 different sounds for 4 tiers of drops (long sounds are good).
 #               > 1 additional sound just for Divination cards and another for racing related items.
 #               > Lower base rares get filtered as you progress for less clutter.
 #               > Large text for all - easy pick up.
 #               > Crafting bases show at appropriate levels.
-#               > Includes chancing items
-#               > Flasks filtering
-#               > Hidden items further filtration (Endgame version - Use "Alt" key)
-#               > Great integration with Filterblast.
+#               > Includes chancing items.
+#               > Flasks filtering.
+#               > Hidden items further filtration (Endgame version - Use "Alt" key).
+#               > Great integration with Filterblast for easy customization.
 #
 #
 #
@@ -199,12 +200,12 @@
 #
 #   > SOUNDS
 #
-#       Tier 1:                         PlayAlertSound 8 280 # Tier 1
-#       Tier 2:                         PlayAlertSound 7 220 # Tier 2
-#       Tier 3:                         PlayAlertSound 1 100 # Tier 3
-#       Tier 4:                         PlayAlertSound 2 90 # Tier 4
-#       Divination cards:               PlayAlertSound 4 120 # Divination cards
-#       Racing items:                   PlayAlertSound 3 160 # Racing items
+#       Tier 1:                         PlayAlertSound 8 280 # A - Tier 1
+#       Tier 2:                         PlayAlertSound 7 220 # A - Tier 2
+#       Tier 3:                         PlayAlertSound 1 100 # A - Tier 3
+#       Tier 4:                         PlayAlertSound 2 90 # A - Tier 4
+#       Divination cards:               PlayAlertSound 4 120 # B -  Divination cards
+#       Racing items:                   PlayAlertSound 3 160 # D - Racing items
 #
 #-------------------------------------------------------------------------------#
 #
@@ -282,7 +283,7 @@
 # //! SetOption $Slot_4_class checkbox [Body Armour] [Boots] [Gloves] [Helmet] # no title
 # //! SetOption $Separator
 # //! SetOption $Caster_Items input ["BB"] # Set a RGB value for races with a caster. [u][b]Block switches[/b][/u] are in the racing filter. Maximum 3 characters. If empty default values will be used.
-# //! SetOption $Racing_items_volume switch [80] [ 0] [80] # Toggle sounds for low currency (Utility flasks, Whetstone, Transmutation, Augmentation orbs). Only for races / leveling, 0 = disabled (Default).
+# //! SetOption $Leveling_items switch [Enable] [Disable] [Enable] # Toggle sounds for low currency (Utility flasks, Whetstone, Transmutation, Augmentation orbs). Only for races / leveling, disabled by default.
 # //! SetOption $Racing_items_max_level switch [63] [66] [72] [77] [99] # Set the maximum level for racing items, 63 (Default).
 # //! SetOption $Rares_for_vendoring switch [15] [23] [33] [44] [56] [66] [68] [70] [72] # Set the maximum level of trash rares you want to see. [u][b]Block switches[/b][/u] in the Leveling block.
 # //! SetTab [None]
@@ -298,7 +299,7 @@
 # //! SetTab [Notes]
 
 # //! SetOption $Notes textarea [] # Name your preset, or add your notes here:
-# //! SetOption $PoE_links link [Weapons] [http://pathofexile.gamepedia.com/Weapon] [Armour] [http://pathofexile.gamepedia.com/Armour_(equipment)] [Flasks] [http://pathofexile.gamepedia.com/Flask] [Active skills] [http://pathofexile.gamepedia.com/Active_skill_gem] [Support Skills] [http://pathofexile.gamepedia.com/Support_Skill_Gems] [Maps] [http://pathofexile.gamepedia.com/Map] [Divination cards] [http://pathofexile.gamepedia.com/Divination_card] [Vendor recipes] [https://pathofexile.gamepedia.com/Vendor_recipe_system] [Quest rewards] [http://pathofexile.gamepedia.com/Quest_Rewards] [PoEAffix] [http://poeaffix.net/] # Some useful loot related links.
+# //! SetOption $PoE_links link [Uniques] [https://pathofexile.gamepedia.com/Unique_item] [Weapons] [http://pathofexile.gamepedia.com/Weapon] [Armour] [http://pathofexile.gamepedia.com/Armour_(equipment)] [Flasks] [http://pathofexile.gamepedia.com/Flask] [Active skills] [http://pathofexile.gamepedia.com/Active_skill_gem] [Support Skills] [http://pathofexile.gamepedia.com/Support_Skill_Gems] [Maps] [http://pathofexile.gamepedia.com/Map] [Divination cards] [http://pathofexile.gamepedia.com/Divination_card] [Vendor recipes] [https://pathofexile.gamepedia.com/Vendor_recipe_system] [Quest rewards] [http://pathofexile.gamepedia.com/Quest_Rewards] [PoEAffix] [http://poeaffix.net/] # Some useful loot related links.
 # //! SetOption $Separator
 # //! SetOption $Dont_panic info # Nothing of value can be hidden... Start with a preset, depending on your situation and go from there. Just remember: The more things you enable, the more loot you'll see. The filter has been designed, so that you can configure the filter exactly the way you want and it's generally aimed towards experienced users.
 # //! SetOption $Block_switches_tab info # The most important part of the filter. This tab also contains switches that enable or disable functions in other tabs. The advanced options that are associated with switches use bold markings in the description. Copy a tittle, expand all and use Ctrl+F to find the desired item.
@@ -341,7 +342,7 @@ Show
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Tier 1
+	PlayAlertSound 8 280 # A - Tier 1
 
 Show
 	Class Quest
@@ -353,7 +354,7 @@ Show
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Tier 1
+	PlayAlertSound 8 280 # A - Tier 1
 
 #-------------------------------------------------------------------------------#
 # Section:  #   LABYRINTH
@@ -363,20 +364,20 @@ Show
 	BaseType "Silver Key" "Golden Key" "Treasure Key"
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show
 	BaseType "Offering to the Goddess"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	Class Trinket
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 #-------------------------------------------------------------------------------#
 # Section:  #   HARBINGER
@@ -386,15 +387,15 @@ Show  # ~Misc - Extras - Harbinger items - T4 |Disable
 	Class Currency
 	BaseType "Chaos Shard" "Regal Shard" "Binding Shard"
 	SetFontSize 45
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items 
+# //! AlertSound $Leveling_items
 
 Show  # ~Misc - Extras - Harbinger items - T4 |Disable
 	Class Currency
 	BaseType "Engineer's Shard" "Orb of Binding" "Harbinger's Shard"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # ~Misc - Extras - Harbinger items - T3 |Disable
 	Class Currency
@@ -402,7 +403,7 @@ Show  # ~Misc - Extras - Harbinger items - T3 |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show  # ~Misc - Extras - Harbinger items - T2 |Disable
 	Class Currency
@@ -410,7 +411,7 @@ Show  # ~Misc - Extras - Harbinger items - T2 |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # ~Misc - Extras - Harbinger items - T1 |Disable
 	Class Currency
@@ -418,7 +419,7 @@ Show  # ~Misc - Extras - Harbinger items - T1 |Disable
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Tier 1
+	PlayAlertSound 8 280 # A - Tier 1
 
 #-------------------------------------------------------------------------------#
 # Section:  #   LEGACY
@@ -431,7 +432,7 @@ Show  # ~Misc - Extras - Legacy items - Leaguestone - Normal |Disable
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 200 200 200
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # ~Misc - Extras - Legacy items - Leaguestone - Magic |Disable
 	Class Leaguestone
@@ -440,7 +441,7 @@ Show  # ~Misc - Extras - Legacy items - Leaguestone - Magic |Disable
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 136 136 255
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	Class "Misc Map Items"
@@ -449,7 +450,7 @@ Show
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Tier 1
+	PlayAlertSound 8 280 # A - Tier 1
 
 #-------------------------------------------------------------------------------#
 # Section:  #   BREACH
@@ -460,7 +461,7 @@ Show  # ~Misc - Extras - Breach items - Splinter
 	BaseType Splinter
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # ~Misc - Extras - Breach items - Blessing
 	Class "Stackable Currency"
@@ -469,7 +470,7 @@ Show  # ~Misc - Extras - Breach items - Blessing
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # ~Misc - Extras - Breach items - Breachstone |Disable
 	Class "Misc Map Items"
@@ -478,7 +479,7 @@ Show  # ~Misc - Extras - Breach items - Breachstone |Disable
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   ESSENCE
@@ -489,7 +490,7 @@ Show  # ~Misc - Extras - Essence items - First 3 essence tiers
 	BaseType "Weeping Essence" "Muttering Essence" "Whispering Essence"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	Class Currency
@@ -497,7 +498,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   DIVINATION CARDS
@@ -509,7 +510,7 @@ Show
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 # The divination cards that you don't want to drop with sound in endgame.
 Show  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
@@ -524,7 +525,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 4 120 # Divination cards
+	PlayAlertSound 4 120 # B -  Divination cards
 
 #-------------------------------------------------------------------------------#
 # Section:  #   CURRENCY
@@ -534,13 +535,13 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls
 	Class Currency
 	BaseType "Scroll of Wisdom"
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Endgame Filter (Disable for MF) - Low currency - Portal Scrolls
 	Class Currency
 	BaseType "Portal Scroll"
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Endgame Filter (Disable for MF) - Low currency - Armourer's Scrap
 	Class Currency
@@ -551,8 +552,8 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone
 	Class Currency
 	BaseType "Blacksmith's Whetstone"
 	SetFontSize 45
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Low currency - Glassblower's Bauble
 	Class Currency
@@ -563,50 +564,57 @@ Show  # Endgame Filter (Disable for MF) - Currency - Orb of Transmutation |Disab
 	Class Currency
 	BaseType "Orb of Transmutation"
 	SetFontSize 45
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Currency - Orb of Augmentation |Disable
 	Class Currency
 	BaseType "Orb of Augmentation"
 	SetFontSize 45
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Currency - Orb of Alteration |Disable
 	Class Currency
 	BaseType "Orb of Alteration"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - Currency - Orb of Chance |Disable
 	Class Currency
 	BaseType "Orb of Chance"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - Currency - Chromatic Orb |Disable
 	Class Currency
 	BaseType "Chromatic Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - Currency - Jeweller's Orb |Disable
 	Class Currency
 	BaseType "Jeweller's Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show
 	Class Currency
-	BaseType "Cartographer's Chisel" "Orb of Alchemy"
+	BaseType "Cartographer's Chisel"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
+
+Show
+	Class Currency
+	BaseType "Orb of Alchemy"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # C - Orb of Alchemy
 
 Show  # ~Misc - Extras - Prophecy items - Silver Coins
 	Class Currency
@@ -614,15 +622,71 @@ Show  # ~Misc - Extras - Prophecy items - Silver Coins
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show
 	Class Currency
-	BaseType "Regal Orb" "Blessed Orb" "Gemcutter's Prism" "Orb of Regret" "Vaal Orb" "Chaos Orb" "Orb of Fusing" "Orb of Scouring"
+	BaseType "Regal Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # C - Regal Orb
+
+Show
+	Class Currency
+	BaseType "Blessed Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	PlayAlertSound 1 100 # C - Blessed Orb
+
+Show
+	Class Currency
+	BaseType "Gemcutter's Prism"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	PlayAlertSound 1 100 # A - Tier 3
+
+Show
+	Class Currency
+	BaseType "Orb of Regret"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	PlayAlertSound 1 100 # A - Tier 3
+
+Show
+	Class Currency
+	BaseType "Vaal Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	PlayAlertSound 1 100 # C - Vaal Orb
+
+Show
+	Class Currency
+	BaseType "Chaos Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	PlayAlertSound 1 100 # C - Chaos Orb
+
+Show
+	Class Currency
+	BaseType "Orb of Fusing"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	PlayAlertSound 1 100 # C - Orb of Fusing
+
+Show
+	Class Currency
+	BaseType "Orb of Scouring"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show
 	Class Currency
@@ -630,7 +694,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	Class Currency
@@ -638,15 +702,23 @@ Show
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	Class Currency
-	BaseType "Divine Orb" "Albino Rhoa Feather" "Eternal Orb"
+	BaseType "Divine Orb"
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Tier 1
+	PlayAlertSound 8 280 # C - Divine Orb
+
+Show
+	Class Currency
+	BaseType "Albino Rhoa Feather" "Eternal Orb"
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	PlayAlertSound 8 280 # A - Tier 1
 
 Show
 	Class Currency
@@ -654,7 +726,7 @@ Show
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Exalted Orb
+	PlayAlertSound 8 280 # C - Exalted Orb
 
 Show
 	Class Currency
@@ -662,14 +734,14 @@ Show
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Mirror of Kalandra
+	PlayAlertSound 8 280 # C - Mirror of Kalandra
 
 Show  # Endgame Filter (Disable for MF) - Currency - Perandus Coin |Disable
 	Class Currency
 	BaseType "Perandus Coin"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # ~Misc - Extras - Prophecy items - Sealed Prophecies |Disable
 	Class Currency
@@ -677,13 +749,13 @@ Show  # ~Misc - Extras - Prophecy items - Sealed Prophecies |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 # Present in the Leveling Filter.
 Show  # Leveling Filter (Enable for leveling and races) - Alchemy Shard, Alteration Shard, Transmutation Shard / Scroll Fragment
 	BaseType "Alchemy Shard" "Alteration Shard" "Transmutation Shard" "Scroll Fragment"
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Endgame Filter (Disable for MF) - Currency - Generic currency (catch all)
 	Class Currency "Stackable Currency"
@@ -700,7 +772,7 @@ Show
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Tier 1
+	PlayAlertSound 8 280 # A - Tier 1
 
 Show
 	Class Maps
@@ -709,7 +781,7 @@ Show
 	SetTextColor 175 96 37 # Unique items color
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 175 96 37 # Unique items color
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 # Shaped maps filter
 Show
@@ -721,7 +793,7 @@ Show
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	DropLevel >= 78
@@ -730,7 +802,7 @@ Show
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - Maps - Yellow T10 |Disable
 	DropLevel = 77
@@ -738,7 +810,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Yellow T10 |Disable
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show  # Endgame Filter (Disable for MF) - Maps - Yellow T9 |Disable
 	DropLevel = 76
@@ -746,7 +818,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Yellow T9 |Disable
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 # Custom list of maps
 Show  # Endgame Filter (Disable for MF) - Maps - @Custom maps |Disable
@@ -756,7 +828,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - @Custom maps |Disable
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 # Maps DropLevel >= 73 use T3 sound till ItemLevel <= 78
 Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any yellow map) |Disable
@@ -766,7 +838,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any y
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 # Maps DropLevel >= 73 use T3 sound till ItemLevel <= 78
 Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any yellow map) |Disable
@@ -776,7 +848,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any y
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 # Low level maps in low level maps.
 Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any yellow map) |Disable
@@ -785,7 +857,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any y
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any yellow map) |Disable
 	DropLevel >= 73
@@ -793,7 +865,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any y
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 # Any corrupted map.
 Show
@@ -814,7 +886,7 @@ Show  # ~Misc - Extras - Prophecy items - Council keys |Disable
 	SetTextColor 255 45 175 # T2 drops color
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	Class Fragment "Map Fragments"
@@ -822,7 +894,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	Class Fragment "Map Fragments"
@@ -830,7 +902,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   GEMS
@@ -842,7 +914,7 @@ Show
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 # Drop only gems.
 Show
@@ -851,7 +923,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	Quality >= 14
@@ -859,7 +931,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality 8-13) |Disable
 	Quality >= 8
@@ -867,7 +939,7 @@ Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality 8-13) |Disable
 	SetFontSize 45
 	SetTextColor 27 162 155 # Gems color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality <= 7) |Disable
 	Quality >= 1
@@ -875,7 +947,7 @@ Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality <= 7) |Disable
 	SetFontSize 45
 	SetTextColor 27 162 155 # Gems color
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 # Gems that could have some value.
 Show  # Endgame Filter (Disable for MF) - Gems - @Useful and drop only gems |Disable
@@ -885,7 +957,7 @@ Show  # Endgame Filter (Disable for MF) - Gems - @Useful and drop only gems |Dis
 	SetFontSize 45
 	SetTextColor 27 162 155 # Gems color
 	SetBorderColor 27 162 155 # Gems color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 # Gems that could have some value.
 Show  # Endgame Filter (Disable for MF) - Gems - Vaal gems |Disable
@@ -894,19 +966,19 @@ Show  # Endgame Filter (Disable for MF) - Gems - Vaal gems |Disable
 	SetFontSize 45
 	SetTextColor 27 162 155 # Gems color
 	SetBorderColor 27 162 155 # Gems color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - Gems - No quality  - Active Skill Gems
 	Class "Active Skill Gems"
 	SetFontSize 33
 	SetTextColor 27 162 155 # Gems color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Endgame Filter (Disable for MF) - Gems - No quality  - Support gems
 	Class "Support Skill Gems"
 	SetFontSize 33
 	SetTextColor 27 162 155 # Gems color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   JEWELS
@@ -918,14 +990,14 @@ Show
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show  # Endgame Filter (Disable for MF) - Jewels - Magic (ItemLevel <= 72) |Disable
 	Class Jewel
 	Rarity = Magic
 	ItemLevel <= 72
 	SetFontSize 45
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - Jewels - Magic - Crimson Jewel
 	Class Jewel
@@ -956,7 +1028,7 @@ Show
 	Rarity = Normal
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 #-------------------------------------------------------------------------------#
 # Section:  #   TALISMAN
@@ -969,7 +1041,7 @@ Show  # ~Misc - Extras - Talisman items - Rare |Disable
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 255 255 119
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # ~Misc - Extras - Talisman items - Magic |Disable
 	Class Amulet
@@ -978,7 +1050,7 @@ Show  # ~Misc - Extras - Talisman items - Magic |Disable
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 136 136 255
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # ~Misc - Extras - Talisman items - Normal |Disable
 	Class Amulet
@@ -987,7 +1059,7 @@ Show  # ~Misc - Extras - Talisman items - Normal |Disable
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 200 200 200
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   UNIQUE / OTHER ITEMS
@@ -999,7 +1071,7 @@ Show
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Tier 1
+	PlayAlertSound 8 280 # A - Tier 1
 
 Show
 	LinkedSockets = 6
@@ -1007,35 +1079,35 @@ Show
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Tier 1
+	PlayAlertSound 8 280 # A - Tier 1
 
 Show
 	Rarity = Unique
 	SetFontSize 45
 	SetTextColor 175 96 37 # Unique items color
 	SetBorderColor 175 96 37 # Unique items color
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 5 link (5 socket) |Disable
 	LinkedSockets = 5
 	Sockets = 5
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	LinkedSockets = 5
 	Sockets = 6
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	Sockets = 6
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show
 	BaseType "Sacrificial Garb"
@@ -1057,7 +1129,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 3 160 # Racing items
+	PlayAlertSound 3 160 # D - Racing items
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
 Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
@@ -1071,7 +1143,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 3 160 # Racing items
+	PlayAlertSound 3 160 # D - Racing items
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
 #Disabled Block Start
@@ -1085,7 +1157,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 3 160 # Racing items
+#	PlayAlertSound 3 160 # D - Racing items
 #Disabled Block End
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
@@ -1101,7 +1173,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 3 160 # Racing items
+#	PlayAlertSound 3 160 # D - Racing items
 #Disabled Block End
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
@@ -1116,7 +1188,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 3 160 # Racing items
+#	PlayAlertSound 3 160 # D - Racing items
 #Disabled Block End
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
@@ -1132,7 +1204,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 3 160 # Racing items
+#	PlayAlertSound 3 160 # D - Racing items
 #Disabled Block End
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
@@ -1147,7 +1219,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 3 160 # Racing items
+#	PlayAlertSound 3 160 # D - Racing items
 #Disabled Block End
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
@@ -1163,7 +1235,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 3 160 # Racing items
+#	PlayAlertSound 3 160 # D - Racing items
 #Disabled Block End
 
 # Any 4 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 66
@@ -1193,7 +1265,7 @@ Show  # ~Misc - @Chance bases |Disable
 	Rarity = Normal
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 #-------------------------------------------------------------------------------#
 # Section:  #   ALL 2.4 AND HIGHER BASES
@@ -1204,14 +1276,14 @@ Show
 	Class Amulet Belt Ring
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 #Show # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) (Currently unnused base types) |Disable
 #    DropLevel >= 73
 #    Class "Body Armour" "Shield" "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
 #    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #    SetFontSize 45
-#    PlayAlertSound 7 220 # Tier 2
+#    PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	DropLevel >= 72
@@ -1220,7 +1292,7 @@ Show
 	ItemLevel <= 83
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Boots (Magic, ItemLevel <= 83) |Disable
 	DropLevel >= 72
@@ -1229,7 +1301,7 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Boots (
 	ItemLevel <= 83
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Helmet (Magic, ItemLevel <= 83) |Disable
 	DropLevel >= 72
@@ -1238,7 +1310,7 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Helmet 
 	ItemLevel <= 83
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Fingerless Silk Gloves |Disable
 	DropLevel >= 72
@@ -1248,7 +1320,7 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves 
 	ItemLevel <= 83
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Gripped Gloves |Disable
 	DropLevel >= 72
@@ -1258,7 +1330,7 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves 
 	ItemLevel <= 83
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Spiked Gloves |Disable
 	DropLevel >= 72
@@ -1268,7 +1340,7 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves 
 	ItemLevel <= 83
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 # This entry will catch any specified class in case they get commented, to retain original style.
 Hide
@@ -1286,7 +1358,7 @@ Show
 	ItemLevel <= 83
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 Show
 	DropLevel >= 72
@@ -1294,7 +1366,7 @@ Show
 	ItemLevel >= 84
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # Tier 2
+	PlayAlertSound 7 220 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE
@@ -1309,7 +1381,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - All (ItemLevel <= 6
 	SetTextColor 255 255 119
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Height = 2 |Disable
 	Height = 2
@@ -1319,7 +1391,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Height = 2 |Disable
 	SetTextColor 255 255 119
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Width = 1 |Disable
 	Width = 1
@@ -1329,7 +1401,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Width = 1 |Disable
 	SetTextColor 255 255 119
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 #-------------------------------------------------------------------------------#
 # Section:  #   VENDOR RECIPE ITEMS - CHISEL RECIPE
@@ -1368,7 +1440,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show
 	Class Belt
@@ -1377,7 +1449,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - Rare items - Belts (non top) |Disable
 	Class Belt
@@ -1385,7 +1457,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Belts (non top) |Disable
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - TOP WEAPONS BASES
@@ -1400,7 +1472,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Daggers (DropLevel >= 47)
 	DropLevel >= 47
@@ -1473,7 +1545,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE CORRUPTED ITEMS
@@ -1496,7 +1568,7 @@ Show  # ~Misc - Corrupted items - Weapons (Good bases) - Rare |Disable
 	Rarity = Rare
 	SetFontSize 23
 	SetTextColor 215 25 0 # Corrupted items text
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Rare armour (Good bases) corrupted item.
 Show  # ~Misc - Corrupted items - Armour (Good bases) - Rare |Disable
@@ -1506,7 +1578,7 @@ Show  # ~Misc - Corrupted items - Armour (Good bases) - Rare |Disable
 	Rarity = Rare
 	SetFontSize 23
 	SetTextColor 215 25 0 # Corrupted items text
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Any corrupted rare item.
 #Disabled Block Start
@@ -1515,7 +1587,7 @@ Show  # ~Misc - Corrupted items - Armour (Good bases) - Rare |Disable
 #	Rarity = Rare
 #	SetFontSize 23
 #	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -1530,7 +1602,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares
 # //$ <= $Rares_for_vendoring
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # All other rare quivers are displayed in the Leveling Filter.
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares for vendoring - Height = 2 |Disable
@@ -1540,7 +1612,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares
 # //$ <= $Rares_for_vendoring
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # All other rare quivers are displayed in the Leveling Filter.
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares for vendoring - Any |Disable
@@ -1549,7 +1621,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares
 # //$ <= $Rares_for_vendoring
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - GOOD RARE WEAPONS
@@ -1576,7 +1648,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Bows (+3)
 	ItemLevel >= 64
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # These are ok for leveling.
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Bows
@@ -1585,7 +1657,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Bows |Disable
 	DropLevel >= 44
@@ -1637,7 +1709,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Quivers - Spike-Point Arr
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Top base rare quivers.
 Show  # Endgame Filter (Disable for MF) - Rare items - Quivers - Broadhead Arrow Quiver
@@ -1645,7 +1717,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Quivers - Broadhead Arrow
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Top base rare quivers.
 Show  # Endgame Filter (Disable for MF) - Rare items - Quivers - Two-Point Arrow Quiver
@@ -1653,7 +1725,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Quivers - Two-Point Arrow
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # All other rare quivers are displayed in the Leveling Filter.
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Rare quivers
@@ -1661,7 +1733,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Rare q
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - CLAW
@@ -1674,7 +1746,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Claws |Disable
 	DropLevel >= 43
@@ -1774,7 +1846,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Daggers (Any)
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - ONE HAND AXE
@@ -1787,7 +1859,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - One hand axes |Disable
 	DropLevel >= 42
@@ -1848,7 +1920,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - One hand maces |Disable
 	DropLevel >= 44
@@ -1901,7 +1973,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - One hand swords |Disable
 	DropLevel >= 44
@@ -1962,7 +2034,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Wands (DropLeve
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - SCEPTRE
@@ -1983,7 +2055,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - STAVES
@@ -1996,7 +2068,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Staves (+3)
 	ItemLevel >= 55
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # These are ok for Leveling.
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Staves
@@ -2005,7 +2077,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Staves |Disable
 	DropLevel >= 44
@@ -2058,7 +2130,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Two hand axes |Disable
 	DropLevel >= 44
@@ -2111,7 +2183,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Two hand maces |Disable
 	DropLevel >= 44
@@ -2164,7 +2236,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Two hand swords |Disable
 	DropLevel >= 44
@@ -2217,7 +2289,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Chest armour (il
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Any chest armour can be good while Leveling. These show till item level 63.
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour - Body armour
@@ -2234,7 +2306,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - ARMOUR - BOOTS
@@ -2247,7 +2319,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy 
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Hybrid ES bases.
 Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases - Boots
@@ -2272,7 +2344,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour
 	ItemLevel <= 63
 	SetFontSize 33
 	SetTextColor 255 255 119
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 # Any base can be useful for Leveling.
 Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Low bases - Boots
@@ -2280,7 +2352,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Low bases - Boot
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - ARMOUR - GLOVES
@@ -2293,7 +2365,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy 
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Hybrid ES bases.
 Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases - Gloves
@@ -2325,7 +2397,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Low bases - Glov
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - ARMOUR - HELM
@@ -2338,7 +2410,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy 
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Hybrid ES bases.
 Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases - Helm
@@ -2370,7 +2442,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Low bases - Helm
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - ARMOUR - SHIELD
@@ -2403,7 +2475,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour
 	Rarity = Rare
 	SetFontSize 33
 	SetTextColor 255 255 119
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   FLASKS - UTILITY AND QUALITY
@@ -2417,8 +2489,8 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quicksilver Flask |
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 # Any quality flask will show till level 67.
 Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with quality |Disable
@@ -2427,128 +2499,128 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with quality |Disable
 	ItemLevel <= 67
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quicksilver Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Quicksilver Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Bismuth Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Bismuth Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Stibnite Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Stibnite Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Amethyst Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Amethyst Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Ruby Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Ruby Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Sapphire Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Sapphire Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Topaz Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Topaz Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Silver Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Silver Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Aquamarine Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Aquamarine Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Granite Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Granite Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Jade Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Jade Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quartz Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Quartz Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Sulphur Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Sulphur Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Basalt Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Basalt Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Diamond Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Diamond Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 80 
-# //$ 2 $Racing_items_volume
+	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with quality |Disable
 	Quality >= 10
@@ -2572,56 +2644,56 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life fl
 	BaseType "Hallowed Life Flask"
 	Rarity = Normal
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Normal - Sanctified Life Flask |Disable
 	BaseType "Sanctified Life Flask"
 	Rarity = Normal
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Normal - Divine Life Flask |Disable
 	BaseType "Divine Life Flask"
 	Rarity = Normal
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Normal - Eternal Life Flask |Disable
 	BaseType "Eternal Life Flask"
 	Rarity = Normal
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Hybrid flasks (ilvl 60+) - Normal |Disable
 	BaseType "Hallowed Hybrid Flask"
 	Rarity = Normal
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Mana flasks (ilvl 50+) - Normal - Sanctified Mana Flask |Disable
 	BaseType "Sanctified Mana Flask"
 	Rarity = Normal
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Mana flasks (ilvl 50+) - Normal - Divine Mana Flask |Disable
 	BaseType "Divine Mana Flask"
 	Rarity = Normal
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Mana flasks (ilvl 50+) - Normal - Eternal Mana Flask |Disable
 	BaseType "Eternal Mana Flask"
 	Rarity = Normal
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   FLASKS - TOP BASES - MAGIC
@@ -2632,56 +2704,56 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life fl
 	BaseType "Hallowed Life Flask"
 	Rarity = Magic
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Magic - Sanctified Life Flask |Disable
 	BaseType "Sanctified Life Flask"
 	Rarity = Magic
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Magic - Divine Life Flask |Disable
 	BaseType "Divine Life Flask"
 	Rarity = Magic
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Life flasks (ilvl 42+) - Magic - Eternal Life Flask |Disable
 	BaseType "Eternal Life Flask"
 	Rarity = Magic
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Hybrid flasks (ilvl 60+) - Magic |Disable
 	BaseType "Hallowed Hybrid Flask"
 	Rarity = Magic
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Mana flasks (ilvl 50+) - Magic - Sanctified Mana Flask |Disable
 	BaseType "Sanctified Mana Flask"
 	Rarity = Magic
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Mana flasks (ilvl 50+) - Magic - Divine Mana Flask |Disable
 	BaseType "Divine Mana Flask"
 	Rarity = Magic
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Not relevant to Endgame (present in Leveling Filter). Can be activated.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Top - Mana flasks (ilvl 50+) - Magic - Eternal Mana Flask |Disable
 	BaseType "Eternal Mana Flask"
 	Rarity = Magic
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   FLASKS - PROGRESSION
@@ -2695,7 +2767,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 41
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Life Flask |Disable
@@ -2705,7 +2777,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 35
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Life Flask |Disable
@@ -2715,7 +2787,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 23
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Life Flask |Disable
@@ -2724,7 +2796,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 11
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Mana Flask |Disable
@@ -2734,7 +2806,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 41
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Mana Flask |Disable
@@ -2744,7 +2816,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 35
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Mana Flask |Disable
@@ -2754,7 +2826,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 23
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Mana Flask |Disable
@@ -2763,7 +2835,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 11
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Hybrid Flask |Disable
@@ -2773,7 +2845,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 41
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Hybrid Flask |Disable
@@ -2783,7 +2855,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 35
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Hybrid Flask |Disable
@@ -2793,7 +2865,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 23
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Flask progression.
 Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression - Hybrid Flask |Disable
@@ -2802,7 +2874,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 	ItemLevel <= 11
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   ANIMATE WEAPON
@@ -2817,8 +2889,8 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	Class Dagger "One Hand Mace" "One Hand Sword"
 #	Rarity = Normal
 #	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 155 # Animate weapon items
+#	SetTextColor 110 200 255 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
@@ -2829,8 +2901,8 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	Class Claw
 #	Rarity = Normal
 #	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 155 # Animate weapon items
+#	SetTextColor 110 200 255 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #Disabled Block End
 
@@ -2841,8 +2913,8 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	Class Dagger Claw "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Normal
 #	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 155 # Animate weapon items
+#	SetTextColor 110 200 255 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #Disabled Block End
 
 #Disabled Block Start
@@ -2855,8 +2927,8 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	Class Dagger "One Hand Mace" "One Hand Sword"
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 155 # Animate weapon items
+#	SetTextColor 110 200 255 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
@@ -2868,8 +2940,8 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	Class Claw
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 155 # Animate weapon items
+#	SetTextColor 110 200 255 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	SetBorderColor 74 230 58 # T1 drops color / Quest items
 #Disabled Block End
 
@@ -2881,8 +2953,8 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	Class Dagger Claw "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
-#	SetBackgroundColor 0 200 255 155 # Animate weapon items
+#	SetTextColor 110 200 255 0 # Animate weapon text
+#	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #Disabled Block End
 
 #Disabled Block Start
@@ -2892,7 +2964,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	Class Bow Wand
 #	Rarity = Normal
 #	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
+#	SetTextColor 110 200 255 0 # Animate weapon text
 #	SetBackgroundColor 74 230 58 145 # Animate weapon ranged items
 #Disabled Block End
 
@@ -2903,7 +2975,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	Class Bow Wand
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 0 0 0 # Animate weapon text
+#	SetTextColor 110 200 255 0 # Animate weapon text
 #	SetBackgroundColor 74 230 58 145 # Animate weapon ranged items
 #Disabled Block End
 
@@ -2937,7 +3009,7 @@ Show  # ~Misc - Corrupted items - Weapons (Good bases) - Normal |Disable
 	Rarity = Normal
 	SetFontSize 23
 	SetTextColor 215 25 0 # Corrupted items text
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Magic weapons (Good bases) corrupted item.
 #Disabled Block Start
@@ -2948,7 +3020,7 @@ Show  # ~Misc - Corrupted items - Weapons (Good bases) - Normal |Disable
 #	Rarity = Magic
 #	SetFontSize 23
 #	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 # Normal armour (Good bases) corrupted item.
@@ -2959,7 +3031,7 @@ Show  # ~Misc - Corrupted items - Armour (Good bases) - Normal |Disable
 	Rarity = Normal
 	SetFontSize 23
 	SetTextColor 215 25 0 # Corrupted items text
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Magic armour (Good bases) corrupted item.
 #Disabled Block Start
@@ -2970,7 +3042,7 @@ Show  # ~Misc - Corrupted items - Armour (Good bases) - Normal |Disable
 #	Rarity = Magic
 #	SetFontSize 23
 #	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 # Any corrupted item.
@@ -2980,7 +3052,7 @@ Show  # ~Misc - Corrupted items - Armour (Good bases) - Normal |Disable
 #	Rarity = Normal
 #	SetFontSize 23
 #	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 # Any corrupted item.
@@ -2990,7 +3062,7 @@ Show  # ~Misc - Corrupted items - Armour (Good bases) - Normal |Disable
 #	Rarity = Magic
 #	SetFontSize 23
 #	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -3051,7 +3123,7 @@ Show
 	ItemLevel >= 84
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 1 100 # Tier 3
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show  # Crafting Filter - Normal items - @Jewelry crafting bases
 	Class Amulet Belt Ring
@@ -3083,7 +3155,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Diamo
 	Rarity = Normal
 	ItemLevel >= 60
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   MAGIC IDENTIFIED ITEMS (WARBANDS)
@@ -3096,7 +3168,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Class Boots
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 0 200 255 255 # Identified magic items text
+	SetTextColor 0 200 255 # Identified magic items text
 	SetBackgroundColor 0 200 255 70 # Identified magic items background
 	SetBorderColor 74 230 58 # Boots border color
 
@@ -3107,7 +3179,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Class Gloves
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 0 200 255 255 # Identified magic items text
+	SetTextColor 0 200 255 # Identified magic items text
 	SetBackgroundColor 0 200 255 70 # Identified magic items background
 	SetBorderColor 0 200 255 # Gloves border color
 
@@ -3118,7 +3190,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Class Helm
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 0 200 255 255 # Identified magic items text
+	SetTextColor 0 200 255 # Identified magic items text
 	SetBackgroundColor 0 200 255 70 # Identified magic items background
 	SetBorderColor 215 25 0 # Helmets border color
 
@@ -3129,7 +3201,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 0 200 255 255 # Identified magic items text
+	SetTextColor 0 200 255 # Identified magic items text
 	SetBackgroundColor 0 200 255 70 # Identified magic items background
 
 #-------------------------------------------------------------------------------#
@@ -3142,6 +3214,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Any rarity - Height = 2
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
+#    Rarity <= Magic
 
 Show  # Endgame Filter (Disable for MF) - RGB items - Any rarity - Width = 1
 	Width = 1
@@ -3149,6 +3222,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Any rarity - Width = 1
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
+#    Rarity <= Magic
 
 # Big RGB items are shown only till item level 67.
 Show  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLevel <= 67)
@@ -3157,6 +3231,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLev
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
+#    Rarity <= Magic
 
 #-------------------------------------------------------------------------------#
 # Section:  #   CRAFTING BASES - WEAPONS
@@ -3168,7 +3243,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Bows 
 	Rarity = Normal
 	ItemLevel >= 64
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.
 Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Bows (+3 crafting, ItemLevel >= 64) - Magic |Disable
@@ -3176,7 +3251,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Bows 
 	Rarity = Magic
 	ItemLevel >= 64
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.
 Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Staves (+3 crafting, ItemLevel >= 55) - Normal |Disable
@@ -3184,7 +3259,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Stave
 	Rarity = Normal
 	ItemLevel >= 55
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Crafting bases present in the Leveling Filter.
 Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Staves (+3 crafting, ItemLevel >= 55) - Magic |Disable
@@ -3192,7 +3267,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Stave
 	Rarity = Magic
 	ItemLevel >= 55
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - ARMOUR - CHEST - ADAPTIVE (AR/EV)
@@ -3204,7 +3279,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 9
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3212,7 +3287,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 16
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3220,7 +3295,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 20
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3228,7 +3303,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 27
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3236,7 +3311,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 31
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3244,7 +3319,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 34
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3252,7 +3327,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 37
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3260,7 +3335,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 45
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3268,7 +3343,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 53
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3276,7 +3351,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 59
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3284,7 +3359,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 61
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	Class "Body Armour"
@@ -3293,7 +3368,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3301,7 +3376,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 9
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3309,7 +3384,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 16
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3317,7 +3392,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 20
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3325,7 +3400,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 27
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3333,7 +3408,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 31
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3341,7 +3416,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 34
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3349,7 +3424,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 37
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3357,7 +3432,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 45
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3365,7 +3440,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 53
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3373,7 +3448,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 59
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3381,7 +3456,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 61
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	Class "Body Armour"
@@ -3390,7 +3465,7 @@ Show  # Racing Filter - Armour - Chest - Adaptive (AR/EV) - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - ARMOUR - CHEST - CLASSIC (GENERAL LEVELING)
@@ -3404,7 +3479,7 @@ Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Normal |Di
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Normal |Disable
 	Sockets >= 2
@@ -3413,7 +3488,7 @@ Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Normal |Di
 	Rarity = Normal
 	ItemLevel <= 55
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Normal |Disable
 	Sockets >= 2
@@ -3422,7 +3497,7 @@ Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Normal |Di
 	Rarity = Normal
 	ItemLevel <= 37
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Normal |Disable
 	Sockets >= 2
@@ -3431,7 +3506,7 @@ Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Normal |Di
 	Rarity = Normal
 	ItemLevel <= 17
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Magic |Disable
 	Sockets >= 2
@@ -3441,7 +3516,7 @@ Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Magic |Dis
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Magic |Disable
 	Sockets >= 2
@@ -3450,7 +3525,7 @@ Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Magic |Dis
 	Rarity = Magic
 	ItemLevel <= 44
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Magic |Disable
 	DropLevel >= 1
@@ -3458,10 +3533,10 @@ Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Magic |Dis
 	Rarity = Magic
 	ItemLevel <= 32
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Exception for racing and leveling. Vendor food.
-#Hide # Leveling Filter (Enable for leveling and races) - Act 1 normal items - Normal - Body Armour |Disable
+#Hide # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal - Body Armour |Disable
 #    ItemLevel <= 9
 #    Rarity = Normal
 #    Class "Body Armour"
@@ -3471,61 +3546,53 @@ Show  # Racing Filter - Armour - Chest - Classic (General leveling) - Magic |Dis
 # Section:  #   RACING - ARMOUR - BOOTS
 #-------------------------------------------------------------------------------#
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Boots - Normal |Disable
-#	DropLevel <= 6
-#	Class Boots
-#	Rarity = Normal
-#	ItemLevel <= 13
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 74 230 58 # Boots border color
-#Disabled Block End
+Show  # Racing Filter - Armour - Boots - Normal |Disable
+	DropLevel <= 6
+	Class Boots
+	Rarity = Normal
+	ItemLevel <= 13
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 74 230 58 # Boots border color
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Boots - Normal |Disable
-#	Sockets >= 2
-#	DropLevel >= 12
-#	Class Boots
-#	Rarity = Normal
-#	ItemLevel <= 20
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 74 230 58 # Boots border color
-#Disabled Block End
+Show  # Racing Filter - Armour - Boots - Normal |Disable
+	Sockets >= 2
+	DropLevel >= 12
+	Class Boots
+	Rarity = Normal
+	ItemLevel <= 20
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 74 230 58 # Boots border color
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Boots - Normal |Disable
-#	Sockets >= 2
-#	DropLevel >= 18
-#	Class Boots
-#	Rarity = Normal
-#	ItemLevel <= 44
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 74 230 58 # Boots border color
-#Disabled Block End
+Show  # Racing Filter - Armour - Boots - Normal |Disable
+	Sockets >= 2
+	DropLevel >= 18
+	Class Boots
+	Rarity = Normal
+	ItemLevel <= 44
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 74 230 58 # Boots border color
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Boots - Normal |Disable
-#	Sockets >= 2
-#	DropLevel >= 42
-#	Class Boots
-#	Rarity = Normal
-#	ItemLevel <= 63 
+Show  # Racing Filter - Armour - Boots - Normal |Disable
+	Sockets >= 2
+	DropLevel >= 42
+	Class Boots
+	Rarity = Normal
+	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 74 230 58 # Boots border color
-#Disabled Block End
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 74 230 58 # Boots border color
 
 # Exception for racing and leveling. Vendor food.
-Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal items - Normal - Boots |Disable
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal - Boots |Disable
 	Class Boots
 	Rarity = Normal
 	ItemLevel <= 10
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 74 230 58 # Boots border color
 
 Show  # Racing Filter - Armour - Boots - Magic |Disable
@@ -3534,7 +3601,7 @@ Show  # Racing Filter - Armour - Boots - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 25
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 74 230 58 # Boots border color
 
 Show  # Racing Filter - Armour - Boots - Magic |Disable
@@ -3543,8 +3610,9 @@ Show  # Racing Filter - Armour - Boots - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 44
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 74 230 58 # Boots border color
+#    Sockets >= 2
 
 Show  # Racing Filter - Armour - Boots - Magic |Disable
 	DropLevel >= 42
@@ -3553,8 +3621,9 @@ Show  # Racing Filter - Armour - Boots - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 74 230 58 # Boots border color
+#    Sockets >= 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - ARMOUR - GLOVES
@@ -3566,7 +3635,7 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 13
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 0 200 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Normal |Disable
@@ -3576,7 +3645,7 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 20
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 0 200 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Normal |Disable
@@ -3586,7 +3655,7 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 23
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 0 200 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Normal |Disable
@@ -3596,7 +3665,7 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 44
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 0 200 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Normal |Disable
@@ -3607,53 +3676,47 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 0 200 255 # Gloves border color 
 
 # Exception for racing and leveling. Vendor food.
-Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal items - Normal - Gloves |Disable
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal - Gloves |Disable
 	Class Gloves
 	Rarity = Normal
 	ItemLevel <= 10
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 0 200 255 # Gloves border color 
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Gloves - Magic |Disable
-#	DropLevel <= 22
-#	Class Gloves
-#	Rarity = Magic
-#	ItemLevel <= 25
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 0 200 255 # Gloves border color 
-#Disabled Block End
+Show  # Racing Filter - Armour - Gloves - Magic |Disable
+	DropLevel <= 22
+	Class Gloves
+	Rarity = Magic
+	ItemLevel <= 25
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 0 200 255 # Gloves border color 
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Gloves - Magic |Disable
-#	Sockets >= 2
-#	DropLevel >= 21
-#	Class Gloves
-#	Rarity = Magic
-#	ItemLevel <= 44
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 0 200 255 # Gloves border color 
-#Disabled Block End
+Show  # Racing Filter - Armour - Gloves - Magic |Disable
+	Sockets >= 2
+	DropLevel >= 21
+	Class Gloves
+	Rarity = Magic
+	ItemLevel <= 44
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 0 200 255 # Gloves border color 
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Gloves - Magic |Disable
-#	Sockets >= 2
-#	DropLevel >= 43
-#	Class Gloves
-#	Rarity = Magic
-#	ItemLevel <= 63 
+Show  # Racing Filter - Armour - Gloves - Magic |Disable
+	Sockets >= 2
+	DropLevel >= 43
+	Class Gloves
+	Rarity = Magic
+	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 0 200 255 # Gloves border color 
-#Disabled Block End
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 0 200 255 # Gloves border color 
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - ARMOUR - HELM
@@ -3665,7 +3728,7 @@ Show  # Racing Filter - Armour - Helm - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 13
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 215 25 0 # Helmets border color
 
 Show  # Racing Filter - Armour - Helm - Normal |Disable
@@ -3675,7 +3738,7 @@ Show  # Racing Filter - Armour - Helm - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 20
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 215 25 0 # Helmets border color
 
 Show  # Racing Filter - Armour - Helm - Normal |Disable
@@ -3685,7 +3748,7 @@ Show  # Racing Filter - Armour - Helm - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 44
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 215 25 0 # Helmets border color
 
 Show  # Racing Filter - Armour - Helm - Normal |Disable
@@ -3696,80 +3759,70 @@ Show  # Racing Filter - Armour - Helm - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 215 25 0 # Helmets border color
 
 # Exception for racing and leveling. Vendor food.
-Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal items - Normal - Helm |Disable
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal - Helm |Disable
 	Class Helm
 	Rarity = Normal
 	ItemLevel <= 10
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 215 25 0 # Helmets border color
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Helm - Magic |Disable
-#	DropLevel <= 22
-#	Class Helm
-#	Rarity = Magic
-#	ItemLevel <= 25
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 215 25 0 # Helmets border color
-#Disabled Block End
+Show  # Racing Filter - Armour - Helm - Magic |Disable
+	DropLevel <= 22
+	Class Helm
+	Rarity = Magic
+	ItemLevel <= 25
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 215 25 0 # Helmets border color
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Helm - Magic |Disable
-#	Sockets >= 2
-#	DropLevel >= 18
-#	Class Helm
-#	Rarity = Magic
-#	ItemLevel <= 44
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 215 25 0 # Helmets border color
-#Disabled Block End
+Show  # Racing Filter - Armour - Helm - Magic |Disable
+	Sockets >= 2
+	DropLevel >= 18
+	Class Helm
+	Rarity = Magic
+	ItemLevel <= 44
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 215 25 0 # Helmets border color
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour - Helm - Magic |Disable
-#	Sockets >= 2
-#	DropLevel >= 40
-#	Class Helm
-#	Rarity = Magic
-#	ItemLevel <= 63 
+Show  # Racing Filter - Armour - Helm - Magic |Disable
+	Sockets >= 2
+	DropLevel >= 40
+	Class Helm
+	Rarity = Magic
+	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#	SetBorderColor 215 25 0 # Helmets border color
-#Disabled Block End
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBorderColor 215 25 0 # Helmets border color
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - ARMOUR - SHIELD
 #-------------------------------------------------------------------------------#
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour -  Shield - Normal |Disable
-#	Sockets >= 2
-#	DropLevel >= 42
-#	Class Shield
-#	Rarity = Normal
-#	ItemLevel <= 63 
+Show  # Racing Filter - Armour -  Shield - Normal |Disable
+	Sockets >= 2
+	DropLevel >= 42
+	Class Shield
+	Rarity = Normal
+	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#Disabled Block End
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour -  Shield - Normal |Disable
-#	Sockets >= 2
-#	DropLevel >= 24
-#	Class Shield
-#	Rarity = Normal
-#	ItemLevel <= 46
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#Disabled Block End
+Show  # Racing Filter - Armour -  Shield - Normal |Disable
+	Sockets >= 2
+	DropLevel >= 24
+	Class Shield
+	Rarity = Normal
+	ItemLevel <= 46
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Bone Spirit Shield (Of animation flask recipe) fixed in progression.
 #Disabled Block Start
@@ -3781,48 +3834,40 @@ Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal items - N
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour -  Shield - Normal |Disable
-#	Sockets >= 2
-#	DropLevel >= 11
-#	Class Shield
-#	Rarity = Normal
-#	ItemLevel <= 29
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#Disabled Block End
+Show  # Racing Filter - Armour -  Shield - Normal |Disable
+	Sockets >= 2
+	DropLevel >= 11
+	Class Shield
+	Rarity = Normal
+	ItemLevel <= 29
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour -  Shield - Normal |Disable
-#	Class Shield
-#	Rarity = Normal
-#	ItemLevel <= 16
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#Disabled Block End
+Show  # Racing Filter - Armour -  Shield - Normal |Disable
+	Class Shield
+	Rarity = Normal
+	ItemLevel <= 16
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour -  Shield - Magic |Disable
-#	Sockets >= 2
-#	DropLevel >= 42
-#	Class Shield
-#	Rarity = Magic
-#	ItemLevel <= 63 
+Show  # Racing Filter - Armour -  Shield - Magic |Disable
+	Sockets >= 2
+	DropLevel >= 42
+	Class Shield
+	Rarity = Magic
+	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#Disabled Block End
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour -  Shield - Magic |Disable
-#	Sockets >= 2
-#	DropLevel >= 24
-#	Class Shield
-#	Rarity = Magic
-#	ItemLevel <= 46
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#Disabled Block End
+Show  # Racing Filter - Armour -  Shield - Magic |Disable
+	Sockets >= 2
+	DropLevel >= 24
+	Class Shield
+	Rarity = Magic
+	ItemLevel <= 46
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Bone Spirit Shield (Of animation flask recipe) fixed in progression.
 #Disabled Block Start
@@ -3834,25 +3879,21 @@ Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal items - N
 #	SetBorderColor 255 45 175 # T2 drops color
 #Disabled Block End
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour -  Shield - Magic |Disable
-#	Sockets >= 2
-#	DropLevel >= 11
-#	Class Shield
-#	Rarity = Magic
-#	ItemLevel <= 29
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#Disabled Block End
+Show  # Racing Filter - Armour -  Shield - Magic |Disable
+	Sockets >= 2
+	DropLevel >= 11
+	Class Shield
+	Rarity = Magic
+	ItemLevel <= 29
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
-#Disabled Block Start
-#Show  # Racing Filter - Armour -  Shield - Magic |Disable
-#	Class Shield
-#	Rarity = Magic
-#	ItemLevel <= 16
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 155 # Lesser items
-#Disabled Block End
+Show  # Racing Filter - Armour -  Shield - Magic |Disable
+	Class Shield
+	Rarity = Magic
+	ItemLevel <= 16
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Bone Spirit Shield (Of animation flask recipe for summoners).
 #Disabled Block Start
@@ -3913,7 +3954,7 @@ Show  # Racing Filter - Accessories - @ Jewelry crafting bases - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Accessories - @ Jewelry crafting bases - Magic |Disable
 	Class Amulet Belt Ring
@@ -3923,7 +3964,7 @@ Show  # Racing Filter - Accessories - @ Jewelry crafting bases - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - CASTER - SCEPTRE
@@ -3940,7 +3981,7 @@ Show  # Racing Filter - Caster Items - Sceptre - @3 links |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 3 160 # Racing items
+	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Sceptre - @3 links |Disable
 	LinkedSockets = 3
@@ -3953,7 +3994,7 @@ Show  # Racing Filter - Caster Items - Sceptre - @3 links |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 3 160 # Racing items
+	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Sceptre - 3 links |Disable
 	LinkedSockets = 3
@@ -3963,7 +4004,7 @@ Show  # Racing Filter - Caster Items - Sceptre - 3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Racing Filter - Caster Items - Sceptre - 3 links |Disable
 	LinkedSockets = 3
@@ -3973,7 +4014,7 @@ Show  # Racing Filter - Caster Items - Sceptre - 3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Racing Filter - Caster Items - Sceptre - Magic |Disable
 	Class Sceptre
@@ -3981,13 +4022,13 @@ Show  # Racing Filter - Caster Items - Sceptre - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Caster Items - Sceptre - Any (lvl <= 7) |Disable
 	Class Sceptre
 	ItemLevel <= 7
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - CASTER - DAGGER
@@ -4004,7 +4045,7 @@ Show  # Racing Filter - Caster Items - Dagger - @3 links |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 3 160 # Racing items
+	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Dagger - @3 links |Disable
 	LinkedSockets = 3
@@ -4017,7 +4058,7 @@ Show  # Racing Filter - Caster Items - Dagger - @3 links |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 3 160 # Racing items
+	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Dagger - 3 links |Disable
 	LinkedSockets = 3
@@ -4027,7 +4068,7 @@ Show  # Racing Filter - Caster Items - Dagger - 3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Racing Filter - Caster Items - Dagger - 3 links |Disable
 	LinkedSockets = 3
@@ -4037,7 +4078,7 @@ Show  # Racing Filter - Caster Items - Dagger - 3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Racing Filter - Caster Items - Dagger - Top crit bases - Normal |Disable
 	BaseType "Platinum Kris" "Golden Kris" "Copper Kris"
@@ -4045,7 +4086,7 @@ Show  # Racing Filter - Caster Items - Dagger - Top crit bases - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 255 45 175 # T2 drops color
 
 Show  # Racing Filter - Caster Items - Dagger - Top crit bases - Magic |Disable
@@ -4054,7 +4095,7 @@ Show  # Racing Filter - Caster Items - Dagger - Top crit bases - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 	SetBorderColor 255 45 175 # T2 drops color
 
 Show  # Racing Filter - Caster Items - Dagger - Magic |Disable
@@ -4063,13 +4104,13 @@ Show  # Racing Filter - Caster Items - Dagger - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Caster Items - Dagger - Any (lvl <= 7) |Disable
 	Class Dagger
 	ItemLevel <= 7
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - CASTER - WAND
@@ -4086,7 +4127,7 @@ Show  # Racing Filter - Caster Items - Wand - @3 links |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 3 160 # Racing items
+	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Wand - @3 links |Disable
 	LinkedSockets = 3
@@ -4099,7 +4140,7 @@ Show  # Racing Filter - Caster Items - Wand - @3 links |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 3 160 # Racing items
+	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Wand - 3 links |Disable
 	LinkedSockets = 3
@@ -4109,7 +4150,7 @@ Show  # Racing Filter - Caster Items - Wand - 3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Racing Filter - Caster Items - Wand - 3 links |Disable
 	LinkedSockets = 3
@@ -4119,7 +4160,7 @@ Show  # Racing Filter - Caster Items - Wand - 3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Racing Filter - Caster Items - Wand - Magic |Disable
 	Class Wand
@@ -4127,13 +4168,13 @@ Show  # Racing Filter - Caster Items - Wand - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 	Class Wand
 	ItemLevel <= 7
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - CLAW - NORMAL
@@ -4145,7 +4186,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 6
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4154,7 +4195,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4163,7 +4204,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4172,7 +4213,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4181,7 +4222,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 25
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4190,7 +4231,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4199,7 +4240,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 39
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4208,7 +4249,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4217,7 +4258,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4227,7 +4268,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4240,7 +4281,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4249,7 +4290,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4258,7 +4299,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 25
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4267,7 +4308,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 29
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4276,7 +4317,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4285,7 +4326,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 42
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4294,7 +4335,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4303,7 +4344,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4312,7 +4353,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 59
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4322,7 +4363,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4335,7 +4376,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4344,7 +4385,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4353,7 +4394,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4362,7 +4403,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4371,7 +4412,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4380,7 +4421,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4389,7 +4430,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 42
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4398,7 +4439,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4407,7 +4448,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4417,7 +4458,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4430,7 +4471,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4439,7 +4480,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4448,7 +4489,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4457,7 +4498,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4466,7 +4507,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4475,7 +4516,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4484,7 +4525,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4493,7 +4534,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4502,7 +4543,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4512,7 +4553,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4525,7 +4566,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 5
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4534,7 +4575,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 10
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4543,7 +4584,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 15
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4552,7 +4593,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 20
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4561,7 +4602,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 24
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4570,7 +4611,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 28
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4579,7 +4620,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4588,7 +4629,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 41
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4597,7 +4638,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4606,7 +4647,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4616,7 +4657,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4629,7 +4670,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 15
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4638,7 +4679,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 20
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4647,7 +4688,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 24
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4656,7 +4697,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4665,7 +4706,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4674,7 +4715,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 38
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4683,7 +4724,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 41
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4692,7 +4733,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4701,7 +4742,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 60
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4710,7 +4751,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4720,7 +4761,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4733,7 +4774,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4742,7 +4783,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4751,7 +4792,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4760,7 +4801,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4769,7 +4810,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4778,7 +4819,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4787,7 +4828,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 33
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4796,7 +4837,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4805,7 +4846,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 46
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4814,7 +4855,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4824,7 +4865,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4837,7 +4878,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4846,7 +4887,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4855,7 +4896,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4864,7 +4905,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4873,7 +4914,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4882,7 +4923,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 37
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4891,7 +4932,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4900,7 +4941,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4909,7 +4950,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 59
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4918,7 +4959,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4928,7 +4969,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -4941,7 +4982,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4950,7 +4991,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4959,7 +5000,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4968,7 +5009,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4977,7 +5018,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4986,7 +5027,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -4995,7 +5036,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5004,7 +5045,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5013,7 +5054,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5023,7 +5064,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5036,7 +5077,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5045,7 +5086,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 19
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5054,7 +5095,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5063,7 +5104,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5072,7 +5113,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5081,7 +5122,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5090,7 +5131,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5099,7 +5140,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 59
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5109,7 +5150,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5122,7 +5163,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5131,7 +5172,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5140,7 +5181,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5149,7 +5190,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5158,7 +5199,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5167,7 +5208,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5176,7 +5217,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5185,7 +5226,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5195,7 +5236,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5208,7 +5249,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 9
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5217,7 +5258,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 14
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5226,7 +5267,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 23
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5235,7 +5276,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 37
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5244,7 +5285,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5253,7 +5294,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5262,7 +5303,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5271,7 +5312,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5281,7 +5322,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5294,7 +5335,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 6
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5303,7 +5344,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5312,7 +5353,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5321,7 +5362,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5330,7 +5371,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 25
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5339,7 +5380,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5348,7 +5389,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5357,7 +5398,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5367,7 +5408,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5380,7 +5421,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5389,7 +5430,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5398,7 +5439,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5407,7 +5448,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 33
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5416,7 +5457,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5425,7 +5466,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 42
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5434,7 +5475,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5443,7 +5484,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5453,7 +5494,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5466,7 +5507,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 8
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5475,7 +5516,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 12
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5484,7 +5525,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5493,7 +5534,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5502,7 +5543,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5511,7 +5552,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5520,7 +5561,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5529,7 +5570,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5538,7 +5579,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5547,7 +5588,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 51
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5556,7 +5597,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5566,7 +5607,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5579,7 +5620,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 12
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5588,7 +5629,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5597,7 +5638,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5606,7 +5647,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5615,7 +5656,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5624,7 +5665,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5633,7 +5674,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5642,7 +5683,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5651,7 +5692,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5660,7 +5701,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5669,7 +5710,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5679,7 +5720,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5692,7 +5733,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 8
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5701,7 +5742,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 12
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5710,7 +5751,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5719,7 +5760,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5728,7 +5769,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5737,7 +5778,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5746,7 +5787,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5755,7 +5796,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5764,7 +5805,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5773,7 +5814,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5782,7 +5823,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5791,7 +5832,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5801,7 +5842,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5814,7 +5855,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 12
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5823,7 +5864,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5832,7 +5873,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5841,7 +5882,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 32
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5850,7 +5891,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5859,7 +5900,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 40
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5868,7 +5909,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5877,7 +5918,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 48
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5886,7 +5927,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 54
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5895,7 +5936,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 63
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5904,7 +5945,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5914,7 +5955,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -5927,7 +5968,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 7
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5936,7 +5977,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5945,7 +5986,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5954,7 +5995,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5963,7 +6004,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 26
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5972,7 +6013,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5981,7 +6022,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 33
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5990,7 +6031,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -5999,7 +6040,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6008,7 +6049,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 47
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6017,7 +6058,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6026,7 +6067,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6036,7 +6077,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6049,7 +6090,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6058,7 +6099,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6067,7 +6108,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6076,7 +6117,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 26
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6085,7 +6126,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 33
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6094,7 +6135,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6103,7 +6144,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6112,7 +6153,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 47
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6121,7 +6162,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 53
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6130,7 +6171,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 56
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6139,7 +6180,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6149,7 +6190,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6162,7 +6203,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 7
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6171,7 +6212,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6180,7 +6221,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 16
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6189,7 +6230,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6198,7 +6239,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 26
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6207,7 +6248,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6216,7 +6257,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6225,7 +6266,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 44
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6234,7 +6275,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 47
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6243,7 +6284,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6252,7 +6293,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 53
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6261,7 +6302,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6271,7 +6312,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6284,7 +6325,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 11
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6293,7 +6334,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6302,7 +6343,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 26
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6311,7 +6352,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 34
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6320,7 +6361,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 39
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6329,7 +6370,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6338,7 +6379,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 50
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6347,7 +6388,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 53
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6356,7 +6397,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6365,7 +6406,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 60
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6374,7 +6415,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 55
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6384,7 +6425,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6397,7 +6438,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 4
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6406,7 +6447,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 8
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6415,7 +6456,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 13
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6424,7 +6465,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6433,7 +6474,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6442,7 +6483,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6451,7 +6492,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6460,7 +6501,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 37
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6469,7 +6510,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6478,7 +6519,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 52
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6487,7 +6528,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Normal
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6497,7 +6538,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6510,7 +6551,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 13
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6519,7 +6560,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 17
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6528,7 +6569,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 22
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6537,7 +6578,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 27
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6546,7 +6587,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 31
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6555,7 +6596,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 35
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6564,7 +6605,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 43
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6573,7 +6614,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 49
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6582,7 +6623,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 57
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6591,7 +6632,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 61
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6600,7 +6641,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Rarity = Magic
 #	ItemLevel <= 63
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6610,7 +6651,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6622,7 +6663,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	Class Quiver
 #	ItemLevel <= 21
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6632,7 +6673,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6642,7 +6683,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6652,7 +6693,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6662,7 +6703,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6672,7 +6713,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6682,7 +6723,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6692,7 +6733,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6702,7 +6743,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6712,7 +6753,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #Disabled Block Start
@@ -6722,7 +6763,7 @@ Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 #	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetBackgroundColor 0 0 0 155 # Lesser items
+#	SetBackgroundColor 0 0 0 140 # Lesser items
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -6735,7 +6776,7 @@ Show  # ~Misc - Extras - Hideout Doodads & Microtransactions |Disable
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 8 280 # Tier 1
+	PlayAlertSound 8 280 # A - Tier 1
 
 # Recipe item (Hyrri's bite recipe) can be turned on - recipe items or manually.
 #Disabled Block Start
@@ -6758,6 +6799,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Crude
 	ItemLevel >= 50
 	SetFontSize 45
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
+#   PlayAlertSound 7 220 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   HIDDEN ITEMS
@@ -6775,7 +6817,7 @@ Show  # Leveling Filter (Enable for leveling and races) - 20% quality weapons |D
 	Quality = 20
 	Class Bow Claw Dagger "One Hand" Sceptre Staves "Two Hand" Wand
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Filtering starts at level 1. Normal items that are not Caught get filtered.
 Hide
@@ -6785,19 +6827,19 @@ Hide
 	SetBackgroundColor 0 0 0 55 # Uber trash
 
 # Exception for racing and leveling. Vendor food.
-Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal items - Magic - Small magic item |Disable
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Magic - Small magic item |Disable
 	Width = 1
 	Rarity = Magic
 	ItemLevel <= 13
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Exception for racing and leveling. Vendor food.
-Show  # Leveling Filter (Enable for leveling and races) - Act 1 normal items - Magic - Any magic item |Disable
+Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Magic - Any magic item |Disable
 	Rarity = Magic
 	ItemLevel <= 9
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Filtering starts at level 1. Magic items that are not Caught get filtered.
 Hide
@@ -6818,7 +6860,7 @@ Hide
 	Class Flask
 	Rarity <= Magic
 	SetFontSize 33
-	SetBackgroundColor 0 0 0 155 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   ANYTHING ELSE

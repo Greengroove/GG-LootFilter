@@ -1,0 +1,34 @@
+#   Greengroove's Loot Filter Scripts - Default sound set
+
+Show
+	PlayAlertSound 8            280 # A - Tier 1
+Show
+	PlayAlertSound 7            220 # A - Tier 2
+Show
+	PlayAlertSound 1            100 # A - Tier 3
+Show
+	PlayAlertSound 2            90  # A - Tier 4
+Show
+    PlayAlertSound 4            120 # B - Divination cards
+Show
+    PlayAlertSound 1            100 # C - Blessed Orb
+Show
+    PlayAlertSound 1            100 # C - Chaos Orb
+Show
+    PlayAlertSound 8            280 # C - Divine Orb
+Show
+    PlayAlertSound 8            280 # C - Exalted Orb
+Show
+    PlayAlertSound 8            280 # C - Mirror of Kalandra
+Show
+    PlayAlertSound 2            90  # C - Orb of Alchemy
+Show
+    PlayAlertSound 1            100 # C - Orb of Fusing
+Show
+    PlayAlertSound 1            100 # C - Regal Orb
+Show
+    PlayAlertSound 1            100 # C - Vaal Orb
+Show
+	PlayAlertSound 2            90  # D - Leveling items
+Show
+    PlayAlertSound 3            160 # D - Racing items
