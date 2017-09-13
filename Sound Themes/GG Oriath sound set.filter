@@ -15,11 +15,11 @@ Show
 Show
 	PlayAlertSound 10           100 # C - Chaos Orb
 Show
-	PlayAlertSound ShDivine     280 # C - Divine Orb
+	PlayAlertSound ShDivine     300 # C - Divine Orb
 Show
-	PlayAlertSound ShExalted    280 # C - Exalted Orb
+	PlayAlertSound ShExalted    300 # C - Exalted Orb
 Show
-	PlayAlertSound ShMirror     280 # C - Mirror of Kalandra
+	PlayAlertSound ShMirror     300 # C - Mirror of Kalandra
 Show
 	PlayAlertSound 11           90  # C - Orb of Alchemy
 Show

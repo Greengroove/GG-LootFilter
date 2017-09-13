@@ -11,23 +11,23 @@ Show
 Show
     PlayAlertSound 4            120 # B - Divination cards
 Show
-    PlayAlertSound ShBlessed    200 # C - Blessed Orb
+    PlayAlertSound ShBlessed    300 # C - Blessed Orb
 Show
-    PlayAlertSound ShChaos      200 # C - Chaos Orb
+    PlayAlertSound ShChaos      300 # C - Chaos Orb
 Show
-    PlayAlertSound ShDivine     280 # C - Divine Orb
+    PlayAlertSound ShDivine     300 # C - Divine Orb
 Show
-    PlayAlertSound ShExalted    280 # C - Exalted Orb
+    PlayAlertSound ShExalted    300 # C - Exalted Orb
 Show
-    PlayAlertSound ShMirror     280 # C - Mirror of Kalandra
+    PlayAlertSound ShMirror     300 # C - Mirror of Kalandra
 Show
-    PlayAlertSound ShAlchemy    200 # C - Orb of Alchemy
+    PlayAlertSound ShAlchemy    300 # C - Orb of Alchemy
 Show
-    PlayAlertSound ShFusing     200 # C - Orb of Fusing
+    PlayAlertSound ShFusing     300 # C - Orb of Fusing
 Show
-    PlayAlertSound ShRegal      200 # C - Regal Orb
+    PlayAlertSound ShRegal      300 # C - Regal Orb
 Show
-    PlayAlertSound ShVaal       200 # C - Vaal Orb
+    PlayAlertSound ShVaal       300 # C - Vaal Orb
 Show
     PlayAlertSound 2            90  # D - Leveling items
 Show

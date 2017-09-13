@@ -6,7 +6,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 3.0.1d
 
-- **Introducing Sound Themes!** Two brand new themes and enhanced sound options.
+- **Introducing Sound Themes!** Two brand new themes and enhanced sound options. USE THE NEW SOUNDS AT YOUR OWN RISK!
 - Added a link to the Unique items Wiki page.
 - Some small adjustments, due to the addition of sound themes.
 
