@@ -295,7 +295,7 @@
 
 # //! SetTab [Sound theme]
 
-# //! SetOption $Sounds info # Tier 1 and 2 sounds are long. Tier 3 and 4 sounds are short.
+# //! SetOption $Sounds info # Tier 1 and 2 sounds are long. Tier 3 and 4 sounds are short. USE THE NEW SOUNDS AT YOUR OWN RISK!
 # //! SetTab [Notes]
 
 # //! SetOption $Notes textarea [] # Name your preset, or add your notes here:
