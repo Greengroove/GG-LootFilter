@@ -3,11 +3,11 @@
 Show
 	PlayAlertSound 8            280 # A - Tier 1
 Show
-	PlayAlertSound 14           300 # A - Tier 2
+	PlayAlertSound 9           300 # A - Tier 2
 Show
 	PlayAlertSound 10           100 # A - Tier 3
 Show
-	PlayAlertSound 11           90  # A - Tier 4
+	PlayAlertSound 11           110 # A - Tier 4
 Show
 	PlayAlertSound 5            120 # B - Divination cards
 Show
@@ -17,11 +17,11 @@ Show
 Show
 	PlayAlertSound ShDivine     300 # C - Divine Orb
 Show
-	PlayAlertSound ShExalted    300 # C - Exalted Orb
+    PlayAlertSound 8            280 # C - Exalted Orb
 Show
-	PlayAlertSound ShMirror     300 # C - Mirror of Kalandra
+    PlayAlertSound 8            280 # C - Mirror of Kalandra
 Show
-	PlayAlertSound 11           90  # C - Orb of Alchemy
+	PlayAlertSound 11           110 # C - Orb of Alchemy
 Show
 	PlayAlertSound 10           100 # C - Orb of Fusing
 Show
@@ -29,6 +29,6 @@ Show
 Show
 	PlayAlertSound 10           100 # C - Vaal Orb
 Show
-	PlayAlertSound 11           90  # D - Leveling items
+	PlayAlertSound 11           110 # D - Leveling items
 Show
     PlayAlertSound 15           140 # D - Racing items

@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.0.1e
+
+- Separated all map sounds.
+- Changed and adjusted some sounds. Reverted all new sounds for Ex and Mirror to the old T1 sound. Oriath sound set, changed T2 sound.
+
 ## 3.0.1d
 
 - **Introducing Sound Themes!** Two brand new themes and enhanced sound options. USE THE NEW SOUNDS AT YOUR OWN RISK!

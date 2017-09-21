@@ -17,9 +17,9 @@ Show
 Show
     PlayAlertSound ShDivine     300 # C - Divine Orb
 Show
-    PlayAlertSound ShExalted    300 # C - Exalted Orb
+    PlayAlertSound 8            280 # C - Exalted Orb
 Show
-    PlayAlertSound ShMirror     300 # C - Mirror of Kalandra
+    PlayAlertSound 8            280 # C - Mirror of Kalandra
 Show
     PlayAlertSound ShAlchemy    300 # C - Orb of Alchemy
 Show
