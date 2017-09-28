@@ -3,13 +3,21 @@
 Show
 	PlayAlertSound 8            280 # A - Tier 1
 Show
-	PlayAlertSound 9           300 # A - Tier 2
+	PlayAlertSound 9            300 # A - Tier 2
 Show
 	PlayAlertSound 10           100 # A - Tier 3
 Show
 	PlayAlertSound 11           110 # A - Tier 4
 Show
 	PlayAlertSound 5            120 # B - Divination cards
+Show
+	PlayAlertSound 8            280 # B - Tier 1 map
+Show
+	PlayAlertSound 9            220 # B - Tier 2 map
+Show
+	PlayAlertSound 10           100 # B - Tier 3 map
+Show
+	PlayAlertSound 11           90  # B - Tier 4 map
 Show
 	PlayAlertSound 10           100 # C - Blessed Orb
 Show

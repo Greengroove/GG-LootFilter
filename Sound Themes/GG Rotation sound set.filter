@@ -1,4 +1,4 @@
-#   Greengroove's Loot Filter Scripts - Default sound set
+#   Greengroove's Loot Filter Scripts - Rotation sound set
 
 Show
 	PlayAlertSound 8            280 # A - Tier 1
@@ -11,11 +11,11 @@ Show
 Show
     PlayAlertSound 4            120 # B - Divination cards
 Show
-	PlayAlertSound 8            280 # B - Tier 1 map
+	PlayAlertSound 1            100 # B - Tier 1 map
 Show
-	PlayAlertSound 7            220 # B - Tier 2 map
+	PlayAlertSound 2            90  # B - Tier 2 map
 Show
-	PlayAlertSound 1            100 # B - Tier 3 map
+	PlayAlertSound 2            90  # B - Tier 3 map
 Show
 	PlayAlertSound 2            90  # B - Tier 4 map
 Show

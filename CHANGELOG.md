@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.0.1e
+
+- Separated all map sounds and added a special sound set for rotations. This set is just like the default one, except that map sounds don't use any long effects.
+- Changed and adjusted some sounds. Reverted all new sounds for Ex and Mirror to the old T1 sound. Oriath sound set, changed T2 sound.
+- Added a "no no" exclusion list, for any rare item you do not want to see (ever). At least 1 item needs to listed here ("Splintered Tower Shield" is listed by default). The list starts to take effect from item level 15.
+- Moved "Exalted Shard" to T1, "Harbinger's Shard" to T3 and "Horizon Shard" to T4 shards.
+- Added ability to set font size for non top rare items.
+- Updated crafting section and added ability to set font size.
+- Separated "Alchemy Shard" from other low shards.
+- Updated, to show less corrupted items by default.
+
 ## 3.0.1d
 
 - **Introducing Sound Themes!** Two brand new themes and enhanced sound options. USE THE NEW SOUNDS AT YOUR OWN RISK!
