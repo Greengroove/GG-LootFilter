@@ -61,3 +61,5 @@ Downloading the files is always the best choice. But **If you copy and paste the
 
 
 Check the video tutorials on [Youtube](https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x). More information also available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921).
+
+![Imgur](https://i.imgur.com/Wpg3Qet.png)
