@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.0.1e
+#               Greengroove's Endgame Loot Filter Script v 3.0.2c
 #
 #-------------------------------------------------------------------------------#
 #
@@ -79,9 +79,9 @@
 #   BAD RARE ITEMS
 #   RARE ITEMS - JEWELRY
 #   RARE ITEMS - WEAPONS - TOP WEAPONS BASES
-#   RARE ITEMS - WEAPONS - TOP WANDS
 #   RARE ITEMS - TOP ARMOUR BASES
 #   RARE CORRUPTED ITEMS
+#   RARE ITEMS - WEAPONS - TOP WANDS
 #   RARE ITEMS - ANY RARE FOR LEVELING
 #   RARE ITEMS - WEAPONS - GOOD RARE WEAPONS
 #   RARE ITEMS - WEAPONS - BOW
@@ -107,7 +107,8 @@
 #   FLASKS - TOP BASES - MAGIC
 #   FLASKS - PROGRESSION
 #   ANIMATE WEAPON
-#   <= MAGIC CORRUPTED ITEMS
+#   NORMAL CORRUPTED ITEMS
+#   MAGIC CORRUPTED ITEMS
 #   CRAFTING BASES - TOP ITEMS - WEAPONS
 #   CRAFTING BASES - TOP ITEMS - ARMOUR
 #   CRAFTING BASES - TOP ITEMS - JEWELRY
@@ -168,14 +169,14 @@
 #       Tier 1 drops / Quest items:     74 230 58 255 # T1 drops color / Quest items
 #       Tier 2 drops:                   255 45 175 # T2 drops color
 #       Unique items:                   175 96 37 # Unique items color
-#       Rare items:                     255 255 119                             (WARNING: some items may still retain default color. Mostly items connected to racing using >= Normal and >= Magic arguments)
+#       Rare items:                     255 255 119                         (WARNING: some items may still retain default color. Mostly items connected to racing using >= Normal and >= Magic arguments)
 #       Rare identified items:          215 25 0 255 # Corrupted items text
 #       Magic identified items:         0 200 255 255 # Identified magic items text
 #       Gems:                           27 162 155 # Gems color
 #
 #       Normal / Magic helmets:         215 25 0 255 # Helmets border color
 #       Normal / Magic gloves:          0 200 255 255 # Gloves border color
-#       Normal / Magic boots:           74 230 58 255 # Boots border color          (WARNING: same border color as tier 1 drops)
+#       Normal / Magic boots:           74 230 58 255 # Boots border color  (WARNING: same border color as tier 1 drops)
 #
 #-------------------------------------------------------------------------------#
 #
@@ -194,7 +195,7 @@
 #       Transparency 39%:               SetBackgroundColor 0 0 0 140 # Lesser items
 #       Transparency 79%:               SetBackgroundColor 0 0 0 55 # Uber trash
 #
-#       Chromatic items background:     SetBackgroundColor 75 75 75 # Chromatic background
+#       Chromatic items background:     SetBackgroundColor 75 75 75 200 # Chromatic background
 #       Top tier drops:                 SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 #       Map background color:           SetBackgroundColor 44 44 44 # Map Background Color
 #
@@ -203,7 +204,7 @@
 #   > SOUNDS
 #
 #       Tier 1:                         PlayAlertSound 8 280 # A - Tier 1
-#       Tier 2:                         PlayAlertSound 7 220 # A - Tier 2
+#       Tier 2:                         PlayAlertSound 7 200 # A - Tier 2
 #       Tier 3:                         PlayAlertSound 1 100 # A - Tier 3
 #       Tier 4:                         PlayAlertSound 2 90 # A - Tier 4
 #       Divination cards:               PlayAlertSound 4 120 # B -  Divination cards
@@ -292,13 +293,13 @@
 # //! SetOption $Linked_armour_slot_3 input ["RGB"]
 # //! SetOption $Slot_3_class checkbox [Body Armour] [Boots] [Gloves] [Helmet] # no title
 # //! SetOption $Separator
-# //! SetOption $Linked_armour_slot_4 input ["RGB"]
+# //! SetOption $Linked_armour_slot_4 input ["RGB" "RRR" "GGG" "BBB"]
 # //! SetOption $Slot_4_class checkbox [Body Armour] [Boots] [Gloves] [Helmet] # no title
 # //! SetOption $Separator
 # //! SetOption $Caster_Items input ["BB"] # Set a RGB value for races with a caster. [u][b]Block switches[/b][/u] are in the racing filter. Maximum 3 characters. If empty default values will be used.
 # //! SetOption $Leveling_items switch [Enable] [Disable] [Enable] # Toggle sounds for low currency (Utility flasks, Whetstone, Transmutation, Augmentation orbs). Only for races / leveling, disabled by default.
-# //! SetOption $Racing_items_max_level switch [63] [66] [72] [77] [99] # Set the maximum level for racing items (Default 63).
-# //! SetOption $Rares_for_vendoring switch [15] [23] [33] [44] [56] [66] [68] [70] [72] # Set the maximum level of trash rares you want to see. [u][b]Block switches[/b][/u] in the Leveling block.
+# //! SetOption $Racing_items_max_level switch [63] [66] [67] [72] [77] [99] # Set the maximum level for racing items (Default 63).
+# //! SetOption $Items_for_vendoring switch [15] [23] [33] [44] [56] [66] [68] [70] [72] # Set the maximum level for trash rares you want to see. [u][b]Block switches[/b][/u] in the leveling and racing block.
 # //! SetTab [None]
 
 # //! SetOption $EmptyLine
@@ -314,14 +315,14 @@
 # //! SetTab [Notes]
 
 # //! SetOption $Notes textarea [] # Name your preset, or add your notes here:
-# //! SetOption $PoE_links link [Uniques] [https://pathofexile.gamepedia.com/Unique_item] [Weapons] [http://pathofexile.gamepedia.com/Weapon] [Armour] [http://pathofexile.gamepedia.com/Armour_(equipment)] [Flasks] [http://pathofexile.gamepedia.com/Flask] [Active skills] [http://pathofexile.gamepedia.com/Active_skill_gem] [Support Skills] [http://pathofexile.gamepedia.com/Support_Skill_Gems] [Maps] [http://pathofexile.gamepedia.com/Map] [Divination cards] [http://pathofexile.gamepedia.com/Divination_card] [Vendor recipes] [https://pathofexile.gamepedia.com/Vendor_recipe_system] [Quest rewards] [http://pathofexile.gamepedia.com/Quest_Rewards] [PoEAffix] [http://poeaffix.net/] # Some useful loot related links.
+# //! SetOption $PoE_links link [Uniques] [https://pathofexile.gamepedia.com/Unique_item] [Weapons] [http://pathofexile.gamepedia.com/Weapon] [Armour] [http://pathofexile.gamepedia.com/Armour_(equipment)] [Flasks] [http://pathofexile.gamepedia.com/Flask] [Active skills] [http://pathofexile.gamepedia.com/Active_skill_gem] [Support Skills] [http://pathofexile.gamepedia.com/Support_Skill_Gems] [Maps] [http://pathofexile.gamepedia.com/Map] [Divination cards] [http://pathofexile.gamepedia.com/Divination_card] [Vendor recipes] [https://pathofexile.gamepedia.com/Vendor_recipe_system] [Quest rewards] [http://pathofexile.gamepedia.com/Quest_Rewards] [Pantheon] [https://pathofexile.gamepedia.com/The_Pantheon] [PoEAffix] [http://poeaffix.net/] # Some useful loot related links.
 # //! SetOption $Separator
-# //! SetOption $Dont_panic info # Nothing of value can be hidden... Start with a preset, depending on your situation and go from there. Just remember: The more things you enable, the more loot you'll see. The filter has been designed, so that you can configure the filter exactly the way you want and it's generally aimed towards experienced users.
-# //! SetOption $Block_switches_tab info # The most important part of the filter. This tab also contains switches that enable or disable functions in other tabs. The advanced options that are associated with switches use bold markings in the description. Copy a tittle, expand all and use Ctrl+F to find the desired item.
+# //! SetOption $Dont_panic info # Nothing of value can be hidden... Start with a preset, depending on your situation and go from there. Just remember: The more things you enable, the more loot you'll see. The filter has been designed, so that it can be configured exactly to the point. It's generally aimed towards experienced users.
+# //! SetOption $Block_switches_tab info # The most important part of the filter. This tab also contains switches that enable or disable functions in other tabs. These are marked with "@" as prefix. The other UI options that are associated with switches, use a bold text in the description. Copy a tittle, expand all and use Ctrl+F to find the desired switch.
 # //! SetOption $Unique_url info # Filterblast adds a unique url each time you parse or refresh preview if you made any changes. Use it to store and share your presets. The same url is also stored on the top of the downloaded file.
-# //! SetOption $Editing_lists info # The lists should include all potential candidates. It's up to you to narrow down the choice, or perhaps add something of your own. Generally you only need to remove entries.
+# //! SetOption $Editing_lists info # The lists should include all potential items candidates. It's up to you to narrow down the choice, or perhaps add something of your own. Generally you only need to remove entries.
 # //! SetOption $Separator
-# //! SetOption $Links link [Forum thread] [https://www.pathofexile.com/forum/view-thread/1566921] [Changelog] [https://github.com/Greengroove/GG-LootFilter/blob/master/CHANGELOG.md] [Github] [https://github.com/Greengroove/GG-LootFilter] [Youtube] [https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x] [Facebook] [https://www.facebook.com/GreengroovePOE/] [Twitter] [https://twitter.com/GreengroovePOE] [Reddit] [https://www.reddit.com/user/Greengroove/] [Donate] [https://www.pathofexile.com/forum/view-thread/1566921/page/1/#p12940460]  # Detailed information can be found on the official forum and there's video tutorials on Youtube. Remember to give feedback on the forum if you like the filter and if you have any suggestions or requests. Enjoy the game and good hunting!
+# //! SetOption $Links link [Forum thread] [https://www.pathofexile.com/forum/view-thread/1566921] [Changelog] [https://github.com/Greengroove/GG-LootFilter/blob/master/CHANGELOG.md] [Github] [https://github.com/Greengroove/GG-LootFilter] [Youtube] [https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x] [Facebook] [https://www.facebook.com/GreengroovePOE/] [Twitter] [https://twitter.com/GreengroovePOE] [Reddit] [https://www.reddit.com/user/Greengroove/] [Donate ♥] [https://www.pathofexile.com/forum/view-thread/1566921/page/1/#p12940460]  # Detailed information can be found on the official forum and there's video tutorials on Youtube. Remember to give feedback on the forum if you like the filter and if you have any suggestions or requests. Enjoy the game and good hunting!
 # //! SetTab [None]
 
 # //! SetOption $EmptyLine
@@ -356,19 +357,19 @@ Show
 	BaseType "Shaper's Orb"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # A - Tier 1
 
 Show
 	Class Quest
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 
 Show
 	Class "Pantheon Soul" Piece
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # A - Tier 1
 
 #-------------------------------------------------------------------------------#
@@ -378,20 +379,20 @@ Show
 Show
 	BaseType "Silver Key" "Golden Key" "Treasure Key"
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 2 90 # A - Tier 4
 
 Show
 	BaseType "Offering to the Goddess"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	Class Trinket
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 2 90 # A - Tier 4
 
 #-------------------------------------------------------------------------------#
@@ -402,7 +403,7 @@ Show  # ~Misc - Extras - Harbinger items - T4 |Disable
 	Class Currency
 	BaseType "Chaos Shard" "Regal Shard" "Binding Shard"
 	SetFontSize 45
-	PlayAlertSound 2 0 # D - Leveling items 
+	PlayAlertSound 2 90 # D - Leveling items 
 # //! AlertSound $Leveling_items
 
 Show  # ~Misc - Extras - Harbinger items - T4 |Disable
@@ -417,7 +418,7 @@ Show  # ~Misc - Extras - Harbinger items - T3 |Disable
 	BaseType "Harbinger's Shard" "Ancient Shard" "Orb of Horizons" "Engineer's Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # A - Tier 3
 
 Show  # ~Misc - Extras - Harbinger items - T2 |Disable
@@ -425,15 +426,15 @@ Show  # ~Misc - Extras - Harbinger items - T2 |Disable
 	BaseType "Annulment Shard" "Harbinger's Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # ~Misc - Extras - Harbinger items - T1 |Disable
 	Class Currency
 	BaseType "Exalted Shard" "Mirror Shard" "Ancient Orb" "Orb of Annulment"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # A - Tier 1
 
 #-------------------------------------------------------------------------------#
@@ -444,27 +445,27 @@ Show  # ~Misc - Extras - Legacy items - Leaguestone - Normal |Disable
 	Class Leaguestone
 	Rarity = Normal
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 200 200 200
-	PlayAlertSound 7 220 # A - Tier 2
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # ~Misc - Extras - Legacy items - Leaguestone - Magic |Disable
 	Class Leaguestone
 	Rarity >= Magic
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 136 136 255
-	PlayAlertSound 7 220 # A - Tier 2
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	Class "Misc Map Items"
 	BaseType "Ancient Reliquary"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # A - Tier 1
 
 #-------------------------------------------------------------------------------#
@@ -482,19 +483,19 @@ Show  # ~Misc - Extras - Breach items - Blessing
 	Class "Stackable Currency"
 	BaseType Blessing
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # ~Misc - Extras - Breach items - Breachstone |Disable
 	Class "Misc Map Items"
 	BaseType Breachstone
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   ESSENCE
@@ -505,15 +506,15 @@ Show  # ~Misc - Extras - Essence items - First 3 essence tiers
 	BaseType "Weeping Essence" "Muttering Essence" "Whispering Essence"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 7 220 # A - Tier 2
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	Class Currency
 	BaseType Essence "Remnant of Corruption"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   DIVINATION CARDS
@@ -524,8 +525,8 @@ Show
 	BaseType "Stacked Deck"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 # The divination cards that you don't want to drop with sound in endgame.
 Show  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
@@ -539,7 +540,7 @@ Show
 	Class Divination
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 4 120 # B -  Divination cards
 
 #-------------------------------------------------------------------------------#
@@ -567,7 +568,7 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone
 	Class Currency
 	BaseType "Blacksmith's Whetstone"
 	SetFontSize 45
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Low currency - Glassblower's Bauble
@@ -579,14 +580,14 @@ Show  # Endgame Filter (Disable for MF) - Currency - Orb of Transmutation |Disab
 	Class Currency
 	BaseType "Orb of Transmutation"
 	SetFontSize 45
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Currency - Orb of Augmentation |Disable
 	Class Currency
 	BaseType "Orb of Augmentation"
 	SetFontSize 45
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Currency - Orb of Alteration |Disable
@@ -636,7 +637,7 @@ Show  # ~Misc - Extras - Prophecy items - Silver Coins
 	BaseType "Silver Coin"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 2 90 # A - Tier 4
 
 Show
@@ -644,7 +645,7 @@ Show
 	BaseType "Regal Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # C - Regal Orb
 
 Show
@@ -652,7 +653,7 @@ Show
 	BaseType "Blessed Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # C - Blessed Orb
 
 Show
@@ -660,7 +661,7 @@ Show
 	BaseType "Gemcutter's Prism"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # A - Tier 3
 
 Show
@@ -668,7 +669,7 @@ Show
 	BaseType "Orb of Regret"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # A - Tier 3
 
 Show
@@ -676,7 +677,7 @@ Show
 	BaseType "Vaal Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # C - Vaal Orb
 
 Show
@@ -684,7 +685,7 @@ Show
 	BaseType "Chaos Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # C - Chaos Orb
 
 Show
@@ -692,7 +693,7 @@ Show
 	BaseType "Orb of Fusing"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # C - Orb of Fusing
 
 Show
@@ -700,7 +701,7 @@ Show
 	BaseType "Orb of Scouring"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # A - Tier 3
 
 Show
@@ -708,23 +709,23 @@ Show
 	BaseType "Cartographer's Sextant" "Cartographer's Seal" "Unshaping Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	Class Currency
 	BaseType "Master Cartographer's Sextant" "Master Cartographer's Seal"
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	Class Currency
 	BaseType "Divine Orb"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # C - Divine Orb
 
 Show
@@ -732,7 +733,7 @@ Show
 	BaseType "Albino Rhoa Feather" "Eternal Orb"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # A - Tier 1
 
 Show
@@ -740,7 +741,7 @@ Show
 	BaseType "Exalted Orb"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # C - Exalted Orb
 
 Show
@@ -748,7 +749,7 @@ Show
 	BaseType "Mirror of Kalandra"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # C - Mirror of Kalandra
 
 Show  # Endgame Filter (Disable for MF) - Currency - Perandus Coin |Disable
@@ -763,8 +764,8 @@ Show  # ~Misc - Extras - Prophecy items - Sealed Prophecies |Disable
 	BaseType Prophecy
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 # Present in the Leveling Filter.
 Show  # Leveling Filter (Enable for leveling and races) - Currency - Alchemy Shard
@@ -793,8 +794,8 @@ Show
 	Class Maps
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # B - Tier 1 map
 
 Show
@@ -804,7 +805,7 @@ Show
 	SetTextColor 175 96 37 # Unique items color
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 175 96 37 # Unique items color
-	PlayAlertSound 7 220 # B - Tier 2 map
+	PlayAlertSound 7 200 # B - Tier 2 map
 
 # Shaped maps filter
 Show
@@ -813,26 +814,26 @@ Show
 	Class Maps
 	BaseType Shaped
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # B - Tier 2 map
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # B - Tier 2 map
 
 Show
 	DropLevel >= 78
 	Class Maps
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # B - Tier 2 map
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # B - Tier 2 map
 
 Show  # Endgame Filter (Disable for MF) - Maps - Yellow T10 |Disable
 	DropLevel = 77
 	Class Maps
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # B - Tier 3 map
 
 Show  # Endgame Filter (Disable for MF) - Maps - Yellow T9 |Disable
@@ -840,7 +841,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Yellow T9 |Disable
 	Class Maps
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # B - Tier 3 map
 
 # Custom list of maps
@@ -850,7 +851,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - @Custom maps |Disable
 # //$ $Custom_maps
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # B - Tier 3 map
 
 # Maps DropLevel >= 73 use T3 sound till ItemLevel <= 78
@@ -908,24 +909,24 @@ Show  # ~Misc - Extras - Prophecy items - Council keys |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # B - Tier 2 map
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # B - Tier 2 map
 
 Show
 	Class Fragment
 	BaseType "Divine Vessel"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	Class Fragment "Map Fragments"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # B - Tier 2 map
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # B - Tier 2 map
 
 #-------------------------------------------------------------------------------#
 # Section:  #   GEMS
@@ -935,9 +936,9 @@ Show
 	Quality = 20
 	Class Gem
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 # Drop only gems.
 Show
@@ -945,23 +946,23 @@ Show
 	BaseType Portal Empower Enlighten Enhance "Detonate Mines" "Item Quantity" "Vaal Haste" "Vaal Breach"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	Quality >= 14
 	Class Gem
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality 8-13) |Disable
 	Quality >= 8
 	Class Gem
 	SetFontSize 45
 	SetTextColor 27 162 155 # Gems color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # A - Tier 3
 
 Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality <= 7) |Disable
@@ -992,12 +993,14 @@ Show  # Endgame Filter (Disable for MF) - Gems - Vaal gems |Disable
 	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # Endgame Filter (Disable for MF) - Gems - No quality  - Active Skill Gems
+	Quality = 0
 	Class "Active Skill Gems"
 	SetFontSize 33
 	SetTextColor 27 162 155 # Gems color
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 Show  # Endgame Filter (Disable for MF) - Gems - No quality  - Support gems
+	Quality = 0
 	Class "Support Skill Gems"
 	SetFontSize 33
 	SetTextColor 27 162 155 # Gems color
@@ -1062,27 +1065,27 @@ Show  # ~Misc - Extras - Talisman items - Rare |Disable
 	BaseType Talisman
 	Rarity = Rare
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 255 255 119
-	PlayAlertSound 7 220 # A - Tier 2
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # ~Misc - Extras - Talisman items - Magic |Disable
 	Class Amulet
 	BaseType Talisman
 	Rarity = Magic
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 136 136 255
-	PlayAlertSound 7 220 # A - Tier 2
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # ~Misc - Extras - Talisman items - Normal |Disable
 	Class Amulet
 	BaseType Talisman
 	Rarity = Normal
 	SetFontSize 45
-	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 200 200 200
-	PlayAlertSound 7 220 # A - Tier 2
+	PlayAlertSound 7 200 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   UNIQUE / OTHER ITEMS
@@ -1092,16 +1095,16 @@ Show
 	BaseType "Fishing Rod"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # A - Tier 1
 
 Show
 	LinkedSockets = 6
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # A - Tier 1
 
 Show
@@ -1109,27 +1112,27 @@ Show
 	SetFontSize 45
 	SetTextColor 175 96 37 # Unique items color
 	SetBorderColor 175 96 37 # Unique items color
-	PlayAlertSound 7 220 # A - Tier 2
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 5 link (5 socket) |Disable
 	LinkedSockets = 5
 	Sockets = 5
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 7 220 # A - Tier 2
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	LinkedSockets = 5
 	Sockets = 6
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 7 220 # A - Tier 2
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	Sockets = 6
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # A - Tier 3
 
 Show
@@ -1151,7 +1154,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 	ItemLevel <= 24
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
@@ -1165,7 +1168,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
@@ -1178,7 +1181,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 2 |Disable
 	ItemLevel <= 24
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
@@ -1192,7 +1195,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 2 |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
@@ -1205,7 +1208,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 3 |Disable
 	ItemLevel <= 24
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
@@ -1219,26 +1222,26 @@ Show  # Racing Filter - Armour - @Linked armour Slot 3 |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
 Show  # Racing Filter - Armour - @Linked armour Slot 4 |Disable
 	LinkedSockets = 3
-	SocketGroup RGB 
+	SocketGroup RGB RRR GGG BBB 
 # //$ $Linked_armour_slot_4
 	Class Body Armour Boots Gloves Helmet 
 # //$ $Slot_4_class
 	ItemLevel <= 24
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
 Show  # Racing Filter - Armour - @Linked armour Slot 4 |Disable
 	LinkedSockets >= 4
-	SocketGroup RGB 
+	SocketGroup RGB RRR GGG BBB 
 # //$ $Linked_armour_slot_4
 	Class Body Armour Boots Gloves Helmet 
 # //$ $Slot_4_class
@@ -1246,7 +1249,7 @@ Show  # Racing Filter - Armour - @Linked armour Slot 4 |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 # Any 4 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 66
@@ -1275,7 +1278,7 @@ Show  # ~Misc - @Chance bases |Disable
 # //$ $Chance_bases
 	Rarity = Normal
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 2 90 # A - Tier 4
 
 #-------------------------------------------------------------------------------#
@@ -1286,15 +1289,15 @@ Show
 	DropLevel >= 46
 	Class Amulet Belt Ring
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 #Show # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) (Currently unnused base types) |Disable
 #    DropLevel >= 73
 #    Class "Body Armour" "Shield" "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
 #    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #    SetFontSize 45
-#    PlayAlertSound 7 220 # A - Tier 2
+#    PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	DropLevel >= 72
@@ -1302,8 +1305,8 @@ Show
 	Rarity = Normal
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Boots (Magic, ItemLevel <= 83) |Disable
 	DropLevel >= 72
@@ -1311,8 +1314,8 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Boots (
 	Rarity = Magic
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Helmet (Magic, ItemLevel <= 83) |Disable
 	DropLevel >= 72
@@ -1320,8 +1323,8 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Helmet 
 	Rarity = Magic
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Fingerless Silk Gloves |Disable
 	DropLevel >= 72
@@ -1330,8 +1333,8 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves 
 	Rarity = Magic
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Gripped Gloves |Disable
 	DropLevel >= 72
@@ -1340,8 +1343,8 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves 
 	Rarity = Magic
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Spiked Gloves |Disable
 	DropLevel >= 72
@@ -1350,8 +1353,8 @@ Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves 
 	Rarity = Magic
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 # This entry will catch any specified class in case they get commented, to retain original style.
 Hide
@@ -1360,7 +1363,7 @@ Hide
 	Rarity = Magic
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 Show
 	DropLevel >= 72
@@ -1368,16 +1371,16 @@ Show
 	Rarity = Rare
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 Show
 	DropLevel >= 72
 	Class Boots Gloves Helmet
 	ItemLevel >= 84
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-	PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 200 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE
@@ -1391,7 +1394,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - All (ItemLevel <= 6
 	SetFontSize 33 
 # //$ $Rare_items_font_size
 	SetTextColor 255 255 119
-	SetBackgroundColor 75 75 75 # Chromatic background
+	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 
@@ -1402,7 +1405,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Height = 2 |Disable
 	SetFontSize 33 
 # //$ $Rare_items_font_size
 	SetTextColor 255 255 119
-	SetBackgroundColor 75 75 75 # Chromatic background
+	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 
@@ -1413,7 +1416,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Width = 1 |Disable
 	SetFontSize 33 
 # //$ $Rare_items_font_size
 	SetTextColor 255 255 119
-	SetBackgroundColor 75 75 75 # Chromatic background
+	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 
@@ -1513,12 +1516,118 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Daggers (DropLe
 	SetTextColor 255 255 119
 
 #-------------------------------------------------------------------------------#
+# Section:  #   RARE ITEMS - TOP ARMOUR BASES
+#-------------------------------------------------------------------------------#
+
+# Top base armour.
+Show
+	Class "Body Armour" Boots Gloves Helmet Shield Amulet Belt Ring Quiver
+	BaseType "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield" 
+# //$ $Top_rare_armour
+	Rarity = Rare
+	SetFontSize 45
+	SetTextColor 255 255 119
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+
+#-------------------------------------------------------------------------------#
+# Section:  #   RARE CORRUPTED ITEMS
+#-------------------------------------------------------------------------------#
+
+Show  # ~Misc - Corrupted items - Jewelry - Rare |Disable
+	Corrupted True
+	Class Ring Amulet Belt
+	Rarity = Rare
+	SetFontSize 45
+	SetTextColor 215 25 0 255 # Corrupted items text
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+
+Show  # ~Misc - Corrupted items - Weapons - Dagger, Sceptre, Wand, Quiver - Rare |Disable
+	Corrupted True
+	Class Dagger Sceptre Wand Quiver
+	Rarity = Rare
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show  # ~Misc - Corrupted items - Weapons - Good bases - Rare |Disable
+	Corrupted True
+	DropLevel >= 55
+	Class Bow Claw "One Hand Axe" "One Hand Mace" "One Hand Sword" Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Rarity = Rare
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Weapons - Any - Rare |Disable
+#	Corrupted True
+#	Class Bow Claw "One Hand Axe" "One Hand Mace" "One Hand Sword" Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+#	Rarity = Rare
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show  # ~Misc - Corrupted items - Weapons - Quiver (Any rare) |Disable
+	Corrupted True
+	Class Quiver
+	Rarity = Rare
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show  # ~Misc - Corrupted items - Armour - Good bases - Rare (Body Armour) |Disable
+	Corrupted True
+	DropLevel >= 60
+	Class "Body Armour"
+	Rarity = Rare
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Armour - Good bases - Rare (Boots, Gloves, Helmet, Shield) |Disable
+#	Corrupted True
+#	DropLevel >= 41
+#	Class Boots Gloves Helmet Shield
+#	Rarity = Rare
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Armour - Any - Rare (Body Armour) |Disable
+#	Corrupted True
+#	Class "Body Armour"
+#	Rarity = Rare
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show  # ~Misc - Corrupted items - Armour - Any - Rare (Boots, Gloves, Helmet, Shield) |Disable
+	Corrupted True
+	Class Boots Gloves Helmet Shield
+	Rarity = Rare
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show
+	LinkedSockets = 5
+	Corrupted True
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+
+#-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - TOP WANDS
 #-------------------------------------------------------------------------------#
 
 # Top base wands.
 Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Wands (Decent)
-	DropLevel >= 45
+	DropLevel >= 40
 	Class Wand
 	Rarity = Rare
 	SetFontSize 45
@@ -1564,94 +1673,33 @@ Show  # Racing Filter - Caster Items - Wand - Maraketh wands with cast speed - R
 	SetBorderColor 255 45 175 # T2 drops color
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - TOP ARMOUR BASES
-#-------------------------------------------------------------------------------#
-
-# Top base armour.
-Show
-	Class "Body Armour" Boots Gloves Helmet Shield Amulet Belt Ring Quiver
-	BaseType "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield" 
-# //$ $Top_rare_armour
-	Rarity = Rare
-	SetFontSize 45
-	SetTextColor 255 255 119
-	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-
-#-------------------------------------------------------------------------------#
-# Section:  #   RARE CORRUPTED ITEMS
-#-------------------------------------------------------------------------------#
-
-# Rare corrupted jewelry.
-Show  # ~Misc - Corrupted items - Jewelry - Rare |Disable
-	Corrupted True
-	Class Ring Amulet Belt
-	Rarity = Rare
-	SetFontSize 45
-	SetTextColor 215 25 0 # Corrupted items text
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-
-# Rare weapons (Good bases) corrupted item.
-Show  # ~Misc - Corrupted items - Weapons (Good bases) - Rare |Disable
-	Corrupted True
-	DropLevel >= 55
-	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand Quiver
-	Rarity = Rare
-	SetFontSize 23
-	SetTextColor 215 25 0 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
-
-# Rare armour (Good bases) corrupted item.
-Show  # ~Misc - Corrupted items - Armour (Good bases) - Rare |Disable
-	Corrupted True
-	DropLevel >= 60
-	Class "Body Armour" Boots Gloves Helmet Shield
-	Rarity = Rare
-	SetFontSize 23
-	SetTextColor 215 25 0 # Corrupted items text
-	SetBackgroundColor 0 0 0 140 # Lesser items
-
-# Any corrupted rare item.
-#Disabled Block Start
-#Show  # ~Misc - Corrupted items - Any item - Rare |Disable
-#	Corrupted True
-#	Rarity = Rare
-#	SetFontSize 23
-#	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#Disabled Block End
-
-#-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - ANY RARE FOR LEVELING
 #-------------------------------------------------------------------------------#
 
-# All other rare quivers are displayed in the Leveling Filter.
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares for vendoring - Width = 1 |Disable
+Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Items for vendoring - Width = 1 |Disable
 	Width = 1
 	Rarity = Rare
 	ItemLevel <= 15 
-# //$ <= $Rares_for_vendoring
+# //$ <= $Items_for_vendoring
 	SetFontSize 33 
 # //$ $Rare_items_font_size
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-# All other rare quivers are displayed in the Leveling Filter.
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares for vendoring - Height = 2 |Disable
+Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Items for vendoring - Height = 2 |Disable
 	Height = 2
 	Rarity = Rare
 	ItemLevel <= 15 
-# //$ <= $Rares_for_vendoring
+# //$ <= $Items_for_vendoring
 	SetFontSize 33 
 # //$ $Rare_items_font_size
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
-# All other rare quivers are displayed in the Leveling Filter.
-Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Rares for vendoring - Any |Disable
+Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - @Items for vendoring - Any |Disable
 	Rarity = Rare
 	ItemLevel <= 15 
-# //$ <= $Rares_for_vendoring
+# //$ <= $Items_for_vendoring
 	SetFontSize 33 
 # //$ $Rare_items_font_size
 	SetTextColor 255 255 119
@@ -2038,6 +2086,14 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 # Section:  #   RARE ITEMS - WEAPONS - ONE HAND SWORD
 #-------------------------------------------------------------------------------#
 
+Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Elemental Thrusting One Hand Sword |Disable
+	Class "Thrusting One Hand Sword"
+	BaseType "Jewelled Foil" "Spiraled Foil" "Fancy Foil" "Serrated Foil" "Elegant Foil" "Jagged Foil"
+	Rarity = Rare
+	SetFontSize 33 
+# //$ $Rare_items_font_size
+	SetTextColor 255 255 119
+
 # These are ok for Leveling.
 Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - One hand swords
 	DropLevel >= 50
@@ -2105,6 +2161,14 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - WANDS
 #-------------------------------------------------------------------------------#
+
+Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Elemental Wand |Disable
+	Class Wand
+	BaseType "Imbued Wand" "Engraved Wand" "Carved Wand"
+	Rarity = Rare
+	SetFontSize 33 
+# //$ $Rare_items_font_size
+	SetTextColor 255 255 119
 
 # All other wands.
 Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Wands (DropLevel <= 44)
@@ -2457,6 +2521,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour
 	SetFontSize 33 
 # //$ $Rare_items_font_size
 	SetTextColor 255 255 119
+	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 
 # Any base can be useful for Leveling.
@@ -2583,7 +2648,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Low bases - Helm
 #Disabled Block End
 
 Show  # Endgame Filter (Disable for MF) - Rare items - Armour - @Shields |Disable
-	DropLevel >= 47 
+	DropLevel >= 33 
 # //$ >= $Shield_drop_level
 	Class Shield
 	BaseType "Tower Shield" Buckler "Spirit Shield" "Round Shield" "Kite Shield" "Spiked Shield" 
@@ -2615,7 +2680,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quicksilver Flask |
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 # Any quality flask will show till level 67.
@@ -2625,7 +2690,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with quality |Disable
 	ItemLevel <= 67
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quicksilver Flask |Disable
@@ -2633,7 +2698,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quicksilver Flask |
 	BaseType "Quicksilver Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Bismuth Flask |Disable
@@ -2641,7 +2706,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Bismuth Flask |Disa
 	BaseType "Bismuth Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Stibnite Flask |Disable
@@ -2649,7 +2714,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Stibnite Flask |Dis
 	BaseType "Stibnite Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Amethyst Flask |Disable
@@ -2657,7 +2722,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Amethyst Flask |Dis
 	BaseType "Amethyst Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Ruby Flask |Disable
@@ -2665,7 +2730,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Ruby Flask |Disable
 	BaseType "Ruby Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Sapphire Flask |Disable
@@ -2673,7 +2738,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Sapphire Flask |Dis
 	BaseType "Sapphire Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Topaz Flask |Disable
@@ -2681,7 +2746,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Topaz Flask |Disabl
 	BaseType "Topaz Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Silver Flask |Disable
@@ -2689,7 +2754,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Silver Flask |Disab
 	BaseType "Silver Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Aquamarine Flask |Disable
@@ -2697,7 +2762,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Aquamarine Flask |D
 	BaseType "Aquamarine Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Granite Flask |Disable
@@ -2705,7 +2770,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Granite Flask |Disa
 	BaseType "Granite Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Jade Flask |Disable
@@ -2713,7 +2778,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Jade Flask |Disable
 	BaseType "Jade Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quartz Flask |Disable
@@ -2721,7 +2786,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quartz Flask |Disab
 	BaseType "Quartz Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Sulphur Flask |Disable
@@ -2729,7 +2794,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Sulphur Flask |Disa
 	BaseType "Sulphur Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Basalt Flask |Disable
@@ -2737,7 +2802,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Basalt Flask |Disab
 	BaseType "Basalt Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Diamond Flask |Disable
@@ -2745,7 +2810,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Diamond Flask |Disa
 	BaseType "Diamond Flask"
 	SetFontSize 33
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
+	PlayAlertSound 2 90 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with quality |Disable
@@ -3029,7 +3094,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	SetFontSize 23
 #	SetTextColor 110 200 255 0 # Animate weapon text
 #	SetBackgroundColor 0 200 255 145 # Animate weapon items
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3068,7 +3133,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #	SetFontSize 23
 #	SetTextColor 110 200 255 0 # Animate weapon text
 #	SetBackgroundColor 0 200 255 145 # Animate weapon items
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #Disabled Block End
 
 #Disabled Block Start
@@ -3106,96 +3171,179 @@ Show  # Leveling Filter (Enable for leveling and races) - Flasks - Progression -
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
-# Section:  #   <= MAGIC CORRUPTED ITEMS
+# Section:  #   NORMAL CORRUPTED ITEMS
 #-------------------------------------------------------------------------------#
 
-# Normal corrupted jewelry.
 #Disabled Block Start
 #Show  # ~Misc - Corrupted items - Jewelry - Normal |Disable
 #	Corrupted True
 #	Class Ring Amulet Belt
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetTextColor 215 25 0 # Corrupted items text
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #Disabled Block End
 
-# Magic corrupted jewelry.
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Weapons - Dagger, Sceptre, Wand, Quiver - Normal |Disable
+#	Corrupted True
+#	Class Dagger Sceptre Wand Quiver
+#	Rarity = Normal
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show  # ~Misc - Corrupted items - Weapons - Good bases - Normal |Disable
+	Corrupted True
+	DropLevel >= 55
+	Class Bow Claw "One Hand Axe" "One Hand Mace" "One Hand Sword" Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Rarity = Normal
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Weapons - Any - Normal |Disable
+#	Corrupted True
+#	Class Bow Claw "One Hand Axe" "One Hand Mace" "One Hand Sword" Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+#	Rarity = Normal
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Armour - Good bases - Normal (Body Armour) |Disable
+#	Corrupted True
+#	DropLevel >= 60
+#	Class "Body Armour"
+#	Rarity = Normal
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Armour - Good bases - Normal (Boots, Gloves, Helmet, Shield) |Disable
+#	Corrupted True
+#	DropLevel >= 41
+#	Class Boots Gloves Helmet Shield
+#	Rarity = Normal
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Armour - Any - Normal (Body Armour) |Disable
+#	Corrupted True
+#	Class "Body Armour"
+#	Rarity = Normal
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Armour - Any - Normal (Boots, Gloves, Helmet, Shield) |Disable
+#	Corrupted True
+#	Class Boots Gloves Helmet Shield
+#	Rarity = Normal
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#-------------------------------------------------------------------------------#
+# Section:  #   MAGIC CORRUPTED ITEMS
+#-------------------------------------------------------------------------------#
+
 Show  # ~Misc - Corrupted items - Jewelry - Magic |Disable
 	Corrupted True
 	Class Ring Amulet Belt
 	Rarity = Magic
 	SetFontSize 45
-	SetTextColor 215 25 0 # Corrupted items text
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 215 25 0 255 # Corrupted items text
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
-# Normal weapons (Good bases) corrupted item.
-#Disabled Block Start
-#Show  # ~Misc - Corrupted items - Weapons (Good bases) - Normal |Disable
-#	Corrupted True
-#	DropLevel >= 55
-#	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand Quiver
-#	Rarity = Normal
-#	SetFontSize 23
-#	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#Disabled Block End
+Show  # ~Misc - Corrupted items - Weapons - Dagger, Sceptre, Wand, Quiver - Magic |Disable
+	Corrupted True
+	Class Dagger Sceptre Wand Quiver
+	Rarity = Magic
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+#    SetBackgroundColor 0 0 0 140 # Lesser items
 
-# Magic weapons (Good bases) corrupted item.
+Show  # ~Misc - Corrupted items - Weapons - Good bases - Magic |Disable
+	Corrupted True
+	DropLevel >= 55
+	Class Bow Claw "One Hand Axe" "One Hand Mace" "One Hand Sword" Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Rarity = Magic
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
 #Disabled Block Start
-#Show  # ~Misc - Corrupted items - Weapons (Good bases) - Magic |Disable
+#Show  # ~Misc - Corrupted items - Weapons - Any - Magic |Disable
 #	Corrupted True
-#	DropLevel >= 55
-#	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand Quiver
+#	Class Bow Claw "One Hand Axe" "One Hand Mace" "One Hand Sword" Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetTextColor 215 25 0 255 # Corrupted items text
 #Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
 
-# Normal armour (Good bases) corrupted item.
 #Disabled Block Start
-#Show  # ~Misc - Corrupted items - Armour (Good bases) - Normal |Disable
+#Show  # ~Misc - Corrupted items - Armour - Good bases - Magic (Body Armour) |Disable
 #	Corrupted True
 #	DropLevel >= 60
-#	Class "Body Armour" Boots Gloves Helmet Shield
-#	Rarity = Normal
-#	SetFontSize 23
-#	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#Disabled Block End
-
-# Magic armour (Good bases) corrupted item.
-#Disabled Block Start
-#Show  # ~Misc - Corrupted items - Armour (Good bases) - Magic |Disable
-#	Corrupted True
-#	DropLevel >= 60
-#	Class "Body Armour" Boots Gloves Helmet Shield
+#	Class "Body Armour"
 #	Rarity = Magic
 #	SetFontSize 23
-#	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetTextColor 215 25 0 255 # Corrupted items text
 #Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Armour - Good bases - Magic (Boots, Gloves, Helmet, Shield) |Disable
+#	Corrupted True
+#	DropLevel >= 60
+#	Class Boots Gloves Helmet Shield
+#	Rarity = Magic
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Armour - Any - Magic (Body Armour) |Disable
+#	Corrupted True
+#	Class "Body Armour"
+#	Rarity = Magic
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
+
+#Disabled Block Start
+#Show  # ~Misc - Corrupted items - Armour - Any - Magic (Boots, Gloves, Helmet, Shield) |Disable
+#	Corrupted True
+#	Class Boots Gloves Helmet Shield
+#	Rarity = Magic
+#	SetFontSize 23
+#	SetTextColor 215 25 0 255 # Corrupted items text
+#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
 
 # Any corrupted item.
 #Disabled Block Start
-#Show  # ~Misc - Corrupted items - Any item - Normal |Disable
+#Show  # ~Misc - Corrupted items - Any corrupted item |Disable
 #	Corrupted True
-#	Rarity = Normal
 #	SetFontSize 23
-#	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 140 # Lesser items
+#	SetTextColor 215 25 0 255 # Corrupted items text
 #Disabled Block End
-
-# Any corrupted item.
-#Disabled Block Start
-#Show  # ~Misc - Corrupted items - Any item - Magic |Disable
-#	Corrupted True
-#	Rarity = Magic
-#	SetFontSize 23
-#	SetTextColor 215 25 0 # Corrupted items text
-#	SetBackgroundColor 0 0 0 140 # Lesser items
-#Disabled Block End
+#    SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   CRAFTING BASES - TOP ITEMS - WEAPONS
@@ -3206,22 +3354,22 @@ Show  # Crafting Filter - Normal items - @Weapon crafting bases
 	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" Ambusher Sai "Runic Hatchet" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
 	Rarity = Normal
-	ItemLevel >= 84 
+	ItemLevel >= 73 
 # //$ >= $Crafting_weapons_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 Show  # Crafting Filter - Magic items - @Weapon crafting bases
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand Quiver
 	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" Ambusher Sai "Runic Hatchet" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" Fleshripper "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
 	Rarity = Magic
-	ItemLevel >= 84 
+	ItemLevel >= 73 
 # //$ >= $Crafting_weapons_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   CRAFTING BASES - TOP ITEMS - ARMOUR
@@ -3232,22 +3380,22 @@ Show  # Crafting Filter - Normal items - @Armour crafting bases
 	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Ezomyte Tower Shield" "Titanium Spirit Shield" "Archon Kite Shield" "Crusader Buckler" "Lacquered Buckler" 
 # //$ $Armour_crafting_bases
 	Rarity = Normal
-	ItemLevel >= 84 
+	ItemLevel >= 72 
 # //$ >= $Crafting_armour_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 Show  # Crafting Filter - Magic items - @Armour crafting bases
 	Class "Body Armour" Boots Gloves Helmet Shield Amulet Belt Ring Quiver
 	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Ezomyte Tower Shield" "Titanium Spirit Shield" "Archon Kite Shield" "Crusader Buckler" "Lacquered Buckler" 
 # //$ $Armour_crafting_bases
 	Rarity = Magic
-	ItemLevel >= 84 
+	ItemLevel >= 72 
 # //$ >= $Crafting_armour_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   CRAFTING BASES - TOP ITEMS - JEWELRY
@@ -3258,22 +3406,22 @@ Show  # Crafting Filter - Normal items - @Jewelry crafting bases
 	BaseType "Paua Amulet" "Lapis Amulet" "Jade Amulet" "Amber Amulet" "Gold Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Gold Ring" "Two-Stone Ring" "Diamond Ring" "Amethyst Ring" "Unset Ring" 
 # //$ $Jewelry_crafting_bases
 	Rarity = Normal
-	ItemLevel >= 84 
+	ItemLevel >= 60 
 # //$ >= $Crafting_jewelry_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 Show  # Crafting Filter - Magic items - @Jewelry crafting bases
 	Class Amulet Belt Ring
 	BaseType "Paua Amulet" "Lapis Amulet" "Jade Amulet" "Amber Amulet" "Gold Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Gold Ring" "Two-Stone Ring" "Diamond Ring" "Amethyst Ring" "Unset Ring" 
 # //$ $Jewelry_crafting_bases
 	Rarity = Magic
-	ItemLevel >= 84 
+	ItemLevel >= 60 
 # //$ >= $Crafting_jewelry_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   CRAFTING BASES - JEWELRY
@@ -3298,9 +3446,9 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Class Boots
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 0 200 255 # Identified magic items text
+	SetTextColor 0 200 255 255 # Identified magic items text
 	SetBackgroundColor 0 200 255 70 # Identified magic items background
-	SetBorderColor 74 230 58 # Boots border color
+	SetBorderColor 74 230 58 255 # Boots border color
 
 # Warband filter. Any identified - non corrupted - non top magic item.
 Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warbands" items - Brinerot
@@ -3309,9 +3457,9 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Class Gloves
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 0 200 255 # Identified magic items text
+	SetTextColor 0 200 255 255 # Identified magic items text
 	SetBackgroundColor 0 200 255 70 # Identified magic items background
-	SetBorderColor 0 200 255 # Gloves border color
+	SetBorderColor 0 200 255 255 # Gloves border color
 
 # Warband filter. Any identified - non corrupted - non top magic item.
 Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warbands" items - Redblade
@@ -3320,9 +3468,9 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Class Helm
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 0 200 255 # Identified magic items text
+	SetTextColor 0 200 255 255 # Identified magic items text
 	SetBackgroundColor 0 200 255 70 # Identified magic items background
-	SetBorderColor 215 25 0 # Helmets border color
+	SetBorderColor 215 25 0 255 # Helmets border color
 
 # Warband filter. Any identified - non corrupted - non top magic item.
 Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warbands" items - Renegade
@@ -3331,7 +3479,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Identified magic "Warb
 	Class Bow Claw Dagger "One Hand Axe" "One Hand Mace" "One Hand Sword" Sceptre Staves "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" Wand
 	Rarity = Magic
 	SetFontSize 23
-	SetTextColor 0 200 255 # Identified magic items text
+	SetTextColor 0 200 255 255 # Identified magic items text
 	SetBackgroundColor 0 200 255 70 # Identified magic items background
 
 #-------------------------------------------------------------------------------#
@@ -3342,7 +3490,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Any rarity - Height = 2
 	Height = 2
 	SocketGroup RGB
 	SetFontSize 33
-	SetBackgroundColor 75 75 75 # Chromatic background
+	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 #    Rarity <= Magic
 
@@ -3350,16 +3498,32 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Any rarity - Width = 1
 	Width = 1
 	SocketGroup RGB
 	SetFontSize 33
-	SetBackgroundColor 75 75 75 # Chromatic background
+	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 #    Rarity <= Magic
 
+# Big RGB items
+Show  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB items (2x3) | Disable
+	Height = 3
+	Width = 2
+	SocketGroup RGB
+	SetFontSize 33
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 255 45 175 # T2 drops color
+
+# Big RGB items
+Show  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB items (Any) | Disable
+	SocketGroup RGB
+	SetFontSize 33
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 255 45 175 # T2 drops color
+
 # Big RGB items are shown only till item level 67.
-Show  # Leveling Filter (Enable for leveling and races) - Big RGB items (ItemLevel <= 67)
+Show  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB items (Any, ItemLevel <= 67)
 	SocketGroup RGB
 	ItemLevel <= 67
 	SetFontSize 33
-	SetBackgroundColor 75 75 75 # Chromatic background
+	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
 #    Rarity <= Magic
 
@@ -3683,7 +3847,7 @@ Show  # Racing Filter - Armour - Boots - Normal |Disable
 	ItemLevel <= 13
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 74 230 58 # Boots border color
+	SetBorderColor 74 230 58 255 # Boots border color
 
 Show  # Racing Filter - Armour - Boots - Normal |Disable
 	Sockets >= 2
@@ -3693,7 +3857,7 @@ Show  # Racing Filter - Armour - Boots - Normal |Disable
 	ItemLevel <= 20
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 74 230 58 # Boots border color
+	SetBorderColor 74 230 58 255 # Boots border color
 
 Show  # Racing Filter - Armour - Boots - Normal |Disable
 	Sockets >= 2
@@ -3703,7 +3867,7 @@ Show  # Racing Filter - Armour - Boots - Normal |Disable
 	ItemLevel <= 44
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 74 230 58 # Boots border color
+	SetBorderColor 74 230 58 255 # Boots border color
 
 Show  # Racing Filter - Armour - Boots - Normal |Disable
 	Sockets >= 2
@@ -3714,7 +3878,7 @@ Show  # Racing Filter - Armour - Boots - Normal |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 74 230 58 # Boots border color
+	SetBorderColor 74 230 58 255 # Boots border color
 
 # Exception for racing and leveling. Vendor food.
 Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal - Boots |Disable
@@ -3723,7 +3887,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal -
 	ItemLevel <= 10
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 74 230 58 # Boots border color
+	SetBorderColor 74 230 58 255 # Boots border color
 
 Show  # Racing Filter - Armour - Boots - Magic |Disable
 	DropLevel <= 22
@@ -3732,7 +3896,7 @@ Show  # Racing Filter - Armour - Boots - Magic |Disable
 	ItemLevel <= 25
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 74 230 58 # Boots border color
+	SetBorderColor 74 230 58 255 # Boots border color
 
 Show  # Racing Filter - Armour - Boots - Magic |Disable
 	DropLevel >= 18
@@ -3741,7 +3905,7 @@ Show  # Racing Filter - Armour - Boots - Magic |Disable
 	ItemLevel <= 44
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 74 230 58 # Boots border color
+	SetBorderColor 74 230 58 255 # Boots border color
 #    Sockets >= 2
 
 Show  # Racing Filter - Armour - Boots - Magic |Disable
@@ -3752,7 +3916,7 @@ Show  # Racing Filter - Armour - Boots - Magic |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 74 230 58 # Boots border color
+	SetBorderColor 74 230 58 255 # Boots border color
 #    Sockets >= 2
 
 #-------------------------------------------------------------------------------#
@@ -3766,7 +3930,7 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	ItemLevel <= 13
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 # Gloves border color 
+	SetBorderColor 0 200 255 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	Sockets >= 2
@@ -3776,7 +3940,7 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	ItemLevel <= 20
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 # Gloves border color 
+	SetBorderColor 0 200 255 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	Sockets >= 2
@@ -3786,7 +3950,7 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	ItemLevel <= 23
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 # Gloves border color 
+	SetBorderColor 0 200 255 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	Sockets >= 2
@@ -3796,7 +3960,7 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	ItemLevel <= 44
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 # Gloves border color 
+	SetBorderColor 0 200 255 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Normal |Disable
 	Sockets >= 2
@@ -3807,7 +3971,7 @@ Show  # Racing Filter - Armour - Gloves - Normal |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 # Gloves border color 
+	SetBorderColor 0 200 255 255 # Gloves border color 
 
 # Exception for racing and leveling. Vendor food.
 Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal - Gloves |Disable
@@ -3816,7 +3980,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal -
 	ItemLevel <= 10
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 # Gloves border color 
+	SetBorderColor 0 200 255 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Magic |Disable
 	DropLevel <= 22
@@ -3825,7 +3989,7 @@ Show  # Racing Filter - Armour - Gloves - Magic |Disable
 	ItemLevel <= 25
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 # Gloves border color 
+	SetBorderColor 0 200 255 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Magic |Disable
 	Sockets >= 2
@@ -3835,7 +3999,7 @@ Show  # Racing Filter - Armour - Gloves - Magic |Disable
 	ItemLevel <= 44
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 # Gloves border color 
+	SetBorderColor 0 200 255 255 # Gloves border color 
 
 Show  # Racing Filter - Armour - Gloves - Magic |Disable
 	Sockets >= 2
@@ -3846,7 +4010,7 @@ Show  # Racing Filter - Armour - Gloves - Magic |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 0 200 255 # Gloves border color 
+	SetBorderColor 0 200 255 255 # Gloves border color 
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - ARMOUR - HELM
@@ -3859,7 +4023,7 @@ Show  # Racing Filter - Armour - Helm - Normal |Disable
 	ItemLevel <= 13
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 215 25 0 # Helmets border color
+	SetBorderColor 215 25 0 255 # Helmets border color
 
 Show  # Racing Filter - Armour - Helm - Normal |Disable
 	Sockets >= 2
@@ -3869,7 +4033,7 @@ Show  # Racing Filter - Armour - Helm - Normal |Disable
 	ItemLevel <= 20
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 215 25 0 # Helmets border color
+	SetBorderColor 215 25 0 255 # Helmets border color
 
 Show  # Racing Filter - Armour - Helm - Normal |Disable
 	Sockets >= 2
@@ -3879,7 +4043,7 @@ Show  # Racing Filter - Armour - Helm - Normal |Disable
 	ItemLevel <= 44
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 215 25 0 # Helmets border color
+	SetBorderColor 215 25 0 255 # Helmets border color
 
 Show  # Racing Filter - Armour - Helm - Normal |Disable
 	Sockets >= 2
@@ -3890,7 +4054,7 @@ Show  # Racing Filter - Armour - Helm - Normal |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 215 25 0 # Helmets border color
+	SetBorderColor 215 25 0 255 # Helmets border color
 
 # Exception for racing and leveling. Vendor food.
 Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal - Helm |Disable
@@ -3899,7 +4063,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Act 1 items - Normal -
 	ItemLevel <= 10
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 215 25 0 # Helmets border color
+	SetBorderColor 215 25 0 255 # Helmets border color
 
 Show  # Racing Filter - Armour - Helm - Magic |Disable
 	DropLevel <= 22
@@ -3908,7 +4072,7 @@ Show  # Racing Filter - Armour - Helm - Magic |Disable
 	ItemLevel <= 25
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 215 25 0 # Helmets border color
+	SetBorderColor 215 25 0 255 # Helmets border color
 
 Show  # Racing Filter - Armour - Helm - Magic |Disable
 	Sockets >= 2
@@ -3918,7 +4082,7 @@ Show  # Racing Filter - Armour - Helm - Magic |Disable
 	ItemLevel <= 44
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 215 25 0 # Helmets border color
+	SetBorderColor 215 25 0 255 # Helmets border color
 
 Show  # Racing Filter - Armour - Helm - Magic |Disable
 	Sockets >= 2
@@ -3929,7 +4093,7 @@ Show  # Racing Filter - Armour - Helm - Magic |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
-	SetBorderColor 215 25 0 # Helmets border color
+	SetBorderColor 215 25 0 255 # Helmets border color
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - ARMOUR - SHIELD
@@ -4052,21 +4216,21 @@ Show  # Racing Filter - Accessories - Standard racing rings - Iron Ring (ItemLev
 	ItemLevel <= 20
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 Show  # Racing Filter - Accessories - Standard racing rings - Sapphire Ring (ItemLevel <= 15) |Disable
 	BaseType "Sapphire Ring"
 	ItemLevel <= 15
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 Show  # Racing Filter - Accessories - Standard racing rings - Topaz Ring (ItemLevel <= 20) |Disable
 	BaseType "Topaz Ring"
 	ItemLevel <= 25
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 Show  # Racing Filter - Accessories - Rustic Sash |Disable
 	BaseType "Rustic Sash"
@@ -4108,7 +4272,7 @@ Show  # Racing Filter - Caster Items - Sceptre - @3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Sceptre - @3 links |Disable
@@ -4121,7 +4285,7 @@ Show  # Racing Filter - Caster Items - Sceptre - @3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Sceptre - 3 links |Disable
@@ -4150,13 +4314,13 @@ Show  # Racing Filter - Caster Items - Sceptre - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Caster Items - Sceptre - Any (lvl <= 7) |Disable
 	Class Sceptre
 	ItemLevel <= 7
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - CASTER - DAGGER
@@ -4172,7 +4336,7 @@ Show  # Racing Filter - Caster Items - Dagger - @3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Dagger - @3 links |Disable
@@ -4185,7 +4349,7 @@ Show  # Racing Filter - Caster Items - Dagger - @3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Dagger - 3 links |Disable
@@ -4214,7 +4378,7 @@ Show  # Racing Filter - Caster Items - Dagger - Top crit bases - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 	SetBorderColor 255 45 175 # T2 drops color
 
 Show  # Racing Filter - Caster Items - Dagger - Top crit bases - Magic |Disable
@@ -4223,7 +4387,7 @@ Show  # Racing Filter - Caster Items - Dagger - Top crit bases - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 	SetBorderColor 255 45 175 # T2 drops color
 
 Show  # Racing Filter - Caster Items - Dagger - Magic |Disable
@@ -4232,13 +4396,13 @@ Show  # Racing Filter - Caster Items - Dagger - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Caster Items - Dagger - Any (lvl <= 7) |Disable
 	Class Dagger
 	ItemLevel <= 7
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - CASTER - WAND
@@ -4254,7 +4418,7 @@ Show  # Racing Filter - Caster Items - Wand - @3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Wand - @3 links |Disable
@@ -4267,7 +4431,7 @@ Show  # Racing Filter - Caster Items - Wand - @3 links |Disable
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 3 160 # D - Racing items
 
 Show  # Racing Filter - Caster Items - Wand - 3 links |Disable
@@ -4296,13 +4460,13 @@ Show  # Racing Filter - Caster Items - Wand - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Caster Items - Wand - Any (lvl <= 7) |Disable
 	Class Wand
 	ItemLevel <= 7
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - CLAW - NORMAL
@@ -4313,63 +4477,63 @@ Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 6
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	BaseType "Sharktooth Claw"
 	Rarity = Normal
 	ItemLevel <= 11
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	BaseType Awl
 	Rarity = Normal
 	ItemLevel <= 16
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	BaseType "Cat's Paw"
 	Rarity = Normal
 	ItemLevel <= 21
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	BaseType Blinder
 	Rarity = Normal
 	ItemLevel <= 25
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	BaseType "Timeworn Claw" "Sparkling Claw" "Fright Claw"
 	Rarity = Normal
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	BaseType "Double Claw" "Thresher Claw"
 	Rarity = Normal
 	ItemLevel <= 39
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	BaseType Gouger "Tiger's Paw" "Gut Ripper"
 	Rarity = Normal
 	ItemLevel <= 48
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	BaseType "Prehistoric Claw" "Noble Claw" "Eagle Claw"
 	Rarity = Normal
 	ItemLevel <= 56
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	BaseType "Twin Claw" "Great White Claw" "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Vaal Claw" "Imperial Claw" "Terror Claw" "Gemini Claw"
@@ -4377,7 +4541,7 @@ Show  # Racing Filter - 1 Hand Weapons - Claw - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - CLAW - MAGIC
@@ -4388,63 +4552,63 @@ Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 16
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	BaseType "Sharktooth Claw"
 	Rarity = Magic
 	ItemLevel <= 21
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	BaseType Awl
 	Rarity = Magic
 	ItemLevel <= 25
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	BaseType "Cat's Paw"
 	Rarity = Magic
 	ItemLevel <= 29
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	BaseType Blinder
 	Rarity = Magic
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	BaseType "Timeworn Claw" "Sparkling Claw" "Fright Claw"
 	Rarity = Magic
 	ItemLevel <= 42
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	BaseType "Double Claw" "Thresher Claw"
 	Rarity = Magic
 	ItemLevel <= 48
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	BaseType Gouger "Tiger's Paw" "Gut Ripper"
 	Rarity = Magic
 	ItemLevel <= 56
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	BaseType "Prehistoric Claw" "Noble Claw" "Eagle Claw"
 	Rarity = Magic
 	ItemLevel <= 59
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	BaseType "Twin Claw" "Great White Claw" "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Vaal Claw" "Imperial Claw" "Terror Claw" "Gemini Claw"
@@ -4452,7 +4616,7 @@ Show  # Racing Filter - 1 Hand Weapons - Claw - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - DAGGER - NORMAL
@@ -4463,63 +4627,63 @@ Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 4
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	BaseType "Skinning Knife"
 	Rarity = Normal
 	ItemLevel <= 9
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	BaseType "Carving Knife"
 	Rarity = Normal
 	ItemLevel <= 14
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	BaseType Stiletto
 	Rarity = Normal
 	ItemLevel <= 19
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	BaseType "Boot Knife" "Copper Kris"
 	Rarity = Normal
 	ItemLevel <= 27
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	BaseType Skean "Imp Dagger"
 	Rarity = Normal
 	ItemLevel <= 34
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	BaseType "Flaying Knife" "Prong Dagger" "Butcher Knife"
 	Rarity = Normal
 	ItemLevel <= 42
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	BaseType Poignard "Boot Blade" "Golden Kris"
 	Rarity = Normal
 	ItemLevel <= 49
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	BaseType "Royal Skean" "Fiend Dagger"
 	Rarity = Normal
 	ItemLevel <= 54
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	BaseType Trisula "Gutting Knife" "Slaughter Knife" Ambusher "Ezomyte Dagger" "Platinum Kris" "Imperial Skean" "Demon Dagger" Sai
@@ -4527,7 +4691,7 @@ Show  # Racing Filter - 1 Hand Weapons - Dagger - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - DAGGER - MAGIC
@@ -4538,63 +4702,63 @@ Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 14
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	BaseType "Skinning Knife"
 	Rarity = Magic
 	ItemLevel <= 19
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	BaseType "Carving Knife"
 	Rarity = Magic
 	ItemLevel <= 23
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	BaseType Stiletto
 	Rarity = Magic
 	ItemLevel <= 31
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	BaseType "Boot Knife" "Copper Kris"
 	Rarity = Magic
 	ItemLevel <= 34
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	BaseType Skean "Imp Dagger"
 	Rarity = Magic
 	ItemLevel <= 40
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	BaseType "Flaying Knife" "Prong Dagger" "Butcher Knife"
 	Rarity = Magic
 	ItemLevel <= 52
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	BaseType Poignard "Boot Blade" "Golden Kris"
 	Rarity = Magic
 	ItemLevel <= 54
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	BaseType "Royal Skean" "Fiend Dagger"
 	Rarity = Magic
 	ItemLevel <= 55
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	BaseType Trisula "Gutting Knife" "Slaughter Knife" Ambusher "Ezomyte Dagger" "Platinum Kris" "Imperial Skean" "Demon Dagger" Sai
@@ -4602,7 +4766,7 @@ Show  # Racing Filter - 1 Hand Weapons - Dagger - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - ONE HAND AXE - NORMAL
@@ -4613,70 +4777,70 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 5
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType "Jade Hatchet"
 	Rarity = Normal
 	ItemLevel <= 10
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType "Boarding Axe"
 	Rarity = Normal
 	ItemLevel <= 15
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType Cleaver
 	Rarity = Normal
 	ItemLevel <= 20
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType "Broad Axe"
 	Rarity = Normal
 	ItemLevel <= 24
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType "Arming Axe"
 	Rarity = Normal
 	ItemLevel <= 28
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType "Decorative Axe"
 	Rarity = Normal
 	ItemLevel <= 32
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType "Spectral Axe" "Etched Hatchet" "Jasper Axe" Tomahawk
 	Rarity = Normal
 	ItemLevel <= 41
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType "Wrist Chopper" "War Axe" "Chest Splitter"
 	Rarity = Normal
 	ItemLevel <= 50
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType "Ceremonial Axe" "Wraith Axe"
 	Rarity = Normal
 	ItemLevel <= 55
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	BaseType "Engraved Hatchet" "Karui Axe" "Siege Axe" "Reaver Axe" "Butcher Axe" "Vaal Hatchet" "Royal Axe" "Infernal Axe" "Runic Hatchet"
@@ -4684,7 +4848,7 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - ONE HAND AXE - MAGIC
@@ -4695,70 +4859,70 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 15
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType "Jade Hatchet"
 	Rarity = Magic
 	ItemLevel <= 20
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType "Boarding Axe"
 	Rarity = Magic
 	ItemLevel <= 24
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType Cleaver
 	Rarity = Magic
 	ItemLevel <= 32
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType "Broad Axe"
 	Rarity = Magic
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType "Arming Axe"
 	Rarity = Magic
 	ItemLevel <= 38
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType "Decorative Axe"
 	Rarity = Magic
 	ItemLevel <= 41
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType "Spectral Axe" "Etched Hatchet" "Jasper Axe" Tomahawk
 	Rarity = Magic
 	ItemLevel <= 50
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType "Wrist Chopper" "War Axe" "Chest Splitter"
 	Rarity = Magic
 	ItemLevel <= 60
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType "Ceremonial Axe" "Wraith Axe"
 	Rarity = Magic
 	ItemLevel <= 56
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	BaseType "Engraved Hatchet" "Karui Axe" "Siege Axe" "Reaver Axe" "Butcher Axe" "Vaal Hatchet" "Royal Axe" "Infernal Axe" "Runic Hatchet"
@@ -4766,7 +4930,7 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Axe - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - ONE HAND MACE - NORMAL
@@ -4777,70 +4941,70 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 4
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "Tribal Club"
 	Rarity = Normal
 	ItemLevel <= 9
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "Spiked Club"
 	Rarity = Normal
 	ItemLevel <= 14
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "Stone Hammer"
 	Rarity = Normal
 	ItemLevel <= 19
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "War Hammer"
 	Rarity = Normal
 	ItemLevel <= 23
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "Bladed Mace"
 	Rarity = Normal
 	ItemLevel <= 27
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "Ceremonial Mace" "Dream Mace"
 	Rarity = Normal
 	ItemLevel <= 33
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "Wyrm Mace" "Petrified Club" "Barbed Club"
 	Rarity = Normal
 	ItemLevel <= 40
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "Rock Breaker" "Battle Hammer"
 	Rarity = Normal
 	ItemLevel <= 46
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "Flanged Mace" "Ornate Mace" "Phantom Mace"
 	Rarity = Normal
 	ItemLevel <= 54
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	BaseType "Dragon Mace" "Ancestral Club" Tenderizer Gavel "Legion Hammer" Pernarch "Auric Mace" "Nightmare Mace" "Behemoth Mace"
@@ -4848,7 +5012,7 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - ONE HAND MACE - MAGIC
@@ -4859,70 +5023,70 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 9
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "Tribal Club"
 	Rarity = Magic
 	ItemLevel <= 14
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "Spiked Club"
 	Rarity = Magic
 	ItemLevel <= 23
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "Stone Hammer"
 	Rarity = Magic
 	ItemLevel <= 27
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "War Hammer"
 	Rarity = Magic
 	ItemLevel <= 31
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "Bladed Mace"
 	Rarity = Magic
 	ItemLevel <= 37
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "Ceremonial Mace" "Dream Mace"
 	Rarity = Magic
 	ItemLevel <= 40
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "Wyrm Mace" "Petrified Club" "Barbed Club"
 	Rarity = Magic
 	ItemLevel <= 49
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "Rock Breaker" "Battle Hammer"
 	Rarity = Magic
 	ItemLevel <= 59
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "Flanged Mace" "Ornate Mace" "Phantom Mace"
 	Rarity = Magic
 	ItemLevel <= 54
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	BaseType "Dragon Mace" "Ancestral Club" Tenderizer Gavel "Legion Hammer" Pernarch "Auric Mace" "Nightmare Mace" "Behemoth Mace"
@@ -4930,7 +5094,7 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Mace - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - ONE HAND SWORD - NORMAL
@@ -4941,63 +5105,63 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 4
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	BaseType "Copper Sword"
 	Rarity = Normal
 	ItemLevel <= 9
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	BaseType Sabre
 	Rarity = Normal
 	ItemLevel <= 14
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	BaseType "Broad Sword"
 	Rarity = Normal
 	ItemLevel <= 19
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	BaseType "War Sword"
 	Rarity = Normal
 	ItemLevel <= 23
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	BaseType "Ancient Sword" "Elegant Sword"
 	Rarity = Normal
 	ItemLevel <= 31
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	BaseType "Dusk Blade"
 	Rarity = Normal
 	ItemLevel <= 34
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	BaseType "Hook Sword" "Variscite Blade" Cutlass Baselard
 	Rarity = Normal
 	ItemLevel <= 43
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	BaseType "Battle Sword" "Elder Sword" "Graceful Sword" "Twilight Blade"
 	Rarity = Normal
 	ItemLevel <= 54
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	BaseType Grappler "Gemstone Sword" "Corsair Sword" Gladius "Legion Sword" "Vaal Blade" "Eternal Sword" "Midnight Blade" "Tiger Hook"
@@ -5005,7 +5169,7 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - ONE HAND SWORD - MAGIC
@@ -5016,56 +5180,56 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 9
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	BaseType "Copper Sword"
 	Rarity = Magic
 	ItemLevel <= 19
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	BaseType Sabre
 	Rarity = Magic
 	ItemLevel <= 23
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	BaseType "Broad Sword"
 	Rarity = Magic
 	ItemLevel <= 31
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	BaseType "War Sword" "Ancient Sword" "Elegant Sword"
 	Rarity = Magic
 	ItemLevel <= 40
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	BaseType "Dusk Blade"
 	Rarity = Magic
 	ItemLevel <= 52
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	BaseType "Hook Sword" "Variscite Blade" Cutlass Baselard
 	Rarity = Magic
 	ItemLevel <= 54
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	BaseType "Battle Sword" "Elder Sword" "Graceful Sword" "Twilight Blade"
 	Rarity = Magic
 	ItemLevel <= 59
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	BaseType Grappler "Gemstone Sword" "Corsair Sword" Gladius "Legion Sword" "Vaal Blade" "Eternal Sword" "Midnight Blade" "Tiger Hook"
@@ -5073,7 +5237,7 @@ Show  # Racing Filter - 1 Hand Weapons - One Hand Sword - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - SCEPTRE - NORMAL
@@ -5084,56 +5248,56 @@ Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 4
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	BaseType "Darkwood Sceptre"
 	Rarity = Normal
 	ItemLevel <= 9
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	BaseType "Bronze Sceptre"
 	Rarity = Normal
 	ItemLevel <= 14
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	BaseType "Quartz Sceptre" "Iron Sceptre" "Ochre Sceptre"
 	Rarity = Normal
 	ItemLevel <= 27
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	BaseType "Ritual Sceptre" "Shadow Sceptre" "Grinning Fetish"
 	Rarity = Normal
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	BaseType "Horned Sceptre" Sekhem
 	Rarity = Normal
 	ItemLevel <= 40
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	BaseType "Crystal Sceptre" "Lead Sceptre" "Blood Sceptre"
 	Rarity = Normal
 	ItemLevel <= 49
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	BaseType "Royal Sceptre"
 	Rarity = Normal
 	ItemLevel <= 52
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	BaseType "Abyssal Sceptre" "Stag Sceptre" "Karui Sceptre" "Tyrant's Sekhem" "Opal Sceptre" "Platinum Sceptre" "Vaal Sceptre" "Carnal Sceptre" "Void Sceptre" "Sambar Sceptre"
@@ -5141,7 +5305,7 @@ Show  # Racing Filter - 1 Hand Weapons - Sceptre - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - SCEPTRE - MAGIC
@@ -5152,56 +5316,56 @@ Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 9
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	BaseType "Darkwood Sceptre"
 	Rarity = Magic
 	ItemLevel <= 14
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	BaseType "Bronze Sceptre" "Quartz Sceptre"
 	Rarity = Magic
 	ItemLevel <= 23
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	BaseType "Iron Sceptre" "Ochre Sceptre"
 	Rarity = Magic
 	ItemLevel <= 37
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	BaseType "Ritual Sceptre" "Shadow Sceptre" "Grinning Fetish"
 	Rarity = Magic
 	ItemLevel <= 43
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	BaseType "Horned Sceptre" Sekhem
 	Rarity = Magic
 	ItemLevel <= 49
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	BaseType "Crystal Sceptre" "Lead Sceptre" "Blood Sceptre"
 	Rarity = Magic
 	ItemLevel <= 52
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	BaseType "Royal Sceptre"
 	Rarity = Magic
 	ItemLevel <= 57
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	BaseType "Abyssal Sceptre" "Stag Sceptre" "Karui Sceptre" "Tyrant's Sekhem" "Opal Sceptre" "Platinum Sceptre" "Vaal Sceptre" "Carnal Sceptre" "Void Sceptre" "Sambar Sceptre"
@@ -5209,7 +5373,7 @@ Show  # Racing Filter - 1 Hand Weapons - Sceptre - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - THRUSTING ONE HAND SWORD - NORMAL
@@ -5220,56 +5384,56 @@ Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disa
 	Rarity = Normal
 	ItemLevel <= 6
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disable
 	BaseType "Whalebone Rapier"
 	Rarity = Normal
 	ItemLevel <= 11
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disable
 	BaseType "Battered Foil"
 	Rarity = Normal
 	ItemLevel <= 16
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disable
 	BaseType "Basket Rapier"
 	Rarity = Normal
 	ItemLevel <= 21
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disable
 	BaseType "Jagged Foil"
 	Rarity = Normal
 	ItemLevel <= 25
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disable
 	BaseType "Antique Rapier" "Elegant Foil" "Thorn Rapier"
 	Rarity = Normal
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disable
 	BaseType Smallsword "Wyrmbone Rapier" "Burnished Foil" Estoc "Serrated Foil"
 	Rarity = Normal
 	ItemLevel <= 48
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disable
 	BaseType "Serrated Foil" "Primeval Rapier" "Fancy Foil" "Apex Rapier"
 	Rarity = Normal
 	ItemLevel <= 56
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disable
 	BaseType "Courtesan Sword" "Dragonbone Rapier" "Tempered Foil" Pecoraro "Spiraled Foil" "Vaal Rapier" "Jewelled Foil" "Harpy Rapier" "Dragoon Sword"
@@ -5277,7 +5441,7 @@ Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Normal |Disa
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 1 HAND - THRUSTING ONE HAND SWORD - MAGIC
@@ -5288,56 +5452,56 @@ Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disab
 	Rarity = Magic
 	ItemLevel <= 11
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disable
 	BaseType "Whalebone Rapier"
 	Rarity = Magic
 	ItemLevel <= 16
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disable
 	BaseType "Battered Foil"
 	Rarity = Magic
 	ItemLevel <= 21
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disable
 	BaseType "Basket Rapier"
 	Rarity = Magic
 	ItemLevel <= 33
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disable
 	BaseType "Jagged Foil"
 	Rarity = Magic
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disable
 	BaseType "Antique Rapier" "Elegant Foil" "Thorn Rapier"
 	Rarity = Magic
 	ItemLevel <= 42
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disable
 	BaseType Smallsword "Wyrmbone Rapier" "Burnished Foil" Estoc "Serrated Foil"
 	Rarity = Magic
 	ItemLevel <= 56
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disable
 	BaseType "Serrated Foil" "Primeval Rapier" "Fancy Foil" "Apex Rapier"
 	Rarity = Magic
 	ItemLevel <= 57
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disable
 	BaseType "Courtesan Sword" "Dragonbone Rapier" "Tempered Foil" Pecoraro "Spiraled Foil" "Vaal Rapier" "Jewelled Foil" "Harpy Rapier" "Dragoon Sword"
@@ -5345,7 +5509,7 @@ Show  # Racing Filter - 1 Hand Weapons - Thrusting One Hand Sword - Magic |Disab
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 2 HAND - STAFF - NORMAL
@@ -5356,77 +5520,77 @@ Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 8
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Primitive Staff"
 	Rarity = Normal
 	ItemLevel <= 12
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Long Staff"
 	Rarity = Normal
 	ItemLevel <= 17
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Iron Staff"
 	Rarity = Normal
 	ItemLevel <= 22
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Coiled Staff"
 	Rarity = Normal
 	ItemLevel <= 27
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Royal Staff"
 	Rarity = Normal
 	ItemLevel <= 32
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Vile Staff"
 	Rarity = Normal
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Crescent Staff" "Woodful Staff" Quarterstaff
 	Rarity = Normal
 	ItemLevel <= 44
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Military Staff"
 	Rarity = Normal
 	ItemLevel <= 48
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Serpentine Staff"
 	Rarity = Normal
 	ItemLevel <= 51
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Highborn Staff" "Foul Staff"
 	Rarity = Normal
 	ItemLevel <= 56
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	BaseType "Moon Staff" "Primordial Staff" Lathi "Ezomyte Staff" "Maelström Staff" "Imperial Staff" "Judgement Staff" "Eclipse Staff"
@@ -5434,7 +5598,7 @@ Show  # Racing Filter - 2 Hand Weapons - Staff - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 2 HAND - STAFF - MAGIC
@@ -5445,77 +5609,77 @@ Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 12
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Primitive Staff"
 	Rarity = Magic
 	ItemLevel <= 17
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Long Staff"
 	Rarity = Magic
 	ItemLevel <= 22
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Iron Staff"
 	Rarity = Magic
 	ItemLevel <= 32
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Coiled Staff"
 	Rarity = Magic
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Royal Staff"
 	Rarity = Magic
 	ItemLevel <= 40
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Vile Staff"
 	Rarity = Magic
 	ItemLevel <= 44
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Crescent Staff" "Woodful Staff" Quarterstaff
 	Rarity = Magic
 	ItemLevel <= 48
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Military Staff"
 	Rarity = Magic
 	ItemLevel <= 54
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Serpentine Staff"
 	Rarity = Magic
 	ItemLevel <= 56
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Highborn Staff" "Foul Staff"
 	Rarity = Magic
 	ItemLevel <= 56
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	BaseType "Moon Staff" "Primordial Staff" Lathi "Ezomyte Staff" "Maelström Staff" "Imperial Staff" "Judgement Staff" "Eclipse Staff"
@@ -5523,7 +5687,7 @@ Show  # Racing Filter - 2 Hand Weapons - Staff - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 2 HAND - TWO HAND AXE - NORMAL
@@ -5534,84 +5698,84 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 8
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType "Jade Chopper"
 	Rarity = Normal
 	ItemLevel <= 12
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType Woodsplitter
 	Rarity = Normal
 	ItemLevel <= 17
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType Poleaxe
 	Rarity = Normal
 	ItemLevel <= 22
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType "Double Axe"
 	Rarity = Normal
 	ItemLevel <= 27
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType "Gilded Axe"
 	Rarity = Normal
 	ItemLevel <= 32
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType "Shadow Axe"
 	Rarity = Normal
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType "Dagger Axe" "Jasper Chopper"
 	Rarity = Normal
 	ItemLevel <= 40
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType "Timber Axe"
 	Rarity = Normal
 	ItemLevel <= 44
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType "Headsman Axe"
 	Rarity = Normal
 	ItemLevel <= 48
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType Labrys "Noble Axe"
 	Rarity = Normal
 	ItemLevel <= 54
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType "Abyssal Axe"
 	Rarity = Normal
 	ItemLevel <= 57
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	BaseType "Karui Chopper" "Talon Axe" "Sundering Axe" "Ezomyte Axe" "Vaal Axe" "Despot Axe" "Void Axe" Fleshripper
@@ -5619,7 +5783,7 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 2 HAND - TWO HAND AXE - MAGIC
@@ -5630,77 +5794,77 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 12
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType "Jade Chopper"
 	Rarity = Magic
 	ItemLevel <= 17
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType Woodsplitter
 	Rarity = Magic
 	ItemLevel <= 22
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType Poleaxe
 	Rarity = Magic
 	ItemLevel <= 32
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType "Double Axe"
 	Rarity = Magic
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType "Gilded Axe"
 	Rarity = Magic
 	ItemLevel <= 40
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType "Shadow Axe"
 	Rarity = Magic
 	ItemLevel <= 44
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType "Dagger Axe" "Jasper Chopper" "Timber Axe"
 	Rarity = Magic
 	ItemLevel <= 48
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType "Headsman Axe"
 	Rarity = Magic
 	ItemLevel <= 54
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType Labrys "Noble Axe"
 	Rarity = Magic
 	ItemLevel <= 63
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType "Abyssal Axe"
 	Rarity = Magic
 	ItemLevel <= 57
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	BaseType "Karui Chopper" "Talon Axe" "Sundering Axe" "Ezomyte Axe" "Vaal Axe" "Despot Axe" "Void Axe" Fleshripper
@@ -5708,7 +5872,7 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Axe - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 2 HAND - TWO HAND MACE - NORMAL
@@ -5719,84 +5883,84 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 7
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType "Tribal Maul"
 	Rarity = Normal
 	ItemLevel <= 11
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType Mallet
 	Rarity = Normal
 	ItemLevel <= 16
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType Sledgehammer
 	Rarity = Normal
 	ItemLevel <= 21
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType "Jagged Maul"
 	Rarity = Normal
 	ItemLevel <= 26
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType "Brass Maul"
 	Rarity = Normal
 	ItemLevel <= 31
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType "Fright Maul"
 	Rarity = Normal
 	ItemLevel <= 33
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType "Morning Star"
 	Rarity = Normal
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType "Totemic Maul" "Great Mallet"
 	Rarity = Normal
 	ItemLevel <= 43
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType Steelhead
 	Rarity = Normal
 	ItemLevel <= 47
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType "Spiny Maul"
 	Rarity = Normal
 	ItemLevel <= 50
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType "Plated Maul" "Dread Maul"
 	Rarity = Normal
 	ItemLevel <= 55
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	BaseType "Solar Maul" "Karui Maul" "Colossus Mallet" Piledriver Meatgrinder "Imperial Maul" "Terror Maul" "Coronal Maul"
@@ -5804,7 +5968,7 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 2 HAND - TWO HAND MACE - MAGIC
@@ -5815,77 +5979,77 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 11
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType "Tribal Maul"
 	Rarity = Magic
 	ItemLevel <= 16
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType Mallet
 	Rarity = Magic
 	ItemLevel <= 21
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType Sledgehammer
 	Rarity = Magic
 	ItemLevel <= 26
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType "Jagged Maul"
 	Rarity = Magic
 	ItemLevel <= 33
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType "Brass Maul"
 	Rarity = Magic
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType "Fright Maul"
 	Rarity = Magic
 	ItemLevel <= 43
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType "Morning Star" "Totemic Maul" "Great Mallet"
 	Rarity = Magic
 	ItemLevel <= 47
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType Steelhead
 	Rarity = Magic
 	ItemLevel <= 53
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType "Spiny Maul"
 	Rarity = Magic
 	ItemLevel <= 56
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType "Plated Maul" "Dread Maul"
 	Rarity = Magic
 	ItemLevel <= 55
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	BaseType "Solar Maul" "Karui Maul" "Colossus Mallet" Piledriver Meatgrinder "Imperial Maul" "Terror Maul" "Coronal Maul"
@@ -5893,7 +6057,7 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Mace - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 2 HAND - TWO HAND SWORD - NORMAL
@@ -5904,84 +6068,84 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 7
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType Longsword
 	Rarity = Normal
 	ItemLevel <= 11
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Bastard Sword"
 	Rarity = Normal
 	ItemLevel <= 16
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Two-Handed Sword"
 	Rarity = Normal
 	ItemLevel <= 21
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Etched Greatsword"
 	Rarity = Normal
 	ItemLevel <= 26
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Ornate Sword"
 	Rarity = Normal
 	ItemLevel <= 31
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Spectral Sword"
 	Rarity = Normal
 	ItemLevel <= 34
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Curved Blade" "Butcher Sword" "Footman Sword"
 	Rarity = Normal
 	ItemLevel <= 44
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Highland Blade"
 	Rarity = Normal
 	ItemLevel <= 47
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Engraved Greatsword"
 	Rarity = Normal
 	ItemLevel <= 50
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Tiger Sword"
 	Rarity = Normal
 	ItemLevel <= 53
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Wraith Sword"
 	Rarity = Normal
 	ItemLevel <= 55
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	BaseType "Lithe Blade" "Headman's Sword" "Reaver Sword" "Ezomyte Blade" "Vaal Greatsword" "Lion Sword" "Infernal Sword" "Exquisite Blade"
@@ -5989,7 +6153,7 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - 2 HAND - TWO HAND SWORD - MAGIC
@@ -6000,77 +6164,77 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 11
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType Longsword "Bastard Sword"
 	Rarity = Magic
 	ItemLevel <= 21
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Two-Handed Sword"
 	Rarity = Magic
 	ItemLevel <= 26
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Etched Greatsword"
 	Rarity = Magic
 	ItemLevel <= 34
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Ornate Sword"
 	Rarity = Magic
 	ItemLevel <= 39
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Spectral Sword"
 	Rarity = Magic
 	ItemLevel <= 43
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Curved Blade" "Butcher Sword" "Footman Sword"
 	Rarity = Magic
 	ItemLevel <= 50
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Highland Blade"
 	Rarity = Magic
 	ItemLevel <= 53
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Engraved Greatsword"
 	Rarity = Magic
 	ItemLevel <= 55
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Tiger Sword"
 	Rarity = Magic
 	ItemLevel <= 60
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Wraith Sword"
 	Rarity = Magic
 	ItemLevel <= 55
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	BaseType "Lithe Blade" "Headman's Sword" "Reaver Sword" "Ezomyte Blade" "Vaal Greatsword" "Lion Sword" "Infernal Sword" "Exquisite Blade"
@@ -6078,7 +6242,7 @@ Show  # Racing Filter - 2 Hand Weapons - Two Hand Sword - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - BOW - NORMAL
@@ -6089,77 +6253,77 @@ Show  # Racing Filter - Bow - Normal |Disable
 	Rarity = Normal
 	ItemLevel <= 4
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Short Bow"
 	Rarity = Normal
 	ItemLevel <= 8
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Long Bow"
 	Rarity = Normal
 	ItemLevel <= 13
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Composite Bow"
 	Rarity = Normal
 	ItemLevel <= 17
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Recurve Bow"
 	Rarity = Normal
 	ItemLevel <= 22
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Bone Bow"
 	Rarity = Normal
 	ItemLevel <= 27
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Royal Bow"
 	Rarity = Normal
 	ItemLevel <= 31
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Death Bow" "Grove Bow" "Reflex Bow"
 	Rarity = Normal
 	ItemLevel <= 37
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Decurve Bow" "Compound Bow" "Sniper Bow" "Ivory Bow"
 	Rarity = Normal
 	ItemLevel <= 49
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Highborn Bow"
 	Rarity = Normal
 	ItemLevel <= 52
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Decimation Bow" "Thicket Bow" "Steelwood Bow"
 	Rarity = Normal
 	ItemLevel <= 57
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Normal |Disable
 	BaseType "Citadel Bow" "Ranger Bow" "Assassin Bow" "Spine Bow" "Imperial Bow" "Harbinger Bow" "Maraketh Bow"
@@ -6167,7 +6331,7 @@ Show  # Racing Filter - Bow - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - BOW - MAGIC
@@ -6178,77 +6342,77 @@ Show  # Racing Filter - Bow - Magic |Disable
 	Rarity = Magic
 	ItemLevel <= 13
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Short Bow"
 	Rarity = Magic
 	ItemLevel <= 17
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Long Bow"
 	Rarity = Magic
 	ItemLevel <= 22
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Composite Bow"
 	Rarity = Magic
 	ItemLevel <= 27
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Recurve Bow"
 	Rarity = Magic
 	ItemLevel <= 31
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Bone Bow"
 	Rarity = Magic
 	ItemLevel <= 35
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Royal Bow"
 	Rarity = Magic
 	ItemLevel <= 43
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Death Bow" "Grove Bow" "Reflex Bow"
 	Rarity = Magic
 	ItemLevel <= 49
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Decurve Bow" "Compound Bow" "Sniper Bow" "Ivory Bow"
 	Rarity = Magic
 	ItemLevel <= 57
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Highborn Bow"
 	Rarity = Magic
 	ItemLevel <= 61
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Decimation Bow" "Thicket Bow" "Steelwood Bow"
 	Rarity = Magic
 	ItemLevel <= 63
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Bow - Magic |Disable
 	BaseType "Citadel Bow" "Ranger Bow" "Assassin Bow" "Spine Bow" "Imperial Bow" "Harbinger Bow" "Maraketh Bow"
@@ -6256,7 +6420,7 @@ Show  # Racing Filter - Bow - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - QUIVER
@@ -6266,7 +6430,7 @@ Show  # Racing Filter - Quivers - Any (ItemLevel <= 21) |Disable
 	Class Quiver
 	ItemLevel <= 21
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Good bases - Two-Point Arrow Quiver - Normal |Disable
 	BaseType "Two-Point Arrow Quiver"
@@ -6274,7 +6438,7 @@ Show  # Racing Filter - Quivers - Good bases - Two-Point Arrow Quiver - Normal |
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Good bases - Fire Arrow Quiver - Normal |Disable
 	BaseType "Fire Arrow Quiver"
@@ -6282,7 +6446,7 @@ Show  # Racing Filter - Quivers - Good bases - Fire Arrow Quiver - Normal |Disab
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Good bases - Broadhead Arrow Quiver - Normal |Disable
 	BaseType "Broadhead Arrow Quiver"
@@ -6290,7 +6454,7 @@ Show  # Racing Filter - Quivers - Good bases - Broadhead Arrow Quiver - Normal |
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Good bases - Spike-Point Arrow Quiver - Normal |Disable
 	BaseType "Spike-Point Arrow Quiver"
@@ -6298,7 +6462,7 @@ Show  # Racing Filter - Quivers - Good bases - Spike-Point Arrow Quiver - Normal
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Good bases - Two-Point Arrow Quiver - Magic |Disable
 	BaseType "Two-Point Arrow Quiver"
@@ -6306,7 +6470,7 @@ Show  # Racing Filter - Quivers - Good bases - Two-Point Arrow Quiver - Magic |D
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Good bases - Fire Arrow Quiver - Magic |Disable
 	BaseType "Fire Arrow Quiver"
@@ -6314,7 +6478,7 @@ Show  # Racing Filter - Quivers - Good bases - Fire Arrow Quiver - Magic |Disabl
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Good bases - Broadhead Arrow Quiver - Magic |Disable
 	BaseType "Broadhead Arrow Quiver"
@@ -6322,7 +6486,7 @@ Show  # Racing Filter - Quivers - Good bases - Broadhead Arrow Quiver - Magic |D
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Good bases - Spike-Point Arrow Quiver - Magic |Disable
 	BaseType "Spike-Point Arrow Quiver"
@@ -6330,7 +6494,7 @@ Show  # Racing Filter - Quivers - Good bases - Spike-Point Arrow Quiver - Magic 
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Any quiver - Normal |Disable
 	Class Quiver
@@ -6338,7 +6502,7 @@ Show  # Racing Filter - Quivers - Any quiver - Normal |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 140 # Lesser items
+	SetBackgroundColor 0 0 0 140 # Racing items
 
 Show  # Racing Filter - Quivers - Any quiver - Magic |Disable
 	Class Quiver
@@ -6346,21 +6510,47 @@ Show  # Racing Filter - Quivers - Any quiver - Magic |Disable
 	ItemLevel <= 63 
 # //$ <= $Racing_items_max_level
 	SetFontSize 45
+	SetBackgroundColor 0 0 0 140 # Racing items
+
+#-------------------------------------------------------------------------------#
+# Section:  #   RACING - ANY MAGIC ITEM FOR LEVELING
+#-------------------------------------------------------------------------------#
+
+Show  # Racing Filter - @Magic Items for vendoring - Width = 1 |Disable
+	Width = 1
+	Rarity = Magic
+	ItemLevel <= 15 
+# //$ <= $Items_for_vendoring
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show  # Racing Filter - @Magic Items for vendoring - Height = 2 |Disable
+	Height = 2
+	Rarity = Magic
+	ItemLevel <= 15 
+# //$ <= $Items_for_vendoring
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+Show  # Racing Filter - @Magic Items for vendoring - Any |Disable
+	Rarity = Magic
+	ItemLevel <= 15 
+# //$ <= $Items_for_vendoring
+	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   EXTRAS
 #-------------------------------------------------------------------------------#
 
-# Hideout Doodads & Microtransactions
 Show  # ~Misc - Extras - Hideout Doodads & Microtransactions |Disable
 	Class "Hideout Doodads" Microtransactions
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 280 # A - Tier 1
 
-# Recipe item (Hyrri's bite recipe) can be turned on - recipe items or manually.
+# Recipe item (Hyrri's bite recipe).
 #Disabled Block Start
 #Show  # ~Misc - Recipe items - Normal Sharktooth Arrow Quiver (Hyrri's bite recipe) |Disable
 #	BaseType "Sharktooth Arrow Quiver"
@@ -6368,31 +6558,24 @@ Show  # ~Misc - Extras - Hideout Doodads & Microtransactions |Disable
 #	SetFontSize 33
 #Disabled Block End
 
-# Recipe item (The Goddess Scorned) can be turned on - recipe items or manually.
+# Recipe item (The Goddess Scorned).
 Hide  # ~Misc - Recipe items - Normal Elegant Sword (The Goddess Scorned)
 	BaseType "Elegant Sword"
 	Rarity = Normal
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 
 # Any crude bow. Essence crafting for summoners.
 Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Crude bow (Essence crafting, ItemLevel >= 50)
 	BaseType "Crude Bow"
 	ItemLevel >= 50
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#   PlayAlertSound 7 220 # A - Tier 2
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#   PlayAlertSound 7 200 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
 # Section:  #   HIDDEN ITEMS
 #-------------------------------------------------------------------------------#
-
-# Identify RGB items when "Alt" key is pressed. Present in the Leveling Filter.
-Hide
-	SocketGroup RGB
-	SetFontSize 33
-	SetBackgroundColor 75 75 75 # Chromatic background
-	SetBorderColor 255 45 175 # T2 drops color
 
 # Present in the Leveling Filter. Blacksmith's Whetstone recipe.
 Show  # Leveling Filter (Enable for leveling and races) - 20% quality weapons |Disable
@@ -6400,6 +6583,46 @@ Show  # Leveling Filter (Enable for leveling and races) - 20% quality weapons |D
 	Class Bow Claw Dagger "One Hand" Sceptre Staves "Two Hand" Wand
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
+
+# Present in the Leveling Filter. Blacksmith's Whetstone recipe.
+Show  # Leveling Filter (Enable for leveling and races) - 10% or higher quality weapons |Disable
+	Quality >= 10
+	Class Claw Dagger "Thrusting One Hand Sword" Wand
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+Hide
+	Corrupted True
+	SetFontSize 23
+	SetTextColor 215 25 0 255 # Corrupted items text
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+Hide
+	Class Belt
+	Rarity = Rare
+	SetFontSize 33
+	SetTextColor 255 255 119
+
+Hide
+	Class Shield
+	Rarity = Rare
+	SetFontSize 33
+	SetTextColor 255 255 119
+	SetBackgroundColor 0 0 0 140 # Lesser items
+
+Hide
+	Quality >= 1
+	Class Gem
+	SetFontSize 33
+	SetTextColor 27 162 155 # Gems color
+	SetBorderColor 255 45 175 # T2 drops color
+
+# Identify RGB items when "Alt" key is pressed. Present in the Leveling Filter.
+Hide
+	SocketGroup RGB
+	SetFontSize 33
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 255 45 175 # T2 drops color
 
 # Filtering starts at level 1. Normal items that are not Caught get filtered.
 Hide
@@ -6436,13 +6659,6 @@ Hide
 	SetFontSize 18
 	SetTextColor 255 255 119 185
 	SetBackgroundColor 0 0 0 55 # Uber trash
-
-# Filtering starts at level 1. Flasks that are not Caught get filtered.
-Hide
-	Class Flask
-	Rarity <= Magic
-	SetFontSize 33
-	SetBackgroundColor 0 0 0 140 # Lesser items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   ANYTHING ELSE

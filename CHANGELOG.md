@@ -4,9 +4,23 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.0.2c
+
+- Complete revamp of the corrupted items section and better visibility for hidden corrupted items.
+- Added ability to change the background color for racing weapons in the color theme tab.
+- Added filters for rare elemental thrusting swords and wands in the Endgame Filter.
+- Added 10% or higher quality weapon switch in the Leveling Filter.
+- Hidden superior gems are now highlighted.
+- Added ability to display magic items with specific sizes till a level that is adjustable.
+- Added a link to The Pantheon wiki page in the notes tab.
+- FilterBlast now supports multiple values for SocketGroups. Applicable in the racing tab, example: RGB RGGB RRG.
+- The Leveling filter now also shows big RGB items in maps. Added 2 new switches to enable showing large RGB items in maps.
+- When Non top rare belts are disabled, they will still show normally when pressing alt.
+- Added border around leveling rare boots.
+
 ## 3.0.1e
 
-- Separated all map sounds and added a special sound set for rotations. This set is just like the default one, except that map sounds don't use any long effects.
+- Separated all map sounds and added a special sound set for rotations. This set is just like the default one, except that map sounds don't use any long sound effects.
 - Changed and adjusted some sounds. Reverted all new sounds for Ex and Mirror to the old T1 sound. Oriath sound set, changed T2 sound.
 - Added a "no no" exclusion list, for any rare item you do not want to see (ever). At least 1 item needs to listed here ("Splintered Tower Shield" is listed by default). The list starts to take effect from item level 15.
 - Moved "Exalted Shard" to T1, "Harbinger's Shard" to T3 and "Horizon Shard" to T4 shards.

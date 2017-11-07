@@ -3,7 +3,7 @@
 Show
     PlayAlertSound 8            280 # A - Tier 1
 Show
-    PlayAlertSound 7            220 # A - Tier 2
+    PlayAlertSound 7            200 # A - Tier 2
 Show
     PlayAlertSound 1            100 # A - Tier 3
 Show
@@ -13,7 +13,7 @@ Show
 Show
 	PlayAlertSound 8            280 # B - Tier 1 map
 Show
-	PlayAlertSound 7            220 # B - Tier 2 map
+	PlayAlertSound 7            200 # B - Tier 2 map
 Show
 	PlayAlertSound 1            100 # B - Tier 3 map
 Show
