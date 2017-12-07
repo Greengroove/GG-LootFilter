@@ -6,6 +6,8 @@
 |
 [Youtube](https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x)
 |
+[Twitch](https://www.twitch.tv/greengroovepoe)
+|
 [Facebook](https://www.facebook.com/GreengroovePOE/)
 |
 [Twitter](https://twitter.com/GreengroovePOE)

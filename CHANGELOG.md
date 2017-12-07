@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.1.0
+
+- **Added support for Abyss challenge league and changes in 3.1.0, according to the official information.**
+- Any Shaper and Elder items will be shown big, with green border, gray background and special sound, that is currently associated with racing drops. Subject to change in a future filter version. If these are disabled other regular filters will still apply.
+- The "Custom maps" list now contains all maps up to T10. This list will be shortened at a later time when we know all the new and modified layouts.
+- Removed "Leather Belt" from the chancing bases list.
+- Added ability to hide Cartographer's Chisels (Hidden by default in the MF preset).
+- Added ability to hide Breach splinters and rings.
+- New branch in the Misc section for Challenge leagues.
+- Normal and Magic endgame RGB items are now separated.
+- Slightly lowered the T2 drop sound level.
+
 ## 3.0.2c
 
 - Complete revamp of the corrupted items section and better visibility for hidden corrupted items.
