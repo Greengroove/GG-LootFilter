@@ -462,7 +462,6 @@ Show  # ~Misc - Challenge leagues - Abyss items - Belt - Magic |Disable
 	BaseType "Stygian Vise"
 	Rarity = Magic
 	SetFontSize 45
-	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 1 100 # A - Tier 3
 
@@ -471,7 +470,6 @@ Show  # ~Misc - Challenge leagues - Abyss items - Belt - Normal |Disable
 	BaseType "Stygian Vise"
 	Rarity = Normal
 	SetFontSize 45
-	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 1 100 # A - Tier 3
 
@@ -516,7 +514,6 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels - Magic - Murderous Eye
 	BaseType "Murderous Eye"
 	Rarity = Magic
 	SetFontSize 45
-	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 
@@ -525,7 +522,6 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels - Magic - Searching Eye
 	BaseType "Searching Eye"
 	Rarity = Magic
 	SetFontSize 45
-	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 
@@ -534,7 +530,6 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels - Magic - Hypnotic Eye 
 	BaseType "Hypnotic Eye"
 	Rarity = Magic
 	SetFontSize 45
-	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 
@@ -543,7 +538,6 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels - Magic - Ghastly Eye |
 	BaseType "Ghastly Eye"
 	Rarity = Magic
 	SetFontSize 45
-	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 
