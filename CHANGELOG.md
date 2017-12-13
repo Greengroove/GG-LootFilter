@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.1.0d
+
+- Temporarely reverted "ShapedMap True" to the old system. It is unknown if this is temporary or permanent.
+- Adjusted the minimum drop level of some items introduced in 2.4 to 70. This was causing the intended blocks to not work and could end up hiding these items in a very strict filter. The change was not documented in the patch notes.
+- Removed some redundant entries and updated a few blocks for Abyss challenge league items.
+- Adjusted scale for minimum rare shield drop level to 3.
+- Moved "Useful and drop only gems", Vaal gems and gems with no quality to the Leveling Filter. These items can now be bought from NPCs, but the list can be useful for racing.
+- Added ability to hide rare "Rustic Sash" and "Leather Belt".
+- Added ability to hide "Divine Vessel". These will be hidden in the MF version by default.
+
 ## 3.1.0
 
 - **Added support for Abyss challenge league and changes in 3.1.0, according to the official information.**
