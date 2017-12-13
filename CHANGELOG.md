@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.1.0e
+
+- GGG has fixed the "ShapedMap True" argument, but now there's new problems. Shaped maps don't get filtered by "DropLevel". For this reason I have inserted a general filter that will show all maps untill these problems are fixed for good. The custom maps list should also be fine to use.
+- Reworked the "ALL 2.4 AND HIGHER BASES" block, to fix a minor problem, that caused two unwanted items to be highlighted in 3.1.0d.
+- Improved highlighting for Steel and Opal rings.
+
 ## 3.1.0d
 
 - Temporarely reverted "ShapedMap True" to the old system. It is unknown if this is temporary or permanent.

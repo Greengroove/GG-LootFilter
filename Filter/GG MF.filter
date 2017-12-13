@@ -262,7 +262,7 @@
 # //! SetOption $Crafting_weapons_level slider [84] [73] [84] # Set the minimum item level for crafting items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
-# //! SetOption $Armour_crafting_bases textarea ["Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Ezomyte Tower Shield" "Titanium Spirit Shield" "Archon Kite Shield" "Crusader Buckler" "Lacquered Buckler"] # Applies to all crafting armour. If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
+# //! SetOption $Armour_crafting_bases textarea ["Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Ezomyte Tower Shield" "Titanium Spirit Shield" "Archon Kite Shield" "Crusader Buckler" "Lacquered Buckler"] # Applies to all crafting armour. If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Crafting_armour_level slider [84] [72] [84] # Set the minimum item level for crafting items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
@@ -1094,6 +1094,11 @@ Show
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 
+Show # ~Temporary fix for maps (DO NOT DISABLE UNLESS U KNOW IT'S SAFE) |Disable
+    Class "Maps"
+    SetFontSize 45
+    SetBackgroundColor 44 44 44 # Map Background Color
+
 # Low level maps in high level maps.
 Hide  # Endgame Filter (Disable for MF) - Maps - Low level maps in high level maps (Any map)
 	Class Maps
@@ -1509,115 +1514,98 @@ Show  # ~Misc - @Chance bases |Disable
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 2 90 # A - Tier 4
 
+# Item filter downloaded at FilterBLAST - for updates visit:
+# http://filterblast.oversoul.xyz/advanced/Template/8c057u
+
 #-------------------------------------------------------------------------------#
 # Section:  #   ALL 2.4 AND HIGHER BASES
 #-------------------------------------------------------------------------------#
 
 Show
 	DropLevel >= 46
-	Class Amulet Belt Ring
+	Class Ring
+	BaseType "Steel Ring" "Opal Ring"
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 7 180 # A - Tier 2
 
-#Show # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) (Currently unnused base types) |Disable
-#    DropLevel >= 73
-#    Class "Body Armour" "Shield" "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
-#    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-#    SetFontSize 45
-#    PlayAlertSound 7 180 # A - Tier 2
+Show
+	DropLevel >= 46
+	Class Amulet Belt Ring
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 180 # A - Tier 2
 
 Show
-	DropLevel >= 70
 	Class Boots Gloves Helmet
+	BaseType "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet"
 	Rarity = Normal
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 7 180 # A - Tier 2
 
-#Disabled Block Start
-#Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Boots (Magic, ItemLevel <= 83) |Disable
-#	DropLevel >= 70
-#	Class Boots
-#	Rarity = Magic
-#	ItemLevel <= 83
-#	SetFontSize 45
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 7 180 # A - Tier 2
-#Disabled Block End
-
-#Disabled Block Start
-#Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Helmet (Magic, ItemLevel <= 83) |Disable
-#	DropLevel >= 70
-#	Class Helmet
-#	Rarity = Magic
-#	ItemLevel <= 83
-#	SetFontSize 45
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 7 180 # A - Tier 2
-#Disabled Block End
-
-#Disabled Block Start
-#Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Fingerless Silk Gloves |Disable
-#	DropLevel >= 70
-#	Class Gloves
-#	BaseType "Fingerless Silk Gloves"
-#	Rarity = Magic
-#	ItemLevel <= 83
-#	SetFontSize 45
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 7 180 # A - Tier 2
-#Disabled Block End
-
-#Disabled Block Start
-#Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Gripped Gloves |Disable
-#	DropLevel >= 70
-#	Class Gloves
-#	BaseType "Gripped Gloves"
-#	Rarity = Magic
-#	ItemLevel <= 83
-#	SetFontSize 45
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 7 180 # A - Tier 2
-#Disabled Block End
-
-#Disabled Block Start
-#Show  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Spiked Gloves |Disable
-#	DropLevel >= 70
-#	Class Gloves
-#	BaseType "Spiked Gloves"
-#	Rarity = Magic
-#	ItemLevel <= 83
-#	SetFontSize 45
-#	SetBorderColor 74 230 58 # T1 drops color / Quest items
-#	PlayAlertSound 7 180 # A - Tier 2
-#Disabled Block End
-
-# This entry will catch any specified class in case they get commented, to retain original style.
-Hide
-	DropLevel >= 70
-	Class Boots Gloves Helmet
+Hide  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Two-Toned Boots (Magic, ItemLevel <= 83)
+	Class Boots
+	BaseType "Two-Toned Boots"
 	Rarity = Magic
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 0 # A - Tier 2
+
+Hide  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Bone Helmet (Magic, ItemLevel <= 83)
+	Class Helmet
+	BaseType "Bone Helmet"
+	Rarity = Magic
+	ItemLevel <= 83
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 0 # A - Tier 2
+
+Hide  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Fingerless Silk Gloves
+	Class Gloves
+	BaseType "Fingerless Silk Gloves"
+	Rarity = Magic
+	ItemLevel <= 83
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 0 # A - Tier 2
+
+Hide  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Gripped Gloves
+	Class Gloves
+	BaseType "Gripped Gloves"
+	Rarity = Magic
+	ItemLevel <= 83
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 0 # A - Tier 2
+
+Hide  # Endgame Filter (Disable for MF) - 2.4 AND HIGHER BASES (Magic) - Gloves (Magic, ItemLevel <= 83) - Spiked Gloves
+	Class Gloves
+	BaseType "Spiked Gloves"
+	Rarity = Magic
+	ItemLevel <= 83
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 0 # A - Tier 2
 
 Show
-	DropLevel >= 70
 	Class Boots Gloves Helmet
+	BaseType "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet"
 	Rarity = Rare
 	ItemLevel <= 83
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 7 180 # A - Tier 2
 
 Show
-	DropLevel >= 70
 	Class Boots Gloves Helmet
+	BaseType "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet"
 	ItemLevel >= 84
 	SetFontSize 45
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 7 180 # A - Tier 2
 
 #-------------------------------------------------------------------------------#
@@ -3844,7 +3832,7 @@ Hide  # Crafting Filter - Magic items - @Weapon crafting bases
 
 Hide  # Crafting Filter - Normal items - @Armour crafting bases
 	Class "Body Armour" Boots Gloves Helmet Shield Amulet Belt Ring Quiver
-	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Ezomyte Tower Shield" "Titanium Spirit Shield" "Archon Kite Shield" "Crusader Buckler" "Lacquered Buckler" 
+	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Ezomyte Tower Shield" "Titanium Spirit Shield" "Archon Kite Shield" "Crusader Buckler" "Lacquered Buckler"
 # //$ $Armour_crafting_bases
 	Rarity = Normal
 	ItemLevel >= 84 
@@ -3855,7 +3843,7 @@ Hide  # Crafting Filter - Normal items - @Armour crafting bases
 
 Hide  # Crafting Filter - Magic items - @Armour crafting bases
 	Class "Body Armour" Boots Gloves Helmet Shield Amulet Belt Ring Quiver
-	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Ezomyte Tower Shield" "Titanium Spirit Shield" "Archon Kite Shield" "Crusader Buckler" "Lacquered Buckler" 
+	BaseType "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Ezomyte Tower Shield" "Titanium Spirit Shield" "Archon Kite Shield" "Crusader Buckler" "Lacquered Buckler"
 # //$ $Armour_crafting_bases
 	Rarity = Magic
 	ItemLevel >= 84 
