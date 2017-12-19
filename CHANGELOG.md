@@ -6,13 +6,13 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 3.1.0e
 
-- GGG has fixed the "ShapedMap True" argument, but now there's new problems. Shaped maps don't get filtered by "DropLevel". For this reason I have inserted a general filter that will show all maps untill these problems are fixed for good. The custom maps list should also be fine to use.
+- GGG has fixed the "ShapedMap True" argument, but now there's new problems. Shaped maps don't get filtered by "DropLevel". For this reason I have inserted a general filter that will show all maps until these problems are fixed for good. The custom maps list should also be fine to use.
 - Reworked the "ALL 2.4 AND HIGHER BASES" block, to fix a minor problem, that caused two unwanted items to be highlighted in 3.1.0d.
 - Improved highlighting for Steel and Opal rings.
 
 ## 3.1.0d
 
-- Temporarely reverted "ShapedMap True" to the old system. It is unknown if this is temporary or permanent.
+- Temporarily reverted "ShapedMap True" to the old system. It is unknown if this is temporary or permanent.
 - Adjusted the minimum drop level of some items introduced in 2.4 to 70. This was causing the intended blocks to not work and could end up hiding these items in a very strict filter. The change was not documented in the patch notes.
 - Removed some redundant entries and updated a few blocks for Abyss challenge league items.
 - Adjusted scale for minimum rare shield drop level to 3.
