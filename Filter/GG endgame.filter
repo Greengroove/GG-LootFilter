@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.1.0d
+#               Greengroove's Endgame Loot Filter Script v 3.1.1d
 #
 #-------------------------------------------------------------------------------#
 #
@@ -238,7 +238,7 @@
 
 # //! SetOption $Custom_maps textarea ["Lookout" "Beach" "Graveyard" "Dungeon" "Alleyways" "Pen" "Desert" "Arid Lake" "Flooded Mine" "Marshes" "Iceberg" "Cage" "Springs" "Excavation" "Leyline" "Peninsula" "Port" "Burial Chambers" "Cells" "Arcade" "City Square" "Relic Chambers" "Courthouse" "Strand" "Chateau" "Grotto" "Gorge" "Volcano" "Lighthouse" "Canyon" "Conservatory" "Sulphur Vents" "Haunted Mansion" "Maze" "Channel" "Toxic Sewer" "Ancient City" "Ivory Temple" "Spider Lair" "Barrows" "Mausoleum" "Fields" "Jungle Valley" "Phantasmagoria" "Academy" "Thicket" "Wharf" "Ashen Wood" "Atoll" "Cemetery" "Underground Sea" "Tribunal" "Coral Ruins" "Lava Chamber" "Residence" "Ramparts" "Dunes" "Bone Crypt" "Underground River" "Gardens" "Arachnid Nest" "Bazaar" "Laboratory" "Infested Valley" "Overgrown Ruin" "Vaal Pyramid" "Geode" "Armoury" "Courtyard" "Mud Geyser" "Shore" "Tropical Island" "Mineral Pools" "Moon Temple" "Sepulchre" "Tower" "Waste Pool" "Plateau" "Estuary" "Vault" "Temple" "Arena" "Museum" "Scriptorium" "Siege" "Shipyard" "Belfry" "Arachnid Tomb" "Wasteland" "Precinct" "Bog" "Pier" "Cursed Crypt" "Orchard"] # You can hide higher level maps, but still show some lower maps with nice layout or of other intrest. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $EmptyLine
-# //! SetOption $Shaped_maps switch [73] [74] [75] [76] [77] [78] # Set the minimum tier of shaped map you want to have highlights (Default 73 = Tier 6).
+# //! SetOption $Shaped_maps switch [58] [69] [70] [71] [72] [73] # Set the minimum tier of shaped map you want to have highlights (Default 58 = Shaped tier 1).
 
 # //! SetTab [Rare bases]
 
@@ -259,15 +259,15 @@
 # //! SetTab [Crafting filter]
 
 # //! SetOption $Weapon_crafting_bases textarea ["Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Prophecy Wand" "Imbued Wand" "Profane Wand"] # Applies to all crafting weapons. If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
-# //! SetOption $Crafting_weapons_level slider [84] [73] [84] # Set the minimum item level for crafting items.
+# //! SetOption $Crafting_weapons_level slider [83] [73] [86] # Set the minimum item level for crafting items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
 # //! SetOption $Armour_crafting_bases textarea ["Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt" "Vaal Regalia" "Hubris Circlet" "Sorcerer Gloves" "Sorcerer Boots" "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Ezomyte Tower Shield" "Titanium Spirit Shield" "Archon Kite Shield" "Crusader Buckler" "Lacquered Buckler"] # Applies to all crafting armour. If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
-# //! SetOption $Crafting_armour_level slider [84] [72] [84] # Set the minimum item level for crafting items.
+# //! SetOption $Crafting_armour_level slider [84] [72] [86] # Set the minimum item level for crafting items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
 # //! SetOption $Jewelry_crafting_bases textarea ["Paua Amulet" "Lapis Amulet" "Jade Amulet" "Amber Amulet" "Gold Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Gold Ring" "Two-Stone Ring" "Diamond Ring" "Amethyst Ring" "Unset Ring"] # Applies to all crafting jewellry, including jewelry for races. If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
-# //! SetOption $Crafting_jewelry_level slider [84] [60] [84] # Set the minimum item level for crafting items.
+# //! SetOption $Crafting_jewelry_level slider [84] [60] [86] # Set the minimum item level for crafting items.
 # //! SetOption $Separator
 # //! SetOption $Crafting_items_font_size slider [33] [33] [45] # (Default 33).
 
@@ -316,7 +316,7 @@
 # //! SetTab [Notes]
 
 # //! SetOption $Notes textarea [] # Name your preset, or add your notes here:
-# //! SetOption $PoE_links link [Uniques] [https://pathofexile.gamepedia.com/Unique_item] [Weapons] [http://pathofexile.gamepedia.com/Weapon] [Armour] [http://pathofexile.gamepedia.com/Armour_(equipment)] [Flasks] [http://pathofexile.gamepedia.com/Flask] [Active skills] [http://pathofexile.gamepedia.com/Active_skill_gem] [Support Skills] [http://pathofexile.gamepedia.com/Support_Skill_Gems] [Maps] [http://pathofexile.gamepedia.com/Map] [Divination cards] [http://pathofexile.gamepedia.com/Divination_card] [Vendor recipes] [https://pathofexile.gamepedia.com/Vendor_recipe_system] [Quest rewards] [http://pathofexile.gamepedia.com/Quest_Rewards] [Pantheon] [https://pathofexile.gamepedia.com/The_Pantheon] [PoEAffix] [http://poeaffix.net/] # Some useful loot related links.
+# //! SetOption $PoE_links link [Uniques] [https://pathofexile.gamepedia.com/Unique_item] [Weapons] [http://pathofexile.gamepedia.com/Weapon] [Armour] [http://pathofexile.gamepedia.com/Armour_(equipment)] [Flasks] [http://pathofexile.gamepedia.com/Flask] [Active skills] [http://pathofexile.gamepedia.com/Active_skill_gem] [Support Skills] [http://pathofexile.gamepedia.com/Support_Skill_Gems] [Maps] [http://pathofexile.gamepedia.com/Map] [Divination cards] [http://pathofexile.gamepedia.com/Divination_card] [Vendor recipes] [https://pathofexile.gamepedia.com/Vendor_recipe_system] [Quest rewards] [http://pathofexile.gamepedia.com/Quest_Rewards] [PoEAffix] [http://poeaffix.net/] # Some useful loot related links.
 # //! SetOption $Separator
 # //! SetOption $Dont_panic info # Nothing of value can be hidden... Start with a preset, depending on your situation and go from there. Just remember: The more things you enable, the more loot you'll see. The filter has been designed, so that it can be configured exactly to the point. It's generally aimed towards experienced users.
 # //! SetOption $Block_switches_tab info # The most important part of the filter. This tab also contains switches that enable or disable functions in other tabs. These are marked with "@" as prefix. The other UI options that are associated with switches, use a bold text in the description. Copy a tittle, expand all and use Ctrl+F to find the desired switch.
@@ -974,16 +974,15 @@ Show
 
 # Shaped maps filter
 Show
-	DropLevel >= 73 
+	DropLevel >= 58 
 # //$ >= $Shaped_maps
 	Class Maps
-	BaseType Shaped
+	ShapedMap True
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 7 180 # B - Tier 2 map
-#    ShapedMap True
 
 Show
 	DropLevel >= 78
@@ -1064,10 +1063,10 @@ Show
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 
-Show # ~Temporary fix for maps (DO NOT DISABLE UNLESS U KNOW IT'S SAFE) |Disable
-    Class "Maps"
-    SetFontSize 45
-    SetBackgroundColor 44 44 44 # Map Background Color
+#Show # ~Temporary fix for maps (DO NOT DISABLE UNLESS U KNOW IT'S SAFE) |Disable
+#    Class "Maps"
+#    SetFontSize 45
+#    SetBackgroundColor 44 44 44 # Map Background Color
 
 # Low level maps in high level maps.
 Show  # Endgame Filter (Disable for MF) - Maps - Low level maps in high level maps (Any map)

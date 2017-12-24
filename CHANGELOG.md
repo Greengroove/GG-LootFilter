@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.1.1d
+
+- Once again fixed the Shaped map drops. Hope this time it's for good. For extra safety measures you can keep enabled the "Low level maps in high level maps".
+- Adjusted slider on the crafting filter to accommodate the new ilvl 85 and 86 mods.
+- Removed link to the Pantheon Wiki page, as it is now redundant.
+
 ## 3.1.0e
 
 - GGG has fixed the "ShapedMap True" argument, but now there's new problems. Shaped maps don't get filtered by "DropLevel". For this reason I have inserted a general filter that will show all maps until these problems are fixed for good. The custom maps list should also be fine to use.
