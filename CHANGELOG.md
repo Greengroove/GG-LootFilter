@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.1.1e
+
+- **Redesigned the crafting filter to include items from the 2.4 expansion. The old ones were mostly removed, since they are no longer relevant.** The filter still works the same way as it did before, so any base type you wish to craft can be added to the list. As a consequence, the "2.4 AND HIGHER BASES" section has been simplified and the block switches removed. Most jewelry is kept, for the leveling process.
+- Added a comprehensive list of good divination cards. Please note that it's still recommended to check all cards that drop.
+- Added "The Surgeon" "The Metalsmith's Gift" "Rain of Chaos" to the list of bad Divination cards.
+- Updated the list of custom maps to include only maps up to T10, with decent layouts.
+- **Added ability to set the minimum item level of rare items to be displayed.** Only affects non top rare items.
+- Added an option to highlight any item level 84 and higher abyss jewels. Rare Abyssal jewels can no longer be hidden.
+- Updated the list of top rare daggers.
+- Added a link to PoEDB.
+- Moved the chisel recipe to the leveling filter and some other minor adjustments related to this.
+- Slightly reduced the sound volume for T1, T2 items and increased the Divination card sound. Renamed "Racing items" name tag to "Important items".
+- Changed font size of hidden quality gems to 45.
+- Updated the top flasks block.
+- The bad rare item list now only affects items with item level lower than 84.
+- Moved Maraketh wands to the endgame block and rare +3 bows and staves to the leveling block.
+- Moved "Glassblower's Bauble" a tier higher since they are more valuable and much rarer than alterations.
+
 ## 3.1.1d
 
 - Once again fixed the Shaped map drops. Hope this time it's for good. For extra safety measures you can keep enabled the "Low level maps in high level maps".

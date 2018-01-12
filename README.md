@@ -20,10 +20,10 @@
 
 A general recommendation is to only use the leveling filter for races, start of a challenge league or when you level a new character. When you play with a fully geared character the Endgame filter will be much better. If you have a reasonable amount of magic find or wealth, you can use the MF filter. A custom version however, will almost always perform best.
 
-- **Leveling filter** is good for the start of the league, first leveling in a new league and Racing. It includes the racing filter and all the way to level 100. Shows a lot of items. **Customization is encouraged.**
+- **Leveling filter** is good for the start of a challenge league and Racing. It includes the racing filter and can be used all the way to level 100. Shows most items. **Customization is encouraged.**
 - **Leveling filter - FOR CASTERS** Same as the regular leveling filter except that normal and magic leveling weapons are hidden.
 - **Endgame filter** is good for general use (avoid for racing). It filters mediocre items. Use this when you don't care so much about leveling items anymore. Safe for endgame and maps.
-- **Magic Find (MF) filter** hides even more stuff. Use this if you really don't want to identify more rares than you „have to“. It will hide all non essential items. All other than top base rares, 83 / 84+ crafting items, RGB items, all non unique flasks, hammers for chisel recipe, Scraps, Whetstones, Baubles, Wisdom and Portal Scrolls and more... This version is active when both the "Leveling" and "Endgame" blocks are disabled.
+- **Magic Find (MF) filter** hides most items. Use this if you really don't want to identify more rares than you "have to". It will hide all non essential items. All other than top base rares, 83 / 84+ crafting items, RGB items, all non unique flasks, hammers for chisel recipe, Scraps, Whetstones, Baubles, Wisdom and Portal Scrolls and more... This version is active when both the "Leveling" and "Endgame" blocks are disabled. You can still edit the lists for rare items and remove things manually.
 
 ![Imgur](http://i.imgur.com/aU2jxMi.jpg)
 
@@ -31,7 +31,7 @@ A general recommendation is to only use the leveling filter for races, start of 
 
 - **Color and sound themes, with easy customization!**
 - **Don't think, just pick up green and pink stuff.** Think about picking yellow and other things.
-- **Hear sounds for all drops that matter.** There are 4 different sounds (4 tiers of drops, long sounds are good). 1 additional sound just for Divination cards and 1 sound for top tier racing items for casters.
+- **Hear sounds for all drops that matter.** There are 4 different sounds (4 tiers of drops, long sounds are good). 1 additional sound just for Divination cards and 1 sound for top tier racing items.
 - **You will always know if you drop corrupted items that may interest you!**
 - **Complete racing filter!** You can (should) customize for specific classes.
 - Lower bases and flasks get filtered out as you progress for less clutter.

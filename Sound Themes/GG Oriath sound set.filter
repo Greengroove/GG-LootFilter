@@ -1,9 +1,9 @@
 #   Greengroove's Loot Filter Scripts - Oriath sound set
 
 Show
-	PlayAlertSound 8            280 # A - Tier 1
+	PlayAlertSound 8            250 # A - Tier 1
 Show
-	PlayAlertSound 9            300 # A - Tier 2
+	PlayAlertSound 9            220 # A - Tier 2
 Show
 	PlayAlertSound 10           100 # A - Tier 3
 Show
@@ -11,23 +11,23 @@ Show
 Show
 	PlayAlertSound 5            120 # B - Divination cards
 Show
-	PlayAlertSound 8            280 # B - Tier 1 map
+	PlayAlertSound 8            250 # B - Tier 1 map
 Show
 	PlayAlertSound 9            220 # B - Tier 2 map
 Show
 	PlayAlertSound 10           100 # B - Tier 3 map
 Show
-	PlayAlertSound 11           90  # B - Tier 4 map
+	PlayAlertSound 11           110  # B - Tier 4 map
 Show
 	PlayAlertSound 10           100 # C - Blessed Orb
 Show
 	PlayAlertSound 10           100 # C - Chaos Orb
 Show
-	PlayAlertSound ShDivine     300 # C - Divine Orb
+    PlayAlertSound 8            250 # C - Divine Orb
 Show
-    PlayAlertSound 8            280 # C - Exalted Orb
+    PlayAlertSound 8            250 # C - Exalted Orb
 Show
-    PlayAlertSound 8            280 # C - Mirror of Kalandra
+    PlayAlertSound 8            250 # C - Mirror of Kalandra
 Show
 	PlayAlertSound 11           110 # C - Orb of Alchemy
 Show
@@ -39,4 +39,4 @@ Show
 Show
 	PlayAlertSound 11           110 # D - Leveling items
 Show
-    PlayAlertSound 15           140 # D - Racing items
+    PlayAlertSound 15           140 # D - Important items

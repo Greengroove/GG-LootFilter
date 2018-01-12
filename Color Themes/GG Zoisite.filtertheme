@@ -159,11 +159,11 @@
       <ComponentName>Chromatic background</ComponentName>
       <ComponentType>BackgroundColor</ComponentType>
       <Color>
-        <A>255</A>
+        <A>200</A>
         <R>75</R>
         <G>75</G>
         <B>75</B>
-        <ScA>1</ScA>
+        <ScA>0.577580452</ScA>
         <ScR>0.0703600943</ScR>
         <ScG>0.0703600943</ScG>
         <ScB>0.0703600943</ScB>
@@ -202,12 +202,12 @@
       <ComponentType>TextColor</ComponentType>
       <Color>
         <A>0</A>
-        <R>110</R>
-        <G>200</G>
+        <R>255</R>
+        <G>255</G>
         <B>255</B>
         <ScA>0</ScA>
-        <ScR>0.155926466</ScR>
-        <ScG>0.577580452</ScG>
+        <ScR>1</ScR>
+        <ScG>1</ScG>
         <ScB>1</ScB>
       </Color>
     </ThemeComponent>

@@ -1,19 +1,19 @@
 #   Greengroove's Loot Filter Scripts - Shaper sound set
     
 Show
-    PlayAlertSound 8            280 # A - Tier 1
+    PlayAlertSound 8            250 # A - Tier 1
 Show
-    PlayAlertSound 7            180 # A - Tier 2
+    PlayAlertSound 7            160 # A - Tier 2
 Show
     PlayAlertSound 1            100 # A - Tier 3
 Show
     PlayAlertSound 2            90  # A - Tier 4
 Show
-    PlayAlertSound 4            120 # B - Divination cards
+    PlayAlertSound 4            130 # B - Divination cards
 Show
-	PlayAlertSound 8            280 # B - Tier 1 map
+	PlayAlertSound 8            250 # B - Tier 1 map
 Show
-	PlayAlertSound 7            180 # B - Tier 2 map
+	PlayAlertSound 7            160 # B - Tier 2 map
 Show
 	PlayAlertSound 1            100 # B - Tier 3 map
 Show
@@ -25,9 +25,9 @@ Show
 Show
     PlayAlertSound ShDivine     300 # C - Divine Orb
 Show
-    PlayAlertSound 8            280 # C - Exalted Orb
+    PlayAlertSound 8            250 # C - Exalted Orb
 Show
-    PlayAlertSound 8            280 # C - Mirror of Kalandra
+    PlayAlertSound 8            250 # C - Mirror of Kalandra
 Show
     PlayAlertSound ShAlchemy    300 # C - Orb of Alchemy
 Show
@@ -39,4 +39,4 @@ Show
 Show
     PlayAlertSound 2            90  # D - Leveling items
 Show
-    PlayAlertSound 3            160 # D - Racing items
+    PlayAlertSound 3            170 # D - Important items
