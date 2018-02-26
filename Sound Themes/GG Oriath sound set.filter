@@ -39,4 +39,4 @@ Show
 Show
 	PlayAlertSound 11           110 # D - Leveling items
 Show
-    PlayAlertSound 15           140 # D - Important items
+    PlayAlertSound 12           180 # D - Important items

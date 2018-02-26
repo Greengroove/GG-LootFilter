@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.2.0
+
+- **Added a complete filter overview pdf document to the repository.**
+- Reverted the bad rare item list to no longer only affect items with item level lower than 84.
+- Adjusted the Prismatic Jewel highlighting and some other minor fixes.
+- Moved "Orb of Alteration" and "Jeweller's Orb" to "Low currency".
+- Added sound for normal and magic RGB items in the leveling filter. 
+
 ## 3.1.1e
 
 - **Redesigned the crafting filter to include items from the 2.4 expansion. The old ones were mostly removed, since they are no longer relevant.** The filter still works the same way as it did before, so any base type you wish to craft can be added to the list. As a consequence, the "2.4 AND HIGHER BASES" section has been simplified and the block switches removed. Most jewelry is kept, for the leveling process.

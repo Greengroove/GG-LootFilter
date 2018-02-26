@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.1.1e
+#               Greengroove's Endgame Loot Filter Script v 3.1.1f
 #
 #-------------------------------------------------------------------------------#
 #
@@ -734,6 +734,7 @@ Hide  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	PlayAlertSound 2 90 # D - Leveling items
+# //! AlertSound $Leveling_items
 #Disabled Block End
 
 #Disabled Block Start
@@ -973,6 +974,16 @@ Show
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 250 # B - Tier 1 map
+
+Show
+    ShapedMap True
+    Class "Maps"
+    DropLevel >= 73
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 250 # B - Tier 1 map
 
 Show
 	Class Maps
@@ -1251,8 +1262,11 @@ Hide  # Endgame Filter (Disable for MF) - Jewels - Magic - Cobalt Jewel
 Show
 	Class Jewel
 	BaseType "Prismatic Jewel"
-	SetFontSize 33
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	PlayAlertSound 8 250 # A - Tier 1
+    SetFontSize 45
 
 Show
 	Class Jewel
@@ -1649,7 +1663,7 @@ Hide
 # //$ $Bad_rare_items
 	Rarity = Rare
 	ItemLevel >= 15
-	ItemLevel <= 83
+#	ItemLevel <= 83
 	SetFontSize 18
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
