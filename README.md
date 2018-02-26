@@ -17,7 +17,7 @@
 [Donations](https://www.pathofexile.com/forum/view-thread/1566921/page/1/#p12940460)**
 
 - Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTERBLAST IS CURRENTLY THE ONLY CUSTOMIZATION APPLICATION COMPATIBLE WITH MY FILTER!** I will update the info if there are changes. 
-- A complete filter overview **reference manual is available [here](https://github.com/Greengroove/GG-LootFilter/blob/master/GG%20Loot%20Filter%20Scripts%2031x%20-%20Complete%20overview.pdf).**
+- A complete filter overview **reference manual is available [here](https://github.com/Greengroove/GG-LootFilter/blob/master/GG%20Loot%20Filter%20Scripts%20-%20Complete%20overview.pdf).**
 
 A general recommendation is to only use the leveling filter for races, start of a challenge league or when you level a new character. When you play with a fully geared character the Endgame filter will be much better. If you have a reasonable amount of magic find or wealth, you can use the MF filter. A custom version however, will almost always perform best.
 
