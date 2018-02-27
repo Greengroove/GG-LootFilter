@@ -734,8 +734,8 @@ Hide  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	PlayAlertSound 2 90 # D - Leveling items
-# //! AlertSound $Leveling_items
 #Disabled Block End
+# //! AlertSound $Leveling_items
 
 #Disabled Block Start
 #Show  # Endgame Filter (Disable for MF) - Currency - Orb of Transmutation |Disable
