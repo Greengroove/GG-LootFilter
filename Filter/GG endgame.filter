@@ -1,10 +1,10 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.1.1f
+#               Greengroove's Endgame Loot Filter Script v 3.2.0
 #
 #-------------------------------------------------------------------------------#
 #
-#               Updated for War for the Atlas 3.1.x
+#               Updated for War for the Atlas 3.2.x
 #
 #
 #           
@@ -48,18 +48,20 @@
 #   Changelog:
 #   https://github.com/Greengroove/GG-LootFilter/blob/master/CHANGELOG.md
 #
+#   Reference manual:
+#   https://github.com/Greengroove/GG-LootFilter/blob/master/GG%20Loot%20Filter%20Scripts%20-%20Complete%20overview.pdf
+#
+#-------------------------------------------------------------------------------#
+#   Have Fun.
 #-------------------------------------------------------------------------------#
 #
 #   > Content:
 #
 #   SETTINGS
-#   NOTES
-#   TO DO
-#
-#   > Filter:
 #
 #   QUEST & EXTRA
 #   LABYRINTH
+#   BESTIARY
 #   ABYSS
 #   HARBINGER
 #   LEGACY
@@ -233,7 +235,6 @@
 #   > ADVANCED OPTIONS
 #
 # //! SetOption $EmptyLine
-
 # //! SetTab [Maps]
 
 # //! SetOption $Custom_maps textarea ["Lookout" "Beach" "Graveyard" "Alleyways" "Pen" "Arid Lake" "Iceberg" "Cage" "Springs" "Leyline" "Peninsula" "Port" "Burial Chambers" "Arcade" "City Square" "Strand" "Grotto" "Gorge" "Volcano" "Lighthouse" "Canyon" "Sulphur Vents" "Haunted Mansion" "Channel" "Toxic Sewer" "Spider Lair" "Barrows" "Mausoleum" "Fields" "Jungle Valley" "Phantasmagoria" "Wharf" "Ashen Wood" "Atoll" "Cemetery" "Tribunal" "Lava Chamber" "Ramparts" "Dunes" "Underground River" "Arachnid Nest" "Bazaar" "Laboratory" "Infested Valley" "Geode" "Courtyard" "Mud Geyser" "Shore" "Tropical Island" "Sepulchre" "Waste Pool" "Plateau" "Estuary" "Vault" "Temple" "Siege" "Shipyard" "Belfry" "Arachnid Tomb" "Bog"] # You can hide higher level maps, but still show some lower maps with nice layout or of other intrest. The list can be disabled with the [u][b]block switches[/b][/u].
@@ -245,7 +246,7 @@
 # //! SetOption $Top_rare_weapons textarea ["Harbinger Bow" "Gemini Claw" "Runic Hatchet" "Tiger Hook" "Sambar Sceptre" "Spiraled Foil" "Jewelled Foil" "Eclipse Staff" "Vaal Axe" "Coronal Maul" "Exquisite Blade" "Profane Wand" "Prophecy Wand" "Imbued Wand" "Sai" "Demon Dagger" "Imperial Skean" "Platinum Kris" "Ezomyte Dagger" "Ambusher"] # If empty default values will be used.
 # //! SetOption $EmptyLine
 # //! SetOption $Good_rare_weapons textarea ["Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the weapon classes you are interested in. These can be disabled with the [u][b]block switches[/b][/u] in the endgame block.
-# //! SetOption $Good_rare_weapons_level slider [56] [56] [70] # Set the minimum drop level for these items.
+# //! SetOption $Good_rare_weapons_level slider [59] [56] [70] # Set the minimum drop level for these items.
 # //! SetOption $Separator
 # //! SetOption $Top_rare_armour textarea ["Rustic Sash" "Leather Belt" "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield"] # If empty default values will be used.
 # //! SetOption $EmptyLine
@@ -274,9 +275,9 @@
 
 # //! SetTab [Misc]
 
-# //! SetOption $Chance_bases textarea ["Sorcerer Boots"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
+# //! SetOption $Chance_bases textarea ["Leather Belt" "Sorcerer Boots"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Separator
-# //! SetOption $Good_Divination_cards textarea ["The Doctor" "House of Mirrors" "The Fiend" "The Immortal" "Hunter's Reward" "The Last One Standing" "The Queen" "The Formless Sea" "Abandoned Wealth" "The Spark and the Flame" "The Dragon's Heart" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Wealth and Power" "Mawr Blaidd" "The Brittle Emperor" "The Wolf" "The Hunger" "The Celestial Justicar" "The Artist" "The Saint's Treasure" "The Thaumaturgist" "Last Hope" "The Valkyrie" "Heterochromia" "The Wind" "The Enlightened" "The Standoff" "Time-Lost Relic" "The Sephirot" "The Hoarder" "Bowyer's Dream" "Chaotic Disposition" "The Dapper Prodigy" "The Offering" "The Risk" "Left to Fate" "The Ethereal" "The Vast" "The Void" "Emperor of Purity" "Lucky Deck" "Polymath" "The Soul" "The Chains that Bind" "The Dark Mage" "The Porcupine" "The Trial" "The Warlord"] # You want these. If empty default values will be used.
+# //! SetOption $Good_Divination_cards textarea ["The Obscured" "The Iron Bard" "The Breach" "The Dreamer" "The World Eater" "The Doctor" "House of Mirrors" "The Fiend" "The Immortal" "Hunter's Reward" "The Last One Standing" "The Queen" "The Formless Sea" "Abandoned Wealth" "The Spark and the Flame" "The Dragon's Heart" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Wealth and Power" "Mawr Blaidd" "The Brittle Emperor" "The Wolf" "The Hunger" "The Celestial Justicar" "The Artist" "The Saint's Treasure" "The Thaumaturgist" "Last Hope" "The Valkyrie" "Heterochromia" "The Wind" "The Enlightened" "The Standoff" "Time-Lost Relic" "The Sephirot" "The Hoarder" "Bowyer's Dream" "Chaotic Disposition" "The Dapper Prodigy" "The Offering" "The Risk" "Left to Fate" "The Ethereal" "The Vast" "The Void" "Emperor of Purity" "Lucky Deck" "Polymath" "The Soul" "The Chains that Bind" "The Dark Mage" "The Porcupine" "The Trial" "The Warlord"] # You want these. If empty default values will be used.
 # //! SetOption $Bad_Divination_cards textarea ["The Carrion Crow" "The King's Blade" "Death" "Light and Truth" "The Lunaris Priestess" "The Scarred Meadow" "Thunderous Skies" "Turn the Other Cheek" "The Wolf's Shadow" "Lantador's Lost Love" "The Surgeon" "The Metalsmith's Gift" "Rain of Chaos"] # These Divination cards will be hidden in the endgame block. [u][b]block switche[/b][/u] in the leveling block. If empty default values will be used.
 # //! SetOption $Separator
 # //! SetOption $Useful_and_drop_only_gems textarea ["Added Chaos Damage" "Multistrike" "Less Duration" "Increased Duration" "Blood Magic" "Increased Area of Effect" "Concentrated Effect" "Immortal Call" "Phase Run" "Cast when Damage Taken"] # [u][b]Block switches[/b][/u] in the Leveling block. Useful for leveling and races.
@@ -327,31 +328,10 @@
 # //! SetOption $Unique_url info # Filterblast adds a unique url each time you parse or refresh preview if you made any changes. Use it to store and share your presets. The same url is also stored on the top of the downloaded file.
 # //! SetOption $Editing_lists info # The lists should include all potential items candidates. It's up to you to narrow down the choice, or perhaps add something of your own. Generally you only need to remove entries.
 # //! SetOption $Separator
-# //! SetOption $Links link [Forum thread] [https://www.pathofexile.com/forum/view-thread/1566921] [Changelog] [https://github.com/Greengroove/GG-LootFilter/blob/master/CHANGELOG.md] [Github] [https://github.com/Greengroove/GG-LootFilter] [Youtube] [https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x] [Twitch] [https://www.twitch.tv/greengroovepoe] [Twitter] [https://twitter.com/GreengroovePOE] [Reddit] [https://www.reddit.com/user/Greengroove/] [Facebook] [https://www.facebook.com/GreengroovePOE/] [Donate ♥] [https://www.pathofexile.com/forum/view-thread/1566921/page/1/#p12940460]  # Detailed information can be found on the official forum and there's video tutorials on Youtube. Remember to give feedback on the forum if you like the filter and if you have any suggestions or requests. Enjoy the game and good hunting!
+# //! SetOption $Links link [Forum thread] [https://www.pathofexile.com/forum/view-thread/1566921] [Reference manual] [https://github.com/Greengroove/GG-LootFilter/blob/master/GG%20Loot%20Filter%20Scripts%20-%20Complete%20overview.pdf] [Changelog] [https://github.com/Greengroove/GG-LootFilter/blob/master/CHANGELOG.md] [Github] [https://github.com/Greengroove/GG-LootFilter] [Youtube] [https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x] [Twitch] [https://www.twitch.tv/greengroovepoe] [Twitter] [https://twitter.com/GreengroovePOE] [Reddit] [https://www.reddit.com/user/Greengroove/] [Facebook] [https://www.facebook.com/GreengroovePOE/] [Donate ♥] [https://www.pathofexile.com/forum/view-thread/1566921/page/1/#p12940460] # Detailed information can be found on the official forum and there's video tutorials on Youtube. Remember to give feedback on the forum if you like the filter and if you have any suggestions or requests. Enjoy the game and good hunting!
 # //! SetTab [None]
 
 # //! SetOption $EmptyLine
-#
-#-------------------------------------------------------------------------------#
-#
-#   > NOTES
-#
-#   Please use the forum thread for information, updates, feedback, questions and suggestions:
-#   https://www.pathofexile.com/forum/view-thread/1566921
-#
-#   -   I strongly recommend customization of the filter. Especially for racers.
-#       Please refer to the above forum thread for details.
-#
-#   -   You can use Filterblast for easier customization:
-#       http://filterblast.oversoul.xyz/Greengroove/
-#
-#-------------------------------------------------------------------------------#
-#   TO DO
-#-------------------------------------------------------------------------------#
-#
-#   Have Fun
-#
-#-------------------------------------------------------------------------------#
 
 #-------------------------------------------------------------------------------#
 # Section:  #   QUEST & EXTRA
@@ -359,7 +339,7 @@
 
 Show
 	Class Quest
-	BaseType "Shaper's Orb"
+	BaseType "Shaper's Orb" "Elder Orb"
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
@@ -401,6 +381,51 @@ Show
 	PlayAlertSound 2 90 # A - Tier 4
 
 #-------------------------------------------------------------------------------#
+# Section:  #   BESTIARY
+#-------------------------------------------------------------------------------#
+
+Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary Orb |Disable
+	Class "Stackable Currency"
+	BaseType "Bestiary Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 160 # A - Tier 2
+
+Show  # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
+	Class "Stackable Currency"
+	BaseType "Thaumaturgical Net"
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 8 250 # A - Tier 1
+
+Show  # ~Misc - Challenge leagues - Bestiary items - Strong Steel Net |Disable
+	Class "Stackable Currency"
+	BaseType "Strong Steel Net"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 160 # A - Tier 2
+
+Show  # ~Misc - Challenge leagues - Bestiary items - Reinforced Steel Net |Disable
+	Class "Stackable Currency"
+	BaseType "Reinforced Steel Net"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 1 100 # A - Tier 3
+
+Show  # ~Misc - Challenge leagues - Bestiary items - Any Net |Disable
+	Class "Stackable Currency"
+	BaseType Net
+	SetFontSize 45
+	PlayAlertSound 2 90 # A - Tier 4
+
+###	PlayAlertSound 2 90 # D - Leveling items 
+#### //! AlertSound $Leveling_items
+
+#-------------------------------------------------------------------------------#
 # Section:  #   ABYSS
 #-------------------------------------------------------------------------------#
 
@@ -421,6 +446,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Shaper items |Disable
 Show  # ~Misc - Challenge leagues - Abyss items - Stygian Vise Belt |Disable
 	Class Belt
 	BaseType "Stygian Vise"
+	Rarity <= Rare
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 1 100 # A - Tier 3
@@ -677,7 +703,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 
 Show
 	Class Divination
-	BaseType "The Doctor" "House of Mirrors" "The Fiend" "The Immortal" "Hunter's Reward" "The Last One Standing" "The Queen" "The Formless Sea" "Abandoned Wealth" "The Spark and the Flame" "The Dragon's Heart" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Wealth and Power" "Mawr Blaidd" "The Brittle Emperor" "The Wolf" "The Hunger" "The Celestial Justicar" "The Artist" "The Saint's Treasure" "The Thaumaturgist" "Last Hope" "The Valkyrie" Heterochromia "The Wind" "The Enlightened" "The Standoff" "Time-Lost Relic" "The Sephirot" "The Hoarder" "Bowyer's Dream" "Chaotic Disposition" "The Dapper Prodigy" "The Offering" "The Risk" "Left to Fate" "The Ethereal" "The Vast" "The Void" "Emperor of Purity" "Lucky Deck" Polymath "The Soul" "The Chains that Bind" "The Dark Mage" "The Porcupine" "The Trial" "The Warlord" 
+	BaseType "The Obscured" "The Iron Bard" "The Breach" "The Dreamer" "The World Eater" "The Doctor" "House of Mirrors" "The Fiend" "The Immortal" "Hunter's Reward" "The Last One Standing" "The Queen" "The Formless Sea" "Abandoned Wealth" "The Spark and the Flame" "The Dragon's Heart" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Wealth and Power" "Mawr Blaidd" "The Brittle Emperor" "The Wolf" "The Hunger" "The Celestial Justicar" "The Artist" "The Saint's Treasure" "The Thaumaturgist" "Last Hope" "The Valkyrie" Heterochromia "The Wind" "The Enlightened" "The Standoff" "Time-Lost Relic" "The Sephirot" "The Hoarder" "Bowyer's Dream" "Chaotic Disposition" "The Dapper Prodigy" "The Offering" "The Risk" "Left to Fate" "The Ethereal" "The Vast" "The Void" "Emperor of Purity" "Lucky Deck" Polymath "The Soul" "The Chains that Bind" "The Dark Mage" "The Porcupine" "The Trial" "The Warlord" 
 # //$ $Good_Divination_cards
 	SetFontSize 45
 	SetTextColor 0 0 0
@@ -727,12 +753,24 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone
 	PlayAlertSound 2 0 # D - Leveling items
 # //! AlertSound $Leveling_items
 
+Show  # Endgame Filter (Disable for MF) - Low currency - Orb of Alteration |Disable
+	Class Currency
+	BaseType "Orb of Alteration"
+	SetFontSize 45
+	PlayAlertSound 2 90 # A - Tier 4
+
+Show  # Endgame Filter (Disable for MF) - Low currency - Jeweller's Orb |Disable
+	Class Currency
+	BaseType "Jeweller's Orb"
+	SetFontSize 45
+	PlayAlertSound 2 90 # A - Tier 4
+
 Show  # Endgame Filter (Disable for MF) - Currency - Glassblower's Bauble |Disable
 	Class Currency
 	BaseType "Glassblower's Bauble"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 # //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - Currency - Orb of Transmutation |Disable
@@ -749,13 +787,6 @@ Show  # Endgame Filter (Disable for MF) - Currency - Orb of Augmentation |Disabl
 	PlayAlertSound 2 0 # D - Leveling items
 # //! AlertSound $Leveling_items
 
-Show  # Endgame Filter (Disable for MF) - Currency - Orb of Alteration |Disable
-	Class Currency
-	BaseType "Orb of Alteration"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-
 Show  # Endgame Filter (Disable for MF) - Currency - Orb of Chance |Disable
 	Class Currency
 	BaseType "Orb of Chance"
@@ -766,13 +797,6 @@ Show  # Endgame Filter (Disable for MF) - Currency - Orb of Chance |Disable
 Show  # Endgame Filter (Disable for MF) - Currency - Chromatic Orb |Disable
 	Class Currency
 	BaseType "Chromatic Orb"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-
-Show  # Endgame Filter (Disable for MF) - Currency - Jeweller's Orb |Disable
-	Class Currency
-	BaseType "Jeweller's Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
@@ -958,14 +982,14 @@ Show
 	PlayAlertSound 8 250 # B - Tier 1 map
 
 Show
-    ShapedMap True
-    Class "Maps"
-    DropLevel >= 73
-    SetTextColor 0 0 0
-    SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-    SetFontSize 45
-    PlayAlertSound 8 250 # B - Tier 1 map
+	ShapedMap True
+	DropLevel >= 73
+	Class Maps
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 8 250 # B - Tier 1 map
 
 Show
 	Class Maps
@@ -1067,16 +1091,13 @@ Show
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 
-#Show # ~Temporary fix for maps (DO NOT DISABLE UNLESS U KNOW IT'S SAFE) |Disable
-#    Class "Maps"
-#    SetFontSize 45
-#    SetBackgroundColor 44 44 44 # Map Background Color
-
 # Low level maps in high level maps.
 Show  # Endgame Filter (Disable for MF) - Maps - Low level maps in high level maps (Any map)
 	Class Maps
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
+	PlayAlertSound 2 0 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # ~Misc - Challenge leagues - Prophecy items - Council keys |Disable
 	BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
@@ -1092,7 +1113,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Divine Vessel
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	PlayAlertSound 7 160 # A - Tier 2
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show
 	Class Fragment "Map Fragments"
@@ -1224,11 +1245,11 @@ Show  # Endgame Filter (Disable for MF) - Jewels - Magic - Cobalt Jewel
 Show
 	Class Jewel
 	BaseType "Prismatic Jewel"
+	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 8 250 # A - Tier 1
-    SetFontSize 45
 
 Show
 	Class Jewel
@@ -1476,7 +1497,7 @@ Show
 #-------------------------------------------------------------------------------#
 
 Show  # ~Misc - @Chance bases |Disable
-	BaseType "Sorcerer Boots" 
+	BaseType "Leather Belt" "Sorcerer Boots" 
 # //$ $Chance_bases
 	Rarity = Normal
 	SetFontSize 45
@@ -1617,10 +1638,10 @@ Hide
 # //$ $Bad_rare_items
 	Rarity = Rare
 	ItemLevel >= 15
-#	ItemLevel <= 83
 	SetFontSize 18
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items
+#    ItemLevel <= 83
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - JEWELRY
@@ -3880,6 +3901,8 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Magic - Height = 2
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - RGB items - Magic - Width = 1
 	Width = 1
@@ -3888,6 +3911,8 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Magic - Width = 1
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Height = 2
 	Height = 2
@@ -3896,6 +3921,8 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Height = 2
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Width = 1
 	Width = 1
@@ -3904,6 +3931,8 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Width = 1
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+# //! AlertSound $Leveling_items
 
 # Big RGB items
 #Disabled Block Start
@@ -7781,6 +7810,8 @@ Hide
 Hide
 	Class Shield
 	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
 	SetFontSize 33
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 140 # Lesser items

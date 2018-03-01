@@ -6,7 +6,9 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 3.2.0
 
-- **Added a complete filter overview pdf document to the repository.**
+- Added Bestiary and other 3.2 items (including "Elder Orb"). The drop sounds and visuals may be subject to change.
+- **Added a complete filter overview PDF document to the repository.** [Reference Manual](https://github.com/Greengroove/GG-LootFilter/blob/master/GG%20Loot%20Filter%20Scripts%20-%20Complete%20overview.pdf)
+- Added "The Obscured", "The Iron Bard", "The Breach", "The Dreamer" and "The World Eater" to the list of good Divination cards.
 - Reverted the bad rare item list to no longer only affect items with item level lower than 84.
 - Adjusted the Prismatic Jewel highlighting and some other minor fixes.
 - Moved "Orb of Alteration" and "Jeweller's Orb" to "Low currency".
@@ -16,7 +18,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 - **Redesigned the crafting filter to include items from the 2.4 expansion. The old ones were mostly removed, since they are no longer relevant.** The filter still works the same way as it did before, so any base type you wish to craft can be added to the list. As a consequence, the "2.4 AND HIGHER BASES" section has been simplified and the block switches removed. Most jewelry is kept, for the leveling process.
 - Added a comprehensive list of good divination cards. Please note that it's still recommended to check all cards that drop.
-- Added "The Surgeon" "The Metalsmith's Gift" "Rain of Chaos" to the list of bad Divination cards.
+- Added "The Surgeon", "The Metalsmith's Gift" and "Rain of Chaos" to the list of bad Divination cards.
 - Updated the list of custom maps to include only maps up to T10, with decent layouts.
 - **Added ability to set the minimum item level of rare items to be displayed.** Only affects non top rare items.
 - Added an option to highlight any item level 84 and higher abyss jewels. Rare Abyssal jewels can no longer be hidden.
