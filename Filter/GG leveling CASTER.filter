@@ -339,7 +339,7 @@
 
 Show
 	Class Quest
-	BaseType "Shaper's Orb" "Elder Orb"
+	BaseType "Shaper's Orb" Elder
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
