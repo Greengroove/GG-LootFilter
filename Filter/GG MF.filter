@@ -987,9 +987,9 @@ Hide  # Endgame Filter (Disable for MF) - Currency - Generic currency (catch all
 #-------------------------------------------------------------------------------#
 
 Show
-	Class Maps
-	ElderMap True
-	SetTextColor 0 0 0
+    Class Maps
+    ElderMap True
+    SetTextColor 0 0 0
     SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
     SetBorderColor 74 230 58 255 # T1 drops color / Quest items
     SetFontSize 45
