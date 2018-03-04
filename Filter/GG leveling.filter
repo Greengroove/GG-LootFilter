@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.2.0
+#               Greengroove's Endgame Loot Filter Script v 3.2.0b
 #
 #-------------------------------------------------------------------------------#
 #
@@ -967,6 +967,15 @@ Show  # Endgame Filter (Disable for MF) - Currency - Generic currency (catch all
 #-------------------------------------------------------------------------------#
 # Section:  #   MAPS
 #-------------------------------------------------------------------------------#
+
+Show
+	Class Maps
+	ElderMap True
+	SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 250 # B - Tier 1 map
 
 Show
 	DropLevel >= 79
