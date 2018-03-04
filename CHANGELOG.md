@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.2.0a
+
+- Adjusted highlighting for Nets.
+
 ## 3.2.0
 
 - Added Bestiary and other 3.2 items (including "Elder Orb"). The drop sounds and visuals may be subject to change.

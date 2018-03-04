@@ -349,6 +349,7 @@ Show
 	Class Quest
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+    PlayAlertSound 2 90 # A - Tier 4
 
 Show
 	Class "Pantheon Soul" Piece
@@ -396,34 +397,29 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
 	Class "Stackable Currency"
 	BaseType "Thaumaturgical Net"
 	SetFontSize 45
-	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-	PlayAlertSound 8 250 # A - Tier 1
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 1 100 # A - Tier 3
 
 Show  # ~Misc - Challenge leagues - Bestiary items - Strong Steel Net |Disable
 	Class "Stackable Currency"
 	BaseType "Strong Steel Net"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	PlayAlertSound 7 160 # A - Tier 2
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # ~Misc - Challenge leagues - Bestiary items - Reinforced Steel Net |Disable
 	Class "Stackable Currency"
 	BaseType "Reinforced Steel Net"
 	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	PlayAlertSound 1 100 # A - Tier 3
+	PlayAlertSound 2 90 # A - Tier 4
 
 Show  # ~Misc - Challenge leagues - Bestiary items - Any Net |Disable
 	Class "Stackable Currency"
 	BaseType Net
 	SetFontSize 45
-	PlayAlertSound 2 90 # A - Tier 4
-
-###	PlayAlertSound 2 90 # D - Leveling items 
-#### //! AlertSound $Leveling_items
+	PlayAlertSound 2 90 # D - Leveling items 
+# //! AlertSound $Leveling_items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   ABYSS
