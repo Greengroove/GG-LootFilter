@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.2.0c
+
+- Added "Necromancy Net".
+- Updated and expanded the "Bad Divination cards" list. Removed: "The Wolf's Shadow". Added: "A Mother's Parting Gift" "Cartographer's Delight" "Destined to Crumble" "Dying Anguish" "Loyalty" "Prosperity" "Rain Tempter" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Sigil" "The Twins" "The Web".
+- Better handling for nets. In endgame filter, only top 2 tiers use a sound.
+
 ## 3.2.0b
 
 - Added "ElderMap True" (not announced in the patch notes), so the new map type will actually show on all filter versions. This is a critical update.

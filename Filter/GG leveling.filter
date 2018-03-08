@@ -278,7 +278,7 @@
 # //! SetOption $Chance_bases textarea ["Leather Belt" "Sorcerer Boots"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Separator
 # //! SetOption $Good_Divination_cards textarea ["The Obscured" "The Iron Bard" "The Breach" "The Dreamer" "The World Eater" "The Doctor" "House of Mirrors" "The Fiend" "The Immortal" "Hunter's Reward" "The Last One Standing" "The Queen" "The Formless Sea" "Abandoned Wealth" "The Spark and the Flame" "The Dragon's Heart" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Wealth and Power" "Mawr Blaidd" "The Brittle Emperor" "The Wolf" "The Hunger" "The Celestial Justicar" "The Artist" "The Saint's Treasure" "The Thaumaturgist" "Last Hope" "The Valkyrie" "Heterochromia" "The Wind" "The Enlightened" "The Standoff" "Time-Lost Relic" "The Sephirot" "The Hoarder" "Bowyer's Dream" "Chaotic Disposition" "The Dapper Prodigy" "The Offering" "The Risk" "Left to Fate" "The Ethereal" "The Vast" "The Void" "Emperor of Purity" "Lucky Deck" "Polymath" "The Soul" "The Chains that Bind" "The Dark Mage" "The Porcupine" "The Trial" "The Warlord"] # You want these. If empty default values will be used.
-# //! SetOption $Bad_Divination_cards textarea ["The Carrion Crow" "The King's Blade" "Death" "Light and Truth" "The Lunaris Priestess" "The Scarred Meadow" "Thunderous Skies" "Turn the Other Cheek" "The Wolf's Shadow" "Lantador's Lost Love" "The Surgeon" "The Metalsmith's Gift" "Rain of Chaos"] # These Divination cards will be hidden in the endgame block. [u][b]block switche[/b][/u] in the leveling block. If empty default values will be used.
+# //! SetOption $Bad_Divination_cards textarea ["A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Lantador's Lost Love" "Light and Truth" "Loyalty" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame block. [u][b]block switche[/b][/u] in the leveling block. If empty default values will be used.
 # //! SetOption $Separator
 # //! SetOption $Useful_and_drop_only_gems textarea ["Added Chaos Damage" "Multistrike" "Less Duration" "Increased Duration" "Blood Magic" "Increased Area of Effect" "Concentrated Effect" "Immortal Call" "Phase Run" "Cast when Damage Taken"] # [u][b]Block switches[/b][/u] in the Leveling block. Useful for leveling and races.
 # //! SetOption $Separator
@@ -385,7 +385,7 @@ Show
 # Section:  #   BESTIARY
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary Orb |Disable
+Show # ~Misc - Challenge leagues - Bestiary items - Bestiary Orb |Disable
 	Class "Stackable Currency"
 	BaseType "Bestiary Orb"
 	SetFontSize 45
@@ -393,7 +393,15 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary Orb |Disable
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 7 160 # A - Tier 2
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
+Show # ~Misc - Challenge leagues - Bestiary items - Necromancy Net |Disable
+	Class "Stackable Currency"
+	BaseType "Necromancy Net"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 7 160 # A - Tier 2
+
+Show # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
 	Class "Stackable Currency"
 	BaseType "Thaumaturgical Net"
 	SetFontSize 45
@@ -401,24 +409,25 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 1 100 # A - Tier 3
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Strong Steel Net |Disable
+Show # ~Misc - Challenge leagues - Bestiary items - Strong Steel Net
 	Class "Stackable Currency"
 	BaseType "Strong Steel Net"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Reinforced Steel Net |Disable
+Show  # ~Misc - Challenge leagues - Bestiary items - Steel Net
 	Class "Stackable Currency"
-	BaseType "Reinforced Steel Net"
+	BaseType "Steel Net"
 	SetFontSize 45
-	PlayAlertSound 2 90 # A - Tier 4
+	PlayAlertSound 2 0 # D - Leveling items 
+# //! AlertSound $Leveling_items
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Any Net |Disable
+Show  # ~Misc - Challenge leagues - Bestiary items - Rope Net, Iron Net
 	Class "Stackable Currency"
-	BaseType Net
+	BaseType "Rope Net" "Iron Net"
 	SetFontSize 45
-	PlayAlertSound 2 90 # D - Leveling items 
+	PlayAlertSound 2 0 # D - Leveling items 
 # //! AlertSound $Leveling_items
 
 #-------------------------------------------------------------------------------#
@@ -709,7 +718,7 @@ Show
 # The divination cards that you don't want to drop with sound in endgame.
 Show  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 	Class Divination
-	BaseType "The Carrion Crow" "The King's Blade" Death "Light and Truth" "The Lunaris Priestess" "The Scarred Meadow" "Thunderous Skies" "Turn the Other Cheek" "The Wolf's Shadow" "Lantador's Lost Love" "The Surgeon" "The Metalsmith's Gift" "Rain of Chaos" 
+	BaseType "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Lantador's Lost Love" "Light and Truth" "Loyalty" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"
 # //$ $Bad_Divination_cards
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
