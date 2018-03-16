@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+- Removed drop sound from low net tiers.
+
 ## 3.2.0c
 
 - Added "Necromancy Net".

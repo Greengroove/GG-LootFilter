@@ -404,6 +404,7 @@ Show # ~Misc - Challenge leagues - Bestiary items - Necromancy Net |Disable
 Show # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
 	Class "Stackable Currency"
 	BaseType "Thaumaturgical Net"
+	DisableDropSound
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -412,6 +413,7 @@ Show # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
 Show # ~Misc - Challenge leagues - Bestiary items - Strong Steel Net
 	Class "Stackable Currency"
 	BaseType "Strong Steel Net"
+    DisableDropSound
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
@@ -419,6 +421,7 @@ Show # ~Misc - Challenge leagues - Bestiary items - Strong Steel Net
 Show  # ~Misc - Challenge leagues - Bestiary items - Steel Net
 	Class "Stackable Currency"
 	BaseType "Steel Net"
+    DisableDropSound
 	SetFontSize 45
 	PlayAlertSound 2 0 # D - Leveling items 
 # //! AlertSound $Leveling_items
@@ -426,6 +429,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Steel Net
 Show  # ~Misc - Challenge leagues - Bestiary items - Rope Net, Iron Net
 	Class "Stackable Currency"
 	BaseType "Rope Net" "Iron Net"
+    DisableDropSound
 	SetFontSize 45
 	PlayAlertSound 2 0 # D - Leveling items 
 # //! AlertSound $Leveling_items

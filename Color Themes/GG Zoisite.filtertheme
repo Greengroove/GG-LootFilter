@@ -323,5 +323,19 @@
         <ScB>0.4286905</ScB>
       </Color>
     </ThemeComponent>
+	<ThemeComponent>
+      <ComponentName>Racing items</ComponentName>
+      <ComponentType>BackgroundColor</ComponentType>
+      <Color>
+        <A>200</A>
+        <R>75</R>
+        <G>75</G>
+        <B>75</B>
+		<ScA>0.577580452</ScA>
+        <ScR>0.0703600943</ScR>
+        <ScG>0.0703600943</ScG>
+        <ScB>0.0703600943</ScB>
+      </Color>
+    </ThemeComponent>
   </Components>
 </Theme>
