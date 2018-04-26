@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.2.3
+
+- Implemented the global "DisableDropSound" switch on Filterblast. All drop sounds are now disabled by default.
+- Added new UI setting; Color for 3 linked offhand in the racing tab.
+- Removed redundant magic weapons for racing and converted normal weapons to highlight any rarity instead.
+- Racing Filter rework on "One Hand Mace", "Bows", "Quivers" and several smaller improvements on other weapon classes for racing.
+- Reduced non top Net highlighting.
+- Removed "Sorcerer Boots" from chancing bases.
+
+## 3.2.0d
+
+- **Updated and enhanced the racing section.** Added overrides: "Important currency for racing", "Starting weapons" and updated "Weapon with Increased Physical Damage Recipe" switch. More changes and some additions to racing accessories and a new Override section.
+- Racing Filter rework on "One Hand Axe".
+- Changed default background for "Racing items" to gray.
+- Big utility flasks.
+- Added "Siege Axe" To "Top rare weapons" and "Weapon crafting bases".
+- Hidden items are now more visible.
+- The default maximum level for racing items is now 67.
 - Removed drop sound from low net tiers.
 
 ## 3.2.0c
