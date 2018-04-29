@@ -292,7 +292,7 @@
 # //! SetOption $Caster_Items input ["BB"] # Set ideal colors for your caster weapons. [u][b]Block switches[/b][/u] are in the racing filter. Maximum 3 characters. If empty default values will be used.
 # //! SetOption $Separator
 # //! SetOption $Leveling_items switch [Disable] [Disable] [Enable] # Toggle sounds for low currency (Utility flasks, Whetstone, Transmutation, Augmentation orbs). Only for races / leveling, disabled by default.
-# //! SetOption $Racing_items_max_level switch [67] [59] [67] [72] [77] [99] # Set the maximum level for racing items (Default 67).
+# //! SetOption $Racing_items_max_level switch [67] [32] [45] [60] [67] [72] [77] [99] # Set the maximum level for racing items (Default 67).
 # //! SetOption $Items_for_vendoring switch [15] [23] [33] [44] [56] [66] [68] [70] [72] # Set the maximum level for trash you want to see. [u][b]Block switches[/b][/u] in the leveling and racing block.
 # //! SetTab [None]
 
