@@ -1396,8 +1396,8 @@ Show
 
 Show  # Endgame Filter (Disable for MF) - Gems - @Leveled gems |Disable
 	Class "Gem"
-	GemLevel = 19 
-# //$ $Leveled_gems
+	GemLevel >= 19 
+# //$ >= $Leveled_gems
 	SetFontSize 45
 	SetTextColor 27 162 155 # Gems color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
