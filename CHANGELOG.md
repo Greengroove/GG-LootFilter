@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.3.0
+
+- Added all items for Incursion and a filter for Incursion explicit mods.
+- Added ability to highlight items with specific mods. An editable list is present in the "Misc" tab. This functionality is new and needs testing.
+- Added to the good divination card list: "The Admirer" "The Undisputed" "The Hale Heart" "The Celestial Stone" "Perfection" "Immortal Resolve" "The Master" "The Mayor" "The Professor" "The Samurai's Eye" "The Sword King's Salute" "The Undaunted".
+- Added ability to show leveled gems, with UI option in the "Misc" tab. By default gems with level 19 or higher will be displayed in the endgame filter.
+- Updated the Warband filter to use "HasExplicitMod". The items will now be displayed by default.
+- Added UI option for 3 linked shields for racing.
+- Updated flasks progression to show more flasks as you are leveling.
+- Magic wands for racing will now only show till level 9.
+- Further tuning of the racing filter and many other insignificant improvements under the hood.
+- The chancing items switch has been moved for easier access.
+
 ## 3.2.3
 
 - Implemented the global "DisableDropSound" switch on Filterblast. All drop sounds are now disabled by default.
