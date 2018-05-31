@@ -1782,7 +1782,7 @@ Show
 #-------------------------------------------------------------------------------#
 
 Show  # @Chance bases |Disable
-	BaseType "Leather Belt" 
+	BaseType "Sorcerer Boots" 
 # //$ $Chance_bases
 	Rarity = Normal
 	SetFontSize 45
