@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.3.1
+
+- Heavily expanded the "ITEMS WITH EXPLICIT MOD" section. Most of the mod combinations are predefined, but jewels and flasks also feature a few block switches in the endgame block.
+- Maps with "Vaal" and "Zana's" explicit mod will always show.
+- Changed highlighting for vials. "Vial of Awakening" "Vial of the Ghost" "Vial of Sacrifice" now look like exalted orbs.
+- Adjusted the corrupted item handling to show less items.
+- Added "Her Mask" to the bad divination card list.
+- "Detonate Mines" gem is now hidden in the endgame filter.
+- Fixed a few small bugs and some general improvements.
+- Moved Abyss jewels to a new section.
+
 ## 3.3.0
 
 - Added all items for Incursion and a filter for Incursion explicit mods.
