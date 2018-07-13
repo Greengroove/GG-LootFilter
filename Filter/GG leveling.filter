@@ -2009,7 +2009,6 @@ Hide
 Show
 	Identified True
 	HasExplicitMod "Tyrannical" "Merciless"
-	HasExplicitMod "Tyrannical" "Merciless" 
 # //$ $Items_with_explicit_mod
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
