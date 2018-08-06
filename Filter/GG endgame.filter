@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.3.1
+#               Greengroove's Endgame Loot Filter Script v 3.3.1c
 #
 #-------------------------------------------------------------------------------#
 #
@@ -1060,13 +1060,20 @@ Show
 	PlayAlertSound 8 250 # C - Mirror of Kalandra
 	DisableDropSound
 
-Show  # Endgame Filter (Disable for MF) - Currency - Perandus Coin |Disable
-	Class "Currency"
-	BaseType "Perandus Coin"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 140 # Lesser items
-	DisableDropSound
+Show # Endgame Filter (Disable for MF) - Currency - Perandus Coin (Only 4+ stack) |Disable
+    Class "Currency"
+    BaseType "Perandus Coin"
+	StackSize >= 4
+    SetTextColor 255 45 175 # T2 drops color
+    SetBackgroundColor 0 0 0 170 # Lesser items
+    SetFontSize 45
+
+Show # Endgame Filter (Disable for MF) - Currency - Perandus Coin (Any) |Disable
+    Class "Currency"
+    BaseType "Perandus Coin"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBackgroundColor 0 0 0 170 # Lesser items
+    SetFontSize 45
 
 Show  # ~Misc - Challenge leagues - Prophecy items - Sealed Prophecies |Disable
 	Class "Currency"
