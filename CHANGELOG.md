@@ -4,13 +4,23 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.4.0
+
+- **Added all items for Delve, listed in the patch notes.**
+- Added map icons for items that use T1 and T2 sounds. T1 uses a big yellow star and the T2 items are displayed with a small yellow circle.
+- Added to the good divination card list: "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose".
+- Added to the explicit mod list: "Subterranean" "of the Underground" "of Weaponcraft" "of Spellcraft" "of Crafting".
+- Changed appearance: "Divine orb" "Ancient Orb" "Orb of Annulment" "Stacked Deck" now use a black background and T2 sound instead T1.
+- Changed chancing base to "Leather Belt".
+- Other insignificant adjustments.
+
 ## 3.3.1c
 
 - Added option to only show Perandus coins in stack of 4 and higher.
 
 ## 3.3.1
 
-- Heavily expanded the "ITEMS WITH EXPLICIT MOD" section. Most of the mod combinations are predefined, but jewels and flasks also feature a few block switches in the endgame block.
+- **Heavily expanded the "ITEMS WITH EXPLICIT MOD" section. Most of the mod combinations are predefined, but jewels and flasks also feature a few block switches in the endgame block.**
 - Maps with "Vaal" and "Zana's" explicit mod will always show.
 - Changed highlighting for vials. "Vial of Awakening" "Vial of the Ghost" "Vial of Sacrifice" now look like exalted orbs.
 - Adjusted the corrupted item handling to show less items.
@@ -21,7 +31,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 3.3.0
 
-- Added all items for Incursion and a filter for Incursion explicit mods.
+- **Added all items for Incursion and a filter for Incursion explicit mods.**
 - Added ability to highlight items with specific mods. An editable list is present in the "Misc" tab. This functionality is new and needs testing.
 - Added to the good divination card list: "The Admirer" "The Undisputed" "The Hale Heart" "The Celestial Stone" "Perfection" "Immortal Resolve" "The Master" "The Mayor" "The Professor" "The Samurai's Eye" "The Sword King's Salute" "The Undaunted".
 - Added ability to show leveled gems, with UI option in the "Misc" tab. By default gems with level 19 or higher will be displayed in the endgame filter.

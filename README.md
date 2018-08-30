@@ -44,7 +44,7 @@ Detailed information is available on the [Official forum thread](https://www.pat
 ## INSTALL AND CUSTOMIZE:
 
 - Please download and customize the filter on [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTERBLAST IS CURRENTLY THE ONLY CUSTOMIZATION APPLICATION COMPATIBLE WITH MY FILTER!**
-- Customization also possible with Notepad (or a similar application) with find and replace function.
+- Customization also possible with Notepad (or a similar application) with find and replace function. Not recommended.
 - Filter comes with a few color and sound themes.
 
 Check the video tutorials on [Youtube](https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x). More information also available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921).
@@ -55,10 +55,9 @@ Check the video tutorials on [Youtube](https://www.youtube.com/playlist?list=PL1
 
 There's a free auto update script that works with [AutoHotkey](https://autohotkey.com/download/). Get it [here](http://filterblast.oversoul.xyz/auto-updater.html). It will make sure to keep all your filter files up to date. Across multiple filters and filter versions.
 
-## ALTERNATIVE INSTALL OPTION:
+## INSTALL INSTRUCTIONS:
 
-- **Download the Zip file [here](https://github.com/Greengroove/GG-LootFilter/releases).**
-- Copy the filter file/s to "system drive":\Users\\"Your username"\My Documents\My Games\Path of Exile
+- Download or copy the filter file to: "system drive":\Users\\"Your username"\My Documents\My Games\Path of Exile
 
 You can also access this folder from the game's UI options. On the very bottom see the button "Show folder" If you click that, the folder will open in a new window.
 

@@ -23,7 +23,7 @@ Show
 Show
     PlayAlertSound 1            100 # C - Chaos Orb
 Show
-    PlayAlertSound 8            250 # C - Divine Orb
+    PlayAlertSound 7            160 # C - Divine Orb
 Show
     PlayAlertSound 8            250 # C - Exalted Orb
 Show
