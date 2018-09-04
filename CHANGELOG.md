@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.4.0e
+
+- Added Yellow Circle minimap Icon on all maps, some currency and many other items. Currently 137 entries use the minimal icon overall.
+- Added small brown square map icon for divination cards.
+- Added permanent green beam on T1 items.
+- Added option to show "Scroll of Wisdom" if 4 or more are stacked.
+- Added Green Triangle map icon for some racing items.
+- Fixed the linked racing shields not behaving as intended and a few other insignificant changes.
+
 ## 3.4.0
 
 - **Added all items for Delve, listed in the patch notes.**
