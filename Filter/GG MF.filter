@@ -59,10 +59,10 @@
 #
 #   SETTINGS
 #
-#   INCURSION
 #   QUEST & EXTRA
 #   LABYRINTH
 #   DELVE
+#   INCURSION
 #   BESTIARY
 #   ABYSS
 #   HARBINGER
@@ -202,8 +202,10 @@
 #
 #       Tier 1:                         MinimapIcon 0 Yellow Star
 #       Tier 2:                         MinimapIcon 2 Yellow Circle
+#       Unique items:                   MinimapIcon 2 Brown Circle
 #       Divination cards:               MinimapIcon 2 Brown Square
-#       Racing items:                   MinimapIcon 2 Green Triangle
+#       Racing linked items:            MinimapIcon 2 Green Triangle
+#       Racing offhand & caster items:  MinimapIcon 2 Green Diamond
 #
 #-------------------------------------------------------------------------------#
 #
@@ -343,124 +345,6 @@
 # //! SetOption $EmptyLine
 
 #-------------------------------------------------------------------------------#
-# Section:  #   INCURSION
-#-------------------------------------------------------------------------------#
-
-Show  # ~Misc - Challenge leagues - Incursion items - Stone Of Passage |Disable
-	Class "Incursion Item"
-	BaseType "Stone of Passage"
-	SetFontSize 45
-	SetTextColor 74 230 58 255 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 3 160 # D - Important items
-	DisableDropSound
-
-Show  # ~Misc - Challenge leagues - Incursion items - Flashpowder Keg |Disable
-	Class "Incursion Item"
-	BaseType "Flashpowder Keg"
-	SetFontSize 45
-	SetTextColor 74 230 58 255 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 3 160 # D - Important items
-	DisableDropSound
-
-#-------------------------------------------------------------------------------#
-
-Show
-	Class "Stackable Currency"
-	BaseType "Vial of Awakening" "Vial of the Ghost" "Vial of Sacrifice"
-	SetFontSize 45
-	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 0 Yellow Star
-	PlayEffect Green
-	PlayAlertSound 8 250 # A - Tier 1
-	DisableDropSound
-
-Show  # ~Misc - Challenge leagues - Incursion items - Vials - Vial of Dominance |Disable
-	Class "Stackable Currency"
-	BaseType "Vial of Dominance"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-Show  # ~Misc - Challenge leagues - Incursion items - Vials - Vial of Summoning |Disable
-	Class "Stackable Currency"
-	BaseType "Vial of Summoning"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-Show  # ~Misc - Challenge leagues - Incursion items - Vials - Vial of the Ritual |Disable
-	Class "Stackable Currency"
-	BaseType "Vial of the Ritual"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-Show  # ~Misc - Challenge leagues - Incursion items - Vials - Vial of Fate |Disable
-	Class "Stackable Currency"
-	BaseType "Vial of Fate"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-Show  # ~Misc - Challenge leagues - Incursion items - Vials - Vial of Consequence |Disable
-	Class "Stackable Currency"
-	BaseType "Vial of Consequence"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-Show  # ~Misc - Challenge leagues - Incursion items - Vials - Vial of Transcendence |Disable
-	Class "Stackable Currency"
-	BaseType "Vial of Transcendence"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-Show
-	Class "Stackable Currency"
-	BaseType "Vial of"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-#-------------------------------------------------------------------------------#
-
-Show  # ~Misc - Challenge leagues - Incursion items - Incursion explicit mods |Disable
-	HasExplicitMod "Tacati's" "Citaqualotl's" "Matatl's" "Topotante's" "Xopec's" "Guatelitzi's" "of Tacati" "of Citaqualotl" "of Matatl" "of Puhuarte" "of Guatelitzi"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-#-------------------------------------------------------------------------------#
 # Section:  #   QUEST & EXTRA
 #-------------------------------------------------------------------------------#
 
@@ -537,12 +421,13 @@ Show
 
 Show
 	Class "Currency"
-	BaseType "Hollow Fossil"
-	SetFontSize 45
-	SetTextColor 74 230 58 255 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 7 160 # A - Tier 2
+	BaseType "Faceted Fossil" "Fractured Fossil" "Hollow Fossil" "Shuddering Fossil" "Bloodstained Fossil" "Glyphic Fossil" "Tangled Fossil" "Sanctified Fossil" "Gilded Fossil"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 250 # A - Tier 1
+ 	MinimapIcon 0 Yellow Star
+	PlayEffect Green
 	DisableDropSound
 
 Show
@@ -557,22 +442,75 @@ Show
 
 Show
 	Class "Currency"
-	BaseType "Prime Chaotic Resonator"
+	BaseType "Prime Chaotic Resonator" "Prime Alchemical Resonator"
+    SetTextColor 0 0 0
+    SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 8 250 # A - Tier 1
+ 	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	DisableDropSound
+
+Show # ~Misc - Challenge leagues - Delve items - Powerful resonators |Disable
+    Class Currency
+    BaseType "Powerful Chaotic Resonator" "Powerful Alchemical Resonator"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+    SetFontSize 45
+	PlayAlertSound 1 100 # A - Tier 3
+	MinimapIcon 2 Yellow Circle
+	DisableDropSound
+
+Show # ~Misc - Challenge leagues - Delve items - low resonators |Disable
+    Class Currency
+    BaseType Resonator
+    SetTextColor 255 45 175 # T2 drops color
+    SetFontSize 45
+    PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+#-------------------------------------------------------------------------------#
+# Section:  #   INCURSION
+#-------------------------------------------------------------------------------#
+
+Show
+	Class "Incursion Item"
+	BaseType "Stone of Passage" "Flashpowder Keg"
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 7 160 # A - Tier 2
+	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
 Show
-	Class "Currency"
-	BaseType "Resonator"
+	Class "Stackable Currency"
+	BaseType "Vial of Awakening" "Vial of the Ghost" "Vial of Sacrifice"
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
+	DisableDropSound
+
+Show
+	Class "Stackable Currency"
+	BaseType "Vial of"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Incursion items - Incursion explicit mods |Disable
+	HasExplicitMod "Tacati's" "Citaqualotl's" "Matatl's" "Topotante's" "Xopec's" "Guatelitzi's" "of Tacati" "of Citaqualotl" "of Matatl" "of Puhuarte" "of Guatelitzi"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
 #-------------------------------------------------------------------------------#
@@ -915,13 +853,6 @@ Hide  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls (Single)
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
 
-Hide  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls (4x+ Stack)
-	Class "Currency"
-	BaseType "Scroll of Wisdom"
-	StackSize >= 4
-	SetFontSize 45
-	DisableDropSound
-
 Hide  # Endgame Filter (Disable for MF) - Low currency - Portal Scrolls
 	Class "Currency"
 	BaseType "Portal Scroll"
@@ -1253,6 +1184,14 @@ Hide  # Leveling Filter (Enable for leveling and races) - Currency - Alteration 
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
 
+#Disabled Block Start
+#Show # Endgame Filter (Disable for MF) - Currency - Generic stacked currency (catch all 4+ stack) |Disable
+#	Class "Currency" "Stackable Currency"
+#	StackSize >= 4
+#	SetFontSize 45
+#	DisableDropSound
+#Disabled Block End
+
 Hide  # Endgame Filter (Disable for MF) - Currency - Generic currency (catch all)
 	Class "Currency" "Stackable Currency"
 	SetFontSize 45
@@ -1306,7 +1245,7 @@ Show
 	SetTextColor 175 96 37 # Unique items color
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 175 96 37 # Unique items color
-	MinimapIcon 2 Yellow Circle
+	MinimapIcon 2 Brown Circle
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
@@ -1827,14 +1766,12 @@ Show
 	DisableDropSound
 
 Show
-	Class "Jewel"
-	Rarity = Normal
-	SetFontSize 45
-	SetTextColor 74 230 58 255 # T1 drops color / Quest items
-	SetBorderColor 255 255 119
-	MinimapIcon 2 Yellow Circle
+    Class "Jewel"
+    Rarity = Normal
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+    SetFontSize 45
 	PlayAlertSound 7 160 # A - Tier 2
-	DisableDropSound
+ 	MinimapIcon 2 Yellow Circle
 
 #-------------------------------------------------------------------------------#
 # Section:  #   TALISMAN
@@ -1902,7 +1839,7 @@ Show
 	SetFontSize 45
 	SetTextColor 175 96 37 # Unique items color
 	SetBorderColor 175 96 37 # Unique items color
-	MinimapIcon 2 Yellow Circle
+	MinimapIcon 2 Brown Circle
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -5383,7 +5320,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB it
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-#	MinimapIcon 2 Green Triangle
+#	MinimapIcon 2 Green Diamond
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
 #Disabled Block End
@@ -5412,7 +5349,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB it
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-#	MinimapIcon 2 Green Triangle
+#	MinimapIcon 2 Green Diamond
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
 #Disabled Block End
@@ -6356,10 +6293,10 @@ Show
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
+#	MinimapIcon 2 Green Diamond
 #Disabled Block End
 
 #Disabled Block Start
@@ -6372,10 +6309,10 @@ Show
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
+#	MinimapIcon 2 Green Diamond
 #Disabled Block End
 
 #Disabled Block Start
@@ -6437,10 +6374,10 @@ Show
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
+#	MinimapIcon 2 Green Diamond
 #Disabled Block End
 
 #Disabled Block Start
@@ -6453,10 +6390,10 @@ Show
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
+#	MinimapIcon 2 Green Diamond
 #Disabled Block End
 
 #Disabled Block Start
@@ -6540,7 +6477,6 @@ Show
 #	BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
 #	Rarity = Normal
 #	SetFontSize 45
-#	SetTextColor 255 255 119
 #	SetBorderColor 255 45 175 # T2 drops color
 #	DisableDropSound
 #Disabled Block End
@@ -6553,7 +6489,6 @@ Show
 #	BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
 #	Rarity = Magic
 #	SetFontSize 45
-#	SetTextColor 255 255 119
 #	SetBorderColor 255 45 175 # T2 drops color
 #	DisableDropSound
 #Disabled Block End
@@ -6568,10 +6503,10 @@ Show
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
+#	MinimapIcon 2 Green Diamond
 #Disabled Block End
 
 #Disabled Block Start
@@ -6584,10 +6519,10 @@ Show
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
-#	SetTextColor 255 45 175 # T2 drops color
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
+#	MinimapIcon 2 Green Diamond
 #Disabled Block End
 
 #Disabled Block Start

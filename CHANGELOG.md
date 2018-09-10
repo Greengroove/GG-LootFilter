@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.4.1b
+
+- Adjusted the highlights for Fossils.
+- Low level resonators can now be hidden and have a lesser highlight.
+- Unique items now use a brown circle mini map.
+- Fixed visible mini map icons on hidden items. Only a problem with filter version 3.4.0e. Please re-download your filter.
+- Changed from only showing stacks of 4 and higher of "Scroll of Wisdom" to sowing stacks of any currency item.
+- Changed the mini map icon for racing offhand items and added the icons to caster racing items.
+- Fixed wrong border color on some linked racing wands and highlighting for normal jewels.
+- Simplified the Incursion league block for better performance.
+
 ## 3.4.0e
 
 - Added Yellow Circle minimap Icon on all maps, some currency and many other items. Currently 137 entries use the minimal icon overall.
