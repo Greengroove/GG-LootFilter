@@ -4,13 +4,19 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.4.2
+
+- Added new Bestiary explicit mods.
+- Added switch in the leveling filter for Any 4+ link rare armour piece.
+- "Work in progress" Added switch for 21+ Quality items in the branch dedicated to Delve.
+
 ## 3.4.1b
 
 - Adjusted the highlights for Fossils.
 - Low level resonators can now be hidden and have a lesser highlight.
-- Unique items now use a brown circle mini map.
+- Unique items now use a brown circle mini map icons.
 - Fixed visible mini map icons on hidden items. Only a problem with filter version 3.4.0e. Please re-download your filter.
-- Changed from only showing stacks of 4 and higher of "Scroll of Wisdom" to sowing stacks of any currency item.
+- Changed from only showing stacks of 4 and higher of "Scroll of Wisdom" to showing stacks of any currency item.
 - Changed the mini map icon for racing offhand items and added the icons to caster racing items.
 - Fixed wrong border color on some linked racing wands and highlighting for normal jewels.
 - Simplified the Incursion league block for better performance.

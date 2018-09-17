@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.4.0e
+#               Greengroove's Endgame Loot Filter Script v 3.4.2
 #
 #-------------------------------------------------------------------------------#
 #
@@ -468,6 +468,10 @@ Show # ~Misc - Challenge leagues - Delve items - low resonators |Disable
     SetFontSize 45
     PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
+	
+Show # ~Misc - Challenge leagues - Delve items - 21+ Quality items
+	Quality >= 21
+	Rarity >= Normal
 
 #-------------------------------------------------------------------------------#
 # Section:  #   INCURSION
@@ -516,6 +520,14 @@ Show  # ~Misc - Challenge leagues - Incursion items - Incursion explicit mods |D
 #-------------------------------------------------------------------------------#
 # Section:  #   BESTIARY
 #-------------------------------------------------------------------------------#
+
+Show # ~Misc - Challenge leagues - Bestiary items - Bestiary explicit mods |Disable
+	HasExplicitMod "of Farrul" "of Craiceann" "of Fenumus" "of Saqawal"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 2 90 # A - Tier 4
+	MinimapIcon 2 Yellow Circle
 
 Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary Orb |Disable
 	Class "Stackable Currency"
@@ -2514,6 +2526,17 @@ Show
 	SetBorderColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
+
+# Any 4+ link rare armour piece
+Show # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour - Any 4+ link rare armour piece |Disable
+    ItemLevel >= 1
+# //$ >= $Rare_items_minimum_item_level
+    LinkedSockets >= 4
+    Rarity = Rare
+    Class "Body Armour" "Boots" "Gloves" "Helmet"
+    SetTextColor 255 255 119
+    SetFontSize 33
+# //$ $Rare_items_font_size
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE CORRUPTED ITEMS
