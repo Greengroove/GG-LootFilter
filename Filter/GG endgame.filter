@@ -972,6 +972,7 @@ Show  # Endgame Filter (Disable for MF) - Currency - Cartographer's Chisel |Disa
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
+	MinimapIcon 2 Yellow Circle
 
 Show
 	Class "Currency"

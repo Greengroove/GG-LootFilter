@@ -7,6 +7,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 ## 3.4.2
 
 - Added new Bestiary explicit mods.
+- Added mini map icon to Chisels.
 - Added switch in the leveling filter for Any 4+ link rare armour piece.
 - "Work in progress" Added switch for 21+ Quality items in the branch dedicated to Delve.
 

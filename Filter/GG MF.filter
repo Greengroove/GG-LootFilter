@@ -986,6 +986,7 @@ Hide  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	PlayAlertSound 2 90 # A - Tier 4
+#	MinimapIcon 2 Yellow Circle
 #	DisableDropSound
 #Disabled Block End
 
