@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.5.0
+
+- Added an entry for items with veiled mod: "Veil".
+- Added to the good divination card list: "The Sacrifice" "The Nurse".
+- Scarabs are covered with the generic "Map Fragments" filter.
+- Reworked the maps filter with the new syntax "MapTier". Thanks to Neversink for informing the community about the change.
+- Added tier 2 effects on 91 items.
+- Added mini map icon for lab keys and trinkets.
+- A few minor fixes and changes.
+- Please note that the "good map" list will have to be re evaluated at a later time.
+
 ## 3.4.2
 
 - Added new Bestiary explicit mods.

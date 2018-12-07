@@ -1,10 +1,10 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.4.2
+#               Greengroove's Endgame Loot Filter Script v 3.5.0
 #
 #-------------------------------------------------------------------------------#
 #
-#               Updated for War for the Atlas 3.4.x
+#               Updated for War for the Atlas 3.5.x
 #
 #
 #           
@@ -209,6 +209,13 @@
 #
 #-------------------------------------------------------------------------------#
 #
+#   > MAP ICONS
+#
+#       Tier 1:                         PlayEffect Green
+#       Tier 2:                         PlayEffect Green Temp
+#
+#-------------------------------------------------------------------------------#
+#
 #   > SOUNDS
 #
 #       Tier 1:                         PlayAlertSound 8 250 # A - Tier 1
@@ -237,9 +244,9 @@
 # //! SetOption $EmptyLine
 # //! SetTab [Maps]
 
-# //! SetOption $Custom_maps textarea ["Beach" "Graveyard" "Alleyways" "Pen" "Arid Lake" "Iceberg" "Cage" "Springs" "Leyline" "Peninsula" "Port" "Burial Chambers" "Arcade" "City Square" "Strand" "Grotto" "Gorge" "Volcano" "Lighthouse" "Canyon" "Sulphur Vents" "Haunted Mansion" "Channel" "Toxic Sewer" "Spider Lair" "Barrows" "Mausoleum" "Fields" "Jungle Valley" "Phantasmagoria" "Wharf" "Ashen Wood" "Atoll" "Cemetery" "Tribunal" "Lava Chamber" "Ramparts" "Dunes" "Underground River" "Arachnid Nest" "Bazaar" "Laboratory" "Infested Valley" "Geode" "Courtyard" "Mud Geyser" "Shore" "Tropical Island" "Sepulchre" "Waste Pool" "Plateau" "Estuary" "Vault" "Temple" "Siege" "Shipyard" "Belfry" "Arachnid Tomb" "Bog"] # You can hide higher level maps, but still show some lower maps with nice layout or of other intrest. The list can be disabled with the [u][b]block switches[/b][/u].
+# //! SetOption $Custom_maps textarea ["Beach" "Graveyard" "Alleyways" "Pen" "Arid Lake" "Iceberg" "Cage" "Leyline" "Peninsula" "Port" "Burial Chambers" "Arcade" "City Square" "Strand" "Grotto" "Volcano" "Lighthouse" "Canyon" "Sulphur Vents" "Haunted Mansion" "Channel" "Toxic Sewer" "Spider Lair" "Barrows" "Mausoleum" "Fields" "Jungle Valley" "Phantasmagoria" "Wharf" "Ashen Wood" "Atoll" "Cemetery" "Lava Chamber" "Ramparts" "Dunes" "Underground River" "Arachnid Nest" "Bazaar" "Laboratory" "Infested Valley" "Geode" "Courtyard" "Mud Geyser" "Shore" "Tropical Island" "Sepulchre" "Waste Pool" "Plateau" "Estuary" "Vault" "Temple" "Siege" "Shipyard" "Belfry" "Arachnid Tomb" "Bog"] # You can hide higher level maps, but still show some lower maps with nice layout or of other intrest. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $EmptyLine
-# //! SetOption $Shaped_maps switch [58] [69] [70] [71] [72] [73] # Set the minimum tier of shaped map you want to have highlights (Default 58 = Shaped tier 1).
+# //! SetOption $Shaped_maps switch [1] [2] [3] [4] [5] [6] # Set the minimum tier of shaped map you want to have highlights (Default shaped tier 1 means map tier 6).
 
 # //! SetTab [Rare bases]
 
@@ -277,9 +284,9 @@
 
 # //! SetOption $Items_with_explicit_mod textarea ["Subterranean" "of the Underground" "of Weaponcraft" "of Spellcraft" "of Crafting" "Tyrannical" "Merciless"] # If empty default values will be used.
 # //! SetOption $Separator
-# //! SetOption $Chance_bases textarea ["Leather Belt"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
+# //! SetOption $Chance_bases textarea ["Occultist's Vestment"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Separator
-# //! SetOption $Good_Divination_cards textarea ["Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
+# //! SetOption $Good_Divination_cards textarea ["The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
 # //! SetOption $EmptyLine
 # //! SetOption $Bad_Divination_cards textarea ["A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Loyalty" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame filter. The [u][b]block switch[/b][/u] is in the leveling block. If empty default values will be used.
 # //! SetOption $Separator
@@ -309,7 +316,6 @@
 ## //! SetOption $Offhand_class input ["Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Thrusting One Hand Sword"] # no title
 # //! SetOption $Offhand_class checkbox ["Claw"] ["Dagger"] ["One Hand Axe"] ["One Hand Mace"] ["One Hand Sword"] ["Sceptre"] ["Thrusting One Hand Sword"] # no title
 # //! SetOption $Separator
-## //! SetOption $Racing_Shields_color input ["RGB"] # Color for 3 linked shield. [u][b]Block switches[/b][/u] are in the racing filter. Maximum 3 characters. If empty default values will be used.
 # //! SetOption $Racing_Shields checkbox ["Tower Shield"] ["Buckler"] ["Spirit Shield"] ["Round Shield"] ["Kite Shield"] ["Spiked Shield"] # 3 linked shields. [u][b]Block switches[/b][/u] in the Racing block.
 # //! SetOption $Separator
 # //! SetOption $Caster_Items input ["BB"] # Set ideal colors for your caster weapons. [u][b]Block switches[/b][/u] are in the racing filter. Maximum 3 characters. If empty default values will be used.
@@ -384,15 +390,19 @@ Show
 	BaseType "Silver Key" "Golden Key" "Treasure Key"
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
+#    Class "Labyrinth Item"
 
 Show
+	Class "Map Fragments"
 	BaseType "Offering to the Goddess"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -400,6 +410,7 @@ Show
 	Class "Trinket"
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
@@ -422,12 +433,12 @@ Show
 Show
 	Class "Currency"
 	BaseType "Faceted Fossil" "Fractured Fossil" "Hollow Fossil" "Shuddering Fossil" "Bloodstained Fossil" "Glyphic Fossil" "Tangled Fossil" "Sanctified Fossil" "Gilded Fossil"
-    SetTextColor 0 0 0
-    SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-    SetFontSize 45
-    PlayAlertSound 8 250 # A - Tier 1
- 	MinimapIcon 0 Yellow Star
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
 	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
 Show
@@ -437,41 +448,49 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
 Show
 	Class "Currency"
 	BaseType "Prime Chaotic Resonator" "Prime Alchemical Resonator"
-    SetTextColor 0 0 0
-    SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-    SetFontSize 45
-    PlayAlertSound 8 250 # A - Tier 1
- 	MinimapIcon 0 Yellow Star
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
 	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
-Show # ~Misc - Challenge leagues - Delve items - Powerful resonators |Disable
-    Class Currency
-    BaseType "Powerful Chaotic Resonator" "Powerful Alchemical Resonator"
-    SetTextColor 255 45 175 # T2 drops color
-    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-    SetFontSize 45
-	PlayAlertSound 1 100 # A - Tier 3
+Show  # ~Misc - Challenge leagues - Delve items - Powerful resonators |Disable
+	Class "Currency"
+	BaseType "Powerful Chaotic Resonator" "Powerful Alchemical Resonator"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show # ~Misc - Challenge leagues - Delve items - low resonators |Disable
-    Class Currency
-    BaseType Resonator
-    SetTextColor 255 45 175 # T2 drops color
-    SetFontSize 45
-    PlayAlertSound 2 90 # A - Tier 4
+Show  # ~Misc - Challenge leagues - Delve items - low resonators |Disable
+	Class "Currency"
+	BaseType "Resonator"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
-	
-Show # ~Misc - Challenge leagues - Delve items - 21+ Quality items
+
+Show  # ~Misc - Challenge leagues - Delve items - 21+ Quality items
 	Quality >= 21
 	Rarity >= Normal
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
 
 #-------------------------------------------------------------------------------#
 # Section:  #   INCURSION
@@ -484,6 +503,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -505,6 +525,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -514,6 +535,7 @@ Show  # ~Misc - Challenge leagues - Incursion items - Incursion explicit mods |D
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
@@ -521,13 +543,15 @@ Show  # ~Misc - Challenge leagues - Incursion items - Incursion explicit mods |D
 # Section:  #   BESTIARY
 #-------------------------------------------------------------------------------#
 
-Show # ~Misc - Challenge leagues - Bestiary items - Bestiary explicit mods |Disable
+Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary explicit mods |Disable
 	HasExplicitMod "of Farrul" "of Craiceann" "of Fenumus" "of Saqawal"
-    SetTextColor 255 45 175 # T2 drops color
-    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-    SetFontSize 45
-    PlayAlertSound 2 90 # A - Tier 4
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary Orb |Disable
 	Class "Stackable Currency"
@@ -536,6 +560,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary Orb |Disable
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -546,6 +571,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Necromancy Net |Disable
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -556,6 +582,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -594,6 +621,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Elder items |Disable
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -603,6 +631,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Shaper items |Disable
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -641,6 +670,7 @@ Show  # ~Misc - Challenge leagues - Harbinger items - T3 Currency |Disable
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -650,7 +680,8 @@ Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency |Disable
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -677,6 +708,7 @@ Show  # ~Misc - Challenge leagues - Legacy items - Leaguestones - Normal |Disabl
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 200 200 200
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -688,6 +720,7 @@ Show  # ~Misc - Challenge leagues - Legacy items - Leaguestones - Magic |Disable
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 136 136 255
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -756,6 +789,7 @@ Show  # ~Misc - Challenge leagues - Breach items - Blessing
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -767,6 +801,7 @@ Show  # ~Misc - Challenge leagues - Breach items - Breachstone |Disable
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -799,6 +834,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -813,6 +849,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -826,7 +863,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 
 Show
 	Class "Divination"
-	BaseType "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power" 
+	BaseType "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power" 
 # //$ $Good_Divination_cards
 	SetFontSize 45
 	SetTextColor 0 0 0
@@ -850,6 +887,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Brown Square
+	PlayEffect Green Temp
 	PlayAlertSound 4 130 # B - Divination cards
 	DisableDropSound
 
@@ -972,7 +1010,6 @@ Show  # Endgame Filter (Disable for MF) - Currency - Cartographer's Chisel |Disa
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
-	MinimapIcon 2 Yellow Circle
 
 Show
 	Class "Currency"
@@ -988,6 +1025,7 @@ Show  # ~Misc - Challenge leagues - Prophecy items - Silver Coins
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayEffect Green Temp
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
@@ -998,6 +1036,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # C - Regal Orb
 	DisableDropSound
 
@@ -1008,6 +1047,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # C - Blessed Orb
 	DisableDropSound
 
@@ -1018,6 +1058,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1028,6 +1069,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1038,6 +1080,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # C - Vaal Orb
 	DisableDropSound
 
@@ -1048,6 +1091,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # C - Chaos Orb
 	DisableDropSound
 
@@ -1058,6 +1102,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # C - Orb of Fusing
 	DisableDropSound
 
@@ -1068,6 +1113,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1078,6 +1124,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -1088,6 +1135,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -1098,6 +1146,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -1158,6 +1207,7 @@ Show  # ~Misc - Challenge leagues - Prophecy items - Sealed Prophecies |Disable
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -1177,10 +1227,10 @@ Hide  # Leveling Filter (Enable for leveling and races) - Currency - Alteration 
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
 
-Show # Endgame Filter (Disable for MF) - Currency - Generic stacked currency (catch all 4+ stack) |Disable
-    Class "Currency" "Stackable Currency"
+Show  # Endgame Filter (Disable for MF) - Currency - Generic stacked currency (catch all 4+ stack) |Disable
+	Class "Currency" "Stackable Currency"
 	StackSize >= 4
-    SetFontSize 45
+	SetFontSize 45
 	DisableDropSound
 
 Show  # Endgame Filter (Disable for MF) - Currency - Generic currency (catch all)
@@ -1205,8 +1255,8 @@ Show
 	DisableDropSound
 
 Show
-	DropLevel >= 79
 	Class "Maps"
+	MapTier >= 12
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
@@ -1218,8 +1268,8 @@ Show
 
 Show
 	ShapedMap True
-	DropLevel >= 73
 	Class "Maps"
+	MapTier >= 6
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
@@ -1243,65 +1293,70 @@ Show
 # Shaped maps filter
 Show
 	ShapedMap True
-	DropLevel >= 58 
-# //$ >= $Shaped_maps
 	Class "Maps"
+	MapTier >= 1 
+# //$ >= $Shaped_maps
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
 Show
-	DropLevel >= 78
 	Class "Maps"
+	MapTier >= 11
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
 Show  # Endgame Filter (Disable for MF) - Maps - Yellow T10 |Disable
-	DropLevel = 77
 	Class "Maps"
+	MapTier = 10
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # B - Tier 3 map
 	DisableDropSound
 
 Show  # Endgame Filter (Disable for MF) - Maps - Yellow T9 |Disable
-	DropLevel = 76
 	Class "Maps"
+	MapTier = 9
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # B - Tier 3 map
 	DisableDropSound
 
 # Custom list of maps
 Show  # Endgame Filter (Disable for MF) - Maps - @Custom maps |Disable
 	Class "Maps"
-	BaseType "Beach" "Graveyard" "Alleyways" "Pen" "Arid Lake" "Iceberg" "Cage" "Springs" "Leyline" "Peninsula" "Port" "Burial Chambers" "Arcade" "City Square" "Strand" "Grotto" "Gorge" "Volcano" "Lighthouse" "Canyon" "Sulphur Vents" "Haunted Mansion" "Channel" "Toxic Sewer" "Spider Lair" "Barrows" "Mausoleum" "Fields" "Jungle Valley" "Phantasmagoria" "Wharf" "Ashen Wood" "Atoll" "Cemetery" "Tribunal" "Lava Chamber" "Ramparts" "Dunes" "Underground River" "Arachnid Nest" "Bazaar" "Laboratory" "Infested Valley" "Geode" "Courtyard" "Mud Geyser" "Shore" "Tropical Island" "Sepulchre" "Waste Pool" "Plateau" "Estuary" "Vault" "Temple" "Siege" "Shipyard" "Belfry" "Arachnid Tomb" "Bog" 
+	BaseType "Beach" "Graveyard" "Alleyways" "Pen" "Arid Lake" "Iceberg" "Cage" "Leyline" "Peninsula" "Port" "Burial Chambers" "Arcade" "City Square" "Strand" "Grotto" "Volcano" "Lighthouse" "Canyon" "Sulphur Vents" "Haunted Mansion" "Channel" "Toxic Sewer" "Spider Lair" "Barrows" "Mausoleum" "Fields" "Jungle Valley" "Phantasmagoria" "Wharf" "Ashen Wood" "Atoll" "Cemetery" "Lava Chamber" "Ramparts" "Dunes" "Underground River" "Arachnid Nest" "Bazaar" "Laboratory" "Infested Valley" "Geode" "Courtyard" "Mud Geyser" "Shore" "Tropical Island" "Sepulchre" "Waste Pool" "Plateau" "Estuary" "Vault" "Temple" "Siege" "Shipyard" "Belfry" "Arachnid Tomb" "Bog" 
 # //$ $Custom_maps
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # B - Tier 3 map
 	DisableDropSound
 
-# Maps DropLevel >= 73 use T3 sound till ItemLevel <= 78
+# Maps MapTier >= 6 use T3 sound till ItemLevel <= 78
 Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any yellow map) |Disable
-	DropLevel >= 73
 	Class "Maps"
 	ItemLevel <= 78
+	MapTier >= 6
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 255 45 175 # T2 drops color
@@ -1309,11 +1364,11 @@ Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any y
 	PlayAlertSound 1 100 # B - Tier 3 map
 	DisableDropSound
 
-# Maps DropLevel >= 73 use T3 sound till ItemLevel <= 78
+# Maps MapTier >= 4 use T3 sound till ItemLevel <= 74
 Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any yellow map) |Disable
-	DropLevel >= 71
 	Class "Maps"
 	ItemLevel <= 74
+	MapTier >= 4
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 255 45 175 # T2 drops color
@@ -1333,8 +1388,8 @@ Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any y
 	DisableDropSound
 
 Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any yellow map) |Disable
-	DropLevel >= 73
 	Class "Maps"
+	MapTier >= 6
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 255 45 175 # T2 drops color
@@ -1371,16 +1426,6 @@ Show  # Endgame Filter (Disable for MF) - Maps - Low level maps in high level ma
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
-#Show # ~Misc - Challenge leagues - Prophecy items - Council keys |Disable
-#	Class  "Map Fragments"
-#	BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
-#	SetTextColor 255 45 175 # T2 drops color
-#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-#	SetBackgroundColor 44 44 44 # Map Background Color
-#	SetFontSize 45
-#	PlayAlertSound 7 160 # B - Tier 2 map
-#   MinimapIcon 2 Yellow Circle
-
 Show  # Endgame Filter (Disable for MF) - Maps - Divine Vessel
 	Class "Fragment"
 	BaseType "Divine Vessel"
@@ -1388,6 +1433,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Divine Vessel
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1398,6 +1444,7 @@ Show
 	SetBackgroundColor 44 44 44 # Map Background Color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
@@ -1412,6 +1459,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -1423,6 +1471,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -1433,6 +1482,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -1443,6 +1493,8 @@ Show  # Endgame Filter (Disable for MF) - Gems - @Leveled gems |Disable
 	SetFontSize 45
 	SetTextColor 27 162 155 # Gems color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1452,6 +1504,8 @@ Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality 8-13) |Disable
 	SetFontSize 45
 	SetTextColor 27 162 155 # Gems color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1519,6 +1573,7 @@ Show
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1531,6 +1586,7 @@ Show  # Endgame Filter (Disable for MF) - Jewels - Magic jewels with explicit mo
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1543,6 +1599,7 @@ Show  # Endgame Filter (Disable for MF) - Jewels - Magic jewels with explicit mo
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1557,6 +1614,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -1571,6 +1629,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -1585,6 +1644,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -1595,6 +1655,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Murderous
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1605,6 +1666,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Searching
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1615,6 +1677,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Hypnotic 
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1625,6 +1688,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Ghastly E
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1731,12 +1795,14 @@ Show
 	DisableDropSound
 
 Show
-    Class "Jewel"
-    Rarity = Normal
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
-    SetFontSize 45
+	Class "Jewel"
+	Rarity = Normal
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
- 	MinimapIcon 2 Yellow Circle
+	DisableDropSound
 
 #-------------------------------------------------------------------------------#
 # Section:  #   TALISMAN
@@ -1750,6 +1816,7 @@ Show  # ~Misc - Challenge leagues - Talisman items - Rare |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 255 255 119
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -1824,6 +1891,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -1833,6 +1901,7 @@ Show
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -1856,6 +1925,7 @@ Show
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	PlayEffect Green Temp
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
 #Disabled Block End
@@ -2024,7 +2094,7 @@ Show
 #-------------------------------------------------------------------------------#
 
 Show  # @Chance bases |Disable
-	BaseType "Leather Belt" "Sorcerer Boots" 
+	BaseType "Occultist's Vestment"
 # //$ $Chance_bases
 	Rarity = Normal
 	SetFontSize 45
@@ -2043,6 +2113,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -2053,6 +2124,7 @@ Show
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -2063,6 +2135,7 @@ Show
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -2073,6 +2146,7 @@ Show
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -2083,6 +2157,7 @@ Show
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -2183,7 +2258,7 @@ Hide
 # //$ $Bad_rare_items
 	Rarity = Rare
 	ItemLevel >= 15
-	SetFontSize 20
+	SetFontSize 21
 	SetTextColor 255 255 119
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2191,6 +2266,18 @@ Hide
 #-------------------------------------------------------------------------------#
 # Section:  #   ITEMS WITH EXPLICIT MOD
 #-------------------------------------------------------------------------------#
+
+# Items with veiled mod
+Show
+	Identified True
+	HasExplicitMod "Veil"
+	SetFontSize 45
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 3 160 # D - Important items
+	DisableDropSound
 
 # Generic filter with UI
 Show
@@ -2201,6 +2288,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2214,6 +2302,7 @@ Show  # ~Misc - Explicit mod filter - Weapons - Physical Weapon |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2229,6 +2318,7 @@ Show  # ~Misc - Explicit mod filter - Weapons - Elemental Weapon |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2241,6 +2331,7 @@ Show  # ~Misc - Explicit mod filter - Weapons - Caster items (Magic) |Disable
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -2254,6 +2345,7 @@ Show  # ~Misc - Explicit mod filter - Weapons - Caster Dagger, Sceptre (Rare) |D
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2267,6 +2359,7 @@ Show  # ~Misc - Explicit mod filter - Weapons - Caster wand (Rare) |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2279,6 +2372,7 @@ Show  # ~Misc - Explicit mod filter - Weapons - +1 Bow, Staff (Magic) |Disable
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
@@ -2292,6 +2386,7 @@ Show  # ~Misc - Explicit mod filter - Weapons - +3 Bow, Staff (Rare) |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2306,6 +2401,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Body Armour |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2320,6 +2416,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Helmets (ES) |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2333,6 +2430,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Gloves (Life) |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2347,6 +2445,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Gloves (ES) |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2360,6 +2459,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Boots (Life) |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2374,6 +2474,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Boots (ES) |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2388,6 +2489,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Shield (ES) |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2401,6 +2503,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Amulet |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2414,6 +2517,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Ring |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2423,8 +2527,10 @@ Show  # ~Misc - Explicit mod filter - Armour - Ring (double rarity) |Disable
 	HasExplicitMod "of Excavation"
 	HasExplicitMod "Perandus'" "Dragon's"
 	SetFontSize 45
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2439,6 +2545,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Belt |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2453,6 +2560,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Three resistance items |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2467,6 +2575,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Three resistance items |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2481,6 +2590,7 @@ Show  # ~Misc - Explicit mod filter - Armour - Three resistance items |Disable
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -2552,17 +2662,18 @@ Show
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-#Disabled Block Start
 # Any 4+ link rare armour piece
-#Hide # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour - Any 4+ link rare armour piece |Disable
-#   ItemLevel >= 1
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour - Any 4+ link rare armour piece |Disable
+#	LinkedSockets >= 4
+#	Class "Body Armour" "Boots" "Gloves" "Helmet"
+#	Rarity = Rare
+#	ItemLevel >= 1 
 # //$ >= $Rare_items_minimum_item_level
-#   LinkedSockets >= 4
-#   Rarity = Rare
-#   Class "Body Armour" "Boots" "Gloves" "Helmet"
-#   SetTextColor 255 255 119
-#   SetFontSize 33
+#	SetFontSize 33 
 # //$ $Rare_items_font_size
+#	SetTextColor 255 255 119
+#	DisableDropSound
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
@@ -2576,13 +2687,15 @@ Show  # ~Misc - Corrupted items - Jewelry - Rare |Disable
 	SetFontSize 45
 	SetTextColor 215 25 0 255 # Corrupted items text
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	DisableDropSound
 
 Show  # ~Misc - Corrupted items - Weapons - Dagger, Sceptre, Wand, Quiver - Rare |Disable
 	Corrupted True
 	Class "Dagger" "Sceptre" "Wand" "Quiver"
 	Rarity = Rare
-	SetFontSize 23
+	SetFontSize 24
 	SetTextColor 215 25 0 255 # Corrupted items text
 	DisableDropSound
 
@@ -2591,7 +2704,7 @@ Show  # ~Misc - Corrupted items - Weapons - Good bases - Rare |Disable
 	DropLevel >= 55
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	Rarity = Rare
-	SetFontSize 23
+	SetFontSize 24
 	SetTextColor 215 25 0 255 # Corrupted items text
 	DisableDropSound
 
@@ -2600,7 +2713,7 @@ Show  # ~Misc - Corrupted items - Weapons - Good bases - Rare |Disable
 #	Corrupted True
 #	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Rare
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -2609,7 +2722,7 @@ Show  # ~Misc - Corrupted items - Weapons - Quiver (Any rare) |Disable
 	Corrupted True
 	Class "Quiver"
 	Rarity = Rare
-	SetFontSize 23
+	SetFontSize 24
 	SetTextColor 215 25 0 255 # Corrupted items text
 	DisableDropSound
 
@@ -2618,7 +2731,7 @@ Show  # ~Misc - Corrupted items - Armour - Good bases - Rare (Body Armour) |Disa
 	DropLevel >= 60
 	Class "Body Armour"
 	Rarity = Rare
-	SetFontSize 23
+	SetFontSize 24
 	SetTextColor 215 25 0 255 # Corrupted items text
 	DisableDropSound
 
@@ -2628,7 +2741,7 @@ Show  # ~Misc - Corrupted items - Armour - Good bases - Rare (Body Armour) |Disa
 #	DropLevel >= 41
 #	Class "Boots" "Gloves" "Helmet" "Shield"
 #	Rarity = Rare
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -2638,7 +2751,7 @@ Show  # ~Misc - Corrupted items - Armour - Good bases - Rare (Body Armour) |Disa
 #	Corrupted True
 #	Class "Body Armour"
 #	Rarity = Rare
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -2647,14 +2760,14 @@ Show  # ~Misc - Corrupted items - Armour - Any - Rare (Boots, Gloves, Helmet, Sh
 	Corrupted True
 	Class "Boots" "Gloves" "Helmet" "Shield"
 	Rarity = Rare
-	SetFontSize 23
+	SetFontSize 24
 	SetTextColor 215 25 0 255 # Corrupted items text
 	DisableDropSound
 
 Show
 	LinkedSockets = 5
 	Corrupted True
-	SetFontSize 23
+	SetFontSize 24
 	SetTextColor 215 25 0 255 # Corrupted items text
 	DisableDropSound
 
@@ -3839,7 +3952,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Low bases - Glov
 #-------------------------------------------------------------------------------#
 
 # Mediocre Energy shield bases.
-Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy shield bases - Helm
+Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy shield bases - Helm |Disable
 	Class "Helm"
 	BaseType "Solaris Circlet" "Necromancer Circlet"
 	Rarity = Rare
@@ -3852,7 +3965,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy 
 	DisableDropSound
 
 # Hybrid ES bases.
-Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases - Helm
+Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases - Helm |Disable
 	Class "Helm"
 	BaseType "Prophet Crown" "Vaal Mask" "Magistrate Crown" "Harlequin Mask"
 	Rarity = Rare
@@ -3864,7 +3977,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases 
 	DisableDropSound
 
 # Decent bases.
-Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Decent bases - Helm
+Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Decent bases - Helm |Disable
 	DropLevel >= 55
 	Class "Helm"
 	Rarity = Rare
@@ -3875,7 +3988,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Decent bases - H
 	SetTextColor 255 255 119
 	DisableDropSound
 
-# Any base can be useful for Leveling till item level 63.
+# Any base can be useful for Leveling.
 #Disabled Block Start
 #Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour - Helm |Disable
 #	Class "Helm"
@@ -3999,6 +4112,8 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with explicit mod - Li
 	HasExplicitMod "of Heat" "of Staunching"
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
@@ -4014,6 +4129,8 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with explicit mod - Ut
 	HasExplicitMod "of Heat" "of Staunching" "of Warding"
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -4028,6 +4145,8 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with explicit mod - Qu
 	HasExplicitMod "of Adrenaline" "of Heat" "of Staunching" "of Warding"
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
@@ -4041,6 +4160,8 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with explicit mod - Ja
 	HasExplicitMod "of Reflexes"
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
@@ -4604,7 +4725,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Width = 1
 #	Class "Dagger" "One Hand Mace" "One Hand Sword"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 255 255 255 0 # Animate weapon text
 #	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	SetBorderColor 255 45 175 # T2 drops color
@@ -4617,7 +4738,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted False
 #	Class "Claw"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 255 255 255 0 # Animate weapon text
 #	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -4630,7 +4751,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted False
 #	Class "Dagger" "Claw" "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 255 255 255 0 # Animate weapon text
 #	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	DisableDropSound
@@ -4645,7 +4766,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Width = 1
 #	Class "Dagger" "One Hand Mace" "One Hand Sword"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 255 255 255 0 # Animate weapon text
 #	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	SetBorderColor 255 45 175 # T2 drops color
@@ -4659,7 +4780,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Identified True
 #	Class "Claw"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 255 255 255 0 # Animate weapon text
 #	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -4673,7 +4794,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Identified True
 #	Class "Dagger" "Claw" "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 255 255 255 0 # Animate weapon text
 #	SetBackgroundColor 0 200 255 145 # Animate weapon items
 #	DisableDropSound
@@ -4685,7 +4806,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted False
 #	Class "Bow" "Wand"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 255 255 255 0 # Animate weapon text
 #	SetBackgroundColor 74 230 58 145 # Animate weapon ranged items
 #	DisableDropSound
@@ -4697,7 +4818,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted False
 #	Class "Bow" "Wand"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 255 255 255 0 # Animate weapon text
 #	SetBackgroundColor 74 230 58 145 # Animate weapon ranged items
 #	DisableDropSound
@@ -4723,7 +4844,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted True
 #	Class "Dagger" "Sceptre" "Wand" "Quiver"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4734,7 +4855,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	DropLevel >= 55
 #	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4744,7 +4865,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted True
 #	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4755,7 +4876,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	DropLevel >= 60
 #	Class "Body Armour"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4766,7 +4887,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	DropLevel >= 41
 #	Class "Boots" "Gloves" "Helmet" "Shield"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4776,7 +4897,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted True
 #	Class "Body Armour"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4786,7 +4907,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted True
 #	Class "Boots" "Gloves" "Helmet" "Shield"
 #	Rarity = Normal
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4811,7 +4932,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted True
 #	Class "Dagger" "Sceptre" "Wand" "Quiver"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4822,7 +4943,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	DropLevel >= 55
 #	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4832,7 +4953,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted True
 #	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4843,7 +4964,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	DropLevel >= 60
 #	Class "Body Armour"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4854,7 +4975,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	DropLevel >= 60
 #	Class "Boots" "Gloves" "Helmet" "Shield"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4864,7 +4985,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted True
 #	Class "Body Armour"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4874,7 +4995,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #	Corrupted True
 #	Class "Boots" "Gloves" "Helmet" "Shield"
 #	Rarity = Magic
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -4883,7 +5004,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #Disabled Block Start
 #Show  # ~Misc - Corrupted items - Any corrupted item |Disable
 #	Corrupted True
-#	SetFontSize 23
+#	SetFontSize 24
 #	SetTextColor 215 25 0 255 # Corrupted items text
 #	DisableDropSound
 #Disabled Block End
@@ -5001,6 +5122,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # Boots border color
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -5014,6 +5136,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 0 200 255 255 # Gloves border color
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -5027,6 +5150,7 @@ Show
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 215 25 0 255 # Helmets border color
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
@@ -5038,6 +5162,7 @@ Show
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 #    Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
@@ -5183,6 +5308,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB it
 #	ItemLevel <= 24
 #	SetFontSize 45
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	PlayEffect Green Temp
 #	DisableDropSound
 #Disabled Block End
 
@@ -6206,10 +6332,11 @@ Show
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Diamond
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
-#	MinimapIcon 2 Green Diamond
 #Disabled Block End
+#    SetTextColor 255 45 175 # T2 drops color
 
 #Disabled Block Start
 #Show  # Racing Filter - Caster Items - Sceptre - @3 links |Disable
@@ -6222,10 +6349,11 @@ Show
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Diamond
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
-#	MinimapIcon 2 Green Diamond
 #Disabled Block End
+#    SetTextColor 255 45 175 # T2 drops color
 
 #Disabled Block Start
 #Show  # Racing Filter - Caster Items - Sceptre - 3 links |Disable
@@ -6287,10 +6415,11 @@ Show
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Diamond
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
-#	MinimapIcon 2 Green Diamond
 #Disabled Block End
+#    SetTextColor 255 45 175 # T2 drops color
 
 #Disabled Block Start
 #Show  # Racing Filter - Caster Items - Dagger - @3 links |Disable
@@ -6303,10 +6432,11 @@ Show
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Diamond
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
-#	MinimapIcon 2 Green Diamond
 #Disabled Block End
+#    SetTextColor 255 45 175 # T2 drops color
 
 #Disabled Block Start
 #Show  # Racing Filter - Caster Items - Dagger - 3 links |Disable
@@ -6416,9 +6546,9 @@ Show
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Diamond
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
-#	MinimapIcon 2 Green Diamond
 #Disabled Block End
 
 #Disabled Block Start
@@ -6432,9 +6562,9 @@ Show
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
 #	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Diamond
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
-#	MinimapIcon 2 Green Diamond
 #Disabled Block End
 
 #Disabled Block Start
@@ -8258,7 +8388,7 @@ Hide
 
 Hide
 	Corrupted True
-	SetFontSize 23
+	SetFontSize 24
 	SetTextColor 215 25 0 255 # Corrupted items text
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -8291,7 +8421,7 @@ Hide
 # Filtering starts at level 1. Normal items that are not Caught get filtered.
 Hide
 	Rarity = Normal
-	SetFontSize 20
+	SetFontSize 21
 	SetTextColor 200 200 200 220
 	SetBackgroundColor 0 0 0 100 # Uber trash
 	DisableDropSound
@@ -8333,7 +8463,7 @@ Hide
 # Filtering starts at level 1. Magic items that are not Caught get filtered.
 Hide
 	Rarity = Magic
-	SetFontSize 20
+	SetFontSize 21
 	SetTextColor 136 136 255 220
 	SetBackgroundColor 0 0 0 100 # Uber trash
 	DisableDropSound
@@ -8341,7 +8471,7 @@ Hide
 # Filtering starts at level 1. Rare items that are not Caught get filtered.
 Hide
 	Rarity = Rare
-	SetFontSize 20
+	SetFontSize 21
 	SetTextColor 255 255 119 220
 	SetBackgroundColor 0 0 0 100 # Uber trash
 	DisableDropSound
