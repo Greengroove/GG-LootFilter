@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.5.1
+
+- Fixed a small bug that showed all shaped maps as T1 items.
+
 ## 3.5.0
 
 - Added an entry for items with veiled mod: "Veil".
