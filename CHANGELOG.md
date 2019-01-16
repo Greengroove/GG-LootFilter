@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.5.1c
+
+- Removed mini map icons on rare jewelry.
+- Removed "Loyalty" from the list of bad cards and added: "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Rain of Chaos" "Doedre's Madness".
+- Fixed the conflict with "The Master Artisan" Divination card.
+
 ## 3.5.1
 
 - Fixed a small bug that showed all shaped maps as T1 items.

@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.5.1
+#               Greengroove's Endgame Loot Filter Script v 3.5.1c
 #
 #-------------------------------------------------------------------------------#
 #
@@ -288,7 +288,7 @@
 # //! SetOption $Separator
 # //! SetOption $Good_Divination_cards textarea ["The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Bad_Divination_cards textarea ["A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Loyalty" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame filter. The [u][b]block switch[/b][/u] is in the leveling block. If empty default values will be used.
+# //! SetOption $Bad_Divination_cards textarea ["The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Rain of Chaos" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame filter. The [u][b]block switch[/b][/u] is in the leveling block. If empty default values will be used.
 # //! SetOption $Separator
 # //! SetOption $Useful_and_drop_only_gems textarea ["Added Chaos Damage" "Blood Magic" "Cast when Damage Taken" "Concentrated Effect" "Detonate Mines" "Immortal Call" "Increased Area of Effect" "Increased Duration" "Less Duration" "Multistrike" "Phase Run"] # [u][b]Block switches[/b][/u] in the Leveling block. Useful for leveling and races.
 # //! SetOption $Leveled_gems slider [17] [1] [20] # Set the minimum level of gems you'd like to see. [u][b]Block switch[/b][/u] in the Endgame block.
@@ -861,6 +861,17 @@ Show  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 	SetTextColor 255 45 175 # T2 drops color
 	DisableDropSound
 
+# exception to prevent conflict!
+Show
+    Class "Divination"
+    BaseType "The Master Artisan"
+    SetTextColor 255 45 175 # T2 drops color
+    SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+    SetFontSize 45
+    PlayAlertSound 4 130 # B - Divination cards
+	MinimapIcon 2 Brown Square
+	PlayEffect Green Temp
+
 Show
 	Class "Divination"
 	BaseType "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power" 
@@ -875,7 +886,7 @@ Show
 
 Show  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 	Class "Divination"
-	BaseType "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Loyalty" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek" 
+	BaseType "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Rain of Chaos" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek" 
 # //$ $Bad_Divination_cards
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
@@ -2565,7 +2576,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	MinimapIcon 2 Yellow Circle
+#	MinimapIcon 2 Yellow Circle
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
