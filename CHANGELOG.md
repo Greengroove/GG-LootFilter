@@ -9,7 +9,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Improved Shaper and Elder rare item handling. Some weapon bases and shields will receive lesser highlighting or can be hidden.
 - Added Fractured and Synthesised items. They use the same filter as Elder and Shaper items.
 - Any item that has a lab enchantment will be highlighted.
-- Added to the good divination card list: "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years' Bad Luck".
+- Added to the good divination card list: "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years' Bad Luck".
 - Added to the bad divination card list: "Dark Temptation".
 - Changed minimap icons for maps to white, yellow, red and brown squares.
 - Divination cards are now blue squares on the minimap.
