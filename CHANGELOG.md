@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.6.0
+
+- Improved Shaper and Elder rare item handling. Some weapon bases and shields will receive lesser highlighting or can be hidden.
+- Added Fractured and Synthesised items. They use the same filter as Elder and Shaper items.
+- Any item that has a lab enchantment will be highlighted.
+- Added to the good divination card list: "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years' Bad Luck".
+- Added to the bad divination card list: "Dark Temptation".
+- Changed minimap icons for maps to white, yellow, red and brown squares.
+- Divination cards are now blue squares on the minimap.
+- All Breach splinters now use a blue, diamond shaped minimap icon.
+- Tier 12 and 13 maps now display same as T11 maps. 
+- Added minimap icons to some Harbinger related currency and updated the block.
+- The custom map list now only contains one map and can no longer be disabled. Customize the list to your preference. If empty, it will automatically revert to the default setting.
+- Added option to hide mediocre rare rings and amulets. These will be disabled by default in the MF version.
+- Removed almost all old corrupted item filters. Kept rare jewelry, quivers and magic quivers.
+- It is now possible to hide ItemLevel >= 84 "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet". These items are now being handled by the crafting block.
+- Few other minor adjustments.
+
 ## 3.5.1c
 
 - Removed mini map icons on rare jewelry.
