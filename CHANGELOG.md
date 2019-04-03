@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.6.3
+
+- **Parsed source code with Filterblast.**
+- New slick tab with a comprehensive custom filter for Elder, Shaper and Fractured items.
+- Identified fractured items receive a lesser highlight.
+- Added one explicit mod for utility flasks and rearanged some blocks. Most of the explicit blocks are now grouped in a cluster. Switches moved to the Misc branch.
+- Hidden currency now uses colored text for easier recognition when you press alt.
+- Updated blocks for Betrayal and Delve.
+- Quality flasks are now highlighted with font size 45.
+- Normal skill and support gems no longer have a transparent background and are smaller and semi transparent when hidden.
+- "Useful and drop only gems" and "Important currency for racing" now get a minimap icon.
+- Portal scrolls get a racing override without transparency.
+- Moved Breach rings to the rare items block. They are now a part of the Endgame block.
+- Removed "Detonate Mines" from the useful and drop only gem list.
+
 ## 3.6.0
 
 - Improved Shaper and Elder rare item handling. Some weapon bases and shields will receive lesser highlighting or can be hidden.
