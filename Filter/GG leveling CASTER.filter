@@ -997,6 +997,7 @@ Show
 
 # Custom Fractured weapons
 Show
+	FracturedItem True
 	DropLevel >= 55 
 # //$ >= $Fractured_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
@@ -1012,6 +1013,7 @@ Show
 
 # Custom Fractured armour
 Show
+	FracturedItem True
 	DropLevel >= 1 
 # //$ >= $Fractured_armour_drop_level
 	Class "Body Armour" "Quiver" 
@@ -1342,6 +1344,7 @@ Show
 
 # Custom Elder weapons
 Show
+	ElderItem True
 	DropLevel >= 55 
 # //$ >= $Elder_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
@@ -1357,6 +1360,7 @@ Show
 
 # Custom Elder armour
 Show
+	ElderItem True
 	DropLevel >= 1 
 # //$ >= $Elder_armour_drop_level
 	Class "Body Armour" "Quiver" 
@@ -1416,6 +1420,7 @@ Show
 
 # Custom Shaper weapons
 Show
+	ShaperItem True
 	DropLevel >= 55 
 # //$ >= $Shaper_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
@@ -1431,6 +1436,7 @@ Show
 
 # Custom Shaper armour
 Show
+	ShaperItem True
 	DropLevel >= 1 
 # //$ >= $Shaper_armour_drop_level
 	Class "Body Armour" "Quiver" 
