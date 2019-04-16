@@ -4,12 +4,17 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.6.3c
+
+- Fixed: Filter was hiding Unique Shaped, Elder, Fractured and Synthesised items. Also updated the blocks that were hiding these items, not to filter unique items. 
+- Chisels can no longer be hidden. When the block is disabled they only change appearance slightly and drop without sound. 
+
 ## 3.6.3
 
 - **Parsed source code with Filterblast.**
 - New slick tab with a comprehensive custom filter for Elder, Shaper and Fractured items.
 - Identified fractured items receive a lesser highlight.
-- Added one explicit mod for utility flasks and rearanged some blocks. Most of the explicit blocks are now grouped in a cluster. Switches moved to the Misc branch.
+- Added one explicit mod for utility flasks and rearranged some blocks. Most of the explicit blocks are now grouped in a cluster. Switches moved to the Misc branch.
 - Hidden currency now uses colored text for easier recognition when you press alt.
 - Updated blocks for Betrayal and Delve.
 - Quality flasks are now highlighted with font size 45.

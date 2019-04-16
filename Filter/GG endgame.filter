@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.6.3
+#               Greengroove's Endgame Loot Filter Script v 3.6.3c
 #
 #-------------------------------------------------------------------------------#
 #
@@ -954,6 +954,19 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 # Section:  #   SYNTHESIS - FRACTURED ITEMS
 #-------------------------------------------------------------------------------#
 
+Show
+	FracturedItem True
+	Rarity = Unique
+	SetFontSize 45
+	SetTextColor 175 96 37 # Unique items color
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	SetBorderColor 175 96 37 # Unique items color
+	MinimapIcon 2 Brown Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
 # Identified Fractured items
 Show  # ~Misc - Challenge leagues - Synthesis items - identified Fractured items
 	Identified True
@@ -967,6 +980,7 @@ Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 	FracturedItem True
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
+	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	DisableDropSound
@@ -978,6 +992,7 @@ Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 # //$ < $Fractured_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	ItemLevel >= 68
+	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	DisableDropSound
@@ -1030,6 +1045,7 @@ Show
 # Bad Fractured items
 Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 	FracturedItem True
+	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	DisableDropSound
@@ -1038,11 +1054,25 @@ Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 # Section:  #   SYNTHESIS - SYNTHESISED ITEMS
 #-------------------------------------------------------------------------------#
 
+Show
+	SynthesisedItem True
+	Rarity = Unique
+	SetFontSize 45
+	SetTextColor 175 96 37 # Unique items color
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	SetBorderColor 175 96 37 # Unique items color
+	MinimapIcon 2 Brown Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
 # Bad Synthesised items
 Show  # ~Misc - Challenge leagues - Synthesis items - Bad Synthesised items
 	SynthesisedItem True
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
+	Rarity <= Rare
 	SetFontSize 33 
 # //$ $Rare_items_font_size
 	SetBackgroundColor 0 0 0 140 # Lesser items
@@ -1066,6 +1096,7 @@ Show  # ~Misc - Challenge leagues - Synthesis items - Bad Synthesised items
 	DropLevel <= 54
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	ItemLevel >= 68
+	Rarity <= Rare
 	SetFontSize 33 
 # //$ $Rare_items_font_size
 	SetBackgroundColor 0 0 0 140 # Lesser items
@@ -1309,11 +1340,25 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Rope Net, Iron Net
 # Section:  #   ELDER ITEMS
 #-------------------------------------------------------------------------------#
 
+Show
+	ElderItem True
+	Rarity = Unique
+	SetFontSize 45
+	SetTextColor 175 96 37 # Unique items color
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	SetBorderColor 175 96 37 # Unique items color
+	MinimapIcon 2 Brown Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
 # Bad Elder items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Elder items
 	ElderItem True
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
+	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	DisableDropSound
@@ -1325,6 +1370,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Elder items
 # //$ < $Elder_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	ItemLevel >= 68
+	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	DisableDropSound
@@ -1377,6 +1423,7 @@ Show
 # Bad Elder items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Elder items
 	ElderItem True
+	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	DisableDropSound
@@ -1385,11 +1432,25 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Elder items
 # Section:  #   SHAPER ITEMS
 #-------------------------------------------------------------------------------#
 
+Show
+	ShaperItem True
+	Rarity = Unique
+	SetFontSize 45
+	SetTextColor 175 96 37 # Unique items color
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	SetBorderColor 175 96 37 # Unique items color
+	MinimapIcon 2 Brown Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
 # Bad Shaper items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Shaper items
 	ShaperItem True
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
+	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	DisableDropSound
@@ -1401,6 +1462,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Shaper items
 # //$ < $Shaper_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	ItemLevel >= 68
+	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	DisableDropSound
@@ -1453,6 +1515,7 @@ Show
 # Bad Shaper items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Shaper items
 	ShaperItem True
+	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 140 # Lesser items
 	DisableDropSound
@@ -1849,12 +1912,20 @@ Show  # Endgame Filter (Disable for MF) - Currency - Chromatic Orb |Disable
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # Endgame Filter (Disable for MF) - Currency - Cartographer's Chisel |Disable
+Show  # Endgame Filter (Disable for MF) - Currency - Cartographer's Chisel (special highlight only) |Disable
 	Class "Currency"
 	BaseType "Cartographer's Chisel"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show
+	Class "Currency"
+	BaseType "Cartographer's Chisel"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
 
 Show
