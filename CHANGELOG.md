@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.7.0
+
+- Added Incubators, Timeless Emblems and Splinters for Legion challenge league.
+- Added to the good divination card list: "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "The Archmage's Right Hand"
+- Added to the bad divination card list: "Echoes of Love" "The Fool"
+- Unknown cards (for reference): "The Primordial" "Thirst for Knowledge" "The Deep Ones" "Demigod's Wager"
+
 ## 3.6.3c
 
 - Fixed: Filter was hiding Unique Shaped, Elder, Fractured and Synthesised items. Also updated the blocks that were hiding these items, not to filter unique items. 
