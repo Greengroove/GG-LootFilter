@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.7.0a
+
+- Updated the class for incubators and emblems as GGG changed the filter specification.
+- Updated "Timeless Eternal Empire Emblem" to "Timeless Eternal Emblem", but the corresponding splinter name is still unclear, so I had to generalize. This will have to be re checked and updated after release.
+
 ## 3.7.0
 
 - Added Incubators, Timeless Emblems and Splinters for Legion challenge league.

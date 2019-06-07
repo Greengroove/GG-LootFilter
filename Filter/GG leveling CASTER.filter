@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.7.0
+#               Greengroove's Endgame Loot Filter Script v 3.7.0a
 #
 #-------------------------------------------------------------------------------#
 #
@@ -956,7 +956,7 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 #-------------------------------------------------------------------------------#
 
 Show  # ~Misc - Challenge leagues - Legion - Incubators |Disable
-	Class "Currency"
+	Class "Incubator"
 	BaseType "Incubator"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
@@ -966,9 +966,10 @@ Show  # ~Misc - Challenge leagues - Legion - Incubators |Disable
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
+## "Timeless Karui Splinter" "Timeless Maraketh Splinter" "Timeless Eternal Empire Splinter" "Timeless Templar Splinter" "Timeless Vaal Splinter"
 Show  # ~Misc - Challenge leagues - Legion - Timeless Splinters |Disable
 	Class "Stackable Currency"
-	BaseType "Timeless Karui Splinter" "Timeless Maraketh Splinter" "Timeless Eternal Empire Splinter" "Timeless Templar Splinter" "Timeless Vaal Splinter"
+	BaseType Timeless
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	MinimapIcon 2 Blue Diamond
@@ -976,8 +977,8 @@ Show  # ~Misc - Challenge leagues - Legion - Timeless Splinters |Disable
 	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Legion - Timeless Emblems |Disable
-	Class "Stackable Currency"
-	BaseType "Timeless Karui Emblem" "Timeless Maraketh Emblem" "Timeless Eternal Empire Emblem" "Timeless Templar Emblem" "Timeless Vaal Emblem"
+	Class "Map Fragments"
+	BaseType Timeless "Timeless Karui Emblem" "Timeless Maraketh Emblem" "Timeless Eternal Emblem" "Timeless Templar Emblem" "Timeless Vaal Emblem"
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
