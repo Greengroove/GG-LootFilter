@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.7.0b (ENDGAME VERSION ONLY)
+
+- More blocks for rare items use the "|Disable" syntax. Affected rare items such as most weapons and some armour will be displayed with a small font when hidden.
+- Few small adjustments to the racing and leveling filter.
+
 ## 3.7.0a
 
 - Updated the class for incubators and emblems as GGG changed the filter specification.
