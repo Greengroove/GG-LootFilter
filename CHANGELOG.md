@@ -4,9 +4,14 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
-## 3.7.0b (ENDGAME VERSION ONLY)
+## 3.7.3 (ENDGAME VERSION ONLY)
 
+- Added veiled item filter by class with UI options in the "Special rares" tab. Disabling Veiled items is possible in the Block group browser (~ Misc/Challenge leagues/Betrayal).
+- "Added top weapon and armour lists for Elder and Shaper bases."
+- Added "Potent Chaotic Resonator" and "Potent Alchemical Resonator" to tier 2 resonators.
+- Added ability to hide T4 "Wailing Essence".
 - More blocks for rare items use the "|Disable" syntax. Affected rare items such as most weapons and some armour will be displayed with a small font when hidden.
+- Moved the UI options for Fractured items below Elder and Shaper items.
 - Few small adjustments to the racing and leveling filter.
 
 ## 3.7.0a
