@@ -6,9 +6,9 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 3.8.0
 
-- To do: Better integration of the new "Rune Dagger" and "Warstaff" basetypes.
-
-- Added Items related to Blight challenge league.
+- Added to the good divination card list: "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements".
+- Added to the bad divination card list: "The Mountain".
+- Added Items related to the Blight challenge league. Some options available under ~Misc/Challenge leagues/Betrayal.
 - Added veiled item filter by class with UI options in the "Special rares" tab. Disabling Veiled items is possible in the Block group browser (~ Misc/Challenge leagues/Betrayal).
 - Added "Pristine Fossil" to the tier 1 fossil list.
 - Added "Potent Chaotic Resonator" and "Potent Alchemical Resonator" to tier 2 resonators.
