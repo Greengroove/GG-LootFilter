@@ -4,15 +4,20 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
-## 3.7.3 (ENDGAME VERSION ONLY)
+## 3.8.0
 
+- To do: Better integration of the new "Rune Dagger" and "Warstaff" basetypes.
+
+- Added Items related to Blight challenge league.
 - Added veiled item filter by class with UI options in the "Special rares" tab. Disabling Veiled items is possible in the Block group browser (~ Misc/Challenge leagues/Betrayal).
-- "Added top weapon and armour lists for Elder and Shaper bases."
+- Added "Pristine Fossil" to the tier 1 fossil list.
 - Added "Potent Chaotic Resonator" and "Potent Alchemical Resonator" to tier 2 resonators.
 - Added ability to hide T4 "Wailing Essence".
 - More blocks for rare items use the "|Disable" syntax. Affected rare items such as most weapons and some armour will be displayed with a small font when hidden.
 - Moved the UI options for Fractured items below Elder and Shaper items.
 - Few small adjustments to the racing and leveling filter.
+- Moved "Orb of Alteration" to normal currency and "Orb of Augmentation" to low currency.
+- Rare Accessories, top armour and weapons will now only use an alert sound in the leveling variation or when the "Leveling items" switch is enabled in the racing tab.
 
 ## 3.7.0a
 
