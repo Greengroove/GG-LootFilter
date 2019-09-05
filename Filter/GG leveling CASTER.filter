@@ -975,6 +975,7 @@ Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Red maps |Disable
 
 Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Yellow maps |Disable
 	Class "Maps"
+	BlightedMap True
 	MapTier >= 6
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
