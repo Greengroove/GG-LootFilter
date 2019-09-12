@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.8.0a
+
+- Added option for extra highlighting for Orb of Alchemy in the Leveling Filter branch.
+- Added option to highlight 4 linked rare Body Armour separate from Boots, Gloves, Helmets. 
+- Removed "The Archmage's Right Hand" from the list of good divination cards.
+- Changed highlighting for "Convoking Wand".
+- Minimum "Racing_items_max_level" is now 60.
+- Added option to display any jewelry till level 8.
+
 ## 3.8.0
 
 - Added to the good divination card list: "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements".
