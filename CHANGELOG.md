@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.x.x
+
+- First 3 essence tiers and T4 Harbinger Currency (Chaos Shard, Regal Shard, Binding Shard) moved to the endgame filter and will be hidden by default in the MF version.
+- Fixed conflict with "The Wolf's Legacy" divination card.
+- Improved highlighting for white Blighted maps.
+
 ## 3.8.0b
 
 - Added special highlighting for "Black Oil" "Opalescent Oil" "Silver Oil" "Golden Oil".

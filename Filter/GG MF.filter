@@ -987,15 +987,16 @@ Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Yellow maps |Disabl
 	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Blight - Blighted maps - White maps |Disable
-	BlightedMap True
 	Class "Maps"
+	BlightedMap True
 	MapTier <= 5
 	SetFontSize 45
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 White Square
 	PlayEffect Green Temp
-	PlayAlertSound 1 100 # B - Tier 3 map
+	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
 Show
