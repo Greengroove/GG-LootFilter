@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.8.0b
+#               Greengroove's Endgame Loot Filter Script v 3.9.0
 #
 #-------------------------------------------------------------------------------#
 #
@@ -65,6 +65,7 @@
 #   EXPLICIT MOD FILTER - JEWELS
 #   EXPLICIT MOD FILTER - RARE ITEMS
 #   EXPLICIT MOD FILTER - FLASKS
+#	METAMORPH
 #	BLIGHT
 #   LEGION
 #   SYNTHESIS - FRACTURED ITEMS
@@ -263,7 +264,7 @@
 # //! SetOption $Top_rare_armour textarea ["Vermillion Ring" "Cerulean Ring" "Rustic Sash" "Leather Belt" "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield"] # If empty default values will be used.
 # //! SetOption $EmptyLine
 # //! SetOption $Rare_Shields checkbox ["Tower Shield"] ["Buckler"] ["Spirit Shield"] ["Round Shield"] ["Kite Shield"] ["Spiked Shield"] # Set the bases you are interested in. These can be disabled with the [u][b]block switches[/b][/u]. If none is selected, default values will be used.
-# //! SetOption $Shield_drop_level slider [3] [3] [70] # Set the minimum drop level (Default 47).
+# //! SetOption $Shield_drop_level slider [33] [3] [70] # Set the minimum drop level (Default 47).
 # //! SetOption $Separator
 # //! SetOption $Rare_items_minimum_item_level slider [1] [1] [84] # Only affects non top rare items (Default 1).
 # //! SetOption $Rare_items_font_size slider [33] [33] [45] # Only affects non top rare items (Default 33).
@@ -315,7 +316,7 @@
 # //! SetOption $Crafting_armour_level slider [72] [72] [86] # Set the minimum item level for crafting items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
-# //! SetOption $Jewelry_crafting_bases textarea ["Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring"] # Applies to all crafting jewellry, including jewelry for races. If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
+# //! SetOption $Jewelry_crafting_bases textarea ["Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring"] # Applies to all crafting jewellry, including jewelry for races. If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Crafting_jewelry_level slider [60] [60] [86] # Set the minimum item level for crafting items.
 # //! SetOption $Separator
 # //! SetOption $Crafting_items_font_size slider [33] [33] [45] # (Default 33).
@@ -889,7 +890,7 @@ Show  # ~Misc - Explicit mod filter - Flasks - Life flasks |Disable
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -952,9 +953,24 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
+
+#-------------------------------------------------------------------------------#
+# Section:  #   METAMORPH
+#-------------------------------------------------------------------------------#
+
+Show  # ~Misc - Challenge leagues - Metamorph - Samples |Disable
+	Class "Metamorph Sample"
+	BaseType "Metamorph Brain" "Metamorph Eye" "Metamorph Liver" "Metamorph Lung" "Metamorph Heart"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
 
 #-------------------------------------------------------------------------------#
 # Section:  #   BLIGHT
@@ -974,8 +990,8 @@ Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Red maps |Disable
 	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Yellow maps |Disable
-	Class "Maps"
 	BlightedMap True
+	Class "Maps"
 	MapTier >= 6
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
@@ -987,13 +1003,13 @@ Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Yellow maps |Disabl
 	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Blight - Blighted maps - White maps |Disable
-	Class "Maps"
 	BlightedMap True
+	Class "Maps"
 	MapTier <= 5
 	SetFontSize 45
-	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 White Square
 	PlayEffect Green Temp
 	PlayAlertSound 7 160 # B - Tier 2 map
@@ -1004,7 +1020,7 @@ Show
 	BaseType "Black Oil" "Opalescent Oil" "Silver Oil" "Golden Oil"
 	SetFontSize 45
 	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 0 Yellow Star
 	PlayEffect Green
 	PlayAlertSound 8 250 # A - Tier 1
@@ -1462,7 +1478,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Steel Net
 	Class "Stackable Currency"
 	BaseType "Steel Net"
 	SetFontSize 45
-	PlayAlertSound 2 90 # D - Leveling items 
+	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -1471,7 +1487,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Rope Net, Iron Net
 	BaseType "Rope Net" "Iron Net"
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 170 # Lesser items
-	PlayAlertSound 2 90 # D - Leveling items 
+	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -1678,15 +1694,15 @@ Show  # ~Misc - Challenge leagues - Abyss items - Stygian Vise Belt |Disable
 # Section:  #   HARBINGER
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Harbinger items - T4 Currency (Chaos Shard, Regal Shard, Binding Shard) |Disable
+Show  # Endgame Filter (Disable for MF) - Low currency - T4 Currency (Chaos Shard, Regal Shard, Binding Shard) |Disable
 	Class "Currency"
 	BaseType "Chaos Shard" "Regal Shard" "Binding Shard"
 	SetFontSize 45
-	PlayAlertSound 2 90 # D - Leveling items 
+	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
-Show  # ~Misc - Challenge leagues - Harbinger items - T3 Currency (Engineer's Shard, Orb of Binding, Horizon Shard) |Disable
+Show  # Endgame Filter (Disable for MF) - Low currency - T3 Currency (Engineer's Shard, Orb of Binding, Horizon Shard) |Disable
 	Class "Currency"
 	BaseType "Engineer's Shard" "Orb of Binding" "Horizon Shard"
 	SetFontSize 45
@@ -1844,7 +1860,7 @@ Show  # ~Misc - Challenge leagues - Breach items - Breachstone |Disable
 # Section:  #   ESSENCE
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Essence items - First 3 essence tiers
+Show  # Endgame Filter (Disable for MF) - Low currency - First 3 essence tiers
 	Class "Currency"
 	BaseType "Weeping Essence" "Muttering Essence" "Whispering Essence"
 	SetFontSize 45
@@ -1888,18 +1904,18 @@ Show
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-# exception to prevent conflict!
+# exception for bad cards to prevent conflict!
 Show  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 	Class "Divination"
-	BaseType "The Wolf's Shadow"
+	BaseType == "The Wolf's Shadow"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	DisableDropSound
 
-# exception to prevent conflict!
+# exception for normal cards to prevent conflict!
 Show
 	Class "Divination"
-	BaseType "The Master Artisan"
+	BaseType == "The Master Artisan" "The Wolf's Legacy"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
@@ -1993,7 +2009,7 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone 
 	Class "Currency"
 	BaseType "Blacksmith's Whetstone"
 	SetFontSize 45
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -2008,7 +2024,7 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Orb of Augmentation |Di
 	Class "Currency"
 	BaseType "Orb of Augmentation"
 	SetFontSize 45
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -2017,7 +2033,7 @@ Show  # Endgame Filter (Disable for MF) - Currency - Glassblower's Bauble |Disab
 	BaseType "Glassblower's Bauble"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -2025,7 +2041,7 @@ Show  # Endgame Filter (Disable for MF) - Currency - Orb of Transmutation |Disab
 	Class "Currency"
 	BaseType "Orb of Transmutation"
 	SetFontSize 45
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -2074,7 +2090,7 @@ Show  # Leveling Filter (Enable for leveling and races) - Currency - Orb of Alch
 	BaseType "Orb of Alchemy"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
@@ -2188,7 +2204,7 @@ Show
 
 Show
 	Class "Currency"
-	BaseType "Cartographer's Sextant" "Cartographer's Seal" "Unshaping Orb"
+	BaseType "Simple Sextant" "Prime Sextant" "Cartographer's Seal" "Unshaping Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
@@ -2199,13 +2215,24 @@ Show
 
 Show
 	Class "Currency"
-	BaseType "Master Cartographer's Sextant" "Master Cartographer's Seal"
+	BaseType "Awakened Sextant" "Master Cartographer's Seal"
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show
+	Class "Stackable Currency"
+	BaseType "Turbulent Catalyst" "Imbued Catalyst" "Abrasive Catalyst" "Tempering Catalyst" "Fertile Catalyst" "Prismatic Catalyst" "Intrinsic Catalyst"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
 Show
@@ -2222,6 +2249,28 @@ Show
 Show
 	Class "Currency"
 	BaseType "Albino Rhoa Feather" "Eternal Orb"
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
+	DisableDropSound
+
+Show
+	Class "Stackable Currency"
+	BaseType "Crusader's Exalted Orb" "Redeemer's Exalted Orb" "Hunter's Exalted Orb" "Warlord's Exalted Orb"
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
+	DisableDropSound
+
+Show
+	Class "Stackable Currency"
+	BaseType "Awakener's Orb"
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 # T1 drops color / Quest items
@@ -2492,9 +2541,21 @@ Show  # Endgame Filter (Disable for MF) - Maps - Low level maps in high level ma
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	MinimapIcon 2 White Square
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
+
+Show
+	Class "Atlas Region Upgrade Item"
+	BaseType "Ivory Watchstone"
+	SetFontSize 45
+	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetBackgroundColor 44 44 44 # Map Background Color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
+	PlayAlertSound 7 160 # B - Tier 2 map
+	DisableDropSound
 
 Show  # Endgame Filter (Disable for MF) - Maps - Divine Vessel
 	Class "Fragment"
@@ -2505,6 +2566,18 @@ Show  # Endgame Filter (Disable for MF) - Maps - Divine Vessel
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
+
+Show
+	Class "Map Fragments"
+	BaseType "Fragment of Enslavement" "Fragment of Eradication" "Fragment of Constriction" "Fragment of Purification" "Fragment of Shape" "Fragment of Knowledge" "Fragment of Terror" "Fragment of Emptiness"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBackgroundColor 44 44 44 # Map Background Color
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
 Show
@@ -3069,10 +3142,10 @@ Show  # @Chance bases |Disable
 
 Show
 	Class "Wand"
-	BaseType  "Convoking Wand"
+	BaseType "Convoking Wand"
 	Rarity = Rare
 	SetFontSize 45
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
@@ -3091,7 +3164,7 @@ Show
 	DisableDropSound
 
 Show
-	Class "Amulet" "Belt" "Ring"
+	Class "Amulet" "Belt"
 	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt"
 	Rarity = Rare
 	SetFontSize 45
@@ -3113,7 +3186,7 @@ Show
 	DisableDropSound
 
 Show
-	Class "Amulet" "Belt" "Ring"
+	Class "Amulet" "Belt"
 	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt"
 	ItemLevel >= 84
 	SetFontSize 45
@@ -3230,7 +3303,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Breach Ring
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items 
+	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -3258,7 +3331,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items 
+	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -3270,7 +3343,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Belts |Disa
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items 
+	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -3287,7 +3360,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items 
+	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -3315,7 +3388,7 @@ Show
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items 
+	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4507,7 +4580,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Low bases - Helm
 #Disabled Block End
 
 Show  # Endgame Filter (Disable for MF) - Rare items - Armour - @Shields |Disable
-	DropLevel >= 3 
+	DropLevel >= 33
 # //$ >= $Shield_drop_level
 	Class "Shield"
 	BaseType "Tower Shield" "Buckler" "Spirit Shield" "Round Shield" "Kite Shield" "Spiked Shield" 
@@ -4576,7 +4649,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quicksilver Flask |
 	BaseType "Quicksilver Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4585,7 +4658,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Bismuth Flask |Disa
 	BaseType "Bismuth Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4594,7 +4667,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Stibnite Flask |Dis
 	BaseType "Stibnite Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4603,7 +4676,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Amethyst Flask |Dis
 	BaseType "Amethyst Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4612,7 +4685,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Ruby Flask |Disable
 	BaseType "Ruby Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4621,7 +4694,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Sapphire Flask |Dis
 	BaseType "Sapphire Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4630,7 +4703,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Topaz Flask |Disabl
 	BaseType "Topaz Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4639,7 +4712,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Silver Flask |Disab
 	BaseType "Silver Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4648,7 +4721,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Aquamarine Flask |D
 	BaseType "Aquamarine Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4657,7 +4730,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Granite Flask |Disa
 	BaseType "Granite Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4666,7 +4739,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Jade Flask |Disable
 	BaseType "Jade Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4675,7 +4748,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quartz Flask |Disab
 	BaseType "Quartz Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4684,7 +4757,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Sulphur Flask |Disa
 	BaseType "Sulphur Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4693,7 +4766,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Basalt Flask |Disab
 	BaseType "Basalt Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4702,7 +4775,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Diamond Flask |Disa
 	BaseType "Diamond Flask"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -4713,7 +4786,7 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Flasks with quality |Disable
 	ItemLevel <= 67
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -5173,7 +5246,7 @@ Show  # Crafting Filter - Normal items - @Weapon crafting bases
 	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
 	Rarity = Normal
-	ItemLevel >= 73 
+	ItemLevel >= 83 
 # //$ >= $Crafting_weapons_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
@@ -5185,7 +5258,7 @@ Show  # Crafting Filter - Magic items - @Weapon crafting bases
 	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
 	Rarity = Magic
-	ItemLevel >= 73 
+	ItemLevel >= 83 
 # //$ >= $Crafting_weapons_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
@@ -5201,7 +5274,7 @@ Show  # Crafting Filter - Normal items - @Armour crafting bases
 	BaseType "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
 # //$ $Armour_crafting_bases
 	Rarity = Normal
-	ItemLevel >= 72 
+	ItemLevel >= 84 
 # //$ >= $Crafting_armour_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
@@ -5213,7 +5286,7 @@ Show  # Crafting Filter - Magic items - @Armour crafting bases
 	BaseType "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
 # //$ $Armour_crafting_bases
 	Rarity = Magic
-	ItemLevel >= 72 
+	ItemLevel >= 84 
 # //$ >= $Crafting_armour_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
@@ -5226,10 +5299,10 @@ Show  # Crafting Filter - Magic items - @Armour crafting bases
 
 Show  # Crafting Filter - Normal items - @Jewelry crafting bases
 	Class "Amulet" "Belt" "Ring"
-	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
+	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
 # //$ $Jewelry_crafting_bases
 	Rarity = Normal
-	ItemLevel >= 60 
+	ItemLevel >= 84 
 # //$ >= $Crafting_jewelry_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
@@ -5238,10 +5311,10 @@ Show  # Crafting Filter - Normal items - @Jewelry crafting bases
 
 Show  # Crafting Filter - Magic items - @Jewelry crafting bases
 	Class "Amulet" "Belt" "Ring"
-	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
+	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
 # //$ $Jewelry_crafting_bases
 	Rarity = Magic
-	ItemLevel >= 60 
+	ItemLevel >= 84 
 # //$ >= $Crafting_jewelry_level
 	SetFontSize 33 
 # //$ $Crafting_items_font_size
@@ -5332,7 +5405,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Magic - Height = 2
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -5343,7 +5416,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Magic - Width = 1
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -5354,7 +5427,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Height = 2
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -5365,7 +5438,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Width = 1
 	SetFontSize 33
 	SetBackgroundColor 75 75 75 200 # Chromatic background
 	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # D - Leveling items
+	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -5574,7 +5647,7 @@ Show  # Racing Filter - Accessories - Standard racing accessories - Heavy Belt (
 
 Show  # Racing Filter - Accessories - @ Jewelry crafting bases - Normal |Disable
 	Class "Amulet" "Belt" "Ring"
-	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
+	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
 # //$ $Jewelry_crafting_bases
 	Rarity = Normal
 	ItemLevel <= 67 
@@ -5585,7 +5658,7 @@ Show  # Racing Filter - Accessories - @ Jewelry crafting bases - Normal |Disable
 
 Show  # Racing Filter - Accessories - @ Jewelry crafting bases - Magic |Disable
 	Class "Amulet" "Belt" "Ring"
-	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
+	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
 # //$ $Jewelry_crafting_bases
 	Rarity = Magic
 	ItemLevel <= 67 
@@ -5595,8 +5668,8 @@ Show  # Racing Filter - Accessories - @ Jewelry crafting bases - Magic |Disable
 	DisableDropSound
 
 Show  # Racing Filter - Accessories - Standard racing accessories - Any accessory till level 8 |Disable
-	ItemLevel <= 8
 	Class "Ring" "Amulet" "Belt"
+	ItemLevel <= 8
 	SetFontSize 45
 	DisableDropSound
 
