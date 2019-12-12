@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.9.0a
+
+- Updated class Warstaff to Warstaves.
+
 ## 3.9.0
 
 - Added new map fragment types, Metamorph samples, Catalysts, new exalted orbs, "Awakener's Orb", "Ivory Watchstone" and changed sextant names.

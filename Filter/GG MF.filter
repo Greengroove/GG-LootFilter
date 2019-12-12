@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.9.0
+#               Greengroove's Endgame Loot Filter Script v 3.9.0a
 #
 #-------------------------------------------------------------------------------#
 #
@@ -258,7 +258,7 @@
 
 # //! SetOption $Top_rare_weapons textarea ["Harbinger Bow" "Gemini Claw" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Spiraled Foil" "Jewelled Foil" "Eclipse Staff" "Vaal Axe" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Profane Wand" "Prophecy Wand" "Imbued Wand" "Sai" "Demon Dagger" "Imperial Skean" "Platinum Kris" "Ezomyte Dagger" "Ambusher"] # If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Good_rare_weapons textarea ["Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the weapon classes you are interested in. These can be disabled with the [u][b]block switches[/b][/u] in the endgame block.
+# //! SetOption $Good_rare_weapons textarea ["Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the weapon classes you are interested in. These can be disabled with the [u][b]block switches[/b][/u] in the endgame block.
 # //! SetOption $Good_rare_weapons_level slider [56] [56] [70] # Set the minimum drop level for these items.
 # //! SetOption $Separator
 # //! SetOption $Top_rare_armour textarea ["Vermillion Ring" "Cerulean Ring" "Rustic Sash" "Leather Belt" "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield"] # If empty default values will be used.
@@ -274,12 +274,12 @@
 # //! SetTab [Special rares]
 
 # //! SetOption $Veiled_armour textarea ["Body Armour" "Gloves" "Boots" "Helmets" "Shield" "Rings" "Amulet" "Belts"] # Select the classes you are interested in. If empty default values will be used.
-# //! SetOption $Veiled_weapons textarea ["Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Veiled_weapons textarea ["Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Separator
 
 # //! SetOption $Good_Elder_items textarea ["Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Elder_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Elder_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Elder_weapons_drop_level slider [55] [1] [70] # Set the minimum drop level for these items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
@@ -289,7 +289,7 @@
 
 # //! SetOption $Good_Shaper_items textarea ["Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Shaper_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Shaper_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Shaper_weapons_drop_level slider [55] [1] [70] # Set the minimum drop level for these items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
@@ -299,7 +299,7 @@
 
 # //! SetOption $Good_fractured_items textarea ["Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Fractured_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Fractured_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Fractured_weapons_drop_level slider [55] [1] [70] # Set the minimum drop level for these items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
@@ -645,7 +645,7 @@ Show  # ~Misc - Explicit mod filter - Weapons - Caster wand (Rare) |Disable
 Show  # ~Misc - Explicit mod filter - Weapons - +1 Bow, Staff (Magic) |Disable
 	Corrupted False
 	Identified True
-	Class "Bow" "Staves" "Warstaff"
+	Class "Bow" "Staves" "Warstaves"
 	Rarity = Magic
 	HasExplicitMod "Paragon's"
 	SetFontSize 45
@@ -657,7 +657,7 @@ Show  # ~Misc - Explicit mod filter - Weapons - +1 Bow, Staff (Magic) |Disable
 
 Show  # ~Misc - Explicit mod filter - Weapons - +3 Bow, Staff (Rare) |Disable
 	Identified True
-	Class "Bow" "Staves" "Warstaff"
+	Class "Bow" "Staves" "Warstaves"
 	Rarity = Rare
 	HasExplicitMod "Paragon's"
 	HasExplicitMod "Sharpshooter's" "Anarchist's" "Lava Caller's" "Tempest King's" "Winterbringer's"
@@ -1122,7 +1122,7 @@ Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 	FracturedItem True
 	DropLevel < 55 
 # //$ < $Fractured_weapons_drop_level
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	Rarity <= Rare
 	ItemLevel >= 68
 	SetFontSize 33
@@ -1147,7 +1147,7 @@ Show
 	FracturedItem True
 	DropLevel >= 55 
 # //$ >= $Fractured_weapons_drop_level
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
 # //$ $Fractured_weapons
 	Rarity = Rare
 	SetFontSize 45
@@ -1226,7 +1226,7 @@ Show
 Show  # ~Misc - Challenge leagues - Synthesis items - Bad Synthesised items
 	SynthesisedItem True
 	DropLevel <= 54
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	Rarity <= Rare
 	ItemLevel >= 68
 	SetFontSize 33 
@@ -1263,7 +1263,7 @@ Show  # ~Misc - Challenge leagues - Betrayal - Veiled armour |Disable
 
 Show  # ~Misc - Challenge leagues - Betrayal - Veiled weapons |Disable
 	Identified True
-	Class "Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" 
+	Class "Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" 
 # //$ $Veiled_weapons
 	HasExplicitMod "Veil"
 	SetFontSize 45
@@ -1523,7 +1523,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Bad Elder items
 	ElderItem True
 	DropLevel < 55 
 # //$ < $Elder_weapons_drop_level
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	Rarity <= Rare
 	ItemLevel >= 68
 	SetFontSize 33
@@ -1548,7 +1548,7 @@ Show
 	ElderItem True
 	DropLevel >= 55 
 # //$ >= $Elder_weapons_drop_level
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
 # //$ $Elder_weapons
 	Rarity = Rare
 	SetFontSize 45
@@ -1615,7 +1615,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Bad Shaper items
 	ShaperItem True
 	DropLevel < 55 
 # //$ < $Shaper_weapons_drop_level
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	Rarity <= Rare
 	ItemLevel >= 68
 	SetFontSize 33
@@ -1640,7 +1640,7 @@ Show
 	ShaperItem True
 	DropLevel >= 55 
 # //$ >= $Shaper_weapons_drop_level
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
 # //$ $Shaper_weapons
 	Rarity = Rare
 	SetFontSize 45
@@ -3401,7 +3401,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Recipes - 20% Chisel r
 # List of items that you never want to see. Use with care.
 Hide
 	Corrupted False
-	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver" "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
+	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver" "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
 	BaseType "Splintered Tower Shield" 
 # //$ $Bad_rare_items
 	Rarity = Rare
@@ -3474,7 +3474,7 @@ Show
 
 # All top weapon base rares.
 Show
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
 	BaseType "Harbinger Bow" "Gemini Claw" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Spiraled Foil" "Jewelled Foil" "Eclipse Staff" "Vaal Axe" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Profane Wand" "Prophecy Wand" "Imbued Wand" "Sai" "Demon Dagger" "Imperial Skean" "Platinum Kris" "Ezomyte Dagger" "Ambusher" 
 # //$ $Top_rare_weapons
 	Rarity = Rare
@@ -3626,7 +3626,7 @@ Hide  # Endgame Filter (Disable for MF) - Rare items - Weapons - Wands - Decent
 #Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - @Good rare weapons |Disable
 #	DropLevel >= 56 
 # //$ >= $Good_rare_weapons_level
-#	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" 
+#	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" 
 # //$ $Good_rare_weapons
 #	Rarity = Rare
 #	ItemLevel >= 1 
@@ -4317,7 +4317,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 # Any staff that can craft +3 to gems.
 #Disabled Block Start
 #Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Staves (+3) |Disable
-#	Class "Staves" "Warstaff"
+#	Class "Staves" "Warstaves"
 #	Rarity = Rare
 #	ItemLevel >= 55
 #	SetFontSize 33 
@@ -4331,7 +4331,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 #Disabled Block Start
 #Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Staves |Disable
 #	DropLevel >= 49
-#	Class "Staves" "Warstaff"
+#	Class "Staves" "Warstaves"
 #	Rarity = Rare
 #	ItemLevel >= 1 
 # //$ >= $Rare_items_minimum_item_level
@@ -4346,7 +4346,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 
 #Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Staves |Disable
 #	DropLevel >= 44
-#	Class "Staves" "Warstaff"
+#	Class "Staves" "Warstaves"
 #	Rarity = Rare
 #	ItemLevel <= 63
 #	SetFontSize 33 
@@ -4359,7 +4359,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 
 #Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Staves |Disable
 #	DropLevel >= 34
-#	Class "Staves" "Warstaff"
+#	Class "Staves" "Warstaves"
 #	Rarity = Rare
 #	ItemLevel <= 48
 #	SetFontSize 33 
@@ -4372,7 +4372,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 
 #Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Staves |Disable
 #	DropLevel >= 23
-#	Class "Staves" "Warstaff"
+#	Class "Staves" "Warstaves"
 #	Rarity = Rare
 #	ItemLevel <= 36
 #	SetFontSize 33 
@@ -4385,7 +4385,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 
 #Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Staves |Disable
 #	DropLevel >= 13
-#	Class "Staves" "Warstaff"
+#	Class "Staves" "Warstaves"
 #	Rarity = Rare
 #	ItemLevel <= 27
 #	SetFontSize 33 
@@ -4398,7 +4398,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 
 #Show  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapons - Staves |Disable
 #	DropLevel >= 1
-#	Class "Staves" "Warstaff"
+#	Class "Staves" "Warstaves"
 #	Rarity = Rare
 #	ItemLevel <= 16
 #	SetFontSize 33 
@@ -5660,7 +5660,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 
 #Show  # ~Misc - Animate Weapon - Normal - weapons (All) |Disable
 #	Corrupted False
-#	Class "Dagger" "Claw" "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+#	Class "Dagger" "Claw" "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Normal
 #	SetFontSize 21
 #	SetTextColor 255 255 255 0 # Animate weapon text
@@ -5703,7 +5703,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #Show  # ~Misc - Animate Weapon - Magic - weapons (All) |Disable
 #	Corrupted False
 #	Identified True
-#	Class "Dagger" "Claw" "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+#	Class "Dagger" "Claw" "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Magic
 #	SetFontSize 21
 #	SetTextColor 255 255 255 0 # Animate weapon text
@@ -5740,7 +5740,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #-------------------------------------------------------------------------------#
 
 Hide  # Crafting Filter - Normal items - @Weapon crafting bases
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
 	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
 	Rarity = Normal
@@ -5752,7 +5752,7 @@ Hide  # Crafting Filter - Normal items - @Weapon crafting bases
 	DisableDropSound
 
 Hide  # Crafting Filter - Magic items - @Weapon crafting bases
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
 	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
 	Rarity = Magic
@@ -5892,7 +5892,7 @@ Show
 	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
-#    Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
+#    Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
 #	SetBorderColor 255 45 175 # T2 drops color
 
 #-------------------------------------------------------------------------------#
@@ -6243,7 +6243,7 @@ Hide  # Endgame Filter (Disable for MF) - RGB items - Normal - Width = 1
 #Disabled Block End
 
 Show
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaff" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
 	ItemLevel <= 1
 	SetFontSize 45
 	SetBackgroundColor 75 75 75 200 # Racing items
@@ -9407,7 +9407,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Crafting Items - Crude
 
 #Show  # Leveling Filter (Enable for leveling and races) - Recipes - 20% quality weapons |Disable
 #	Quality = 20
-#	Class "Bow" "Claw" "Dagger" "One Hand" "Sceptre" "Staves" "Warstaff" "Two Hand" "Wand"
+#	Class "Bow" "Claw" "Dagger" "One Hand" "Sceptre" "Staves" "Warstaves" "Two Hand" "Wand"
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
