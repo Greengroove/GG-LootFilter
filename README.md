@@ -1,6 +1,6 @@
 # Greengroove's Loot Filter Scripts for Path of Exile
 
-**[Filterblast](http://filterblast.oversoul.xyz/Greengroove/)
+**[Filterblast](https://filterblast.xyz/Greengroove/)
 |
 [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921)
 |
@@ -17,7 +17,7 @@
 [Donations](https://www.pathofexile.com/forum/view-thread/1566921/page/1/#p12940460)**
 
 - A complete filter overview **reference manual is available [here](https://github.com/Greengroove/GG-LootFilter/blob/master/GG%20Loot%20Filter%20Scripts%20-%20Complete%20overview.pdf).**
-- Fully compatible with [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTERBLAST IS CURRENTLY THE ONLY CUSTOMIZATION APPLICATION COMPATIBLE WITH MY FILTER!** I will update the info if there are changes. 
+- Fully compatible with [Filterblast](https://filterblast.xyz/Greengroove/). **FILTERBLAST IS CURRENTLY THE ONLY CUSTOMIZATION APPLICATION COMPATIBLE WITH MY FILTER!** I will update the info if there are changes. 
 
 A general recommendation is to only use the leveling filter for races, start of a challenge league or when you level a new character. When you play with a fully geared character the Endgame filter will be much better. If you have a reasonable amount of magic find or wealth, you can use the MF filter. A custom version however, will almost always perform best.
 
@@ -43,7 +43,7 @@ Detailed information is available on the [Official forum thread](https://www.pat
 
 ## INSTALL AND CUSTOMIZE:
 
-- Please download and customize the filter on [Filterblast](http://filterblast.oversoul.xyz/Greengroove/). **FILTERBLAST IS CURRENTLY THE ONLY CUSTOMIZATION APPLICATION COMPATIBLE WITH MY FILTER!**
+- Please download and customize the filter on [Filterblast](https://filterblast.xyz/Greengroove/). **FILTERBLAST IS CURRENTLY THE ONLY CUSTOMIZATION APPLICATION COMPATIBLE WITH MY FILTER!**
 - Customization also possible with Notepad (or a similar application) with find and replace function. Not recommended.
 - Filter comes with a few color and sound themes.
 
@@ -53,7 +53,7 @@ Check the video tutorials on [Youtube](https://www.youtube.com/playlist?list=PL1
 
 ## AUTO UPDATE:
 
-There's a free auto update script that works with [AutoHotkey](https://autohotkey.com/download/). Get it [here](http://filterblast.oversoul.xyz/auto-updater.html). It will make sure to keep all your filter files up to date. Across multiple filters and filter versions.
+There's a free auto update script that works with [AutoHotkey](https://autohotkey.com/download/). Get it [here](https://filterblast.xyz/filternova.html). It will make sure to keep all your filter files up to date. Across multiple filters and filter versions.
 
 ## INSTALL INSTRUCTIONS:
 
