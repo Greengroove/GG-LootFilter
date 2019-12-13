@@ -4,14 +4,14 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
-## 3.9.0a
+## 3.9.0b
 
 - Updated class Warstaff to Warstaves.
+- Added to the good divination card list: "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen"
 
 ## 3.9.0
 
 - Added new map fragment types, Metamorph samples, Catalysts, new exalted orbs, "Awakener's Orb", "Ivory Watchstone" and changed sextant names.
-- "TO DO" Added to the good divination card list: "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen"
 - Just for reference - unknown card: "Underground Forest"
 - First 3 essence tiers and T4 Harbinger Currency (Chaos Shard, Regal Shard, Binding Shard) moved to the endgame filter and will be hidden by default in the MF version.
 - Fixed conflict with "The Wolf's Legacy" divination card.
