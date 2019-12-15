@@ -1,10 +1,10 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.9.0c
+#               Greengroove's Endgame Loot Filter Script v 3.9.0d
 #
 #-------------------------------------------------------------------------------#
 #
-#               Updated for War for the Atlas 3.8.x
+#               Updated for War for the Atlas 3.9.x
 #
 #
 #           
@@ -74,6 +74,7 @@
 #   DELVE
 #   INCURSION
 #   BESTIARY
+#   SHAPER ITEMS
 #   ELDER ITEMS
 #   SHAPER ITEMS
 #   ABYSS
@@ -275,6 +276,16 @@
 
 # //! SetOption $Veiled_armour textarea ["Body Armour" "Gloves" "Boots" "Helmets" "Shield" "Rings" "Amulet" "Belts"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Veiled_weapons textarea ["Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Separator
+
+# //! SetOption $Good_Influenced_items textarea ["Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $EmptyLine
+# //! SetOption $Influenced_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Influenced_weapons_drop_level slider [55] [1] [70] # Set the minimum drop level for these items.
+# //! SetOption $EmptyLine
+# //! SetOption $EmptyLine
+# //! SetOption $Influenced_armour textarea ["Body Armour" "Quiver"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Influenced_armour_drop_level slider [1] [1] [70] # Set the minimum drop level for these items.
 # //! SetOption $Separator
 
 # //! SetOption $Good_Elder_items textarea ["Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
@@ -1490,6 +1501,97 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Rope Net, Iron Net
 	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
+
+#-------------------------------------------------------------------------------#
+# Section:  #   Influenced ITEMS
+#-------------------------------------------------------------------------------#
+
+Show
+	HasInfluence Crusader Redeemer Hunter Warlord
+	Rarity = Unique
+	SetFontSize 45
+	SetTextColor 175 96 37 # Unique items color
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Brown Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+# Bad Influenced items
+Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
+	HasInfluence Crusader Redeemer Hunter Warlord
+	Class "Shield"
+	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
+	Rarity <= Rare
+	SetFontSize 33 
+	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
+
+# Bad Influenced items
+Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
+	HasInfluence Crusader Redeemer Hunter Warlord
+	DropLevel < 55
+# //$ < $Influenced_weapons_drop_level
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	ItemLevel >= 68
+	Rarity <= Rare
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
+
+# Good Influenced items
+Show
+	HasInfluence Crusader Redeemer Hunter Warlord
+	Class "Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"
+# //$ $Good_Influenced_items
+	SetFontSize 45
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 3 160 # D - Important items
+	DisableDropSound
+
+# Custom Influenced weapons
+Show
+	HasInfluence Crusader Redeemer Hunter Warlord
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+# //$ $Influenced_weapons
+	Rarity = Rare
+	DropLevel >= 55 
+# //$ >= $Influenced_weapons_drop_level
+	SetFontSize 45
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 3 160 # D - Important items
+	DisableDropSound
+
+# Custom Influenced armour
+Show
+	HasInfluence Crusader Redeemer Hunter Warlord
+	Class "Body Armour" "Quiver"
+# //$ $Influenced_armour
+	Rarity = Rare
+	DropLevel >= 1 
+# //$ >= $Influenced_armour_drop_level
+	SetFontSize 45
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 3 160 # D - Important items
+	DisableDropSound
+
+# Bad Influenced items
+Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
+	HasInfluence Crusader Redeemer Hunter Warlord
+	Rarity <= Rare
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
 
 #-------------------------------------------------------------------------------#
 # Section:  #   ELDER ITEMS
