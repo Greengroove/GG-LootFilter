@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.9.0b
+#               Greengroove's Endgame Loot Filter Script v 3.9.0c
 #
 #-------------------------------------------------------------------------------#
 #
@@ -43,7 +43,7 @@
 #   https://www.pathofexile.com/forum/view-thread/1566921
 #
 #   Download:
-#   http://filterblast.oversoul.xyz/Greengroove/
+#   https://filterblast.xyz/Greengroove/
 #   https://github.com/Greengroove/GG-LootFilter/releases
 #
 #   Changelog:
@@ -2559,7 +2559,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Low level maps in high level ma
 
 Show
 	Class "Atlas Region Upgrade Item"
-	BaseType "Ivory Watchstone"
+	BaseType "Ivory Watchstone" "Watchstone"
 	SetFontSize 45
 	SetTextColor 74 230 58 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color

@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.9.0c
+
+- Fixed not displaying Watchstones.
+
 ## 3.9.0b
 
 - Updated class Warstaff to Warstaves.
