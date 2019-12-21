@@ -2204,6 +2204,7 @@ Hide  # Endgame Filter (Disable for MF) - Low currency - Armourer's Scrap
 #Show  # Endgame Filter (Disable for MF) - Currency - Cartographer's Chisel (highlight only) |Disable
 #	Class "Currency"
 #	BaseType "Cartographer's Chisel"
+#	MinimapIcon 2 Blue Diamond
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 #	PlayAlertSound 2 90 # A - Tier 4

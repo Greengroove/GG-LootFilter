@@ -6,6 +6,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 3.9.0d
 
+- Added MinimapIcon Blue Diamond to chisels.
 - Added support for Crusader, Redeemer, Hunter and Warlord influenced map items.
 
 ## 3.9.0c
