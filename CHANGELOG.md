@@ -4,8 +4,9 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
-## 3.9.1c
+## 3.9.1c (Endgame version only)
 
+- Added Awakened Support Skill Gems.
 - All normal rare items (that can't be hidden) are now affected by "Rare_items_minimum_item_level" slider and the slider can now go upt to item level 87.
 
 ## 3.9.0d

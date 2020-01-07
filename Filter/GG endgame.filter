@@ -2711,6 +2711,18 @@ Show
 #-------------------------------------------------------------------------------#
 
 Show
+	Quality = 0
+	Class "Support Skill Gems"
+	BaseType Awakened
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
+	DisableDropSound
+
+Show
 	Quality = 20
 	Class "Gem"
 	SetFontSize 45
@@ -2781,7 +2793,7 @@ Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality <= 7) |Disable
 
 #Show  # Leveling Filter (Enable for leveling and races) - Gems - @Useful and drop only gems |Disable
 #	Class "Gem"
-#	BaseType "Added Chaos Damage" "Blood Magic" "Cast when Damage Taken" "Concentrated Effect" "Immortal Call" "Increased Area of Effect" "Increased Duration" "Less Duration" "Multistrike" "Phase Run" 
+#	BaseType "Added Chaos Damage" "Blood Magic" "Cast when Damage Taken" "Concentrated Effect" "Immortal Call" "Increased Area of Effect" "Increased Duration" "Less Duration" "Multistrike" "Phase Run" Awakened
 # //$ $Useful_and_drop_only_gems
 #	SetFontSize 45
 #	SetTextColor 27 162 155 # Gems color
