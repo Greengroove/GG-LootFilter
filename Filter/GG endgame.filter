@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.9.0d
+#               Greengroove's Endgame Loot Filter Script v 3.9.1c
 #
 #-------------------------------------------------------------------------------#
 #
@@ -74,6 +74,7 @@
 #   DELVE
 #   INCURSION
 #   BESTIARY
+#   INFLUENCED ITEMS
 #   ELDER ITEMS
 #   SHAPER ITEMS
 #   ABYSS
@@ -266,7 +267,7 @@
 # //! SetOption $Rare_Shields checkbox ["Tower Shield"] ["Buckler"] ["Spirit Shield"] ["Round Shield"] ["Kite Shield"] ["Spiked Shield"] # Set the bases you are interested in. These can be disabled with the [u][b]block switches[/b][/u]. If none is selected, default values will be used.
 # //! SetOption $Shield_drop_level slider [47] [3] [70] # Set the minimum drop level (Default 47).
 # //! SetOption $Separator
-# //! SetOption $Rare_items_minimum_item_level slider [1] [1] [84] # Only affects non top rare items (Default 1).
+# //! SetOption $Rare_items_minimum_item_level slider [1] [1] [87] # Only affects non top rare items (Default 1).
 # //! SetOption $Rare_items_font_size slider [33] [33] [45] # Only affects non top rare items (Default 33).
 # //! SetOption $Separator
 # //! SetOption $Bad_rare_items textarea ["Splintered Tower Shield"] # This is a list of items that you never want to see. If empty default values will be used.
@@ -337,7 +338,7 @@
 # //! SetOption $Separator
 # //! SetOption $Chance_bases textarea ["Leather Belt"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Separator
-# //! SetOption $Good_Divination_cards textarea ["Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
+# //! SetOption $Good_Divination_cards textarea ["Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
 # //! SetOption $EmptyLine
 # //! SetOption $Bad_Divination_cards textarea ["The Mountain" "Echoes of Love" "The Fool" "Dark Temptation" "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame filter. The [u][b]block switch[/b][/u] is in the leveling block. If empty default values will be used.
 # //! SetOption $Separator
@@ -975,8 +976,8 @@ Show  # ~Misc - Challenge leagues - Metamorph - Samples |Disable
 	Class "Metamorph Sample"
 	BaseType "Metamorph Brain" "Metamorph Eye" "Metamorph Liver" "Metamorph Lung" "Metamorph Heart"
 	SetFontSize 45
-	SetTextColor 74 230 58 255 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 0 Yellow Star
 	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
@@ -1502,16 +1503,16 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Rope Net, Iron Net
 # //! AlertSound $Leveling_items
 
 #-------------------------------------------------------------------------------#
-# Section:  #   Influenced ITEMS
+# Section:  #   INFLUENCED ITEMS
 #-------------------------------------------------------------------------------#
 
 Show
-	HasInfluence Crusader Redeemer Hunter Warlord
 	Rarity = Unique
+	HasInfluence Crusader Redeemer Hunter Warlord
 	SetFontSize 45
 	SetTextColor 175 96 37 # Unique items color
 	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 Brown Circle
 	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
@@ -1519,75 +1520,75 @@ Show
 
 # Bad Influenced items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
-	HasInfluence Crusader Redeemer Hunter Warlord
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
 	Rarity <= Rare
-	SetFontSize 33 
+	HasInfluence Crusader Redeemer Hunter Warlord
+	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
 
 # Bad Influenced items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
-	HasInfluence Crusader Redeemer Hunter Warlord
-	DropLevel < 55
+	DropLevel < 55 
 # //$ < $Influenced_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
-	ItemLevel >= 68
 	Rarity <= Rare
+	ItemLevel >= 68
+	HasInfluence Crusader Redeemer Hunter Warlord
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
 
 # Good Influenced items
 Show
-	HasInfluence Crusader Redeemer Hunter Warlord
-	Class "Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"
+	Class "Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand" 
 # //$ $Good_Influenced_items
+	HasInfluence Crusader Redeemer Hunter Warlord
 	SetFontSize 45
 	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
-	PlayAlertSound 3 160 # D - Important items
+	PlayAlertSound 3 170 # D - Important items
 	DisableDropSound
 
 # Custom Influenced weapons
 Show
-	HasInfluence Crusader Redeemer Hunter Warlord
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
-# //$ $Influenced_weapons
-	Rarity = Rare
 	DropLevel >= 55 
 # //$ >= $Influenced_weapons_drop_level
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" 
+# //$ $Influenced_weapons
+	Rarity = Rare
+	HasInfluence Crusader Redeemer Hunter Warlord
 	SetFontSize 45
 	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
-	PlayAlertSound 3 160 # D - Important items
+	PlayAlertSound 3 170 # D - Important items
 	DisableDropSound
 
 # Custom Influenced armour
 Show
-	HasInfluence Crusader Redeemer Hunter Warlord
-	Class "Body Armour" "Quiver"
-# //$ $Influenced_armour
-	Rarity = Rare
 	DropLevel >= 1 
 # //$ >= $Influenced_armour_drop_level
+	Class "Body Armour" "Quiver" 
+# //$ $Influenced_armour
+	Rarity = Rare
+	HasInfluence Crusader Redeemer Hunter Warlord
 	SetFontSize 45
 	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
-	PlayAlertSound 3 160 # D - Important items
+	PlayAlertSound 3 170 # D - Important items
 	DisableDropSound
 
 # Bad Influenced items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
-	HasInfluence Crusader Redeemer Hunter Warlord
 	Rarity <= Rare
+	HasInfluence Crusader Redeemer Hunter Warlord
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2027,7 +2028,7 @@ Show
 
 Show
 	Class "Divination"
-	BaseType "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power" 
+	BaseType "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power" 
 # //$ $Good_Divination_cards
 	SetFontSize 45
 	SetTextColor 0 0 0
@@ -2184,8 +2185,8 @@ Show  # Endgame Filter (Disable for MF) - Currency - Cartographer's Chisel (high
 	BaseType "Cartographer's Chisel"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
 	MinimapIcon 2 Blue Diamond
+	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
 Show
@@ -3494,6 +3495,8 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Amethyst, G
 Show
 	Class "Amulet" "Ring"
 	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
@@ -3523,6 +3526,8 @@ Show
 	BaseType "Harbinger Bow" "Gemini Claw" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Spiraled Foil" "Jewelled Foil" "Eclipse Staff" "Vaal Axe" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Profane Wand" "Prophecy Wand" "Imbued Wand" "Sai" "Demon Dagger" "Imperial Skean" "Platinum Kris" "Ezomyte Dagger" "Ambusher" 
 # //$ $Top_rare_weapons
 	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
@@ -3551,6 +3556,8 @@ Show
 	BaseType "Vermillion Ring" "Cerulean Ring" "Rustic Sash" "Leather Belt" "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield" 
 # //$ $Top_rare_armour
 	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
 	SetFontSize 45
 	SetTextColor 255 255 119
 	SetBorderColor 255 45 175 # T2 drops color
