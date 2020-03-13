@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.10.0
+
+- Added Delirium challenge league items.
+- Added "Sockets AA" with proper highlight.
+
 ## 3.9.1c (Endgame version only)
 
 - Added Awakened Support Skill Gems.
