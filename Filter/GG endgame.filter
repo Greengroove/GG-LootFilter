@@ -466,17 +466,6 @@ Show
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-# Item has any labyrinth enchantment
-Show
-	AnyEnchantment True
-	SetFontSize 45
-	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 3 160 # D - Important items
-	DisableDropSound
-
 #-------------------------------------------------------------------------------#
 # Section:  #   EXPLICIT MOD FILTER - JEWELS
 #-------------------------------------------------------------------------------#
@@ -1045,6 +1034,17 @@ Show  # ~Misc - Challenge leagues - Delirium items - Cluster Jewels (item level 
 	SetBorderColor 255 45 175 # T2 drops color
 	MinimapIcon 2 Yellow Circle
 	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
+
+# Item has any enchantment
+Show
+	AnyEnchantment True
+	SetFontSize 45
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
 #-------------------------------------------------------------------------------#
