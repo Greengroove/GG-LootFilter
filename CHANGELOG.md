@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.10.1c
+
+- Added option to hide cluster jewels item level <= 74.
+- Added filter for good veiled mods that can't be hidden.
+- Changed highlights for a few Delirium challenge league items.
+- Added minimum item level argument to some jewelry.
+- Moved the leveling items switch to top of the block.
+- Animate weapon filter is now less visible.
+
 ## 3.10.0
 
 - Added Delirium challenge league items.
