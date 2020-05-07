@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.10.1f
+
+- Added Explicit mod filter for Martinet's and Magister's.
+- Added option to hide Blessed orbs.
+- Added editable list of bad prophecies.
+
 ## 3.10.1c
 
 - Added option to hide cluster jewels item level <= 74.

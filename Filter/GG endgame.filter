@@ -1,10 +1,10 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.10.1c
+#               Greengroove's Endgame Loot Filter Script v 3.10.1f
 #
 #-------------------------------------------------------------------------------#
 #
-#               Updated for War for the Atlas 3.9.x
+#               Updated for War for the Atlas 3.10.x
 #
 #
 #           
@@ -263,7 +263,7 @@
 # //! SetOption $Good_rare_weapons textarea ["Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the weapon classes you are interested in. These can be disabled with the [u][b]block switches[/b][/u] in the endgame block.
 # //! SetOption $Good_rare_weapons_level slider [56] [56] [70] # Set the minimum drop level for these items.
 # //! SetOption $Separator
-# //! SetOption $Top_rare_armour textarea ["Vermillion Ring" "Cerulean Ring" "Rustic Sash" "Leather Belt" "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield"] # If empty default values will be used.
+# //! SetOption $Top_rare_armour_and_accessories textarea ["Vermillion Ring" "Cerulean Ring" "Rustic Sash" "Leather Belt" "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield"] # If empty default values will be used.
 # //! SetOption $EmptyLine
 # //! SetOption $Rare_Shields checkbox ["Tower Shield"] ["Buckler"] ["Spirit Shield"] ["Round Shield"] ["Kite Shield"] ["Spiked Shield"] # Set the bases you are interested in. These can be disabled with the [u][b]block switches[/b][/u]. If none is selected, default values will be used.
 # //! SetOption $Shield_drop_level slider [47] [3] [70] # Set the minimum drop level (Default 47).
@@ -336,6 +336,8 @@
 # //! SetTab [Misc]
 
 # //! SetOption $Items_with_explicit_mod textarea ["Tyrannical" "Merciless"] # If empty default values will be used.
+# //! SetOption $Separator
+# //! SetOption $Bad_Prophecies textarea ["A Valuable Combination" "Anarchy's End I" "Anarchy's End II" "Beyond Sight I" "Beyond Sight II" "Day of Sacrifice I" "Day of Sacrifice II" "Day of Sacrifice III" "Deadly Rivalry I" "Deadly Rivalry II" "Defiled in the Sceptre" "Echoes of Witchcraft" "Ending the Torment" "Erased from Memory" "Fallow At Last" "Forceful Exorcism" "Gilded Within" "Golden Touch" "Heavy Blows" "Holding the Bridge" "Hunter's Lesson" "In the Grasp of Corruption" "Lasting Impressions" "Living Fires" "Nemesis of Greed" "Path of Betrayal" "Pools of Wealth" "Rebirth" "Resistant to Change" "Risen Blood" "Smothering Tendrils" "Thaumaturgical History I" "Thaumaturgical History II" "The Alchemist" "The Ambitious Bandit I" "The Ambitious Bandit II" "The Child of Lunaris" "The Corrupt" "The Feral Lord I" "The Feral Lord II" "The Feral Lord III" "The Forgotten Garrison" "The Forgotten Soldiers" "The Invader" "The Mysterious Gift" "The Plaguemaw I" "The Plaguemaw II" "The Plaguemaw III" "The Scout" "The Singular Spirit" "The Stockkeeper" "The Unbreathing Queen I" "The Unbreathing Queen II" "The Unbreathing Queen III" "The Undead Brutes" "The Warmongers I" "The Warmongers II" "The Wealthy Exile" "Touched by the Wind" "Unbearable Whispers I" "Unbearable Whispers II" "Unbearable Whispers III" "Undead Uprising" "Unnatural Energy" "Vaal Invasion" "Visions of the Drowned" "Vital Transformation"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Separator
 # //! SetOption $Chance_bases textarea ["Leather Belt"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Separator
@@ -564,6 +566,17 @@ Show
 	Identified True
 	HasExplicitMod "Tyrannical" "Merciless" 
 # //$ $Items_with_explicit_mod
+	SetFontSize 45
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 3 160 # D - Important items
+	DisableDropSound
+
+Show  # ~Misc - Explicit mod filter - Weapons - Gem level modifiers |Disable
+	Identified True
+	HasExplicitMod "Magister's" "Martinet's"
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -1364,7 +1377,7 @@ Show
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Betrayal - Veiled armour |Disable
+Show  # ~Misc - Challenge leagues - Betrayal - Ordinary veiled armour |Disable
 	Identified True
 	HasExplicitMod "Veil"
 	Class "Body Armour" "Gloves" "Boots" "Helmets" "Shield" "Rings" "Amulet" "Belts"
@@ -1377,7 +1390,7 @@ Show  # ~Misc - Challenge leagues - Betrayal - Veiled armour |Disable
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Betrayal - Veiled weapons |Disable
+Show  # ~Misc - Challenge leagues - Betrayal - Ordinary veiled weapons |Disable
 	Identified True
 	HasExplicitMod "Veil"
 	Class "Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
@@ -2351,7 +2364,7 @@ Show
 	PlayAlertSound 1 100 # C - Regal Orb
 	DisableDropSound
 
-Show
+Show  # Endgame Filter (Disable for MF) - Currency - Blessed Orb |Disable
 	Class "Currency"
 	BaseType "Blessed Orb"
 	SetFontSize 45
@@ -2542,6 +2555,16 @@ Show  # Endgame Filter (Disable for MF) - Currency - Perandus Coin (Any) |Disabl
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Currency - Bad sealed Prophecies
+	Class "Currency"
+	BaseType "Prophecy"
+	Prophecy "A Valuable Combination" "Anarchy's End I" "Anarchy's End II" "Beyond Sight I" "Beyond Sight II" "Day of Sacrifice I" "Day of Sacrifice II" "Day of Sacrifice III" "Deadly Rivalry I" "Deadly Rivalry II" "Defiled in the Sceptre" "Echoes of Witchcraft" "Ending the Torment" "Erased from Memory" "Fallow At Last" "Forceful Exorcism" "Gilded Within" "Golden Touch" "Heavy Blows" "Holding the Bridge" "Hunter's Lesson" "In the Grasp of Corruption" "Lasting Impressions" "Living Fires" "Nemesis of Greed" "Path of Betrayal" "Pools of Wealth" "Rebirth" "Resistant to Change" "Risen Blood" "Smothering Tendrils" "Thaumaturgical History I" "Thaumaturgical History II" "The Alchemist" "The Ambitious Bandit I" "The Ambitious Bandit II" "The Child of Lunaris" "The Corrupt" "The Feral Lord I" "The Feral Lord II" "The Feral Lord III" "The Forgotten Garrison" "The Forgotten Soldiers" "The Invader" "The Mysterious Gift" "The Plaguemaw I" "The Plaguemaw II" "The Plaguemaw III" "The Scout" "The Singular Spirit" "The Stockkeeper" "The Unbreathing Queen I" "The Unbreathing Queen II" "The Unbreathing Queen III" "The Undead Brutes" "The Warmongers I" "The Warmongers II" "The Wealthy Exile" "Touched by the Wind" "Unbearable Whispers I" "Unbearable Whispers II" "Unbearable Whispers III" "Undead Uprising" "Unnatural Energy" "Vaal Invasion" "Visions of the Drowned" "Vital Transformation"
+# //$ $Bad_Prophecies
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Prophecy items - Sealed Prophecies |Disable
@@ -3661,7 +3684,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Daggers - DropL
 Show
 	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver"
 	BaseType "Vermillion Ring" "Cerulean Ring" "Rustic Sash" "Leather Belt" "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield" 
-# //$ $Top_rare_armour
+# //$ $Top_rare_armour_and_accessories
 	Rarity = Rare
 	ItemLevel >= 1 
 # //$ >= $Rare_items_minimum_item_level
