@@ -1041,17 +1041,6 @@ Show
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show
-	Class "Harvest Infrastructure"
-	BaseType "Stanchion" "Disperser" "Condenser" "Horticrafting Station" "Wild Lifeforce Collector" "Vivid Lifeforce Collector" "Primal Lifeforce Collector"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 7 160 # A - Tier 2
-	DisableDropSound
-
 Show  # ~Misc - Challenge leagues - Harvest items - Grains
 	Class "Harvest Seed"
 	BaseType Grain
@@ -1089,6 +1078,17 @@ Show
 	MinimapIcon 0 Yellow Star
 	PlayEffect Green
 	PlayAlertSound 8 250 # A - Tier 1
+	DisableDropSound
+
+Show
+	Class Harvest
+	BaseType "Stanchion" "Disperser" "Condenser" "Horticrafting Station" "Wild Lifeforce Collector" "Vivid Lifeforce Collector" "Primal Lifeforce Collector"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 #-------------------------------------------------------------------------------#
