@@ -1032,7 +1032,7 @@ Show
 #	Winged scarabs
 Show
 	Class "Map Fragment"
-	BaseType "winged"
+	BaseType "Winged Cartography Scarab" "Winged Reliquary Scarab" "Winged Bestiary Scarab" "Winged Shaper Scarab" "Winged Elder Scarab" "Winged Sulphite Scarab" "Winged Divination Scarab" "Winged Torment Scarab" "Winged Ambush Scarab" "Winged Harbinger Scarab" "Winged Perandus Scarab" "Winged Breach Scarab" "Winged Legion Scarab" "Winged Metamorph Scarab"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
