@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.11.0e
+
+- Changed appearance for grains and added a map icon.
+- Fixed a bug because some rare gloves and boots wouldn't show when higher priority items were hidden, but lower still enabled.
+
 ## 3.11.0
 
 - Added Harvest challenge league related items and other items specified in the [forum post](https://www.pathofexile.com/forum/view-thread/2873743).

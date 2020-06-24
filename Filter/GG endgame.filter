@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.11.0
+#               Greengroove's Endgame Loot Filter Script v 3.11.0e
 #
 #-------------------------------------------------------------------------------#
 #
@@ -1044,9 +1044,10 @@ Show
 Show  # ~Misc - Challenge leagues - Harvest items - Grains
 	Class "Harvest Seed"
 	BaseType Grain
-#	StackSize = 1
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 170 # Lesser items
+	SetTextColor 255 45 175 # T2 drops color
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Harvest items - Seeds
@@ -4939,7 +4940,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Armour
 #-------------------------------------------------------------------------------#
 
 # Mediocre Energy shield bases.
-Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy shield bases - Boots
+Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy shield bases - Boots |Disable
 	Class "Boots"
 	BaseType "Conjurer Boots" "Samite Slippers"
 	Rarity = Rare
@@ -4952,7 +4953,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy 
 	DisableDropSound
 
 # Hybrid ES bases.
-Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases - Boots
+Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases - Boots |Disable
 	Class "Boots"
 	BaseType "Murder Boots" "Crusader Boots" "Assassin's Boots" "Legion Boots" "Carnal Boots"
 	Rarity = Rare
@@ -4964,7 +4965,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases 
 	DisableDropSound
 
 # Decent bases.
-Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Decent bases - Boots
+Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Decent bases - Boots |Disable
 	DropLevel >= 51
 	Class "Boots"
 	Rarity = Rare
@@ -5007,7 +5008,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Low bases - Boot
 #-------------------------------------------------------------------------------#
 
 # Mediocre Energy shield bases.
-Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy shield bases - Gloves
+Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy shield bases - Gloves |Disable
 	Class "Gloves"
 	BaseType "Conjurer Gloves" "Samite Gloves"
 	Rarity = Rare
@@ -5020,7 +5021,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Mediocre Energy 
 	DisableDropSound
 
 # Hybrid ES bases.
-Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases - Gloves
+Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases - Gloves |Disable
 	Class "Gloves"
 	BaseType "Murder Mitts" "Crusader Gloves" "Assassin's Mitts" "Legion Gloves"
 	Rarity = Rare
@@ -5032,7 +5033,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Hybrid ES bases 
 	DisableDropSound
 
 # Decent bases.
-Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Decent bases - Gloves
+Show  # Endgame Filter (Disable for MF) - Rare items - Armour - Decent bases - Gloves |Disable
 	DropLevel >= 53
 	Class "Gloves"
 	Rarity = Rare
