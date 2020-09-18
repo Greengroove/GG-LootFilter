@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.12.0
+
+- Added a filter for Replica unique items.
+- Added a filter for experimented base types.
+- Added filters for alternate quality gems and a list to highlight the ones you are interested in. By default I listed the ones I'm interested in.
+- Added filters for rogue equipment with the ability to hide non rares.
+- Added to the new / unknown divination card list: "The Bitter Blossom" "The Cache" "The Academic" "Cursed Words"
+- Added to the good divination card list: "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash"
+- Added to the bad divination card list: "The Unexpected Prize" "The Journalist"
+
 ## 3.11.0e
 
 - Changed appearance for grains and added a map icon.
