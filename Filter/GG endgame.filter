@@ -997,9 +997,30 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 # Section:  #	HEIST
 #-------------------------------------------------------------------------------#
 
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps
+	Class "Stackable Currency"
+	BaseType "Rogue's Marker"
+	AreaLevel >= 68
+	StackSize <= 90
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+#	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Acts
+	Class "Stackable Currency"
+	BaseType "Rogue's Marker"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
 Show
 	Class "Stackable Currency"
-	BaseType "Prime Regrading Lens" "Secondary Regrading Lens" "Tempering Orb" "Tailoring Orb" "Rogue's Marker"
+	BaseType "Prime Regrading Lens" "Secondary Regrading Lens" "Tempering Orb" "Tailoring Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -1040,7 +1061,7 @@ Show
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show
+Show  # ~Misc - Challenge leagues - Heist - Non rare contracts
 	Class "Contract"
 	Rarity <= Magic
 #	BaseType 
