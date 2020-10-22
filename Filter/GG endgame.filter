@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.12.0
+#               Greengroove's Endgame Loot Filter Script v 3.12.4b
 #
 #-------------------------------------------------------------------------------#
 #
@@ -212,6 +212,7 @@
 #       Yellow maps:                    MinimapIcon 2 Yellow Square
 #       White maps:                     MinimapIcon 2 White Square   
 #       Divination cards:               MinimapIcon 2 Blue Square
+#       Heist contracts and blueprints:	MinimapIcon 2 Green Square
 #       Splinters:                      MinimapIcon 2 Blue Diamond
 #
 #       Racing offhand & caster items:  MinimapIcon 2 Green Diamond
@@ -419,12 +420,22 @@
 #-------------------------------------------------------------------------------#
 
 Show
+	Class "Trinket"
+	BaseType "Thief's Trinket"
+	SetFontSize 45
+	SetTextColor 74 230 58 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show
 	Class "Quest Item"
 	BaseType Contract
 	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
+	MinimapIcon 2 Green Square
 	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
@@ -997,14 +1008,14 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 # Section:  #	HEIST
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize <= 80)
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
 	AreaLevel >= 68
-	StackSize <= 90
+	StackSize <= 80
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-#	PlayAlertSound 2 90 # A - Tier 4
+	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Acts
@@ -1022,26 +1033,6 @@ Show
 	Class "Stackable Currency"
 	BaseType "Prime Regrading Lens" "Secondary Regrading Lens" "Tempering Orb" "Tailoring Orb"
 	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-Show
-	Class "Trinket"
-	BaseType "Thief's Trinket"
-	SetFontSize 45
-	SetTextColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 7 160 # A - Tier 2
-	DisableDropSound
-
-Show
-	Class "Heist Target"
-#	BaseType "Urn of Farud"
-	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 0 Yellow Star
@@ -1050,36 +1041,43 @@ Show
 	DisableDropSound
 
 Show
+	Class "Heist Target"
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Contracts - Rare contracts
 	Class "Contract"
 	Rarity = Rare
-#	BaseType 
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
+	MinimapIcon 2 Green Square
 	PlayEffect Green Temp
-	PlayAlertSound 7 160 # A - Tier 2
+	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Non rare contracts
+Show  # ~Misc - Challenge leagues - Heist - Contracts - Non rare contracts
 	Class "Contract"
 	Rarity <= Magic
-#	BaseType 
 	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
-#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 2 90 # A - Tier 4
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Green Square
+	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show
+Show  # ~Misc - Challenge leagues - Heist - Blueprints - Rare
 	Class "Blueprint"
 	Rarity = Rare
-#	BaseType 
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Green Square
 	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
@@ -1087,50 +1085,163 @@ Show
 Show  # ~Misc - Challenge leagues - Heist - Blueprints - Magic
 	Class "Blueprint"
 	Rarity = Magic
-#	BaseType 
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 2 90 # A - Tier 4
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Green Square
+	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Heist - Blueprints - Normal
 	Class "Blueprint"
 	Rarity = Normal
-#	BaseType 
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 2 90 # A - Tier 4
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Green Square
+	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
-	
-Show  # ~Misc - Challenge leagues - Heist - Non rare rogue equipment |Disable
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Obsidian Sharpening Stone"
 	Class "Heist Gear"
-	BaseType "Rough Sharpening Stone" "Standard Sharpening Stone" "Fine Sharpening Stone" "Obsidian Sharpening Stone" "Flanged Arrowhead" "Fragmenting Arrowhead" "Hollowpoint Arrowhead" "Precise Arrowhead" "Focal Stone" "Conduit Line" "Aggregator Charm" "Burst Band"
+	BaseType "Obsidian Sharpening Stone"
 	SetFontSize 45
-#	SetBackgroundColor 75 75 75 200 # Chromatic background
-#	SetBorderColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show
-	Class "Heist Cloak" "Heist Brooch" "Heist Tool"
-	Rarity = Rare
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Precise Arrowhead"
+	Class "Heist Gear"
+	BaseType "Precise Arrowhead"
 	SetFontSize 45
-	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Burst Band"
+	Class "Heist Gear"
+	BaseType "Burst Band"
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Whisper-woven Cloak"
+	Class "Heist Cloak"
+	BaseType "Whisper-woven Cloak"
+	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
-	PlayAlertSound 3 160 # D - Important items
+	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Non rare rogue equipment |Disable
-	Class "Heist Cloak" "Heist Brooch" "Heist Tool"
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Foliate Brooch"
+	Class "Heist Brooch"
+	BaseType "Foliate Brooch"
 	SetFontSize 45
-#	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - tools
+	Class "Heist Tool"
+	BaseType "Master Lockpick" "Steel Bracers" "Thaumaturgical Sensing Charm" "Thaumetic Flashpowder" "Thaumaturgical Ward" "Grandmaster Keyring" "Silkweave Sole" "Regicide Disguise Kit" "Thaumetic Blowtorch" "Obsidian Sharpening Stone" "Precise Arrowhead" "Burst Band"
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Fine Sharpening Stone"
+	Class "Heist Gear"
+	BaseType "Fine Sharpening Stone"
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Hollowpoint Arrowhead"
+	Class "Heist Gear"
+	BaseType "Hollowpoint Arrowhead"
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Aggregator Charm"
+	Class "Heist Gear"
+	BaseType "Aggregator Charm"
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Hooded Cloak"
+	Class "Heist Cloak"
+	BaseType "Hooded Cloak"
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Enamel Brooch"
+	Class "Heist Brooch"
+	BaseType "Enamel Brooch"
+	SetFontSize 45
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 1-4 tools
+	Class "Heist Tool"
+	SetFontSize 45
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 "Rough Sharpening Stone" "Standard Sharpening Stone"
+	Class "Heist Gear"
+	BaseType "Rough Sharpening Stone" "Standard Sharpening Stone"
+	SetFontSize 45
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 "Flanged Arrowhead" "Fragmenting Arrowhead"
+	Class "Heist Gear"
+	BaseType "Flanged Arrowhead" "Fragmenting Arrowhead"
+	SetFontSize 45
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 "Focal Stone" "Conduit Line"
+	Class "Heist Gear"
+	BaseType "Focal Stone" "Conduit Line"
+	SetFontSize 45
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 Cloaks
+	Class "Heist Cloak"
+	SetFontSize 45
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 Brooches
+	Class "Heist Brooch"
+	SetFontSize 45
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
@@ -1546,7 +1657,7 @@ Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 # Good Fractured items
 Show
 	FracturedItem True
-	Class "Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"
+	Class "Jewel" "Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"
 # //$ $Good_fractured_items
 	SetFontSize 45
 	SetBackgroundColor 75 75 75 200 # Chromatic background
@@ -3201,7 +3312,18 @@ Show
 	DisableDropSound
 
 Show
-	Quality = 20
+	Class "Gem"
+	GemLevel >= 20
+	SetFontSize 45
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show
+	Quality >= 20
 	Class "Gem"
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
@@ -3252,21 +3374,22 @@ Show  # ~Misc - Challenge leagues - Heist - Alternate quality gem list |Disable
 	BaseType "Item Rarity Support" "Spark" "Clarity" "Animate Guardian" "Summon Skeletons" "Raise Zombie" "Convocation" "Feeding Frenzy Support"
 # //$ $Alternate_quality_gems
 	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
-	PlayAlertSound 1 100 # A - Tier 3
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Heist - Any alternate quality gem |Disable
 	Class "Gem"
 	AlternateQuality True
 	SetFontSize 45
-	SetTextColor 27 162 155 # Gems color
-	SetBorderColor 27 162 155 # Gems color
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 2 90 # A - Tier 4
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
 Show  # Endgame Filter (Disable for MF) - Gems - Gems (Quality 8-13) |Disable

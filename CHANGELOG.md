@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.12.4b
+
+- You can now hide Rogue's Markers in the Misc / Challenge section.
+- Added filter for Heist gear in the Misc / Challenge section.
+- Some changes to highlights for contracts, blueprints and alternate quality gems.
+- Improved highlighting for "Prime Regrading Lens" "Secondary Regrading Lens" "Tempering Orb" "Tailoring Orb".
+- Added highlighting for gems level 20 or higher or quality 20 or higher.
+- Fixed Thief's Trinkets and fractured jewels not displaying correctly.
+
 ## 3.12.0
 
 - Added a filter for Replica unique items.
