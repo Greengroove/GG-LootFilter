@@ -4,9 +4,6 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
-## 3.12.x
-
-- Moved the veiled item filter to the endgame section.
 
 ## 3.12.4b
 
@@ -16,6 +13,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Improved highlighting for "Prime Regrading Lens" "Secondary Regrading Lens" "Tempering Orb" "Tailoring Orb".
 - Added highlighting for gems level 20 or higher or quality 20 or higher.
 - Fixed Thief's Trinkets and fractured jewels not displaying correctly.
+- Moved the veiled item filter to the endgame section.
 
 ## 3.12.0
 
