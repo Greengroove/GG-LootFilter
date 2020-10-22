@@ -1008,17 +1008,17 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 # Section:  #	HEIST
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize <= 80)
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 80)
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
 	AreaLevel >= 68
-	StackSize <= 80
+	StackSize >= 80
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Acts
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Any Marker
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
 	SetFontSize 45
@@ -1799,7 +1799,7 @@ Show
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Betrayal - Ordinary veiled armour |Disable
+Show  # Endgame Filter (Disable for MF) - Rare items - Veiled items - Armour |Disable
 	Identified True
 	HasExplicitMod "Veil"
 	Class "Body Armour" "Gloves" "Boots" "Helmets" "Shield" "Rings" "Amulet" "Belts"
@@ -1812,7 +1812,7 @@ Show  # ~Misc - Challenge leagues - Betrayal - Ordinary veiled armour |Disable
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Betrayal - Ordinary veiled weapons |Disable
+Show  # Endgame Filter (Disable for MF) - Rare items - Veiled items - Weapons |Disable
 	Identified True
 	HasExplicitMod "Veil"
 	Class "Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
@@ -1826,7 +1826,7 @@ Show  # ~Misc - Challenge leagues - Betrayal - Ordinary veiled weapons |Disable
 	DisableDropSound
 
 # Items with veiled mod
-Show  # ~Misc - Challenge leagues - Betrayal - Any veiled item |Disable
+Show  # Endgame Filter (Disable for MF) - Rare items - Veiled items - Any veiled item |Disable
 	Identified True
 	HasExplicitMod "Veil"
 	SetFontSize 33 
