@@ -319,7 +319,7 @@
 # //! SetOption $Shaper_armour_drop_level slider [1] [1] [70] # Set the minimum drop level for these items.
 # //! SetOption $Separator
 
-# //! SetOption $Good_fractured_items textarea ["Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Good_fractured_items textarea ["Jewel" "Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $EmptyLine
 # //! SetOption $Fractured_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Fractured_weapons_drop_level slider [55] [1] [70] # Set the minimum drop level for these items.
