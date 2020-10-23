@@ -4360,7 +4360,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Amethyst, G
 	SetTextColor 255 255 119
 	DisableDropSound
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Amulets |Disable
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Amulets
 	Class "Amulet"
 	Rarity = Rare
 	ItemLevel >= 1 
@@ -4372,7 +4372,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Amule
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Rings |Disable
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Rings
 	Class "Ring"
 	Rarity = Rare
 	ItemLevel >= 1 
@@ -4384,7 +4384,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Rings
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Belts |Disable
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Belts
 	Class "Belt"
 	Rarity = Rare
 	ItemLevel >= 1 
