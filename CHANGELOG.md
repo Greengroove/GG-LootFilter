@@ -14,6 +14,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Added highlighting for gems level 20 or higher or quality 20 or higher.
 - Fixed Thief's Trinkets and fractured jewels not displaying correctly.
 - Moved the veiled item filter to the endgame section.
+- Added ability to hide rare amulets and rings if they are ordinary rares.
 
 ## 3.12.0
 

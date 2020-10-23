@@ -4129,8 +4129,20 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Amethyst, G
 	SetTextColor 255 255 119
 	DisableDropSound
 
-Show
-	Class "Amulet" "Ring"
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Amulets |Disable
+	Class "Amulet"
+	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 45
+	SetTextColor 255 255 119
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items 
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Rings |Disable
+	Class "Ring"
 	Rarity = Rare
 	ItemLevel >= 1 
 # //$ >= $Rare_items_minimum_item_level
