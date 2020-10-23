@@ -96,6 +96,12 @@
 #   RACING - LINKED ARMOUR / RUSTIC SASH
 #   CHANCE ITEMS
 #   ALL 2.4 AND HIGHER BASES
+#   CRAFTING BASES - TOP ITEMS - WEAPONS
+#   CRAFTING BASES - TOP ITEMS - ARMOUR
+#   CRAFTING BASES - TOP ITEMS - JEWELRY
+#   CRAFTING BASES - JEWELRY
+#   CRAFTING BASES - WEAPONS
+#   VENDOR RECIPE ITEMS - RGB ITEMS
 #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE
 #   VENDOR RECIPE ITEMS - CHISEL RECIPE
 #   BAD RARE ITEMS
@@ -129,13 +135,7 @@
 #   FLASKS - TOP BASES - MAGIC
 #   FLASKS - PROGRESSION
 #   ANIMATE WEAPON
-#   CRAFTING BASES - TOP ITEMS - WEAPONS
-#   CRAFTING BASES - TOP ITEMS - ARMOUR
-#   CRAFTING BASES - TOP ITEMS - JEWELRY
-#   CRAFTING BASES - JEWELRY
 #   WARBAND ITEMS
-#   VENDOR RECIPE ITEMS - RGB ITEMS
-#   CRAFTING BASES - WEAPONS
 #   RACING - EXCEPTIONS
 #   RACING - ACCESSORIES
 #   RACING - ARMOUR - CHEST - ADAPTIVE (AR/EV)
@@ -1637,7 +1637,7 @@ Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 	FracturedItem True
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33 
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -1649,7 +1649,7 @@ Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 # //$ < $Fractured_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	ItemLevel >= 68
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -1672,7 +1672,7 @@ Show
 	FracturedItem True
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 # //$ $Fractured_weapons
-	Rarity = Rare
+#	Rarity = Rare
 	DropLevel >= 55 
 # //$ >= $Fractured_weapons_drop_level
 	SetFontSize 45
@@ -1688,7 +1688,7 @@ Show
 	FracturedItem True
 	Class "Body Armour" "Quiver"
 # //$ $Fractured_armour
-	Rarity = Rare
+#	Rarity = Rare
 	DropLevel >= 1 
 # //$ >= $Fractured_armour_drop_level
 	SetFontSize 45
@@ -1702,7 +1702,7 @@ Show
 # Bad Fractured items
 Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 	FracturedItem True
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2063,7 +2063,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
 	HasInfluence Crusader Redeemer Hunter Warlord
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33 
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2075,7 +2075,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
 # //$ < $Influenced_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	ItemLevel >= 68
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2098,7 +2098,7 @@ Show
 	HasInfluence Crusader Redeemer Hunter Warlord
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 # //$ $Influenced_weapons
-	Rarity = Rare
+#	Rarity = Rare
 	DropLevel >= 55 
 # //$ >= $Influenced_weapons_drop_level
 	SetFontSize 45
@@ -2114,7 +2114,7 @@ Show
 	HasInfluence Crusader Redeemer Hunter Warlord
 	Class "Body Armour" "Quiver"
 # //$ $Influenced_armour
-	Rarity = Rare
+#	Rarity = Rare
 	DropLevel >= 1 
 # //$ >= $Influenced_armour_drop_level
 	SetFontSize 45
@@ -2128,7 +2128,7 @@ Show
 # Bad Influenced items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
 	HasInfluence Crusader Redeemer Hunter Warlord
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2155,7 +2155,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Elder items
 	ElderItem True
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33 
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2167,7 +2167,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Elder items
 # //$ < $Elder_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	ItemLevel >= 68
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2190,7 +2190,7 @@ Show
 	ElderItem True
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 # //$ $Elder_weapons
-	Rarity = Rare
+#	Rarity = Rare
 	DropLevel >= 55 
 # //$ >= $Elder_weapons_drop_level
 	SetFontSize 45
@@ -2206,7 +2206,7 @@ Show
 	ElderItem True
 	Class "Body Armour" "Quiver"
 # //$ $Elder_armour
-	Rarity = Rare
+#	Rarity = Rare
 	DropLevel >= 1 
 # //$ >= $Elder_armour_drop_level
 	SetFontSize 45
@@ -2220,7 +2220,7 @@ Show
 # Bad Elder items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Elder items
 	ElderItem True
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2247,7 +2247,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Shaper items
 	ShaperItem True
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2259,7 +2259,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Shaper items
 # //$ < $Shaper_weapons_drop_level
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 	ItemLevel >= 68
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -2282,7 +2282,7 @@ Show
 	ShaperItem True
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 # //$ $Shaper_weapons
-	Rarity = Rare
+#	Rarity = Rare
 	DropLevel >= 55 
 # //$ >= $Shaper_weapons_drop_level
 	SetFontSize 45
@@ -2298,7 +2298,7 @@ Show
 	ShaperItem True
 	Class "Body Armour" "Quiver"
 # //$ $Shaper_armour
-	Rarity = Rare
+#	Rarity = Rare
 	DropLevel >= 1 
 # //$ >= $Shaper_armour_drop_level
 	SetFontSize 45
@@ -2312,7 +2312,7 @@ Show
 # Bad Shaper items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Shaper items
 	ShaperItem True
-	Rarity <= Rare
+#	Rarity <= Rare
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -3989,6 +3989,235 @@ Show
 	DisableDropSound
 
 #-------------------------------------------------------------------------------#
+# Section:  #   CRAFTING BASES - TOP ITEMS - WEAPONS
+#-------------------------------------------------------------------------------#
+
+Show  # Crafting Filter - Normal items - @Weapon crafting bases
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
+# //$ $Weapon_crafting_bases
+	Rarity = Normal
+	ItemLevel >= 83 
+# //$ >= $Crafting_weapons_level
+	SetFontSize 33 
+# //$ $Crafting_items_font_size
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	DisableDropSound
+
+Show  # Crafting Filter - Magic items - @Weapon crafting bases
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
+# //$ $Weapon_crafting_bases
+	Rarity = Magic
+	ItemLevel >= 83 
+# //$ >= $Crafting_weapons_level
+	SetFontSize 33 
+# //$ $Crafting_items_font_size
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	DisableDropSound
+
+#-------------------------------------------------------------------------------#
+# Section:  #   CRAFTING BASES - TOP ITEMS - ARMOUR
+#-------------------------------------------------------------------------------#
+
+Show  # Crafting Filter - Normal items - @Armour crafting bases
+	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver"
+	BaseType "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
+# //$ $Armour_crafting_bases
+	Rarity = Normal
+	ItemLevel >= 84 
+# //$ >= $Crafting_armour_level
+	SetFontSize 33 
+# //$ $Crafting_items_font_size
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	DisableDropSound
+
+Show  # Crafting Filter - Magic items - @Armour crafting bases
+	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver"
+	BaseType "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
+# //$ $Armour_crafting_bases
+	Rarity = Magic
+	ItemLevel >= 84 
+# //$ >= $Crafting_armour_level
+	SetFontSize 33 
+# //$ $Crafting_items_font_size
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	DisableDropSound
+
+#-------------------------------------------------------------------------------#
+# Section:  #   CRAFTING BASES - TOP ITEMS - JEWELRY
+#-------------------------------------------------------------------------------#
+
+Show  # Crafting Filter - Normal items - @Jewelry crafting bases
+	Class "Amulet" "Belt" "Ring"
+	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
+# //$ $Jewelry_crafting_bases
+	Rarity = Normal
+	ItemLevel >= 84 
+# //$ >= $Crafting_jewelry_level
+	SetFontSize 33 
+# //$ $Crafting_items_font_size
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	DisableDropSound
+
+Show  # Crafting Filter - Magic items - @Jewelry crafting bases
+	Class "Amulet" "Belt" "Ring"
+	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
+# //$ $Jewelry_crafting_bases
+	Rarity = Magic
+	ItemLevel >= 84 
+# //$ >= $Crafting_jewelry_level
+	SetFontSize 33 
+# //$ $Crafting_items_font_size
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	DisableDropSound
+
+#-------------------------------------------------------------------------------#
+# Section:  #   CRAFTING BASES - JEWELRY
+#-------------------------------------------------------------------------------#
+
+# Diamond ring for alching present in the Leveling Filter.
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Diamond Rings (ItemLevel >= 60) |Disable
+#	BaseType "Diamond Ring"
+#	Rarity = Normal
+#	ItemLevel >= 60
+#	SetFontSize 33
+#	SetBackgroundColor 0 0 0 170 # Lesser items
+#	DisableDropSound
+#Disabled Block End
+
+#-------------------------------------------------------------------------------#
+# Section:  #   CRAFTING BASES - WEAPONS
+#-------------------------------------------------------------------------------#
+
+# Crafting bases present in the Leveling Filter.
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Bows (+3 crafting, ItemLevel >= 64) - Normal |Disable
+#	BaseType "Short Bow" "Grove Bow" "Thicket Bow"
+#	Rarity = Normal
+#	ItemLevel >= 64
+#	SetFontSize 33
+#	SetBackgroundColor 0 0 0 170 # Lesser items
+#	DisableDropSound
+#Disabled Block End
+
+# Crafting bases present in the Leveling Filter.
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Bows (+3 crafting, ItemLevel >= 64) - Magic |Disable
+#	BaseType "Short Bow" "Grove Bow" "Thicket Bow"
+#	Rarity = Magic
+#	ItemLevel >= 64
+#	SetFontSize 33
+#	SetBackgroundColor 0 0 0 170 # Lesser items
+#	DisableDropSound
+#Disabled Block End
+
+# Crafting bases present in the Leveling Filter.
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Staves (+3 crafting, ItemLevel >= 55) - Normal |Disable
+#	BaseType "Maelström Staff"
+#	Rarity = Normal
+#	ItemLevel >= 55
+#	SetFontSize 33
+#	SetBackgroundColor 0 0 0 170 # Lesser items
+#	DisableDropSound
+#Disabled Block End
+
+# Crafting bases present in the Leveling Filter.
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Staves (+3 crafting, ItemLevel >= 55) - Magic |Disable
+#	BaseType "Maelström Staff"
+#	Rarity = Magic
+#	ItemLevel >= 55
+#	SetFontSize 33
+#	SetBackgroundColor 0 0 0 170 # Lesser items
+#	DisableDropSound
+#Disabled Block End
+
+#-------------------------------------------------------------------------------#
+# Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS
+#-------------------------------------------------------------------------------#
+
+Show  # Endgame Filter (Disable for MF) - RGB items - Magic - Height = 2
+	Height = 2
+	SocketGroup RGB
+	Rarity = Magic
+	SetFontSize 33
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - RGB items - Magic - Width = 1
+	Width = 1
+	SocketGroup RGB
+	Rarity = Magic
+	SetFontSize 33
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Height = 2
+	Height = 2
+	SocketGroup RGB
+	Rarity = Normal
+	SetFontSize 33
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Width = 1
+	Width = 1
+	SocketGroup RGB
+	Rarity = Normal
+	SetFontSize 33
+	SetBackgroundColor 75 75 75 200 # Chromatic background
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+# Big RGB items
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB items (2x3) | Disable
+#	Height = 3
+#	Width = 2
+#	SocketGroup RGB
+#	SetFontSize 33
+#	SetBackgroundColor 75 75 75 200 # Chromatic background
+#	SetBorderColor 255 45 175 # T2 drops color
+#	DisableDropSound
+#Disabled Block End
+
+# Big RGB items
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB items (Any) | Disable
+#	SocketGroup RGB
+#	SetFontSize 33
+#	SetBackgroundColor 75 75 75 200 # Chromatic background
+#	SetBorderColor 255 45 175 # T2 drops color
+#	DisableDropSound
+#Disabled Block End
+
+# Big RGB items are shown only till item level 67.
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB items (Any, ItemLevel <= 67) | Disable
+#	SocketGroup RGB
+#	ItemLevel <= 67
+#	SetFontSize 33
+#	SetBackgroundColor 75 75 75 200 # Chromatic background
+#	SetBorderColor 255 45 175 # T2 drops color
+#	PlayAlertSound 2 90 # A - Tier 4
+#	DisableDropSound
+#Disabled Block End
+
+#-------------------------------------------------------------------------------#
 # Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE
 #-------------------------------------------------------------------------------#
 
@@ -4033,13 +4262,15 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Width = 1 |Disable
 # Section:  #   VENDOR RECIPE ITEMS - CHISEL RECIPE
 #-------------------------------------------------------------------------------#
 
-Hide  # Leveling Filter (Enable for leveling and races) - Recipes - 20% Chisel recipe (Stone Hammer)
-	Quality = 20
-	BaseType "Stone Hammer" "Rock Breaker" "Gavel"
-	ItemLevel >= 33
-	SetFontSize 33
-	SetBorderColor 255 45 175 # T2 drops color
-	DisableDropSound
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - Recipes - 20% Chisel recipe (Stone Hammer) |Disable
+#	Quality = 20
+#	BaseType "Stone Hammer" "Rock Breaker" "Gavel"
+#	ItemLevel >= 33
+#	SetFontSize 33
+#	SetBorderColor 255 45 175 # T2 drops color
+#	DisableDropSound
+#Disabled Block End
 
 #Disabled Block Start
 #Show  # Leveling Filter (Enable for leveling and races) - Recipes - Chisel recipe (Stone Hammer) |Disable
@@ -6244,105 +6475,6 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - TOP ITEMS - WEAPONS
-#-------------------------------------------------------------------------------#
-
-Show  # Crafting Filter - Normal items - @Weapon crafting bases
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
-	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
-# //$ $Weapon_crafting_bases
-	Rarity = Normal
-	ItemLevel >= 83 
-# //$ >= $Crafting_weapons_level
-	SetFontSize 33 
-# //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	DisableDropSound
-
-Show  # Crafting Filter - Magic items - @Weapon crafting bases
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
-	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
-# //$ $Weapon_crafting_bases
-	Rarity = Magic
-	ItemLevel >= 83 
-# //$ >= $Crafting_weapons_level
-	SetFontSize 33 
-# //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	DisableDropSound
-
-#-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - TOP ITEMS - ARMOUR
-#-------------------------------------------------------------------------------#
-
-Show  # Crafting Filter - Normal items - @Armour crafting bases
-	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver"
-	BaseType "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
-# //$ $Armour_crafting_bases
-	Rarity = Normal
-	ItemLevel >= 84 
-# //$ >= $Crafting_armour_level
-	SetFontSize 33 
-# //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	DisableDropSound
-
-Show  # Crafting Filter - Magic items - @Armour crafting bases
-	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver"
-	BaseType "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
-# //$ $Armour_crafting_bases
-	Rarity = Magic
-	ItemLevel >= 84 
-# //$ >= $Crafting_armour_level
-	SetFontSize 33 
-# //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	DisableDropSound
-
-#-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - TOP ITEMS - JEWELRY
-#-------------------------------------------------------------------------------#
-
-Show  # Crafting Filter - Normal items - @Jewelry crafting bases
-	Class "Amulet" "Belt" "Ring"
-	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
-# //$ $Jewelry_crafting_bases
-	Rarity = Normal
-	ItemLevel >= 84 
-# //$ >= $Crafting_jewelry_level
-	SetFontSize 33 
-# //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	DisableDropSound
-
-Show  # Crafting Filter - Magic items - @Jewelry crafting bases
-	Class "Amulet" "Belt" "Ring"
-	BaseType "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
-# //$ $Jewelry_crafting_bases
-	Rarity = Magic
-	ItemLevel >= 84 
-# //$ >= $Crafting_jewelry_level
-	SetFontSize 33 
-# //$ $Crafting_items_font_size
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	DisableDropSound
-
-#-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - JEWELRY
-#-------------------------------------------------------------------------------#
-
-# Diamond ring for alching present in the Leveling Filter.
-#Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Diamond Rings (ItemLevel >= 60) |Disable
-#	BaseType "Diamond Ring"
-#	Rarity = Normal
-#	ItemLevel >= 60
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 170 # Lesser items
-#	DisableDropSound
-#Disabled Block End
-
-#-------------------------------------------------------------------------------#
 # Section:  #   WARBAND ITEMS
 #-------------------------------------------------------------------------------#
 
@@ -6401,134 +6533,6 @@ Show
 	DisableDropSound
 #    Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
 #	SetBorderColor 255 45 175 # T2 drops color
-
-#-------------------------------------------------------------------------------#
-# Section:  #   VENDOR RECIPE ITEMS - RGB ITEMS
-#-------------------------------------------------------------------------------#
-
-Show  # Endgame Filter (Disable for MF) - RGB items - Magic - Height = 2
-	Height = 2
-	SocketGroup RGB
-	Rarity = Magic
-	SetFontSize 33
-	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - RGB items - Magic - Width = 1
-	Width = 1
-	SocketGroup RGB
-	Rarity = Magic
-	SetFontSize 33
-	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Height = 2
-	Height = 2
-	SocketGroup RGB
-	Rarity = Normal
-	SetFontSize 33
-	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - RGB items - Normal - Width = 1
-	Width = 1
-	SocketGroup RGB
-	Rarity = Normal
-	SetFontSize 33
-	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-# Big RGB items
-#Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB items (2x3) | Disable
-#	Height = 3
-#	Width = 2
-#	SocketGroup RGB
-#	SetFontSize 33
-#	SetBackgroundColor 75 75 75 200 # Chromatic background
-#	SetBorderColor 255 45 175 # T2 drops color
-#	DisableDropSound
-#Disabled Block End
-
-# Big RGB items
-#Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB items (Any) | Disable
-#	SocketGroup RGB
-#	SetFontSize 33
-#	SetBackgroundColor 75 75 75 200 # Chromatic background
-#	SetBorderColor 255 45 175 # T2 drops color
-#	DisableDropSound
-#Disabled Block End
-
-# Big RGB items are shown only till item level 67.
-Hide  # Leveling Filter (Enable for leveling and races) - RGB items - Big RGB items (Any, ItemLevel <= 67) | Disable
-	SocketGroup RGB
-	ItemLevel <= 67
-	SetFontSize 33
-	SetBackgroundColor 75 75 75 200 # Chromatic background
-	SetBorderColor 255 45 175 # T2 drops color
-	DisableDropSound
-#    Rarity <= Magic
-
-#-------------------------------------------------------------------------------#
-# Section:  #   CRAFTING BASES - WEAPONS
-#-------------------------------------------------------------------------------#
-
-# Crafting bases present in the Leveling Filter.
-#Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Bows (+3 crafting, ItemLevel >= 64) - Normal |Disable
-#	BaseType "Short Bow" "Grove Bow" "Thicket Bow"
-#	Rarity = Normal
-#	ItemLevel >= 64
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 170 # Lesser items
-#	DisableDropSound
-#Disabled Block End
-
-# Crafting bases present in the Leveling Filter.
-#Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Bows (+3 crafting, ItemLevel >= 64) - Magic |Disable
-#	BaseType "Short Bow" "Grove Bow" "Thicket Bow"
-#	Rarity = Magic
-#	ItemLevel >= 64
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 170 # Lesser items
-#	DisableDropSound
-#Disabled Block End
-
-# Crafting bases present in the Leveling Filter.
-#Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Staves (+3 crafting, ItemLevel >= 55) - Normal |Disable
-#	BaseType "Maelström Staff"
-#	Rarity = Normal
-#	ItemLevel >= 55
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 170 # Lesser items
-#	DisableDropSound
-#Disabled Block End
-
-# Crafting bases present in the Leveling Filter.
-#Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Staves (+3 crafting, ItemLevel >= 55) - Magic |Disable
-#	BaseType "Maelström Staff"
-#	Rarity = Magic
-#	ItemLevel >= 55
-#	SetFontSize 33
-#	SetBackgroundColor 0 0 0 170 # Lesser items
-#	DisableDropSound
-#Disabled Block End
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RACING - EXCEPTIONS

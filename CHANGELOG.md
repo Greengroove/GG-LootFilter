@@ -15,6 +15,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Fixed Thief's Trinkets and fractured jewels not displaying correctly.
 - Moved the veiled item filter to the endgame section.
 - Added ability to hide rare amulets and rings if they are ordinary rares.
+- All influenced items display regardless of rarity.
 
 ## 3.12.0
 
