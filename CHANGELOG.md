@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.12.5b
+
+- Added ability to hide (find the switch under ~Misc / Extras): Divination cards, Stacked deck, Offering to the Goddess, Cartographer's Chisel, Maps, Scarabs and Sextants.
+- A few entries connected to the items in the previous entry are now split for more flexibility.
 
 ## 3.12.4b
 

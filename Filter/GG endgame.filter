@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.12.4b
+#               Greengroove's Endgame Loot Filter Script v 3.12.5b
 #
 #-------------------------------------------------------------------------------#
 #
@@ -482,7 +482,7 @@ Show
 	DisableDropSound
 #    Class "Labyrinth Item"
 
-Show
+Show  # ~Misc - Extras - Offering to the Goddess
 	Class "Map Fragments"
 	BaseType "Offering to the Goddess"
 	SetFontSize 45
@@ -2362,9 +2362,31 @@ Show  # Endgame Filter (Disable for MF) - Low currency - T3 Currency (Engineer's
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency (Ancient Shard, Annulment Shard, Harbinger's Shard, Engineer's Orb, Orb of Horizons) |Disable
+Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency (Orb of Horizons) |Disable
 	Class "Currency"
-	BaseType "Ancient Shard" "Annulment Shard" "Harbinger's Shard" "Engineer's Orb" "Orb of Horizons"
+	BaseType "Orb of Horizons"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Blue Diamond
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency (Engineer's Orb) |Disable
+	Class "Currency"
+	BaseType "Engineer's Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Blue Diamond
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency (Ancient Shard, Annulment Shard, Harbinger's Shard, Engineer's Orb) |Disable
+	Class "Currency"
+	BaseType "Ancient Shard" "Annulment Shard" "Harbinger's Shard" "Engineer's Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -2545,7 +2567,7 @@ Show
 # Section:  #   DIVINATION CARDS
 #-------------------------------------------------------------------------------#
 
-Show
+Show  # ~Misc - Extras - Stacked deck
 	Class "Currency"
 	BaseType "Stacked Deck"
 	SetFontSize 45
@@ -2565,7 +2587,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 	DisableDropSound
 
 # exception for normal cards to prevent conflict!
-Show
+Show  # ~Misc - Extras - Divination cards
 	Class "Divination"
 	BaseType == "The Master Artisan" "The Wolf's Legacy"
 	SetFontSize 45
@@ -2576,21 +2598,21 @@ Show
 	PlayAlertSound 4 130 # B - Divination cards
 	DisableDropSound
 
-# New 3.12.0 / unknown cards
-Show
-	Class "Divination"
-	BaseType == "The Bitter Blossom" "The Cache" "The Academic" "Cursed Words"
-	SetFontSize 45
-	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 0 Yellow Star
-	PlayEffect Green
-	PlayAlertSound 8 250 # A - Tier 1
-	DisableDropSound
+# New / unknown cards
+#Show
+#	Class "Divination"
+#	BaseType == 
+#	SetFontSize 45
+#	SetTextColor 0 0 0
+#	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 0 Yellow Star
+#	PlayEffect Green
+#	PlayAlertSound 8 250 # A - Tier 1
+#	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Good Divination cards
 	Class "Divination"
-	BaseType == "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power" 
+	BaseType == "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power" 
 # //$ $Good_Divination_cards
 	SetFontSize 45
 	SetTextColor 0 0 0
@@ -2608,7 +2630,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 	SetTextColor 255 45 175 # T2 drops color
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Divination cards
 	Class "Divination"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
@@ -2748,7 +2770,7 @@ Show  # Endgame Filter (Disable for MF) - Currency - Cartographer's Chisel (high
 	MinimapIcon 2 Blue Diamond
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Cartographer's Chisel
 	Class "Currency"
 	BaseType "Cartographer's Chisel"
 	SetFontSize 45
@@ -2877,7 +2899,7 @@ Show
 
 Show
 	Class "Currency"
-	BaseType "Simple Sextant" "Prime Sextant" "Cartographer's Seal" "Unshaping Orb"
+	BaseType "Cartographer's Seal" "Unshaping Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -2886,9 +2908,42 @@ Show
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
+Show  # ~Misc - Extras - Sextant - Simple
+	Class "Currency"
+	BaseType "Simple Sextant"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show  # ~Misc - Extras - Sextant - Prime
+	Class "Currency"
+	BaseType "Prime Sextant"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show  # ~Misc - Extras - Sextant - Awakened
+	Class "Currency"
+	BaseType "Awakened Sextant"
+	SetFontSize 45
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
 Show
 	Class "Currency"
-	BaseType "Awakened Sextant" "Master Cartographer's Seal"
+	BaseType "Master Cartographer's Seal"
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -3044,7 +3099,7 @@ Show  # Endgame Filter (Disable for MF) - Currency - Generic currency (catch all
 # Section:  #   MAPS
 #-------------------------------------------------------------------------------#
 
-Show
+Show  # ~Misc - Extras - Maps - Elder map
 	ElderMap True
 	Class "Maps"
 	SetFontSize 45
@@ -3056,7 +3111,7 @@ Show
 	PlayAlertSound 8 250 # B - Tier 1 map
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Maps - Tier 14+
 	Class "Maps"
 	MapTier >= 14
 	SetFontSize 45
@@ -3068,7 +3123,7 @@ Show
 	PlayAlertSound 8 250 # B - Tier 1 map
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Maps - Shaped map Tier 11+
 	ShapedMap True
 	Class "Maps"
 	MapTier >= 11
@@ -3081,7 +3136,7 @@ Show
 	PlayAlertSound 8 250 # B - Tier 1 map
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Maps - Unique Maps
 	Class "Maps"
 	Rarity = Unique
 	SetFontSize 45
@@ -3093,7 +3148,7 @@ Show
 	DisableDropSound
 
 # Shaped maps filter
-Show
+Show  # ~Misc - Extras - Maps - Shaped maps
 	ShapedMap True
 	Class "Maps"
 	MapTier >= 1 
@@ -3107,7 +3162,7 @@ Show
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Maps - Tier 11+
 	Class "Maps"
 	MapTier >= 11
 	SetFontSize 45
@@ -3142,7 +3197,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Yellow T9 |Disable
 	DisableDropSound
 
 # Custom list of maps
-Show
+Show  # ~Misc - Extras - Maps - Custom map list
 	Class "Maps"
 	BaseType "Vaal Temple" 
 # //$ $Custom_maps
@@ -3199,7 +3254,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Adaptive leveling filter (Any y
 	PlayAlertSound 2 90 # B - Tier 4 map
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Maps - Vaal and Zana's mods
 	Identified True
 	Class "Maps"
 	Rarity >= Magic
@@ -3210,7 +3265,7 @@ Show
 	DisableDropSound
 
 # Any corrupted map.
-Show
+Show  # ~Misc - Extras - Maps - Corrupted maps
 	Corrupted True
 	Class "Maps"
 	SetFontSize 45
@@ -3228,7 +3283,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Low level maps in high level ma
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
-Show
+Show  # ~Misc - Extras - Maps - Watchstones
 	Class "Atlas Region Upgrade Item"
 	BaseType "Ivory Watchstone" "Watchstone"
 	SetFontSize 45
@@ -3251,7 +3306,7 @@ Show  # Endgame Filter (Disable for MF) - Maps - Divine Vessel
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Maps - Map fragments
 	Class "Map Fragments"
 	BaseType "Fragment of Enslavement" "Fragment of Eradication" "Fragment of Constriction" "Fragment of Purification" "Fragment of Shape" "Fragment of Knowledge" "Fragment of Terror" "Fragment of Emptiness"
 	SetFontSize 45
@@ -3263,7 +3318,7 @@ Show
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Maps - Map fragments
 	Class "Fragment" "Map Fragments"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
@@ -3274,7 +3329,7 @@ Show
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
-Show
+Show  # ~Misc - Extras - Maps - Scarabs
 	Class "Map Fragments"
 	BaseType "Scarab"
 	SetFontSize 45
