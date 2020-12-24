@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.12.5b
+#               Greengroove's Endgame Loot Filter Script v 3.12.5c
 #
 #-------------------------------------------------------------------------------#
 #
@@ -1008,11 +1008,30 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 # Section:  #	HEIST
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 80)
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 45) |Disable
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
 	AreaLevel >= 68
-	StackSize >= 80
+	StackSize >= 45
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 35) |Disable
+	Class "Stackable Currency"
+	BaseType "Rogue's Marker"
+	AreaLevel >= 68
+	StackSize >= 35
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - StackSize >= 33
+	Class "Stackable Currency"
+	BaseType "Rogue's Marker"
+	StackSize >= 33
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
@@ -1023,9 +1042,6 @@ Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Any Marker
 	BaseType "Rogue's Marker"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-#	MinimapIcon 2 Yellow Circle
-#	PlayEffect Green Temp
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
