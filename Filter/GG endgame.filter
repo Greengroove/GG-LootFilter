@@ -1008,30 +1008,20 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 # Section:  #	HEIST
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 45) |Disable
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 40) |Disable
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
 	AreaLevel >= 68
-	StackSize >= 45
+	StackSize >= 40
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 35) |Disable
+Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - StackSize >= 35 |Disable
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
-	AreaLevel >= 68
 	StackSize >= 35
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - StackSize >= 33
-	Class "Stackable Currency"
-	BaseType "Rogue's Marker"
-	StackSize >= 33
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
