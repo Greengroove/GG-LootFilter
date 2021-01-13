@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.13.0
+
+- Added challenge league related items and other items specified in the [forum post](https://www.pathofexile.com/forum/view-thread/3009221).
+
 ## 3.12.5c
 
 - Added an additional filter for Rogue's Markers.
