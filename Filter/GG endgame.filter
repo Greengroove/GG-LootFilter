@@ -356,7 +356,7 @@
 # //! SetOption $EmptyLine
 # //! SetOption $Bad_Divination_cards textarea ["The Unexpected Prize" "The Journalist" "The Mountain" "Echoes of Love" "The Fool" "Dark Temptation" "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame filter. The [u][b]block switch[/b][/u] is in the leveling block. If empty default values will be used.
 # //! SetOption $Separator
-# //! SetOption $Alternate_quality_gems textarea ["Item Rarity Support" "Spark" "Clarity" "Animate Guardian" "Summon Skeletons" "Raise Zombie" "Convocation" "Feeding Frenzy Support"] # Good alternate quality gem list. Edit the list to your liking
+## //! SetOption $Alternate_quality_gems textarea ["Item Rarity Support" "Spark" "Clarity" "Animate Guardian" "Summon Skeletons" "Raise Zombie" "Convocation" "Feeding Frenzy Support"] # Good alternate quality gem list. Edit the list to your liking
 # //! SetOption $Useful_and_drop_only_gems textarea ["Added Chaos Damage" "Blood Magic" "Cast when Damage Taken" "Concentrated Effect" "Immortal Call" "Increased Area of Effect" "Increased Duration" "Less Duration" "Multistrike" "Phase Run"] # [u][b]Block switches[/b][/u] in the Leveling block. Useful for leveling and races.
 # //! SetOption $Leveled_gems slider [19] [1] [20] # Set the minimum level of gems you'd like to see. [u][b]Block switch[/b][/u] in the Endgame block.
 # //! SetOption $Separator
@@ -1428,45 +1428,45 @@ Show
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Harvest items - Grains
-	Class "Harvest Seed"
-	BaseType Grain
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
+#Show  # ~Misc - Challenge leagues - Harvest items - Grains
+#	Class "Harvest Seed"
+#	BaseType Grain
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	MinimapIcon 2 Yellow Circle
+#	PlayAlertSound 2 90 # A - Tier 4
+#	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Harvest items - Seeds
-	Class "Harvest Seed"
-	BaseType Seed
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
+#Show  # ~Misc - Challenge leagues - Harvest items - Seeds
+#	Class "Harvest Seed"
+#	BaseType Seed
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	MinimapIcon 2 Yellow Circle
+#	PlayAlertSound 2 90 # A - Tier 4
+#	DisableDropSound
 
-Show
-	Class "Harvest Seed"
-	BaseType Bulb
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
+#Show
+#	Class "Harvest Seed"
+#	BaseType Bulb
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Yellow Circle
+#	PlayEffect Green Temp
+#	PlayAlertSound 1 100 # A - Tier 3
+#	DisableDropSound
 
-Show
-	Class "Harvest Seed"
-	BaseType "Wild Thornfruit" "Vivid Scalefruit" "Primal Blisterfruit"
-	SetFontSize 45
-	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 0 Yellow Star
-	PlayEffect Green
-	PlayAlertSound 8 250 # A - Tier 1
-	DisableDropSound
+#Show
+#	Class "Harvest Seed"
+#	BaseType "Wild Thornfruit" "Vivid Scalefruit" "Primal Blisterfruit"
+#	SetFontSize 45
+#	SetTextColor 0 0 0
+#	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 0 Yellow Star
+#	PlayEffect Green
+#	PlayAlertSound 8 250 # A - Tier 1
+#	DisableDropSound
 
 #Show
 #	Class Harvest
@@ -3509,18 +3509,18 @@ Show  # Endgame Filter (Disable for MF) - Gems - @Leveled gems |Disable
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Alternate quality gem list |Disable
-	Class "Gem"
-	AlternateQuality True
-	BaseType "Item Rarity Support" "Spark" "Clarity" "Animate Guardian" "Summon Skeletons" "Raise Zombie" "Convocation" "Feeding Frenzy Support"
-# //$ $Alternate_quality_gems
-	SetFontSize 45
-	SetTextColor 74 230 58 255 # T1 drops color / Quest items
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 7 160 # A - Tier 2
-	DisableDropSound
+#Show  # ~Misc - Challenge leagues - Heist - Alternate quality gem list |Disable
+#	Class "Gem"
+#	AlternateQuality True
+#	BaseType "Item Rarity Support" "Spark" "Clarity" "Animate Guardian" "Summon Skeletons" "Raise Zombie" "Convocation" "Feeding Frenzy Support"
+## //$ $Alternate_quality_gems
+#	SetFontSize 45
+#	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Yellow Circle
+#	PlayEffect Green Temp
+#	PlayAlertSound 7 160 # A - Tier 2
+#	DisableDropSound
 
 Show  # ~Misc - Challenge leagues - Heist - Any alternate quality gem |Disable
 	Class "Gem"
