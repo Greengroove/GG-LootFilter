@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.13.0
+#               Greengroove's Endgame Loot Filter Script v 3.13.0c
 #
 #-------------------------------------------------------------------------------#
 #
@@ -106,10 +106,10 @@
 #   VENDOR RECIPE ITEMS - RGB ITEMS = RARE
 #   VENDOR RECIPE ITEMS - CHISEL RECIPE
 #   BAD RARE ITEMS
-#   RARE ITEMS - JEWELRY
 #   RARE ITEMS - TOP WEAPON BASES
 #   RARE ITEMS - TOP ARMOUR BASES
 #   CORRUPTED ITEMS
+#   RARE ITEMS - JEWELRY
 #   RARE ITEMS - WEAPONS - TOP WANDS
 #   RARE ITEMS - WEAPONS - GOOD RARE WEAPONS
 #   RARE ITEMS - WEAPONS - BOW
@@ -430,7 +430,7 @@ Show
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show
+Show  # Challenge leagues - Heist - Contracts - Quest contracts
 	Class "Quest Item"
 	BaseType Contract
 	SetFontSize 45
@@ -1009,7 +1009,7 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 # Section:  #	ECHOES OF THE ATLAS + RITUAL
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Splinter
+Show  # Challenge leagues - Echoes of the Atlas - Splinter
 	Class "Stackable Currency"
 	BaseType "Ritual Splinter" "Crescent Splinter"
 	SetFontSize 45
@@ -1029,7 +1029,7 @@ Show
 	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Maven's Invitation
+Show  # Challenge leagues - Echoes of the Atlas - Maven's Invitation
 	Class "Map Fragment"
 	BaseType "The Maven's Writ" "Blood-filled Vessel"
 	SetFontSize 45
@@ -1042,7 +1042,7 @@ Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Maven's Invitation
 	DisableDropSound
 
 # List: "Maven's Invitation: The Formed" "Maven's Invitation: The Twisted" "Maven's Invitation: The Forgotten" "Maven's Invitation: The Hidden" "Maven's Invitation: The Feared" "Maven's Invitation: Haewark Hamlet" "Maven's Invitation: Tirn's End" "Maven's Invitation: Lex Proxima" "Maven's Invitation: Lex Ejoris" "Maven's Invitation: New Vastir" "Maven's Invitation: Glennach Cairns" "Maven's Invitation: Valdo's Rest" "Maven's Invitation: Lira Arthain"
-Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Maven's Invitation
+Show  # Challenge leagues - Echoes of the Atlas - Maven's Invitation
 	Class "Misc Map Items"
 	BaseType "Maven's Invitation"
 	SetFontSize 45
@@ -1054,7 +1054,7 @@ Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Maven's Invitation
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Ritual Base Types - Boots
+Show  # Challenge leagues - Echoes of the Atlas - Ritual Base Types - Boots
 	Class "Boots"
 	BaseType "Dreamquest Slippers" "Cloudwhisper Boots" "Brimstone Treads" "Nightwind Slippers" "Windbreak Boots" "Darksteel Treads" "Duskwalk Slippers" "Stormrider Boots" "Basemetal Treads"
 	SetFontSize 45
@@ -1064,7 +1064,7 @@ Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Ritual Base Types - Bo
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Ritual Base Types - Gloves
+Show  # Challenge leagues - Echoes of the Atlas - Ritual Base Types - Gloves
 	Class "Gloves"
 	BaseType "Debilitation Gauntlets" "Gruelling Gauntlets" "Taxing Gauntlets" "Sinistral Gloves" "Southswing Gloves" "Gauche Gloves" "Nexus Gloves" "Aetherwind Gloves" "Leyline Gloves"
 	SetFontSize 45
@@ -1074,7 +1074,7 @@ Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Ritual Base Types - Gl
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Ritual Base Types - Helmets
+Show  # Challenge leagues - Echoes of the Atlas - Ritual Base Types - Helmets
 	Class "Helmets"
 	BaseType "Blizzard Crown" "Winter Crown" "Gale Crown" "Archdemon Crown" "Demon Crown" "Imp Crown" "Atonement Mask" "Penitent Mask" "Sorrow Mask"
 	SetFontSize 45
@@ -1088,26 +1088,26 @@ Show  # ~Misc - Challenge leagues - Echoes of the Atlas - Ritual Base Types - He
 # Section:  #	HEIST
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 42) |Disable
+Show  # Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 70) |Disable
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
 	AreaLevel >= 68
-	StackSize >= 42
+	StackSize >= 70
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - StackSize >= 35 |Disable
+Show  # Challenge leagues - Heist - Rogue's Markers - StackSize >= 55 |Disable
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
-	StackSize >= 35
+	StackSize >= 55
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Rogue's Markers - Any Marker
+Show  # Challenge leagues - Heist - Rogue's Markers - Any Marker
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
 	SetFontSize 45
@@ -1136,7 +1136,7 @@ Show
 	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Contracts - Rare contracts
+Show  # Challenge leagues - Heist - Contracts - Rare contracts
 	Class "Contract"
 	Rarity = Rare
 	SetFontSize 45
@@ -1147,9 +1147,9 @@ Show  # ~Misc - Challenge leagues - Heist - Contracts - Rare contracts
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Contracts - Non rare contracts
+Show  # Challenge leagues - Heist - Contracts - Magic contracts
 	Class "Contract"
-	Rarity <= Magic
+	Rarity = Magic
 	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -1157,7 +1157,17 @@ Show  # ~Misc - Challenge leagues - Heist - Contracts - Non rare contracts
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Blueprints - Rare
+Show  # Challenge leagues - Heist - Contracts - Normal contracts
+	Class "Contract"
+	Rarity = Normal
+	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Green Square
+	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
+
+Show  # Challenge leagues - Heist - Blueprints - Rare
 	Class "Blueprint"
 	Rarity = Rare
 	SetFontSize 45
@@ -1168,7 +1178,7 @@ Show  # ~Misc - Challenge leagues - Heist - Blueprints - Rare
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Blueprints - Magic
+Show  # Challenge leagues - Heist - Blueprints - Magic
 	Class "Blueprint"
 	Rarity = Magic
 	SetFontSize 45
@@ -1178,7 +1188,7 @@ Show  # ~Misc - Challenge leagues - Heist - Blueprints - Magic
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Blueprints - Normal
+Show  # Challenge leagues - Heist - Blueprints - Normal
 	Class "Blueprint"
 	Rarity = Normal
 	SetFontSize 45
@@ -1188,7 +1198,7 @@ Show  # ~Misc - Challenge leagues - Heist - Blueprints - Normal
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Obsidian Sharpening Stone"
+Show  # Challenge leagues - Heist - Heist Gear - Level 5 - "Obsidian Sharpening Stone"
 	Class "Heist Gear"
 	BaseType "Obsidian Sharpening Stone"
 	SetFontSize 45
@@ -1196,7 +1206,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Obsidian Sha
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Precise Arrowhead"
+Show  # Challenge leagues - Heist - Heist Gear - Level 5 - "Precise Arrowhead"
 	Class "Heist Gear"
 	BaseType "Precise Arrowhead"
 	SetFontSize 45
@@ -1204,7 +1214,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Precise Arro
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Burst Band"
+Show  # Challenge leagues - Heist - Heist Gear - Level 5 - "Burst Band"
 	Class "Heist Gear"
 	BaseType "Burst Band"
 	SetFontSize 45
@@ -1212,7 +1222,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Burst Band"
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Whisper-woven Cloak"
+Show  # Challenge leagues - Heist - Heist Gear - Level 5 - "Whisper-woven Cloak"
 	Class "Heist Cloak"
 	BaseType "Whisper-woven Cloak"
 	SetFontSize 45
@@ -1222,7 +1232,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Whisper-wove
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Foliate Brooch"
+Show  # Challenge leagues - Heist - Heist Gear - Level 5 - "Foliate Brooch"
 	Class "Heist Brooch"
 	BaseType "Foliate Brooch"
 	SetFontSize 45
@@ -1232,7 +1242,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - "Foliate Broo
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - tools
+Show  # Challenge leagues - Heist - Heist Gear - Level 5 - tools
 	Class "Heist Tool"
 	BaseType "Master Lockpick" "Steel Bracers" "Thaumaturgical Sensing Charm" "Thaumetic Flashpowder" "Thaumaturgical Ward" "Grandmaster Keyring" "Silkweave Sole" "Regicide Disguise Kit" "Thaumetic Blowtorch" "Obsidian Sharpening Stone" "Precise Arrowhead" "Burst Band"
 	SetFontSize 45
@@ -1242,7 +1252,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 5 - tools
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Fine Sharpening Stone"
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Fine Sharpening Stone"
 	Class "Heist Gear"
 	BaseType "Fine Sharpening Stone"
 	SetFontSize 45
@@ -1250,7 +1260,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Fi
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Hollowpoint Arrowhead"
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Hollowpoint Arrowhead"
 	Class "Heist Gear"
 	BaseType "Hollowpoint Arrowhead"
 	SetFontSize 45
@@ -1258,7 +1268,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Ho
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Aggregator Charm"
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Aggregator Charm"
 	Class "Heist Gear"
 	BaseType "Aggregator Charm"
 	SetFontSize 45
@@ -1266,7 +1276,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Ag
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Hooded Cloak"
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Hooded Cloak"
 	Class "Heist Cloak"
 	BaseType "Hooded Cloak"
 	SetFontSize 45
@@ -1276,7 +1286,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Ho
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Enamel Brooch"
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "Enamel Brooch"
 	Class "Heist Brooch"
 	BaseType "Enamel Brooch"
 	SetFontSize 45
@@ -1286,7 +1296,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 4 "En
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 1-4 tools
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 1-4 tools
 	Class "Heist Tool"
 	SetFontSize 45
 	MinimapIcon 2 Yellow Circle
@@ -1294,28 +1304,28 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 1-4 t
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 "Rough Sharpening Stone" "Standard Sharpening Stone"
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 "Rough Sharpening Stone" "Standard Sharpening Stone"
 	Class "Heist Gear"
 	BaseType "Rough Sharpening Stone" "Standard Sharpening Stone"
 	SetFontSize 45
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 "Flanged Arrowhead" "Fragmenting Arrowhead"
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 "Flanged Arrowhead" "Fragmenting Arrowhead"
 	Class "Heist Gear"
 	BaseType "Flanged Arrowhead" "Fragmenting Arrowhead"
 	SetFontSize 45
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 "Focal Stone" "Conduit Line"
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 "Focal Stone" "Conduit Line"
 	Class "Heist Gear"
 	BaseType "Focal Stone" "Conduit Line"
 	SetFontSize 45
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 Cloaks
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 Cloaks
 	Class "Heist Cloak"
 	SetFontSize 45
 	MinimapIcon 2 Yellow Circle
@@ -1323,7 +1333,7 @@ Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 C
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 Brooches
+Show  # Challenge leagues - Heist - Heist Gear - Level 1-4 - Level 2&3 Brooches
 	Class "Heist Brooch"
 	SetFontSize 45
 	MinimapIcon 2 Yellow Circle
@@ -1428,7 +1438,7 @@ Show
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-#Show  # ~Misc - Challenge leagues - Harvest items - Grains
+#Show  # Challenge leagues - Harvest - Grains
 #	Class "Harvest Seed"
 #	BaseType Grain
 #	SetFontSize 45
@@ -1437,7 +1447,7 @@ Show
 #	PlayAlertSound 2 90 # A - Tier 4
 #	DisableDropSound
 
-#Show  # ~Misc - Challenge leagues - Harvest items - Seeds
+#Show  # Challenge leagues - Harvest - Seeds
 #	Class "Harvest Seed"
 #	BaseType Seed
 #	SetFontSize 45
@@ -1494,7 +1504,7 @@ Show
 	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Delirium items - Simulacrum Splinter
+Show  # Challenge leagues - Delirium - Simulacrum Splinter
 	Class "Stackable Currency"
 	BaseType "Simulacrum Splinter"
 	SetFontSize 45
@@ -1503,7 +1513,7 @@ Show  # ~Misc - Challenge leagues - Delirium items - Simulacrum Splinter
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Delirium items - Delirium Orb
+Show  # Challenge leagues - Delirium - Delirium Orb
 	Class "Stackable Currency"
 	BaseType "Delirium Orb"
 	SetFontSize 45
@@ -1514,10 +1524,12 @@ Show  # ~Misc - Challenge leagues - Delirium items - Delirium Orb
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show
+Show  # Challenge leagues - Delirium - Cluster Jewels - Large |Disable
 	Class "Jewel"
-	BaseType "Large Cluster Jewel" "Medium Cluster Jewel" "Small Cluster Jewel"
-	ItemLevel >= 75
+	BaseType "Large Cluster Jewel"
+	EnchantmentPassiveNum = 8
+#	EnchantmentPassiveNode "Damage over Time"
+#	ItemLevel >= 75
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -1526,14 +1538,35 @@ Show
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Delirium items - Cluster Jewels (item level <= 74)
+Show  # Challenge leagues - Delirium - Cluster Jewels - Medium |Disable
+	Class "Jewel"
+	BaseType "Medium Cluster Jewel"
+	EnchantmentPassiveNum = 4
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show  # Challenge leagues - Delirium - Cluster Jewels - Small |Disable
+	Class "Jewel"
+	BaseType "Small Cluster Jewel"
+	EnchantmentPassiveNum = 2
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show  # Challenge leagues - Delirium - Any Cluster Jewel
 	Class "Jewel"
 	BaseType "Large Cluster Jewel" "Medium Cluster Jewel" "Small Cluster Jewel"
 	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 255 45 175 # T2 drops color
-	MinimapIcon 2 Yellow Circle
-	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
 # Item has any enchantment
@@ -1572,7 +1605,7 @@ Show
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Metamorph - Samples |Disable
+Show  # Challenge leagues - Metamorph - Samples |Disable
 	Class "Metamorph Sample"
 	BaseType "Metamorph Brain" "Metamorph Eye" "Metamorph Liver" "Metamorph Lung" "Metamorph Heart"
 	SetFontSize 45
@@ -1587,7 +1620,7 @@ Show  # ~Misc - Challenge leagues - Metamorph - Samples |Disable
 # Section:  #   BLIGHT
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Red maps |Disable
+Show  # Challenge leagues - Blight - Blighted maps - Red maps |Disable
 	Class "Maps"
 	BlightedMap True
 	MapTier >= 11
@@ -1600,7 +1633,7 @@ Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Red maps |Disable
 	PlayAlertSound 8 250 # B - Tier 1 map
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Yellow maps |Disable
+Show  # Challenge leagues - Blight - Blighted maps - Yellow maps |Disable
 	Class "Maps"
 	BlightedMap True
 	MapTier >= 6
@@ -1613,7 +1646,7 @@ Show  # ~Misc - Challenge leagues - Blight - Blighted maps - Yellow maps |Disabl
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Blight - Blighted maps - White maps |Disable
+Show  # Challenge leagues - Blight - Blighted maps - White maps |Disable
 	Class "Maps"
 	BlightedMap True
 	MapTier <= 5
@@ -1637,7 +1670,7 @@ Show
 	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Blight - Clear Oil
+Show  # Challenge leagues - Blight - Clear Oil
 	Class "Stackable Currency"
 	BaseType "Clear Oil"
 	SetFontSize 45
@@ -1645,7 +1678,7 @@ Show  # ~Misc - Challenge leagues - Blight - Clear Oil
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Blight - Other oils |Disable
+Show  # Challenge leagues - Blight - Other oils |Disable
 	Class "Stackable Currency"
 	BaseType Oil
 	SetFontSize 45
@@ -1660,7 +1693,7 @@ Show  # ~Misc - Challenge leagues - Blight - Other oils |Disable
 # Section:  #   LEGION
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Legion - Incubators |Disable
+Show  # Challenge leagues - Legion - Incubators |Disable
 	Class "Incubator"
 	BaseType "Incubator"
 	SetFontSize 45
@@ -1672,7 +1705,7 @@ Show  # ~Misc - Challenge leagues - Legion - Incubators |Disable
 	DisableDropSound
 
 ## "Timeless Karui Splinter" "Timeless Maraketh Splinter" "Timeless Eternal Empire Splinter" "Timeless Templar Splinter" "Timeless Vaal Splinter"
-Show  # ~Misc - Challenge leagues - Legion - Timeless Splinters |Disable
+Show  # Challenge leagues - Legion - Timeless Splinters |Disable
 	Class "Stackable Currency"
 	BaseType Timeless
 	SetFontSize 45
@@ -1681,7 +1714,7 @@ Show  # ~Misc - Challenge leagues - Legion - Timeless Splinters |Disable
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Legion - Timeless Emblems |Disable
+Show  # Challenge leagues - Legion - Timeless Emblems |Disable
 	Class "Map Fragments"
 	BaseType Timeless "Timeless Karui Emblem" "Timeless Maraketh Emblem" "Timeless Eternal Emblem" "Timeless Templar Emblem" "Timeless Vaal Emblem"
 	SetFontSize 45
@@ -1711,7 +1744,7 @@ Show
 	DisableDropSound
 
 # Identified Fractured items
-Show  # ~Misc - Challenge leagues - Synthesis items - identified Fractured items
+Show  # Challenge leagues - Synthesis - identified Fractured items
 	FracturedItem True
 	Identified True
 	SetFontSize 20
@@ -1719,7 +1752,7 @@ Show  # ~Misc - Challenge leagues - Synthesis items - identified Fractured items
 	DisableDropSound
 
 # Bad Fractured items
-Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
+Show  # Challenge leagues - Synthesis - Bad Fractured items
 	FracturedItem True
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
@@ -1729,7 +1762,7 @@ Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
 	DisableDropSound
 
 # Bad Fractured items
-Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
+Show  # Challenge leagues - Synthesis - Bad Fractured items
 	FracturedItem True
 	DropLevel < 55
 # //$ < $Fractured_weapons_drop_level
@@ -1786,7 +1819,7 @@ Show
 	DisableDropSound
 
 # Bad Fractured items
-Show  # ~Misc - Challenge leagues - Synthesis items - Bad Fractured items
+Show  # Challenge leagues - Synthesis - Bad Fractured items
 	FracturedItem True
 #	Rarity <= Rare
 	SetFontSize 33
@@ -1811,7 +1844,7 @@ Show
 	DisableDropSound
 
 # Bad Synthesised items
-Show  # ~Misc - Challenge leagues - Synthesis items - Bad Synthesised items
+Show  # Challenge leagues - Synthesis - Bad Synthesised items
 	SynthesisedItem True
 	Class "Shield"
 	BaseType "Round Shield" "Splintered Tower Shield" "Goathide Buckler" "Corroded Tower Shield" "Spiked Bundle" "Pine Buckler"
@@ -1834,7 +1867,7 @@ Show
 	DisableDropSound
 
 # Bad Synthesised items
-Show  # ~Misc - Challenge leagues - Synthesis items - Bad Synthesised items
+Show  # Challenge leagues - Synthesis - Bad Synthesised items
 	SynthesisedItem True
 	DropLevel <= 54
 	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
@@ -1980,7 +2013,7 @@ Show
 	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Delve items - Powerful resonators |Disable
+Show  # Challenge leagues - Delve - Powerful resonators |Disable
 	Class "Delve Stackable Socketable Currency"
 	BaseType "Powerful Chaotic Resonator" "Powerful Alchemical Resonator" "Potent Chaotic Resonator" "Potent Alchemical Resonator"
 	SetFontSize 45
@@ -1991,7 +2024,7 @@ Show  # ~Misc - Challenge leagues - Delve items - Powerful resonators |Disable
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Delve items - low resonators |Disable
+Show  # Challenge leagues - Delve - low resonators |Disable
 	Class "Delve Stackable Socketable Currency"
 	BaseType "Resonator"
 	SetFontSize 45
@@ -1999,7 +2032,7 @@ Show  # ~Misc - Challenge leagues - Delve items - low resonators |Disable
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Delve items - 21+ Quality items
+Show  # Challenge leagues - Delve - 21+ Quality items
 	Quality >= 21
 	Rarity >= Normal
 	SetFontSize 45
@@ -2046,7 +2079,7 @@ Show
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Incursion items - Incursion explicit mods |Disable
+Show  # Challenge leagues - Incursion - Incursion explicit mods |Disable
 	HasExplicitMod "Tacati's" "Citaqualotl's" "Matatl's" "Topotante's" "Xopec's" "Guatelitzi's" "of Tacati" "of Citaqualotl" "of Matatl" "of Puhuarte" "of Guatelitzi"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
@@ -2060,7 +2093,7 @@ Show  # ~Misc - Challenge leagues - Incursion items - Incursion explicit mods |D
 # Section:  #   BESTIARY
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary explicit mods |Disable
+Show  # Challenge leagues - Bestiary - Bestiary explicit mods |Disable
 	HasExplicitMod "of Farrul" "of Craiceann" "of Fenumus" "of Saqawal"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
@@ -2070,7 +2103,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary explicit mods |Dis
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary Orb |Disable
+Show  # Challenge leagues - Bestiary - Bestiary Orb |Disable
 	Class "Stackable Currency"
 	BaseType "Bestiary Orb"
 	SetFontSize 45
@@ -2081,7 +2114,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Bestiary Orb |Disable
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Necromancy Net |Disable
+Show  # Challenge leagues - Bestiary - Necromancy Net |Disable
 	Class "Stackable Currency"
 	BaseType "Necromancy Net"
 	SetFontSize 45
@@ -2092,7 +2125,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Necromancy Net |Disable
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
+Show  # Challenge leagues - Bestiary - Thaumaturgical Net |Disable
 	Class "Stackable Currency"
 	BaseType "Thaumaturgical Net"
 	SetFontSize 45
@@ -2103,7 +2136,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Thaumaturgical Net |Disable
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Strong Steel Net
+Show  # Challenge leagues - Bestiary - Strong Steel Net
 	Class "Stackable Currency"
 	BaseType "Strong Steel Net"
 	SetFontSize 45
@@ -2111,7 +2144,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Strong Steel Net
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Steel Net
+Show  # Challenge leagues - Bestiary - Steel Net
 	Class "Stackable Currency"
 	BaseType "Steel Net"
 	SetFontSize 45
@@ -2119,7 +2152,7 @@ Show  # ~Misc - Challenge leagues - Bestiary items - Steel Net
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
-Show  # ~Misc - Challenge leagues - Bestiary items - Rope Net, Iron Net
+Show  # Challenge leagues - Bestiary - Rope Net, Iron Net
 	Class "Stackable Currency"
 	BaseType "Rope Net" "Iron Net"
 	SetFontSize 45
@@ -2407,7 +2440,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Bad Shaper items
 # Section:  #   ABYSS
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Abyss items - Stygian Vise Belt |Disable
+Show  # Challenge leagues - Abyss - Stygian Vise Belt |Disable
 	Class "Belt"
 	BaseType "Stygian Vise"
 	Rarity <= Rare
@@ -2448,7 +2481,7 @@ Show  # Endgame Filter (Disable for MF) - Low currency - T3 Currency (Engineer's
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency (Orb of Horizons) |Disable
+Show  # Challenge leagues - Harbinger - T2 Currency (Orb of Horizons) |Disable
 	Class "Currency"
 	BaseType "Orb of Horizons"
 	SetFontSize 45
@@ -2459,7 +2492,7 @@ Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency (Orb of Horizo
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency (Engineer's Orb) |Disable
+Show  # Challenge leagues - Harbinger - T2 Currency (Engineer's Orb) |Disable
 	Class "Currency"
 	BaseType "Engineer's Orb"
 	SetFontSize 45
@@ -2470,7 +2503,7 @@ Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency (Engineer's Or
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Harbinger items - T2 Currency (Ancient Shard, Annulment Shard, Harbinger's Shard, Engineer's Orb) |Disable
+Show  # Challenge leagues - Harbinger - T2 Currency (Ancient Shard, Annulment Shard, Harbinger's Shard, Engineer's Orb) |Disable
 	Class "Currency"
 	BaseType "Ancient Shard" "Annulment Shard" "Harbinger's Shard" "Engineer's Orb"
 	SetFontSize 45
@@ -2507,7 +2540,7 @@ Show
 # Section:  #   LEGACY
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Legacy items - Leaguestones - Normal |Disable
+Show  # Challenge leagues - Legacy - Leaguestones - Normal |Disable
 	Class "Leaguestone"
 	Rarity = Normal
 	SetFontSize 45
@@ -2519,7 +2552,7 @@ Show  # ~Misc - Challenge leagues - Legacy items - Leaguestones - Normal |Disabl
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Legacy items - Leaguestones - Magic |Disable
+Show  # Challenge leagues - Legacy - Leaguestones - Magic |Disable
 	Class "Leaguestone"
 	Rarity >= Magic
 	SetFontSize 45
@@ -2547,7 +2580,7 @@ Show
 # Section:  #   BREACH
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Tul
+Show  # Challenge leagues - Breach - Splinter - Splinter of Tul
 	Class "Stackable Currency"
 	BaseType "Splinter of Tul"
 	SetFontSize 45
@@ -2556,7 +2589,7 @@ Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Tul
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Esh
+Show  # Challenge leagues - Breach - Splinter - Splinter of Esh
 	Class "Stackable Currency"
 	BaseType "Splinter of Esh"
 	SetFontSize 45
@@ -2565,7 +2598,7 @@ Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Esh
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Xoph
+Show  # Challenge leagues - Breach - Splinter - Splinter of Xoph
 	Class "Stackable Currency"
 	BaseType "Splinter of Xoph"
 	SetFontSize 45
@@ -2574,7 +2607,7 @@ Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Xoph
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Uul-Netol
+Show  # Challenge leagues - Breach - Splinter - Splinter of Uul-Netol
 	Class "Stackable Currency"
 	BaseType "Splinter of Uul-Netol"
 	SetFontSize 45
@@ -2583,7 +2616,7 @@ Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Uul-Ne
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Chayula
+Show  # Challenge leagues - Breach - Splinter - Splinter of Chayula
 	Class "Stackable Currency"
 	BaseType "Splinter of Chayula"
 	SetFontSize 45
@@ -2592,7 +2625,7 @@ Show  # ~Misc - Challenge leagues - Breach items - Splinter - Splinter of Chayul
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Breach items - Blessing
+Show  # Challenge leagues - Breach - Blessing
 	Class "Stackable Currency"
 	BaseType "Blessing"
 	SetFontSize 45
@@ -2604,7 +2637,7 @@ Show  # ~Misc - Challenge leagues - Breach items - Blessing
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Breach items - Breachstone |Disable
+Show  # Challenge leagues - Breach - Breachstone |Disable
 	Class "Map Fragments"
 	BaseType "Breachstone"
 	SetFontSize 45
@@ -2628,7 +2661,7 @@ Show  # Endgame Filter (Disable for MF) - Low currency - First 3 essence tiers
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Essence items - Wailing Essence (T4)
+Show  # Challenge leagues - Essence - Wailing Essence (T4)
 	Class "Currency"
 	BaseType "Wailing Essence"
 	SetFontSize 45
@@ -2885,7 +2918,7 @@ Show
 	PlayAlertSound 2 90 # C - Orb of Alchemy
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Prophecy items - Silver Coins
+Show  # Challenge leagues - Prophecy - Silver Coins
 	Class "Currency"
 	BaseType "Silver Coin"
 	SetFontSize 45
@@ -3142,7 +3175,7 @@ Show  # Endgame Filter (Disable for MF) - Currency - Bad sealed Prophecies
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Prophecy items - Sealed Prophecies |Disable
+Show  # Challenge leagues - Prophecy - Sealed Prophecies |Disable
 	Class "Currency"
 	BaseType "Prophecy"
 	SetFontSize 45
@@ -3509,7 +3542,7 @@ Show  # Endgame Filter (Disable for MF) - Gems - @Leveled gems |Disable
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-#Show  # ~Misc - Challenge leagues - Heist - Alternate quality gem list |Disable
+#Show  # Challenge leagues - Heist - Alternate quality gem list |Disable
 #	Class "Gem"
 #	AlternateQuality True
 #	BaseType "Item Rarity Support" "Spark" "Clarity" "Animate Guardian" "Summon Skeletons" "Raise Zombie" "Convocation" "Feeding Frenzy Support"
@@ -3522,7 +3555,7 @@ Show  # Endgame Filter (Disable for MF) - Gems - @Leveled gems |Disable
 #	PlayAlertSound 7 160 # A - Tier 2
 #	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Heist - Any alternate quality gem |Disable
+Show  # Challenge leagues - Heist - Any alternate quality gem |Disable
 	Class "Gem"
 	AlternateQuality True
 	SetFontSize 45
@@ -3599,7 +3632,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Gems - No quality  - S
 # Section:  #   ABYSS JEWELS
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Murderous Eye |Disable
+Show  # Challenge leagues - Abyss - Jewels (Level 82+) - Murderous Eye |Disable
 	Class "Abyss Jewel"
 	BaseType "Murderous Eye"
 	ItemLevel >= 82
@@ -3610,7 +3643,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Murderous
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Searching Eye |Disable
+Show  # Challenge leagues - Abyss - Jewels (Level 82+) - Searching Eye |Disable
 	Class "Abyss Jewel"
 	BaseType "Searching Eye"
 	ItemLevel >= 82
@@ -3621,7 +3654,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Searching
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Hypnotic Eye |Disable
+Show  # Challenge leagues - Abyss - Jewels (Level 82+) - Hypnotic Eye |Disable
 	Class "Abyss Jewel"
 	BaseType "Hypnotic Eye"
 	ItemLevel >= 82
@@ -3632,7 +3665,7 @@ Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Hypnotic 
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Abyss items - Jewels (Level 82+) - Ghastly Eye |Disable
+Show  # Challenge leagues - Abyss - Jewels (Level 82+) - Ghastly Eye |Disable
 	Class "Abyss Jewel"
 	BaseType "Ghastly Eye"
 	ItemLevel >= 82
@@ -3759,7 +3792,7 @@ Show
 # Section:  #   TALISMAN
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Challenge leagues - Talisman items - Rare |Disable
+Show  # Challenge leagues - Talisman - Rare |Disable
 	Class "Amulet"
 	BaseType "Talisman"
 	Rarity = Rare
@@ -3771,7 +3804,7 @@ Show  # ~Misc - Challenge leagues - Talisman items - Rare |Disable
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Talisman items - Magic |Disable
+Show  # Challenge leagues - Talisman - Magic |Disable
 	Class "Amulet"
 	BaseType "Talisman"
 	Rarity = Magic
@@ -3781,7 +3814,7 @@ Show  # ~Misc - Challenge leagues - Talisman items - Magic |Disable
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
-Show  # ~Misc - Challenge leagues - Talisman items - Normal |Disable
+Show  # Challenge leagues - Talisman - Normal |Disable
 	Class "Amulet"
 	BaseType "Talisman"
 	Rarity = Normal
@@ -4463,81 +4496,6 @@ Hide
 	DisableDropSound
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RARE ITEMS - JEWELRY
-#-------------------------------------------------------------------------------#
-
-Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Breach Ring
-	Class "Ring"
-	BaseType "Breach Ring"
-	Rarity = Rare
-	ItemLevel >= 1 
-# //$ >= $Rare_items_minimum_item_level
-	SetFontSize 45
-	SetTextColor 255 255 119
-	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items 
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Coral, Gold Amulet
-	Class "Amulet"
-	BaseType "Coral Amulet" "Gold Amulet"
-	Rarity = Rare
-	ItemLevel >= 1 
-# //$ >= $Rare_items_minimum_item_level
-	SetFontSize 33 
-# //$ $Rare_items_font_size
-	SetTextColor 255 255 119
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Amethyst, Gold, Iron, Moonstone Ring
-	Class "Ring"
-	BaseType "Amethyst Ring" "Gold Ring" "Iron Ring" "Moonstone Ring"
-	Rarity = Rare
-	ItemLevel >= 1 
-# //$ >= $Rare_items_minimum_item_level
-	SetFontSize 33 
-# //$ $Rare_items_font_size
-	SetTextColor 255 255 119
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Amulets
-	Class "Amulet"
-	Rarity = Rare
-	ItemLevel >= 1 
-# //$ >= $Rare_items_minimum_item_level
-	SetFontSize 45
-	SetTextColor 255 255 119
-	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items 
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Rings
-	Class "Ring"
-	Rarity = Rare
-	ItemLevel >= 1 
-# //$ >= $Rare_items_minimum_item_level
-	SetFontSize 45
-	SetTextColor 255 255 119
-	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items 
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Belts
-	Class "Belt"
-	Rarity = Rare
-	ItemLevel >= 1 
-# //$ >= $Rare_items_minimum_item_level
-	SetFontSize 45
-	SetTextColor 255 255 119
-#	SetBorderColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items 
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-#-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - TOP WEAPON BASES
 #-------------------------------------------------------------------------------#
 
@@ -4618,22 +4576,121 @@ Show
 # Section:  #   CORRUPTED ITEMS
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Corrupted items - Jewelry (Rare) |Disable
+Show  # ~Misc - Corrupted items with mods - Rare Jewelry |Disable
 	Corrupted True
+	CorruptedMods >= 1
 	Class "Ring" "Amulet" "Belt"
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 215 25 0 255 # Corrupted items text
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
-Show  # ~Misc - Corrupted items - Quiver (Magic or Rare) |Disable
+Show  # ~Misc - Corrupted items with mods - Any Rare item |Disable
 	Corrupted True
+	CorruptedMods >= 1
+	Rarity = Rare
+	SetFontSize 45
+	SetTextColor 215 25 0 255 # Corrupted items text
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # ~Misc - Corrupted items with mods - Magic Quiver |Disable
+	Corrupted True
+	CorruptedMods >= 1
 	Class "Quiver"
-	Rarity >= Magic
+	Rarity = Magic
 	SetFontSize 20
 	SetTextColor 215 25 0 255 # Corrupted items text
 	DisableDropSound
+
+Show  # ~Misc - Corrupted items with mods - Any Magic item |Disable
+	Corrupted True
+	CorruptedMods >= 1
+	Rarity = Magic
+	SetFontSize 20
+	SetTextColor 215 25 0 255 # Corrupted items text
+	DisableDropSound
+
+#-------------------------------------------------------------------------------#
+# Section:  #   RARE ITEMS - JEWELRY
+#-------------------------------------------------------------------------------#
+
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Breach Ring
+	Class "Ring"
+	BaseType "Breach Ring"
+	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 45
+	SetTextColor 255 255 119
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items 
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Coral, Gold Amulet
+	Class "Amulet"
+	BaseType "Coral Amulet" "Gold Amulet"
+	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 33 
+# //$ $Rare_items_font_size
+	SetTextColor 255 255 119
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Amethyst, Gold, Iron, Moonstone Ring
+	Class "Ring"
+	BaseType "Amethyst Ring" "Gold Ring" "Iron Ring" "Moonstone Ring"
+	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 33 
+# //$ $Rare_items_font_size
+	SetTextColor 255 255 119
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Amulets
+	Class "Amulet"
+	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 45
+	SetTextColor 255 255 119
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items 
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Other Rings
+	Class "Ring"
+	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 45
+	SetTextColor 255 255 119
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items 
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Rare items - Accessories - Belts
+	Class "Belt"
+	Rarity = Rare
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 45
+	SetTextColor 255 255 119
+#	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items 
+	DisableDropSound
+# //! AlertSound $Leveling_items
 
 #-------------------------------------------------------------------------------#
 # Section:  #   RARE ITEMS - WEAPONS - TOP WANDS
