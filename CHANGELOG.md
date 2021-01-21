@@ -6,6 +6,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 3.13.0c
 
+- Improved Cluster Jewel filtering.
 - Bug fix: Moved "RARE ITEMS - JEWELRY" below "CORRUPTED ITEMS" section.
 - Adjusted Rogue's Marker filters.
 - Updated the corrupted items filter.

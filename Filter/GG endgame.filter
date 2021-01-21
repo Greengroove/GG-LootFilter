@@ -1527,7 +1527,7 @@ Show  # Challenge leagues - Delirium - Delirium Orb
 Show  # Challenge leagues - Delirium - Cluster Jewels - Large |Disable
 	Class "Jewel"
 	BaseType "Large Cluster Jewel"
-	EnchantmentPassiveNum = 8
+	EnchantmentPassiveNum <= 9
 #	EnchantmentPassiveNode "Damage over Time"
 #	ItemLevel >= 75
 	SetFontSize 45
@@ -1541,7 +1541,7 @@ Show  # Challenge leagues - Delirium - Cluster Jewels - Large |Disable
 Show  # Challenge leagues - Delirium - Cluster Jewels - Medium |Disable
 	Class "Jewel"
 	BaseType "Medium Cluster Jewel"
-	EnchantmentPassiveNum = 4
+	EnchantmentPassiveNum <= 6
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -1553,7 +1553,7 @@ Show  # Challenge leagues - Delirium - Cluster Jewels - Medium |Disable
 Show  # Challenge leagues - Delirium - Cluster Jewels - Small |Disable
 	Class "Jewel"
 	BaseType "Small Cluster Jewel"
-	EnchantmentPassiveNum = 2
+	EnchantmentPassiveNum <= 3
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -2720,7 +2720,7 @@ Show  # ~Misc - Extras - Divination cards
 # New / unknown cards
 Show
 	Class "Divination"
-	BaseType == "Haunting Shadows" "The Whiteout" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "The Long Watch" "The Bear Woman" "Brotherhood in Exile"
+	BaseType == "Haunting Shadows" "The Whiteout" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "The Bear Woman" "Brotherhood in Exile"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
