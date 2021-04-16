@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.14.0
+
+- Added new divination cards to the list of unknown cards.
+- Added all other new items to the filter.
+- Added "Grasping Mail" to a dedicated filter as well as to the lists of normal magic and rare top items.
+
 ## 3.13.0c
 
 - Improved Cluster Jewel filtering.
