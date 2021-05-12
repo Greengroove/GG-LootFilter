@@ -258,7 +258,7 @@
 
 # //! SetOption $Custom_maps textarea ["Vaal Temple"] # Any map you want. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Shaped_maps switch [1] [2] [3] [4] [5] [6] # Set the minimum tier of shaped map you want to have highlights (Default shaped tier 1 means map tier 6).
+## //! SetOption $Shaped_maps switch [1] [2] [3] [4] [5] [6] # Set the minimum tier of shaped map you want to have highlights (Default shaped tier 1 means map tier 6).
 
 # //! SetTab [Rare items]
 
@@ -3308,20 +3308,20 @@ Show  # ~Misc - Extras - Maps - Unique Maps
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
-# Shaped maps filter
-Show  # ~Misc - Extras - Maps - Shaped maps
-	ShapedMap True
-	Class "Maps"
-	MapTier >= 1 
+## Shaped maps filter
+#Show  # ~Misc - Extras - Maps - Shaped maps
+#	ShapedMap True
+#	Class "Maps"
+#	MapTier >= 1 
 # //$ >= $Shaped_maps
-	SetFontSize 45
-	SetTextColor 74 230 58 255 # T1 drops color / Quest items
-	SetBackgroundColor 44 44 44 # Map Background Color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Square
-	PlayEffect Green
-	PlayAlertSound 7 160 # B - Tier 2 map
-	DisableDropSound
+#	SetFontSize 45
+#	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+#	SetBackgroundColor 44 44 44 # Map Background Color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Yellow Square
+#	PlayEffect Green
+#	PlayAlertSound 7 160 # B - Tier 2 map
+#	DisableDropSound
 
 Show  # ~Misc - Extras - Maps - Tier 11+
 	Class "Maps"

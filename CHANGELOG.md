@@ -10,6 +10,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 - Added a dedicated filter for "Orb of Binding".
 - "Veiled Chaos Orb" will be highlighted like Divine orbs.
 - Changed Rogue's Markers stack size filter in maps to >= 80.
+- Removed the shaped maps filter as it is no longer in use.
 
 ## 3.14.0
 
