@@ -1088,11 +1088,11 @@ Show  # Challenge leagues - Echoes of the Atlas - Ritual Base Types - Helmets
 # Section:  #	HEIST
 #-------------------------------------------------------------------------------#
 
-Show  # Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 70) |Disable
+Show  # Challenge leagues - Heist - Rogue's Markers - Maps (StackSize >= 80) |Disable
 	Class "Stackable Currency"
 	BaseType "Rogue's Marker"
 	AreaLevel >= 68
-	StackSize >= 70
+	StackSize >= 80
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
