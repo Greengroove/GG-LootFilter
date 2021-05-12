@@ -3308,12 +3308,11 @@ Show  # ~Misc - Extras - Maps - Unique Maps
 	PlayAlertSound 7 160 # B - Tier 2 map
 	DisableDropSound
 
-## Shaped maps filter
+# Shaped maps filter # //$ >= $Shaped_maps
 #Show  # ~Misc - Extras - Maps - Shaped maps
 #	ShapedMap True
 #	Class "Maps"
 #	MapTier >= 1 
-# ## //$ >= $Shaped_maps
 #	SetFontSize 45
 #	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 #	SetBackgroundColor 44 44 44 # Map Background Color
