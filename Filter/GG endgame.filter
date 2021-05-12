@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.14.0
+#               Greengroove's Endgame Loot Filter Script v 3.14.1
 #
 #-------------------------------------------------------------------------------#
 #
@@ -2484,9 +2484,9 @@ Show  # Endgame Filter (Disable for MF) - Low currency - T4 Currency (Chaos Shar
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
-Show  # Endgame Filter (Disable for MF) - Low currency - T3 Currency (Engineer's Shard, Orb of Binding, Horizon Shard) |Disable
+Show  # Endgame Filter (Disable for MF) - Low currency - T3 Currency (Engineer's Shard, Horizon Shard) |Disable
 	Class "Currency"
-	BaseType "Engineer's Shard" "Orb of Binding" "Horizon Shard"
+	BaseType "Engineer's Shard" "Horizon Shard"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
@@ -2917,6 +2917,14 @@ Show
 	PlayAlertSound 2 90 # C - Orb of Alchemy
 	DisableDropSound
 
+Show  # Endgame Filter (Disable for MF) - Currency - Orb of Binding
+	Class "Currency"
+	BaseType "Orb of Binding"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
 Show  # Challenge leagues - Prophecy - Silver Coins
 	Class "Currency"
 	BaseType "Silver Coin"
@@ -3085,11 +3093,11 @@ Show
 	Class "Stackable Currency"
 	BaseType "Veiled Chaos Orb"
 	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # A - Tier 3
+	PlayEffect Green
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show
@@ -9802,8 +9810,9 @@ Show
 # Section:  #   EXTRAS
 #-------------------------------------------------------------------------------#
 
-Show  # ~Misc - Extras - Hideout Doodads & Microtransactions |Disable
-	Class "Hideout Doodads" "Microtransactions"
+# "Hideout Doodads" were also here
+Show  # ~Misc - Extras - Microtransactions |Disable
+	Class "Microtransactions"
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items

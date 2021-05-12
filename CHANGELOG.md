@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. Please note
 
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.14.1
+
+- Added a dedicated filter for "Orb of Binding".
+- "Veiled Chaos Orb" will be highlighted like Divine orbs.
+
 ## 3.14.0
 
 - Added new divination cards to the list of unknown cards.
