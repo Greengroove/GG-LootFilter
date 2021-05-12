@@ -9810,16 +9810,15 @@ Show
 # Section:  #   EXTRAS
 #-------------------------------------------------------------------------------#
 
-# "Hideout Doodads" were also here
-Show  # ~Misc - Extras - Microtransactions |Disable
-	Class "Microtransactions"
-	SetFontSize 45
-	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 0 Yellow Star
-	PlayEffect Green
-	PlayAlertSound 8 250 # A - Tier 1
-	DisableDropSound
+#Show  # ~Misc - Extras - Microtransactions |Disable
+#	Class "Microtransactions" "Hideout Doodads"
+#	SetFontSize 45
+#	SetTextColor 0 0 0
+#	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 0 Yellow Star
+#	PlayEffect Green
+#	PlayAlertSound 8 250 # A - Tier 1
+#	DisableDropSound
 
 # Recipe item (Hyrri's bite recipe).
 #Disabled Block Start
