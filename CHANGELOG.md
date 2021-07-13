@@ -6,6 +6,7 @@ In detail information about the filter can be found [here](https://www.pathofexi
 
 ## 3.14.1c
 
+- Improved the highlight for Crescent Splinters.
 - Removed "Hideout Doodads" and "Microtransactions".
 - Added a dedicated filter for "Orb of Binding".
 - "Veiled Chaos Orb" will be highlighted like Divine orbs.
