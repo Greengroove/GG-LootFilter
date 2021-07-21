@@ -1,10 +1,10 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.14.1c
+#               Greengroove's Endgame Loot Filter Script v 3.15.0
 #
 #-------------------------------------------------------------------------------#
 #
-#               Updated for 3.14.x
+#               Updated for 3.15.x
 #
 #
 #           
@@ -65,6 +65,7 @@
 #   EXPLICIT MOD FILTER - JEWELS
 #   EXPLICIT MOD FILTER - RARE ITEMS
 #   EXPLICIT MOD FILTER - FLASKS
+#	EXPEDITION
 #	ECHOES OF THE ATLAS + RITUAL
 #	HEIST
 #	HARVEST
@@ -154,7 +155,7 @@
 #   RACING - 1 HAND - ONE HAND MACE
 #   RACING - 1 HAND - ONE HAND SWORD
 #   RACING - 1 HAND - SCEPTRE
-#   RACING - 1 HAND - THRUSTING ONE HAND SWORD
+#   RACING - 1 HAND - ONE HAND SWORD (THRUSTING )
 #   RACING - 2 HAND - STAFF
 #   RACING - 2 HAND - TWO HAND AXE
 #   RACING - 2 HAND - TWO HAND MACE
@@ -264,7 +265,7 @@
 
 # //! SetOption $Top_rare_weapons textarea ["Harbinger Bow" "Gemini Claw" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Spiraled Foil" "Jewelled Foil" "Eclipse Staff" "Vaal Axe" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Profane Wand" "Prophecy Wand" "Imbued Wand" "Sai" "Demon Dagger" "Imperial Skean" "Platinum Kris" "Ezomyte Dagger" "Ambusher"] # If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Good_rare_weapons textarea ["Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the weapon classes you are interested in. These can be disabled with the [u][b]block switches[/b][/u] in the endgame block.
+# //! SetOption $Good_rare_weapons textarea ["Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the weapon classes you are interested in. These can be disabled with the [u][b]block switches[/b][/u] in the endgame block.
 # //! SetOption $Good_rare_weapons_level slider [56] [56] [70] # Set the minimum drop level for these items.
 # //! SetOption $Separator
 # //! SetOption $Top_rare_armour_and_accessories textarea ["Grasping Mail" "Vermillion Ring" "Cerulean Ring" "Rustic Sash" "Leather Belt" "Assassin's Garb" "Zodiac Leather" "Slink Boots" "Slink Gloves" "Stealth Gloves" "Lion Pelt" "Sinner Tricorne" "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler" "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Vaal Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Ezomyte Tower Shield" "Vaal Regalia" "Widowsilk Robe" "Sorcerer Boots" "Arcanist Slippers" "Sorcerer Gloves" "Arcanist Gloves" "Hubris Circlet" "Mind Cage" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Fossilised Spirit Shield" "Triumphant Lamellar" "General's Brigandine" "Full Dragonscale" "Dragonscale Boots" "Hydrascale Boots" "Dragonscale Gauntlets" "Hydrascale Gauntlets" "Nightmare Bascinet" "Pig-Faced Bascinet" "Carnal Armour" "Murder Boots" "Assassin's Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield"] # If empty default values will be used.
@@ -287,12 +288,12 @@
 # //! SetOption $Separator
 
 # //! SetOption $Veiled_armour textarea ["Body Armour" "Gloves" "Boots" "Helmets" "Shield" "Rings" "Amulet" "Belts"] # Select the classes you are interested in. If empty default values will be used.
-# //! SetOption $Veiled_weapons textarea ["Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Veiled_weapons textarea ["Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Separator
 
 # //! SetOption $Good_Influenced_items textarea ["Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Influenced_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Influenced_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Influenced_weapons_drop_level slider [55] [1] [70] # Set the minimum drop level for these items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
@@ -302,7 +303,7 @@
 
 # //! SetOption $Good_Elder_items textarea ["Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Elder_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Elder_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Elder_weapons_drop_level slider [55] [1] [70] # Set the minimum drop level for these items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
@@ -312,7 +313,7 @@
 
 # //! SetOption $Good_Shaper_items textarea ["Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Shaper_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Shaper_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Shaper_weapons_drop_level slider [55] [1] [70] # Set the minimum drop level for these items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
@@ -322,7 +323,7 @@
 
 # //! SetOption $Good_fractured_items textarea ["Jewel" "Gloves" "Boots" "Helmets" "Shield" "Quivers" "Rings" "Amulet" "Belts" "Dagger" "Sceptres" "Wand"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Fractured_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
+# //! SetOption $Fractured_weapons textarea ["Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"] # Select the classes you are interested in. If empty default values will be used.
 # //! SetOption $Fractured_weapons_drop_level slider [55] [1] [70] # Set the minimum drop level for these items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
@@ -335,7 +336,7 @@
 # //! SetOption $Crafting_weapons_level slider [83] [73] [86] # Set the minimum item level for crafting items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
-# //! SetOption $Armour_crafting_bases textarea ["Seaglass Amulet" "Iolite Ring" "Blessed Boots" "Apothecary's Gloves" "Artillery Quiver" "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler"] # Applies to all crafting armour. If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
+# //! SetOption $Armour_crafting_bases textarea ["Runic Crown" "Runic Sabatons" "Runic Gauntlets" "Iron Flask" "Seaglass Amulet" "Iolite Ring" "Fugitive Boots" "Apothecary's Gloves" "Artillery Quiver" "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler"] # Applies to all crafting armour. If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Crafting_armour_level slider [84] [72] [86] # Set the minimum item level for crafting items.
 # //! SetOption $EmptyLine
 # //! SetOption $EmptyLine
@@ -352,7 +353,7 @@
 # //! SetOption $Separator
 # //! SetOption $Chance_bases textarea ["Leather Belt"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Separator
-# //! SetOption $Good_Divination_cards textarea ["Haunting Shadows" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "Brotherhood in Exile" "Fateful Meeting" "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
+# //! SetOption $Good_Divination_cards textarea ["Winter's Embrace" "Broken Promises" "Deadly Joy" "The Eternal War" "Prejudice" "The Shortcut" "Haunting Shadows" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "Brotherhood in Exile" "Fateful Meeting" "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
 # //! SetOption $EmptyLine
 # //! SetOption $Bad_Divination_cards textarea ["The Unexpected Prize" "The Journalist" "The Mountain" "Echoes of Love" "The Fool" "Dark Temptation" "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame filter. The [u][b]block switch[/b][/u] is in the leveling block. If empty default values will be used.
 # //! SetOption $Separator
@@ -381,7 +382,7 @@
 # //! SetOption $Slot_4_class checkbox ["Body Armour"] ["Boots"] ["Gloves"] ["Helmet"] # no title
 # //! SetOption $Separator
 # //! SetOption $Offhand_weapon input ["RR"] # Color for 3 linked offhand. [u][b]Block switches[/b][/u] are in the racing filter. Maximum 3 characters. If empty default values will be used.
-# //! SetOption $Offhand_class checkbox ["Claw"] ["Dagger"] ["One Hand Axe"] ["One Hand Mace"] ["One Hand Sword"] ["Sceptre"] ["Thrusting One Hand Sword"] # no title
+# //! SetOption $Offhand_class checkbox ["Claw"] ["Dagger"] ["One Hand Axe"] ["One Hand Mace"] ["One Hand Sword"] ["Sceptre"] # no title
 # //! SetOption $Separator
 # //! SetOption $Racing_Shields checkbox ["Tower Shield"] ["Buckler"] ["Spirit Shield"] ["Round Shield"] ["Kite Shield"] ["Spiked Shield"] # 3 linked shields. [u][b]Block switches[/b][/u] in the Racing block.
 # //! SetOption $Separator
@@ -1002,6 +1003,152 @@ Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green Temp
 	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+#-------------------------------------------------------------------------------#
+# Section:  #	EXPEDITION
+#-------------------------------------------------------------------------------#
+
+Show
+	Class "Expedition Logbook"
+	SetFontSize 45
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
+	SetBackgroundColor 44 44 44 # Map Background Color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Enkindling Orb |Disable
+	Class "Stackable Currency"
+	BaseType "Enkindling Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Instilling Orb |Disable
+	Class "Stackable Currency"
+	BaseType "Instilling Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Currency - Exotic Coinage |Disable
+	Class "Stackable Currency"
+	BaseType "Exotic Coinage"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Currency - Scrap Metal |Disable
+	Class "Stackable Currency"
+	BaseType "Scrap Metal"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Currency - Astragali |Disable
+	Class "Stackable Currency"
+	BaseType "Astragali"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Currency - Burial Medallion |Disable
+	Class "Stackable Currency"
+	BaseType "Burial Medallion"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Artifacts - Lesser |Disable
+	Class "Stackable Currency"
+	BaseType "Lesser Broken Circle Artifact" "Lesser Black Scythe Artifact" "Lesser Order Artifact" "Lesser Sun Artifact"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	MinimapIcon 2 Blue Diamond
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Artifacts - Common |Disable
+	Class "Stackable Currency"
+	BaseType "Common Broken Circle Artifact" "Common Black Scythe Artifact" "Common Order Artifact" "Common Sun Artifact"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	MinimapIcon 2 Blue Diamond
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Artifacts - Greater |Disable
+	Class "Stackable Currency"
+	BaseType "Greater Broken Circle Artifact" "Greater Black Scythe Artifact" "Greater Order Artifact" "Greater Sun Artifact"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	MinimapIcon 2 Blue Diamond
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Artifacts - Grand |Disable
+	Class "Stackable Currency"
+	BaseType "Grand Broken Circle Artifact" "Grand Black Scythe Artifact" "Grand Order Artifact" "Grand Sun Artifact"
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Blue Diamond
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
+	DisableDropSound
+
+Show  # Challenge leagues - Expedition - Ward items - Helmet |Disable
+	Class "Helmet"
+	BaseType "Runic Helm" "Runic Crest" "Runic Crown"
+# //$ $Top_rare_armour_and_accessories
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 45
+	SetTextColor 255 255 119
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items 
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Challenge leagues - Expedition - Ward items - Gloves |Disable
+	Class "Gloves"
+	BaseType "Runic Gloves" "Runic Gages" "Runic Gauntlets"
+# //$ $Top_rare_armour_and_accessories
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 45
+	SetTextColor 255 255 119
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items 
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Challenge leagues - Expedition - Ward items - Boots |Disable
+	Class "Boots"
+	BaseType "Runic Greaves" "Runic Sollerets" "Runic Sabatons"
+# //$ $Top_rare_armour_and_accessories
+	ItemLevel >= 1 
+# //$ >= $Rare_items_minimum_item_level
+	SetFontSize 45
+	SetTextColor 255 255 119
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
@@ -1812,7 +1959,7 @@ Show
 # Custom Fractured weapons
 Show
 	FracturedItem True
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 # //$ $Fractured_weapons
 #	Rarity = Rare
 	DropLevel >= 55 
@@ -1957,7 +2104,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Veiled items - Armour |Di
 Show  # Endgame Filter (Disable for MF) - Rare items - Veiled items - Weapons |Disable
 	Identified True
 	HasExplicitMod "Veil"
-	Class "Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
+	Class "Bow" "Quiver" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptres" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
 	# //$ $Veiled_weapons
 	SetFontSize 45
 	SetBackgroundColor 75 75 75 200 # Chromatic background
@@ -2226,7 +2373,7 @@ Show
 # Custom Influenced weapons
 Show
 	HasInfluence Crusader Redeemer Hunter Warlord
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 # //$ $Influenced_weapons
 #	Rarity = Rare
 	DropLevel >= 55 
@@ -2318,7 +2465,7 @@ Show
 # Custom Elder weapons
 Show
 	ElderItem True
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 # //$ $Elder_weapons
 #	Rarity = Rare
 	DropLevel >= 55 
@@ -2410,7 +2557,7 @@ Show
 # Custom Shaper weapons
 Show
 	ShaperItem True
-	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+	Class "Bow" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 # //$ $Shaper_weapons
 #	Rarity = Rare
 	DropLevel >= 55 
@@ -2730,7 +2877,7 @@ Show  # ~Misc - Extras - Divination cards
 # New / unknown cards
 Show
 	Class "Divination"
-	BaseType == "Winter's Embrace" "Sambodhi's Wisdom" "The Enthusiasts" "Broken Promises" "Brush, Paint and Palette" "Deadly Joy" "The Adventuring Spirit" "The Eternal War" "Prejudice" "The Shortcut" "The Card Sharp" "A Modest Request" "Luminous Trove" "The Hook"
+	BaseType == "The Last Supper" "The Emptiness" "A Sea of Blue" "The Offspring" "The Price of Prescience" "The Mind's Eyes" "Terrible Secret of Space" "The Blessing of Moosh" "Costly Curio" "Lachrymal Necrosis" "Dementophobia" "Ambitious Obsession"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -2741,7 +2888,7 @@ Show
 
 Show  # ~Misc - Extras - Good Divination cards
 	Class "Divination"
-	BaseType == "Haunting Shadows" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "Brotherhood in Exile" "Fateful Meeting" "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"
+	BaseType == "Winter's Embrace" "Broken Promises" "Deadly Joy" "The Eternal War" "Prejudice" "The Shortcut" "Haunting Shadows" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "Brotherhood in Exile" "Fateful Meeting" "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"
 # //$ $Good_Divination_cards
 	SetFontSize 45
 	SetTextColor 0 0 0
@@ -4195,7 +4342,7 @@ Show
 
 Show
 	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver"
-	BaseType "Seaglass Amulet" "Iolite Ring" "Blessed Boots" "Apothecary's Gloves" "Artillery Quiver" "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet"
+	BaseType "Runic Crown" "Runic Sabatons" "Runic Gauntlets" "Iron Flask" "Seaglass Amulet" "Iolite Ring" "Fugitive Boots" "Apothecary's Gloves" "Artillery Quiver" "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet"
 	Rarity = Rare
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -4220,7 +4367,7 @@ Show
 #-------------------------------------------------------------------------------#
 
 Show  # Crafting Filter - Normal items - @Weapon crafting bases
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
 	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
 	Rarity = Normal
@@ -4232,7 +4379,7 @@ Show  # Crafting Filter - Normal items - @Weapon crafting bases
 	DisableDropSound
 
 Show  # Crafting Filter - Magic items - @Weapon crafting bases
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
 	BaseType "Maraketh Bow" "Harbinger Bow" "Gemini Claw" "Platinum Kris" "Ambusher" "Sai" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Spiraled Foil" "Jewelled Foil" "Vaal Axe" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Prophecy Wand" "Imbued Wand" "Profane Wand" 
 # //$ $Weapon_crafting_bases
 	Rarity = Magic
@@ -4249,7 +4396,7 @@ Show  # Crafting Filter - Magic items - @Weapon crafting bases
 
 Show  # Crafting Filter - Normal items - @Armour crafting bases
 	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver"
-	BaseType "Grasping Mail" "Seaglass Amulet" "Iolite Ring" "Blessed Boots" "Apothecary's Gloves" "Artillery Quiver" "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
+	BaseType "Runic Crown" "Runic Sabatons" "Runic Gauntlets" "Iron Flask" "Grasping Mail" "Seaglass Amulet" "Iolite Ring" "Fugitive Boots" "Apothecary's Gloves" "Artillery Quiver" "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
 # //$ $Armour_crafting_bases
 	Rarity = Normal
 	ItemLevel >= 84 
@@ -4261,7 +4408,7 @@ Show  # Crafting Filter - Normal items - @Armour crafting bases
 
 Show  # Crafting Filter - Magic items - @Armour crafting bases
 	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver"
-	BaseType "Grasping Mail" "Seaglass Amulet" "Iolite Ring" "Blessed Boots" "Apothecary's Gloves" "Artillery Quiver" "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
+	BaseType "Runic Crown" "Runic Sabatons" "Runic Gauntlets" "Iron Flask" "Grasping Mail" "Seaglass Amulet" "Iolite Ring" "Fugitive Boots" "Apothecary's Gloves" "Artillery Quiver" "Two-Toned Boots" "Fingerless Silk Gloves" "Gripped Gloves" "Spiked Gloves" "Bone Helmet" "Ezomyte Tower Shield" "Crusader Buckler" "Lacquered Buckler" 
 # //$ $Armour_crafting_bases
 	Rarity = Magic
 	ItemLevel >= 84 
@@ -4538,7 +4685,7 @@ Show  # Endgame Filter (Disable for MF) - RGB items - Rare - Width = 1 |Disable
 # List of items that you never want to see. Use with care.
 Hide
 	Corrupted False
-	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver" "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
+	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver" "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
 	BaseType "Splintered Tower Shield" 
 # //$ $Bad_rare_items
 	Rarity = Rare
@@ -4554,7 +4701,7 @@ Hide
 
 # All top weapon base rares.
 Show
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
 	BaseType "Harbinger Bow" "Gemini Claw" "Runic Hatchet" "Siege Axe" "Tiger Hook" "Sambar Sceptre" "Spiraled Foil" "Jewelled Foil" "Eclipse Staff" "Vaal Axe" "Coronal Maul" "Exquisite Blade" "Convoking Wand" "Profane Wand" "Prophecy Wand" "Imbued Wand" "Sai" "Demon Dagger" "Imperial Skean" "Platinum Kris" "Ezomyte Dagger" "Ambusher" 
 # //$ $Top_rare_weapons
 	Rarity = Rare
@@ -4800,7 +4947,7 @@ Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Wands - Maraket
 Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - @Good rare weapons |Disable
 	DropLevel >= 56 
 # //$ >= $Good_rare_weapons_level
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" 
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" 
 # //$ $Good_rare_weapons
 	Rarity = Rare
 	ItemLevel >= 1 
@@ -5287,8 +5434,8 @@ Hide  # Leveling Filter (Enable for leveling and races) - Rare Leveling - Weapon
 # Section:  #   RARE ITEMS - WEAPONS - ONE HAND SWORD
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Elemental Thrusting One Hand Sword |Disable
-	Class "Thrusting One Hand Sword"
+Show  # Endgame Filter (Disable for MF) - Rare items - Weapons - Elemental One Hand Sword |Disable
+	Class "One Hand Sword"
 	BaseType "Jewelled Foil" "Spiraled Foil" "Fancy Foil" "Serrated Foil" "Elegant Foil" "Jagged Foil"
 	Rarity = Rare
 	ItemLevel >= 1 
@@ -6084,6 +6231,34 @@ Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Quicksilver Flask |
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
+Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Gold Flask |Disable
+	Class "Utility Flasks"
+	BaseType "Gold Flask"
+	SetFontSize 45
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Corundum Flask |Disable
+	Class "Utility Flasks"
+	BaseType "Corundum Flask"
+	SetFontSize 45
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Iron Flask |Disable
+	Class "Utility Flasks"
+	BaseType "Iron Flask"
+	SetFontSize 45
+	SetBorderColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+
 Show  # Endgame Filter (Disable for MF) - Flasks - Utility - Bismuth Flask |Disable
 	Class "Utility Flasks"
 	BaseType "Bismuth Flask"
@@ -6655,7 +6830,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #Disabled Block Start
 #Show  # ~Misc - Animate Weapon - Normal - weapons (All) |Disable
 #	Corrupted False
-#	Class "Dagger" "Claw" "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+#	Class "Dagger" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Normal
 #	SetFontSize 20
 #	SetTextColor 255 255 255 0 # Animate weapon text
@@ -6695,7 +6870,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Flasks - Flasks with q
 #Show  # ~Misc - Animate Weapon - Magic - weapons (All) |Disable
 #	Corrupted False
 #	Identified True
-#	Class "Dagger" "Claw" "Thrusting One Hand Sword" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
+#	Class "Dagger" "Claw" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword"
 #	Rarity = Magic
 #	SetFontSize 20
 #	SetTextColor 255 255 255 0 # Animate weapon text
@@ -6782,7 +6957,7 @@ Show
 	PlayEffect Green Temp
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
-#    Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
+#    Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand"
 #	SetBorderColor 255 45 175 # T2 drops color
 
 #-------------------------------------------------------------------------------#
@@ -6847,7 +7022,7 @@ Show
 #	LinkedSockets = 3
 #	SocketGroup RR 
 # //$ $Offhand_weapon
-#	Class "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Thrusting One Hand Sword" 
+#	Class "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" 
 # //$ $Offhand_class
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
@@ -6862,7 +7037,7 @@ Show
 #Disabled Block Start
 #Hide  # Racing Filter - Weapons - @Offhand weapon |Disable
 #	LinkedSockets = 3
-#	Class "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Thrusting One Hand Sword" 
+#	Class "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre"
 # //$ $Offhand_class
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
@@ -6981,7 +7156,7 @@ Show
 #Disabled Block End
 
 Show
-	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Thrusting One Hand Sword" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
 	ItemLevel <= 1
 	SetFontSize 45
 	SetBackgroundColor 75 75 75 200 # Racing items
@@ -8903,11 +9078,11 @@ Show
 #Disabled Block End
 
 #-------------------------------------------------------------------------------#
-# Section:  #   RACING - 1 HAND - THRUSTING ONE HAND SWORD
+# Section:  #   RACING - 1 HAND - One Hand Sword (Thrusting)
 #-------------------------------------------------------------------------------#
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Rusted Spike"
 #	ItemLevel <= 6
 #	SetFontSize 45
@@ -8916,7 +9091,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Whalebone Rapier"
 #	ItemLevel <= 11
 #	SetFontSize 45
@@ -8925,7 +9100,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Battered Foil"
 #	ItemLevel <= 16
 #	SetFontSize 45
@@ -8934,7 +9109,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Basket Rapier"
 #	ItemLevel <= 21
 #	SetFontSize 45
@@ -8943,7 +9118,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Jagged Foil"
 #	ItemLevel <= 25
 #	SetFontSize 45
@@ -8952,7 +9127,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Antique Rapier" "Elegant Foil" "Thorn Rapier"
 #	ItemLevel <= 35
 #	SetFontSize 45
@@ -8961,7 +9136,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Smallsword" "Wyrmbone Rapier" "Burnished Foil" "Estoc" "Serrated Foil"
 #	ItemLevel <= 48
 #	SetFontSize 45
@@ -8970,7 +9145,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Serrated Foil" "Primeval Rapier" "Fancy Foil" "Apex Rapier"
 #	ItemLevel <= 56
 #	SetFontSize 45
@@ -8979,7 +9154,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Courtesan Sword" "Dragonbone Rapier" "Tempered Foil" "Pecoraro"
 #	ItemLevel <= 63
 #	SetFontSize 45
@@ -8988,7 +9163,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Spiraled Foil" "Vaal Rapier" "Jewelled Foil" "Harpy Rapier" "Dragoon Sword"
 #	ItemLevel <= 67
 #	SetFontSize 45
@@ -8997,7 +9172,7 @@ Show
 #Disabled Block End
 
 #Disabled Block Start
-#Show  # Racing Filter - Weapons - 1 Hand Weapons - Thrusting One Hand Sword |Disable
+#Show  # Racing Filter - Weapons - 1 Hand Weapons - One Hand Sword |Disable
 #	BaseType "Jewelled Foil" "Harpy Rapier" "Dragoon Sword"
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
@@ -9873,7 +10048,7 @@ Hide  # Leveling Filter (Enable for leveling and races) - Crafting Items - Crude
 #Disabled Block Start
 #Show  # Leveling Filter (Enable for leveling and races) - Recipes - 10% or higher quality weapons |Disable
 #	Quality >= 10
-#	Class "Claw" "Dagger" "Thrusting One Hand Sword" "Wand"
+#	Class "Claw" "Dagger" "One Hand Sword" "Wand"
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
