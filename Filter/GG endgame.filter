@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.15.0
+#               Greengroove's Endgame Loot Filter Script v 3.15.0a
 #
 #-------------------------------------------------------------------------------#
 #
@@ -1106,17 +1106,15 @@ Show  # Challenge leagues - Expedition - Artifacts - Grand |Disable
 	Class "Stackable Currency"
 	BaseType "Grand Broken Circle Artifact" "Grand Black Scythe Artifact" "Grand Order Artifact" "Grand Sun Artifact"
 	SetFontSize 45
-	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 255 45 175 # T2 drops color
 	MinimapIcon 2 Blue Diamond
-	PlayEffect Green
-	PlayAlertSound 8 250 # A - Tier 1
+	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
 Show  # Challenge leagues - Expedition - Ward items - Helmet |Disable
 	Class "Helmet"
 	BaseType "Runic Helm" "Runic Crest" "Runic Crown"
-# //$ $Top_rare_armour_and_accessories
 	ItemLevel >= 1 
 # //$ >= $Rare_items_minimum_item_level
 	SetFontSize 45
@@ -1129,7 +1127,6 @@ Show  # Challenge leagues - Expedition - Ward items - Helmet |Disable
 Show  # Challenge leagues - Expedition - Ward items - Gloves |Disable
 	Class "Gloves"
 	BaseType "Runic Gloves" "Runic Gages" "Runic Gauntlets"
-# //$ $Top_rare_armour_and_accessories
 	ItemLevel >= 1 
 # //$ >= $Rare_items_minimum_item_level
 	SetFontSize 45
@@ -1142,7 +1139,6 @@ Show  # Challenge leagues - Expedition - Ward items - Gloves |Disable
 Show  # Challenge leagues - Expedition - Ward items - Boots |Disable
 	Class "Boots"
 	BaseType "Runic Greaves" "Runic Sollerets" "Runic Sabatons"
-# //$ $Top_rare_armour_and_accessories
 	ItemLevel >= 1 
 # //$ >= $Rare_items_minimum_item_level
 	SetFontSize 45
@@ -1590,6 +1586,7 @@ Show
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 0 Yellow Star
 	PlayEffect Green
 	PlayAlertSound 8 250 # A - Tier 1
