@@ -1048,7 +1048,10 @@ Show  # Challenge leagues - Expedition - Currency - Exotic Coinage |Disable
 	BaseType "Exotic Coinage"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show  # Challenge leagues - Expedition - Currency - Scrap Metal |Disable
@@ -1056,7 +1059,10 @@ Show  # Challenge leagues - Expedition - Currency - Scrap Metal |Disable
 	BaseType "Scrap Metal"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show  # Challenge leagues - Expedition - Currency - Astragali |Disable
@@ -1064,7 +1070,10 @@ Show  # Challenge leagues - Expedition - Currency - Astragali |Disable
 	BaseType "Astragali"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show  # Challenge leagues - Expedition - Currency - Burial Medallion |Disable
@@ -1072,7 +1081,10 @@ Show  # Challenge leagues - Expedition - Currency - Burial Medallion |Disable
 	BaseType "Burial Medallion"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show  # Challenge leagues - Expedition - Artifacts - Lesser |Disable
