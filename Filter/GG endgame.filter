@@ -2964,7 +2964,7 @@ Show  # ~Misc - Extras - Divination cards
 #Disabled Block Start
 #Hide  # Racing Filter - Accessories - Important currency for racing |Disable
 #	Class "Currency"
-#	BaseType "Orb of Transmutation" "Orb of Chance" "Orb of Alchemy"
+#	BaseType == "Orb of Transmutation" "Orb of Chance" "Orb of Alchemy"
 #	SetFontSize 45
 #	SetTextColor 0 0 0
 #	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
@@ -2976,7 +2976,7 @@ Show  # ~Misc - Extras - Divination cards
 #Disabled Block Start
 #Hide  # Racing Filter - Accessories - Orb of Alteration override |Disable
 #	Class "Currency"
-#	BaseType "Orb of Alteration"
+#	BaseType == "Orb of Alteration"
 #	SetFontSize 45
 #	SetTextColor 0 0 0
 #	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
@@ -2984,235 +2984,6 @@ Show  # ~Misc - Extras - Divination cards
 #	PlayAlertSound 3 160 # D - Important items
 #	DisableDropSound
 #Disabled Block End
-
-Show  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls (Single)
-	Class "Currency"
-	BaseType "Scroll of Wisdom"
-	StackSize = 1
-	SetFontSize 45
-	SetBackgroundColor 0 0 0 170 # Lesser items
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Low currency - Portal Scrolls
-	Class "Currency"
-	BaseType "Portal Scroll"
-	SetFontSize 45
-	SetBackgroundColor 0 0 0 170 # Lesser items
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Low currency - Armourer's Scrap
-	Class "Currency"
-	BaseType "Armourer's Scrap"
-	SetFontSize 45
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone |Disable
-	Class "Currency"
-	BaseType "Blacksmith's Whetstone"
-	SetFontSize 45
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - Low currency - Jeweller's Orb |Disable
-	Class "Currency"
-	BaseType "Jeweller's Orb"
-	SetFontSize 45
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Low currency - Orb of Augmentation |Disable
-	Class "Currency"
-	BaseType "Orb of Augmentation"
-	SetFontSize 45
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - Currency - Glassblower's Bauble |Disable
-	Class "Currency"
-	BaseType "Glassblower's Bauble"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - Currency - Orb of Transmutation |Disable
-	Class "Currency"
-	BaseType "Orb of Transmutation"
-	SetFontSize 45
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - Currency - Orb of Chance |Disable
-	Class "Currency"
-	BaseType "Orb of Chance"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Currency - Orb of Alteration |Disable
-	Class "Currency"
-	BaseType "Orb of Alteration"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Currency - Chromatic Orb |Disable
-	Class "Currency"
-	BaseType "Chromatic Orb"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Currency - Cartographer's Chisel (highlight only) |Disable
-	Class "Currency"
-	BaseType "Cartographer's Chisel"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-	MinimapIcon 2 Blue Diamond
-	DisableDropSound
-
-Show  # ~Misc - Extras - Cartographer's Chisel
-	Class "Currency"
-	BaseType "Cartographer's Chisel"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 170 # Lesser items
-	DisableDropSound
-
-#Disabled Block Start
-#Hide  # Leveling Filter (Enable for leveling and races) - Currency - Orb of Alchemy (extra highlight)
-#	Class "Currency"
-#	BaseType "Orb of Alchemy"
-#	SetFontSize 45
-#	SetTextColor 255 45 175 # T2 drops color
-#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-#	MinimapIcon 2 Yellow Circle
-#	PlayEffect Green Temp
-#	PlayAlertSound 1 100 # A - Tier 3
-#	DisableDropSound
-#Disabled Block End
-
-Show
-	Class "Currency"
-	BaseType "Orb of Alchemy"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # C - Orb of Alchemy
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Currency - Orb of Binding
-	Class "Currency"
-	BaseType "Orb of Binding"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show  # Challenge leagues - Prophecy - Silver Coins
-	Class "Currency"
-	BaseType "Silver Coin"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	PlayEffect Green Temp
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show
-	Class "Currency"
-	BaseType "Regal Orb"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # C - Regal Orb
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Currency - Blessed Orb |Disable
-	Class "Currency"
-	BaseType "Blessed Orb"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # C - Blessed Orb
-	DisableDropSound
-
-Show
-	Class "Currency"
-	BaseType "Gemcutter's Prism"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-Show
-	Class "Currency"
-	BaseType "Orb of Regret"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
-
-Show
-	Class "Currency"
-	BaseType "Vaal Orb"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # C - Vaal Orb
-	DisableDropSound
-
-Show
-	Class "Currency"
-	BaseType == "Chaos Orb"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # C - Chaos Orb
-	DisableDropSound
-
-Show
-	Class "Currency"
-	BaseType "Orb of Fusing"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # C - Orb of Fusing
-	DisableDropSound
-
-Show
-	Class "Currency"
-	BaseType "Orb of Scouring"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # A - Tier 3
-	DisableDropSound
 
 Show  # Endgame Filter (Disable for MF) - Currency - Tainted Blacksmith's Whetstone / Armourer's Scrap
 	Class "Stackable Currency"
@@ -3249,9 +3020,238 @@ Show
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
+Show  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls (Single)
+	Class "Currency"
+	BaseType == "Scroll of Wisdom"
+	StackSize = 1
+	SetFontSize 45
+	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Low currency - Portal Scrolls
+	Class "Currency"
+	BaseType == "Portal Scroll"
+	SetFontSize 45
+	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Low currency - Armourer's Scrap
+	Class "Currency"
+	BaseType == "Armourer's Scrap"
+	SetFontSize 45
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone |Disable
+	Class "Currency"
+	BaseType == "Blacksmith's Whetstone"
+	SetFontSize 45
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Low currency - Jeweller's Orb |Disable
+	Class "Currency"
+	BaseType == "Jeweller's Orb"
+	SetFontSize 45
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Low currency - Orb of Augmentation |Disable
+	Class "Currency"
+	BaseType == "Orb of Augmentation"
+	SetFontSize 45
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Currency - Glassblower's Bauble |Disable
+	Class "Currency"
+	BaseType == "Glassblower's Bauble"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Currency - Orb of Transmutation |Disable
+	Class "Currency"
+	BaseType == "Orb of Transmutation"
+	SetFontSize 45
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Currency - Orb of Chance |Disable
+	Class "Currency"
+	BaseType == "Orb of Chance"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Currency - Orb of Alteration |Disable
+	Class "Currency"
+	BaseType == "Orb of Alteration"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Currency - Chromatic Orb |Disable
+	Class "Currency"
+	BaseType == "Chromatic Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Currency - Cartographer's Chisel (highlight only) |Disable
+	Class "Currency"
+	BaseType == "Cartographer's Chisel"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	MinimapIcon 2 Blue Diamond
+	DisableDropSound
+
+Show  # ~Misc - Extras - Cartographer's Chisel
+	Class "Currency"
+	BaseType == "Cartographer's Chisel"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
+
+#Disabled Block Start
+#Hide  # Leveling Filter (Enable for leveling and races) - Currency - Orb of Alchemy (extra highlight)
+#	Class "Currency"
+#	BaseType == "Orb of Alchemy"
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Yellow Circle
+#	PlayEffect Green Temp
+#	PlayAlertSound 1 100 # A - Tier 3
+#	DisableDropSound
+#Disabled Block End
+
+Show
+	Class "Currency"
+	BaseType == "Orb of Alchemy"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # C - Orb of Alchemy
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Currency - Orb of Binding
+	Class "Currency"
+	BaseType == "Orb of Binding"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Prophecy - Silver Coins
+	Class "Currency"
+	BaseType == "Silver Coin"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	PlayEffect Green Temp
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show
+	Class "Currency"
+	BaseType == "Regal Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # C - Regal Orb
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Currency - Blessed Orb |Disable
+	Class "Currency"
+	BaseType == "Blessed Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # C - Blessed Orb
+	DisableDropSound
+
+Show
+	Class "Currency"
+	BaseType == "Gemcutter's Prism"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
+
+Show
+	Class "Currency"
+	BaseType == "Orb of Regret"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
+
+Show
+	Class "Currency"
+	BaseType == "Vaal Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # C - Vaal Orb
+	DisableDropSound
+
+Show
+	Class "Currency"
+	BaseType == "Chaos Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # C - Chaos Orb
+	DisableDropSound
+
+Show
+	Class "Currency"
+	BaseType == "Orb of Fusing"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # C - Orb of Fusing
+	DisableDropSound
+
+Show
+	Class "Currency"
+	BaseType == "Orb of Scouring"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 1 100 # A - Tier 3
+	DisableDropSound
+
 Show  # ~Misc - Extras - Sextant - Simple
 	Class "Currency"
-	BaseType "Simple Sextant"
+	BaseType == "Simple Sextant"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -3262,7 +3262,7 @@ Show  # ~Misc - Extras - Sextant - Simple
 
 Show  # ~Misc - Extras - Sextant - Prime
 	Class "Currency"
-	BaseType "Prime Sextant"
+	BaseType == "Prime Sextant"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -3273,7 +3273,7 @@ Show  # ~Misc - Extras - Sextant - Prime
 
 Show  # ~Misc - Extras - Sextant - Awakened
 	Class "Currency"
-	BaseType "Awakened Sextant"
+	BaseType == "Awakened Sextant"
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
