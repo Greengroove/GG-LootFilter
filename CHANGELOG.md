@@ -1,12 +1,17 @@
 # GREENGROOVE'S LOOT FILTER SCRIPTS - CHANGE LOG
 
 All notable changes to this project will be documented in this file. Please note that the log is referring to the endgame filter.
-
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
-## 3.15.0b
+## 3.16.0
+
+- Added, updated and removed all items according to the [forum post](https://www.pathofexile.com/forum/view-thread/3187476).
+- Added new divination cards: "Desperate Crusade" "A Stone Perfected" "Treasures of the Vaal" "The Rabbit's Foot" "Chasing Risk" "The Prince of Darkness" "The Catch" "Eternal Bonds" "Disdain" "The Scout" "Guardian's Challenge" "The Forgotten Treasure" "The Fox in the Brambles" "The Aspirant"
+
+## 3.15.1
 
 - Changed appearance for "Exotic Coinage" "Scrap Metal" "Astragali" "Burial Medallion".
+- Added a few more fossils to top fossil list.
 
 ## 3.15.0a
 

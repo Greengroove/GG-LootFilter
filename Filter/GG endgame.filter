@@ -1,10 +1,10 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.15.0a
+#               Greengroove's Endgame Loot Filter Script v 3.16.0
 #
 #-------------------------------------------------------------------------------#
 #
-#               Updated for 3.15.x
+#               Updated for 3.16.x
 #
 #
 #           
@@ -353,7 +353,7 @@
 # //! SetOption $Separator
 # //! SetOption $Chance_bases textarea ["Leather Belt"] # If empty default values will be used. The list can be disabled with the [u][b]block switches[/b][/u].
 # //! SetOption $Separator
-# //! SetOption $Good_Divination_cards textarea ["Winter's Embrace" "Broken Promises" "Deadly Joy" "The Eternal War" "Prejudice" "The Shortcut" "Haunting Shadows" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "Brotherhood in Exile" "Fateful Meeting" "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
+# //! SetOption $Good_Divination_cards textarea ["Winter's Embrace" "Broken Promises" "Deadly Joy" "The Eternal War" "Prejudice" "The Shortcut" "Haunting Shadows" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "Brotherhood in Exile" "Fateful Meeting" "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
 # //! SetOption $EmptyLine
 # //! SetOption $Bad_Divination_cards textarea ["The Unexpected Prize" "The Journalist" "The Mountain" "Echoes of Love" "The Fool" "Dark Temptation" "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame filter. The [u][b]block switch[/b][/u] is in the leveling block. If empty default values will be used.
 # //! SetOption $Separator
@@ -1607,7 +1607,7 @@ Show
 #	Winged scarabs
 Show
 	Class "Map Fragment"
-	BaseType "Winged Cartography Scarab" "Winged Reliquary Scarab" "Winged Bestiary Scarab" "Winged Shaper Scarab" "Winged Elder Scarab" "Winged Sulphite Scarab" "Winged Divination Scarab" "Winged Torment Scarab" "Winged Ambush Scarab" "Winged Harbinger Scarab" "Winged Perandus Scarab" "Winged Breach Scarab" "Winged Legion Scarab" "Winged Metamorph Scarab"
+	BaseType "Winged Expedition Scarab" "Winged Cartography Scarab" "Winged Reliquary Scarab" "Winged Bestiary Scarab" "Winged Shaper Scarab" "Winged Elder Scarab" "Winged Sulphite Scarab" "Winged Divination Scarab" "Winged Torment Scarab" "Winged Ambush Scarab" "Winged Harbinger Scarab" "Winged Breach Scarab" "Winged Legion Scarab" "Winged Metamorph Scarab"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -1763,25 +1763,15 @@ Show
 # Section:  #   METAMORPH
 #-------------------------------------------------------------------------------#
 
-Show
-	Class "Map Fragments"
-	BaseType "Polished Metamorph Scarab" "Gilded Metamorph Scarab"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 7 160 # A - Tier 2
-	DisableDropSound
-
 #Show
 #	Class "Map Fragments"
-#	BaseType "Rusted Metamorph Scarab"
+#	BaseType "Rusted Metamorph Scarab" "Polished Metamorph Scarab" "Gilded Metamorph Scarab"
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
-#	SetBorderColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 #	MinimapIcon 2 Yellow Circle
-#	PlayAlertSound 1 100 # A - Tier 3
+#	PlayEffect Green Temp
+#	PlayAlertSound 7 160 # A - Tier 2
 #	DisableDropSound
 
 Show  # Challenge leagues - Metamorph - Samples |Disable
@@ -1903,6 +1893,17 @@ Show  # Challenge leagues - Legion - Timeless Emblems |Disable
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+Show
+	Class "Map Fragments"
+	BaseType "Unrelenting Timeless Karui Emblem" "Unrelenting Timeless Maraketh Emblem" "Unrelenting Timeless Eternal Emblem" "Unrelenting Timeless Templar Emblem" "Unrelenting Timeless Vaal Emblem" 
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
 #-------------------------------------------------------------------------------#
@@ -2147,9 +2148,21 @@ Show
 	PlayAlertSound 3 160 # D - Important items
 	DisableDropSound
 
+# New fossils
+Show
+	Class "Stackable Currency"
+	BaseType "Deft Fossil" "Fundamental Fossil"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
 Show
 	Class "Currency"
-	BaseType "Pristine Fossil" "Faceted Fossil" "Fractured Fossil" "Hollow Fossil" "Shuddering Fossil" "Bloodstained Fossil" "Glyphic Fossil" "Tangled Fossil" "Sanctified Fossil" "Gilded Fossil"
+	BaseType "Perfect Fossil" "Bound Fossil" "Serrated Fossil" "Corroded Fossil" "Pristine Fossil" "Faceted Fossil" "Fractured Fossil" "Hollow Fossil" "Shuddering Fossil" "Bloodstained Fossil" "Glyphic Fossil" "Tangled Fossil" "Sanctified Fossil" "Gilded Fossil"
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
@@ -2803,6 +2816,17 @@ Show  # Challenge leagues - Breach - Blessing
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
+Show
+	Class "Map Fragments"
+	BaseType "Xoph's Flawless Breachstone" "Tul's Flawless Breachstone" "Esh's Flawless Breachstone" "Uul-Netol's Flawless Breachstone" "Chayula's Flawless Breachstone"
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
+	DisableDropSound
+
 Show  # Challenge leagues - Breach - Breachstone |Disable
 	Class "Map Fragments"
 	BaseType "Breachstone"
@@ -2886,7 +2910,7 @@ Show  # ~Misc - Extras - Divination cards
 # New / unknown cards
 Show
 	Class "Divination"
-	BaseType == "The Last Supper" "The Emptiness" "A Sea of Blue" "The Offspring" "The Price of Prescience" "The Mind's Eyes" "Terrible Secret of Space" "The Blessing of Moosh" "Costly Curio" "Lachrymal Necrosis" "Dementophobia" "Ambitious Obsession"
+	BaseType == "Desperate Crusade" "A Stone Perfected" "Treasures of the Vaal" "The Rabbit's Foot" "Chasing Risk" "The Prince of Darkness" "The Catch" "Eternal Bonds" "Disdain" "The Scout" "Guardian's Challenge" "The Forgotten Treasure" "The Fox in the Brambles" "The Aspirant"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -2897,7 +2921,7 @@ Show
 
 Show  # ~Misc - Extras - Good Divination cards
 	Class "Divination"
-	BaseType == "Winter's Embrace" "Broken Promises" "Deadly Joy" "The Eternal War" "Prejudice" "The Shortcut" "Haunting Shadows" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "Brotherhood in Exile" "Fateful Meeting" "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Sword King's Salute" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"
+	BaseType == "Lachrymal Necrosis" "Dementophobia" "Ambitious Obsession" "A Sea of Blue" "The Offspring" "The Price of Prescience" "The Mind's Eyes" "Terrible Secret of Space" "The Blessing of Moosh" "Costly Curio" "The Emptiness" "Winter's Embrace" "Broken Promises" "Deadly Joy" "The Eternal War" "Prejudice" "The Shortcut" "Haunting Shadows" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "Brotherhood in Exile" "Fateful Meeting" "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"
 # //$ $Good_Divination_cards
 	SetFontSize 45
 	SetTextColor 0 0 0
@@ -3190,9 +3214,33 @@ Show
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
 
+Show  # Endgame Filter (Disable for MF) - Currency - Tainted Blacksmith's Whetstone / Armourer's Scrap
+	Class "Stackable Currency"
+	BaseType "Tainted Blacksmith's Whetstone" "Tainted Armourer's Scrap"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Currency - Tainted Chromatic Orb
+	Class "Stackable Currency"
+	BaseType "Tainted Chromatic Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Currency - "Tainted Jeweller's Orb"
+	Class "Stackable Currency"
+	BaseType "Tainted Jeweller's Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
 Show
 	Class "Currency"
-	BaseType "Cartographer's Seal" "Unshaping Orb"
+	BaseType "Tainted Mythic Orb" "Tainted Chaos Orb" "Tainted Blessing" "Tainted Orb of Fusing" "Cartographer's Seal" "Unshaping Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -3302,7 +3350,7 @@ Show
 
 Show
 	Class "Stackable Currency"
-	BaseType "Awakener's Orb"
+	BaseType == "Tainted Exalted Orb" "Tainted Divine Teardrop" "Awakener's Orb" "Sacred Orb"
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
@@ -4116,9 +4164,22 @@ Show
 	DisableDropSound
 
 Show
+	Class "Body Armour"
 	BaseType "Sacrificial Garb"
 	SetFontSize 45
 	SetBorderColor 255 45 175 # T2 drops color
+	DisableDropSound
+
+Show
+	Class "Amulet"
+	BaseType "Unset Amulet"
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
 #-------------------------------------------------------------------------------#
