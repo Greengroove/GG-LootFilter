@@ -1883,6 +1883,17 @@ Show  # Challenge leagues - Legion - Timeless Splinters |Disable
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
+Show
+	Class "Map Fragments"
+	BaseType "Unrelenting Timeless Karui Emblem" "Unrelenting Timeless Maraketh Emblem" "Unrelenting Timeless Eternal Emblem" "Unrelenting Timeless Templar Emblem" "Unrelenting Timeless Vaal Emblem" 
+	SetFontSize 45
+	SetTextColor 0 0 0
+	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 0 Yellow Star
+	PlayEffect Green
+	PlayAlertSound 8 250 # A - Tier 1
+	DisableDropSound
+
 Show  # Challenge leagues - Legion - Timeless Emblems |Disable
 	Class "Map Fragments"
 	BaseType Timeless "Timeless Karui Emblem" "Timeless Maraketh Emblem" "Timeless Eternal Emblem" "Timeless Templar Emblem" "Timeless Vaal Emblem"
@@ -1893,17 +1904,6 @@ Show  # Challenge leagues - Legion - Timeless Emblems |Disable
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Green
 	PlayAlertSound 7 160 # A - Tier 2
-	DisableDropSound
-
-Show
-	Class "Map Fragments"
-	BaseType "Unrelenting Timeless Karui Emblem" "Unrelenting Timeless Maraketh Emblem" "Unrelenting Timeless Eternal Emblem" "Unrelenting Timeless Templar Emblem" "Unrelenting Timeless Vaal Emblem" 
-	SetFontSize 45
-	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 0 Yellow Star
-	PlayEffect Green
-	PlayAlertSound 8 250 # A - Tier 1
 	DisableDropSound
 
 #-------------------------------------------------------------------------------#
