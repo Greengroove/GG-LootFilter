@@ -2806,7 +2806,7 @@ Show  # Challenge leagues - Breach - Splinter - Splinter of Chayula
 
 Show  # Challenge leagues - Breach - Blessing
 	Class "Stackable Currency"
-	BaseType "Blessing"
+	BaseType "Blessing of"
 	SetFontSize 45
 	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBackgroundColor 44 44 44 # Map Background Color
