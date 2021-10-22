@@ -967,7 +967,7 @@ Show  # ~Misc - Explicit mod filter - Flasks - Quicksilver / Silver flasks |Disa
 	BaseType "Quicksilver Flask" "Silver Flask"
 	Rarity = Magic
 	HasExplicitMod "Chemist's"
-	HasExplicitMod "of Adrenaline" "of Heat" "of Staunching" "of Warding"
+	HasExplicitMod "of Heat" "of Staunching" "of Warding"
 	SetFontSize 45
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Yellow Circle
@@ -991,19 +991,19 @@ Show  # ~Misc - Explicit mod filter - Flasks - Chemist's Utility flasks |Disable
 	DisableDropSound
 
 # Explicit mod exception
-Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
-	Corrupted False
-	Identified True
-	Class "Utility Flasks"
-	BaseType "Jade Flask"
-	Rarity = Magic
-	HasExplicitMod "of Reflexes"
-	SetFontSize 45
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
+#Show  # ~Misc - Explicit mod filter - Flasks - Jade flask |Disable
+#	Corrupted False
+#	Identified True
+#	Class "Utility Flasks"
+#	BaseType "Jade Flask"
+#	Rarity = Magic
+#	HasExplicitMod "of Reflexes"
+#	SetFontSize 45
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Yellow Circle
+#	PlayEffect Green Temp
+#	PlayAlertSound 2 0 # D - Leveling items
+#	DisableDropSound
 # //! AlertSound $Leveling_items
 
 #-------------------------------------------------------------------------------#

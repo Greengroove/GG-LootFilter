@@ -1,4 +1,4 @@
-# Greengroove's Loot Filter Scripts for Path of Exile
+# Greengroove's Loot Filter Script for Path of Exile
 
 **[Filterblast](https://filterblast.xyz/Greengroove/)
 |
@@ -17,7 +17,7 @@
 [Donations](https://www.pathofexile.com/forum/view-thread/1566921/page/1/#p12940460)**
 
 - This filter is meant to be customized.
-- Fully compatible with [Filterblast](https://filterblast.xyz/Greengroove/). **FILTERBLAST IS CURRENTLY THE ONLY CUSTOMIZATION APPLICATION COMPATIBLE WITH MY FILTER!** I will update the info if there are changes.
+- Fully compatible with [Filterblast](https://filterblast.xyz/Greengroove/). **FILTERBLAST IS CURRENTLY THE ONLY CUSTOMIZATION APPLICATION COMPATIBLE WITH MY FILTER!**
 - A complete filter overview **reference manual is available [here](https://github.com/Greengroove/GG-LootFilter/blob/master/GG%20Loot%20Filter%20Scripts%20-%20Complete%20overview.pdf).**
 
 ![Imgur](http://i.imgur.com/aU2jxMi.jpg)
@@ -37,9 +37,8 @@ Detailed information is available on the [Official forum thread](https://www.pat
 
 ## INSTALL AND CUSTOMIZE:
 
-- Please download and customize the filter on [Filterblast](https://filterblast.xyz/Greengroove/). **FILTERBLAST IS CURRENTLY THE ONLY CUSTOMIZATION APPLICATION COMPATIBLE WITH MY FILTER!**
-- Customization also possible with Notepad (or a similar application) with find and replace function. Not recommended.
-- Filter comes with a few color and sound themes.
+- Please only download and customize the filter on [Filterblast](https://filterblast.xyz/Greengroove/).
+- Customization is also possible with Notepad (or a similar application) with find and replace function. Not recommended.
 
 Check the video tutorials on [Youtube](https://www.youtube.com/playlist?list=PL1fDj7f088kbwAsejBiawLX_4jNVAvw4x). More information also available on the [Official forum thread](https://www.pathofexile.com/forum/view-thread/1566921).
 
@@ -59,4 +58,4 @@ You can also access this folder from the game's UI options. On the very bottom s
 - Press reload if your filter is not present.
 - Select filter; If the status message says „Item Filter loaded successfully“ you are done. If you get an error message there must be an error in the filter on the line described by the error message.
 
-Downloading the files is always the best choice. But **If you copy and paste the code to Notepad make sure sure you save as with UTF-8 encoding and NOT ASCII.** If you save the code as ASCII the filter will return an error and it won't work.
+Downloading the files is always the best choice. But **If you copy and paste the code to Notepad make sure sure you save as with UTF-8 encoding and NOT ASCII.** If you save the code as ASCII the filter will return an error and won't work.
