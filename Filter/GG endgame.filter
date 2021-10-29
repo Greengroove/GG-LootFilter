@@ -3023,7 +3023,7 @@ Show
 Show  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls (Single)
 	Class "Currency"
 	BaseType == "Scroll of Wisdom"
-	StackSize <= 2
+	StackSize <= 3
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -3031,7 +3031,7 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls (Single)
 Show  # Endgame Filter (Disable for MF) - Low currency - Portal Scrolls
 	Class "Currency"
 	BaseType == "Portal Scroll"
-	StackSize <= 2
+	StackSize <= 3
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
@@ -3039,14 +3039,14 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Portal Scrolls
 Show  # Endgame Filter (Disable for MF) - Low currency - Armourer's Scrap
 	Class "Currency"
 	BaseType == "Armourer's Scrap"
-	StackSize <= 2
+	StackSize <= 3
 	SetFontSize 45
 	DisableDropSound
 
 Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone |Disable
 	Class "Currency"
 	BaseType == "Blacksmith's Whetstone"
-	StackSize <= 2
+	StackSize <= 3
 	SetFontSize 45
 	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
@@ -3055,7 +3055,7 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Blacksmith's Whetstone 
 Show  # Endgame Filter (Disable for MF) - Low currency - Jeweller's Orb |Disable
 	Class "Currency"
 	BaseType == "Jeweller's Orb"
-	StackSize <= 2
+	StackSize <= 3
 	SetFontSize 45
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
