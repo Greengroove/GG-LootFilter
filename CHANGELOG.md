@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file. Please note that the log is referring to the endgame filter.
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.16.0a
+
+- Small fixes.
+
 ## 3.16.0
 
 - Added, updated and removed all items according to the [forum post](https://www.pathofexile.com/forum/view-thread/3187476).
