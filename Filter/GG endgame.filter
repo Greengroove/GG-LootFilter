@@ -4509,7 +4509,7 @@ Show  # Crafting Filter - Magic items - @Armour crafting bases
 
 Show  # Crafting Filter - Normal items - @Jewelry crafting bases
 	Class "Amulet" "Belt" "Ring"
-	BaseType "Seaglass Amulet" "Iolite Ring" "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
+	BaseType "Seaglass Amulet" "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Iolite Ring" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
 # //$ $Jewelry_crafting_bases
 	Rarity = Normal
 	ItemLevel >= 84 
@@ -4521,7 +4521,7 @@ Show  # Crafting Filter - Normal items - @Jewelry crafting bases
 
 Show  # Crafting Filter - Magic items - @Jewelry crafting bases
 	Class "Amulet" "Belt" "Ring"
-	BaseType "Seaglass Amulet" "Iolite Ring" "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring" 
+	BaseType "Seaglass Amulet" "Marble Amulet" "Blue Pearl Amulet" "Vanguard Belt" "Crystal Belt" "Iolite Ring" "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Onyx Amulet" "Rustic Sash" "Leather Belt" "Heavy Belt" "Coral Ring" "Paua Ring" "Sapphire Ring" "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Unset Ring"
 # //$ $Jewelry_crafting_bases
 	Rarity = Magic
 	ItemLevel >= 84 
