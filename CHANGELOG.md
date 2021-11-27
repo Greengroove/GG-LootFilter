@@ -3,9 +3,10 @@
 All notable changes to this project will be documented in this file. Please note that the log is referring to the endgame filter.
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
-## 3.16.0b
+## 3.16.0c
 
 - Fixed a bug not showing "Elevated Sextant".
+- Small change with items for crafting.
 
 ## 3.16.0a
 
