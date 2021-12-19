@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file. Please note that the log is referring to the endgame filter.
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.16.0e
+
+- Added advanced filter (Racing tab) for racing armor socket color to filter bases easily as you progress.
+
 ## 3.16.0d
 
 - Updated the racing filter for normal and magic armour except shields.

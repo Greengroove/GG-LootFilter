@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.16.0d
+#               Greengroove's Endgame Loot Filter Script v 3.16.0e
 #
 #-------------------------------------------------------------------------------#
 #
@@ -372,6 +372,8 @@
 # //! SetTab [Racing]
 
 # //! SetOption $Leveling_items switch [Disable] [Disable] [Enable] # Toggle sounds for low currency (Utility flasks, Whetstone, Transmutation, Augmentation orbs). Only for races / leveling, disabled by default.
+# //! SetOption $Racing_items_socket_color input ["R" "G" "B"] # Set the color for your standard racing armor. This will help you find the appropriate base for your build when leveling.
+# //! SetOption $Separator
 # //! SetOption $Linked_armour_slot_1 input ["RGB"] # Set the color for your (>=4) link setups. You can use up to 4 setups at a time. Maximum 6 characters. Recomended to use 2 - 4 characters for racing. This filter covers any armour piece. If empty default values will be used. [u][b]Block switches[/b][/u] in the Racing block.
 # //! SetOption $Slot_1_class checkbox ["Body Armour"] ["Boots"] ["Gloves"] ["Helmet"] # no title
 # //! SetOption $Linked_armour_slot_2 input ["RGB"]
@@ -7517,6 +7519,8 @@ Show
 #	Rarity = Normal
 #	ItemLevel <= 67
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7528,6 +7532,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 61
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7539,6 +7545,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 55
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7550,6 +7558,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 44
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7561,6 +7571,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 34
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7572,6 +7584,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 27
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7583,6 +7597,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 16
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7594,6 +7610,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Normal
 #	ItemLevel <= 5
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7606,6 +7624,8 @@ Show
 #	Rarity = Magic
 #	ItemLevel <= 67
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7617,6 +7637,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Magic
 #	ItemLevel <= 61
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7628,6 +7650,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Magic
 #	ItemLevel <= 55
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7639,6 +7663,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Magic
 #	ItemLevel <= 44
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7650,6 +7676,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Magic
 #	ItemLevel <= 34
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7661,6 +7689,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Magic
 #	ItemLevel <= 27
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7672,6 +7702,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Magic
 #	ItemLevel <= 16
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7683,6 +7715,8 @@ Show
 #	Class "Body Armour"
 #	Rarity = Magic
 #	ItemLevel <= 5
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -7698,6 +7732,8 @@ Show
 #	Class "Boots"
 #	Rarity = Normal
 #	ItemLevel <= 13
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7710,6 +7746,8 @@ Show
 #	Class "Boots"
 #	Rarity = Normal
 #	ItemLevel <= 21
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7722,6 +7760,8 @@ Show
 #	Class "Boots"
 #	Rarity = Normal
 #	ItemLevel <= 32
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7734,6 +7774,8 @@ Show
 #	Class "Boots"
 #	Rarity = Normal
 #	ItemLevel <= 45
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7746,6 +7788,8 @@ Show
 #	Class "Boots"
 #	Rarity = Normal
 #	ItemLevel <= 61
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7759,6 +7803,8 @@ Show
 #	Rarity = Normal
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7783,6 +7829,8 @@ Show
 #	Class "Boots"
 #	Rarity = Magic
 #	ItemLevel <= 13
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7795,6 +7843,8 @@ Show
 #	Class "Boots"
 #	Rarity = Magic
 #	ItemLevel <= 21
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7807,6 +7857,8 @@ Show
 #	Class "Boots"
 #	Rarity = Magic
 #	ItemLevel <= 32
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7819,6 +7871,8 @@ Show
 #	Class "Boots"
 #	Rarity = Magic
 #	ItemLevel <= 45
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7831,6 +7885,8 @@ Show
 #	Class "Boots"
 #	Rarity = Magic
 #	ItemLevel <= 61
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7844,6 +7900,8 @@ Show
 #	Rarity = Magic
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 74 230 58 255 # Boots border color
@@ -7860,6 +7918,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Normal
 #	ItemLevel <= 12
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7871,7 +7931,9 @@ Show
 #	DropLevel >= 7
 #	Class "Gloves"
 #	Rarity = Normal
-#	ItemLevel <= 22	
+#	ItemLevel <= 22
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7884,6 +7946,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Normal
 #	ItemLevel <= 31
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7896,6 +7960,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Normal
 #	ItemLevel <= 36
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7908,6 +7974,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Normal
 #	ItemLevel <= 44
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7920,6 +7988,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Normal
 #	ItemLevel <= 45
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7932,6 +8002,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Normal
 #	ItemLevel <= 54
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7944,6 +8016,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Normal
 #	ItemLevel <= 61
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7956,6 +8030,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Normal
 #	ItemLevel <= 63
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7968,6 +8044,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Normal
 #	ItemLevel <= 65
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -7981,6 +8059,8 @@ Show
 #	Rarity = Normal
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8005,6 +8085,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Magic
 #	ItemLevel <= 12
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8016,7 +8098,9 @@ Show
 #	DropLevel >= 7
 #	Class "Gloves"
 #	Rarity = Magic
-#	ItemLevel <= 22	
+#	ItemLevel <= 22
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8029,6 +8113,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Magic
 #	ItemLevel <= 31
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8041,6 +8127,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Magic
 #	ItemLevel <= 36
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8053,6 +8141,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Magic
 #	ItemLevel <= 44
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8065,6 +8155,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Magic
 #	ItemLevel <= 45
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8077,6 +8169,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Magic
 #	ItemLevel <= 54
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8089,6 +8183,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Magic
 #	ItemLevel <= 61
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8101,6 +8197,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Magic
 #	ItemLevel <= 63
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8113,6 +8211,8 @@ Show
 #	Class "Gloves"
 #	Rarity = Magic
 #	ItemLevel <= 65
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8126,6 +8226,8 @@ Show
 #	Rarity = Magic
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 0 200 255 255 # Gloves border color 
@@ -8142,6 +8244,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 13
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8154,6 +8258,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 20
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8166,6 +8272,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 27
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8178,6 +8286,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 32
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8190,6 +8300,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 34
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8202,6 +8314,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 40
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8214,6 +8328,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 47
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8226,6 +8342,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 51
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8238,6 +8356,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 64
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8250,6 +8370,8 @@ Show
 #	Class "Helm"
 #	Rarity = Normal
 #	ItemLevel <= 67
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8263,6 +8385,8 @@ Show
 #	Rarity = Normal
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8287,6 +8411,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 13
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8299,6 +8425,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 20
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8311,6 +8439,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 27
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8323,6 +8453,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 32
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8335,6 +8467,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 34
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8347,6 +8481,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 40
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8359,6 +8495,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 47
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8371,6 +8509,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 51
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8383,6 +8523,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 64
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8395,6 +8537,8 @@ Show
 #	Class "Helm"
 #	Rarity = Magic
 #	ItemLevel <= 67
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8408,6 +8552,8 @@ Show
 #	Rarity = Magic
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	SetBorderColor 215 25 0 255 # Helmets border color
@@ -8425,6 +8571,8 @@ Show
 #	Rarity = Normal
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -8436,6 +8584,8 @@ Show
 #	Class "Shield"
 #	Rarity = Normal
 #	ItemLevel <= 46
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -8447,6 +8597,8 @@ Show
 #	BaseType "Bone Spirit Shield"
 #	Rarity = Normal
 #	ItemLevel <= 29
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBorderColor 255 45 175 # T2 drops color
 #	DisableDropSound
@@ -8458,6 +8610,8 @@ Show
 #	Class "Shield"
 #	Rarity = Normal
 #	ItemLevel <= 29
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -8468,6 +8622,8 @@ Show
 #	Class "Shield"
 #	Rarity = Normal
 #	ItemLevel <= 16
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -8480,6 +8636,8 @@ Show
 #	Rarity = Magic
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -8491,6 +8649,8 @@ Show
 #	Class "Shield"
 #	Rarity = Magic
 #	ItemLevel <= 46
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -8502,6 +8662,8 @@ Show
 #	BaseType "Bone Spirit Shield"
 #	Rarity = Magic
 #	ItemLevel <= 29
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBorderColor 255 45 175 # T2 drops color
 #	DisableDropSound
@@ -8513,6 +8675,8 @@ Show
 #	Class "Shield"
 #	Rarity = Magic
 #	ItemLevel <= 29
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
@@ -8523,6 +8687,8 @@ Show
 #	Class "Shield"
 #	Rarity = Magic
 #	ItemLevel <= 16
+#	SocketGroup R G B
+# //$ $Racing_items_socket_color
 #	SetFontSize 33
 #	SetBackgroundColor 0 0 0 170 # Lesser items
 #	DisableDropSound
