@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.16.0e
+#               Greengroove's Endgame Loot Filter Script v 3.16.1
 #
 #-------------------------------------------------------------------------------#
 #
@@ -1339,31 +1339,33 @@ Show  # Challenge leagues - Heist - Blueprints - Rare
 	Class "Blueprint"
 	Rarity = Rare
 	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Green Square
-	PlayEffect Green Temp
-	PlayAlertSound 1 100 # A - Tier 3
+	PlayEffect Green
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show  # Challenge leagues - Heist - Blueprints - Magic
 	Class "Blueprint"
 	Rarity = Magic
 	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Green Square
-	PlayAlertSound 1 100 # A - Tier 3
+	PlayEffect Green
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show  # Challenge leagues - Heist - Blueprints - Normal
 	Class "Blueprint"
 	Rarity = Normal
 	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
+	SetTextColor 74 230 58 255 # T1 drops color / Quest items
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
 	MinimapIcon 2 Green Square
-	PlayAlertSound 1 100 # A - Tier 3
+	PlayEffect Green
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show  # Challenge leagues - Heist - Heist Gear - Level 5 - "Obsidian Sharpening Stone"
@@ -4219,12 +4221,13 @@ Show
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
 #Disabled Block Start
-#Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
+#Show  # Racing Filter - Armour - @Linked armour Slot 1 - Normal |Disable
 #	LinkedSockets = 3
 #	SocketGroup RGB 
 # //$ $Linked_armour_slot_1
 #	Class "Body Armour" "Boots" "Gloves" "Helmet" 
 # //$ $Slot_1_class
+#	Rarity = Normal
 #	ItemLevel <= 24
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
@@ -4235,12 +4238,13 @@ Show
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
 #Disabled Block Start
-#Show  # Racing Filter - Armour - @Linked armour Slot 1 |Disable
+#Show  # Racing Filter - Armour - @Linked armour Slot 1 - Normal |Disable
 #	LinkedSockets >= 4
 #	SocketGroup RGB 
 # //$ $Linked_armour_slot_1
 #	Class "Body Armour" "Boots" "Gloves" "Helmet" 
 # //$ $Slot_1_class
+#	Rarity = Normal
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
@@ -4253,12 +4257,49 @@ Show
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
 #Disabled Block Start
-#Show  # Racing Filter - Armour - @Linked armour Slot 2 |Disable
+#Show  # Racing Filter - Armour - @Linked armour Slot 1 - Magic |Disable
+#	LinkedSockets = 3
+#	SocketGroup RGB 
+# //$ $Linked_armour_slot_1
+#	Class "Body Armour" "Boots" "Gloves" "Helmet" 
+# //$ $Slot_1_class
+#	Rarity = Magic
+#	ItemLevel <= 24
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	PlayAlertSound 3 160 # D - Important items
+#	DisableDropSound
+#Disabled Block End
+
+# Any >=4 socket Body Armour, Boots, Gloves or Helmet.
+#Disabled Block Start
+#Show  # Racing Filter - Armour - @Linked armour Slot 1 - Magic |Disable
+#	LinkedSockets >= 4
+#	SocketGroup RGB 
+# //$ $Linked_armour_slot_1
+#	Class "Body Armour" "Boots" "Gloves" "Helmet" 
+# //$ $Slot_1_class
+#	Rarity = Magic
+#	ItemLevel <= 67 
+# //$ <= $Racing_items_max_level
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Triangle
+#	PlayAlertSound 3 160 # D - Important items
+#	DisableDropSound
+#Disabled Block End
+
+# Any >=3 socket Body Armour, Boots, Gloves or Helmet.
+#Disabled Block Start
+#Show  # Racing Filter - Armour - @Linked armour Slot 2 - Normal |Disable
 #	LinkedSockets = 3
 #	SocketGroup RGB 
 # //$ $Linked_armour_slot_2
 #	Class "Body Armour" "Boots" "Gloves" "Helmet" 
 # //$ $Slot_2_class
+#	Rarity = Normal
 #	ItemLevel <= 24
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
@@ -4269,12 +4310,13 @@ Show
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
 #Disabled Block Start
-#Show  # Racing Filter - Armour - @Linked armour Slot 2 |Disable
+#Show  # Racing Filter - Armour - @Linked armour Slot 2 - Normal |Disable
 #	LinkedSockets >= 4
 #	SocketGroup RGB 
 # //$ $Linked_armour_slot_2
 #	Class "Body Armour" "Boots" "Gloves" "Helmet" 
 # //$ $Slot_2_class
+#	Rarity = Normal
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
@@ -4287,12 +4329,13 @@ Show
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
 #Disabled Block Start
-#Show  # Racing Filter - Armour - @Linked armour Slot 3 |Disable
+#Show  # Racing Filter - Armour - @Linked armour Slot 2 - Magic |Disable
 #	LinkedSockets = 3
 #	SocketGroup RGB 
-# //$ $Linked_armour_slot_3
+# //$ $Linked_armour_slot_2
 #	Class "Body Armour" "Boots" "Gloves" "Helmet" 
-# //$ $Slot_3_class
+# //$ $Slot_2_class
+#	Rarity = Magic
 #	ItemLevel <= 24
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
@@ -4303,12 +4346,13 @@ Show
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
 #Disabled Block Start
-#Show  # Racing Filter - Armour - @Linked armour Slot 3 |Disable
+#Show  # Racing Filter - Armour - @Linked armour Slot 2 - Magic |Disable
 #	LinkedSockets >= 4
 #	SocketGroup RGB 
-# //$ $Linked_armour_slot_3
+# //$ $Linked_armour_slot_2
 #	Class "Body Armour" "Boots" "Gloves" "Helmet" 
-# //$ $Slot_3_class
+# //$ $Slot_2_class
+#	Rarity = Magic
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
@@ -4321,12 +4365,13 @@ Show
 
 # Any >=3 socket Body Armour, Boots, Gloves or Helmet.
 #Disabled Block Start
-#Show  # Racing Filter - Armour - @Linked armour Slot 4 |Disable
+#Show  # Racing Filter - Armour - @Linked armour Slot 3 - Normal |Disable
 #	LinkedSockets = 3
-#	SocketGroup RGB RRR GGG BBB 
-# //$ $Linked_armour_slot_4
+#	SocketGroup RGB 
+# //$ $Linked_armour_slot_3
 #	Class "Body Armour" "Boots" "Gloves" "Helmet" 
-# //$ $Slot_4_class
+# //$ $Slot_3_class
+#	Rarity = Normal
 #	ItemLevel <= 24
 #	SetFontSize 45
 #	SetTextColor 255 45 175 # T2 drops color
@@ -4337,12 +4382,121 @@ Show
 
 # Any >=4 socket Body Armour, Boots, Gloves or Helmet.
 #Disabled Block Start
-#Show  # Racing Filter - Armour - @Linked armour Slot 4 |Disable
+#Show  # Racing Filter - Armour - @Linked armour Slot 3 - Normal |Disable
+#	LinkedSockets >= 4
+#	SocketGroup RGB 
+# //$ $Linked_armour_slot_3
+#	Class "Body Armour" "Boots" "Gloves" "Helmet" 
+# //$ $Slot_3_class
+#	Rarity = Normal
+#	ItemLevel <= 67 
+# //$ <= $Racing_items_max_level
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Triangle
+#	PlayAlertSound 3 160 # D - Important items
+#	DisableDropSound
+#Disabled Block End
+
+# Any >=3 socket Body Armour, Boots, Gloves or Helmet.
+#Disabled Block Start
+#Show  # Racing Filter - Armour - @Linked armour Slot 3 - Magic |Disable
+#	LinkedSockets = 3
+#	SocketGroup RGB 
+# //$ $Linked_armour_slot_3
+#	Class "Body Armour" "Boots" "Gloves" "Helmet" 
+# //$ $Slot_3_class
+#	Rarity = Magic
+#	ItemLevel <= 24
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	PlayAlertSound 3 160 # D - Important items
+#	DisableDropSound
+#Disabled Block End
+
+# Any >=4 socket Body Armour, Boots, Gloves or Helmet.
+#Disabled Block Start
+#Show  # Racing Filter - Armour - @Linked armour Slot 3 - Magic |Disable
+#	LinkedSockets >= 4
+#	SocketGroup RGB 
+# //$ $Linked_armour_slot_3
+#	Class "Body Armour" "Boots" "Gloves" "Helmet" 
+# //$ $Slot_3_class
+#	Rarity = Magic
+#	ItemLevel <= 67 
+# //$ <= $Racing_items_max_level
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Triangle
+#	PlayAlertSound 3 160 # D - Important items
+#	DisableDropSound
+#Disabled Block End
+
+# Any >=3 socket Body Armour, Boots, Gloves or Helmet.
+#Disabled Block Start
+#Show  # Racing Filter - Armour - @Linked armour Slot 4 - Normal |Disable
+#	LinkedSockets = 3
+#	SocketGroup RGB RRR GGG BBB 
+# //$ $Linked_armour_slot_4
+#	Class "Body Armour" "Boots" "Gloves" "Helmet" 
+# //$ $Slot_4_class
+#	Rarity = Normal
+#	ItemLevel <= 24
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	PlayAlertSound 3 160 # D - Important items
+#	DisableDropSound
+#Disabled Block End
+
+# Any >=4 socket Body Armour, Boots, Gloves or Helmet.
+#Disabled Block Start
+#Show  # Racing Filter - Armour - @Linked armour Slot 4 - Normal |Disable
 #	LinkedSockets >= 4
 #	SocketGroup RGB RRR GGG BBB 
 # //$ $Linked_armour_slot_4
 #	Class "Body Armour" "Boots" "Gloves" "Helmet" 
 # //$ $Slot_4_class
+#	Rarity = Normal
+#	ItemLevel <= 67 
+# //$ <= $Racing_items_max_level
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	MinimapIcon 2 Green Triangle
+#	PlayAlertSound 3 160 # D - Important items
+#	DisableDropSound
+#Disabled Block End
+
+# Any >=3 socket Body Armour, Boots, Gloves or Helmet.
+#Disabled Block Start
+#Show  # Racing Filter - Armour - @Linked armour Slot 4 - Magic |Disable
+#	LinkedSockets = 3
+#	SocketGroup RGB RRR GGG BBB 
+# //$ $Linked_armour_slot_4
+#	Class "Body Armour" "Boots" "Gloves" "Helmet" 
+# //$ $Slot_4_class
+#	Rarity = Magic
+#	ItemLevel <= 24
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+#	PlayAlertSound 3 160 # D - Important items
+#	DisableDropSound
+#Disabled Block End
+
+# Any >=4 socket Body Armour, Boots, Gloves or Helmet.
+#Disabled Block Start
+#Show  # Racing Filter - Armour - @Linked armour Slot 4 - Magic |Disable
+#	LinkedSockets >= 4
+#	SocketGroup RGB RRR GGG BBB 
+# //$ $Linked_armour_slot_4
+#	Class "Body Armour" "Boots" "Gloves" "Helmet" 
+# //$ $Slot_4_class
+#	Rarity = Magic
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
@@ -4355,9 +4509,10 @@ Show
 
 # Any 4 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 66
 #Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linked armour (3-4 link) |Disable
+#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linked armour (3-4 link) - Normal |Disable
 #	LinkedSockets = 4
 #	Class "Body Armour" "Boots" "Gloves" "Helmet"
+#	Rarity = Normal
 #	ItemLevel <= 67 
 # //$ <= $Racing_items_max_level
 #	SetFontSize 45
@@ -4367,9 +4522,35 @@ Show
 
 # Any 3 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 24
 #Disabled Block Start
-#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linked armour (3-4 link) |Disable
+#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linked armour (3-4 link) - Normal |Disable
 #	LinkedSockets = 3
 #	Class "Boots" "Gloves" "Helmet"
+#	Rarity = Normal
+#	ItemLevel <= 24
+#	SetFontSize 45
+#	SetBorderColor 255 45 175 # T2 drops color
+#	DisableDropSound
+#Disabled Block End
+
+# Any 4 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 66
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linked armour (3-4 link) - Magic |Disable
+#	LinkedSockets = 4
+#	Class "Body Armour" "Boots" "Gloves" "Helmet"
+#	Rarity = Magic
+#	ItemLevel <= 67 
+# //$ <= $Racing_items_max_level
+#	SetFontSize 45
+#	SetBorderColor 255 45 175 # T2 drops color
+#	DisableDropSound
+#Disabled Block End
+
+# Any 3 socket Body Armour, Boots, Gloves or Helmet till ItemLevel <= 24
+#Disabled Block Start
+#Show  # Leveling Filter (Enable for leveling and races) - Crafting Items - Linked armour (3-4 link) - Magic |Disable
+#	LinkedSockets = 3
+#	Class "Boots" "Gloves" "Helmet"
+#	Rarity = Magic
 #	ItemLevel <= 24
 #	SetFontSize 45
 #	SetBorderColor 255 45 175 # T2 drops color
