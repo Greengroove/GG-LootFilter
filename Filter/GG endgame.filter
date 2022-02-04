@@ -1253,42 +1253,42 @@ Show  # Challenge leagues - Expedition - Currency - Burial Medallion |Disable
 	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
-Show  # Challenge leagues - Expedition - Artifacts - Lesser |Disable
-	Class "Stackable Currency"
-	BaseType "Lesser Broken Circle Artifact" "Lesser Black Scythe Artifact" "Lesser Order Artifact" "Lesser Sun Artifact"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	MinimapIcon 2 Blue Diamond
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
+#Show  # Challenge leagues - Expedition - Artifacts - Lesser |Disable
+#	Class "Stackable Currency"
+#	BaseType "Lesser Broken Circle Artifact" "Lesser Black Scythe Artifact" "Lesser Order Artifact" "Lesser Sun Artifact"
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	MinimapIcon 2 Blue Diamond
+#	PlayAlertSound 2 90 # A - Tier 4
+#	DisableDropSound
 
-Show  # Challenge leagues - Expedition - Artifacts - Common |Disable
-	Class "Stackable Currency"
-	BaseType "Common Broken Circle Artifact" "Common Black Scythe Artifact" "Common Order Artifact" "Common Sun Artifact"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	MinimapIcon 2 Blue Diamond
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
+#Show  # Challenge leagues - Expedition - Artifacts - Common |Disable
+#	Class "Stackable Currency"
+#	BaseType "Common Broken Circle Artifact" "Common Black Scythe Artifact" "Common Order Artifact" "Common Sun Artifact"
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	MinimapIcon 2 Blue Diamond
+#	PlayAlertSound 2 90 # A - Tier 4
+#	DisableDropSound
 
-Show  # Challenge leagues - Expedition - Artifacts - Greater |Disable
-	Class "Stackable Currency"
-	BaseType "Greater Broken Circle Artifact" "Greater Black Scythe Artifact" "Greater Order Artifact" "Greater Sun Artifact"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	MinimapIcon 2 Blue Diamond
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
+#Show  # Challenge leagues - Expedition - Artifacts - Greater |Disable
+#	Class "Stackable Currency"
+#	BaseType "Greater Broken Circle Artifact" "Greater Black Scythe Artifact" "Greater Order Artifact" "Greater Sun Artifact"
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	MinimapIcon 2 Blue Diamond
+#	PlayAlertSound 2 90 # A - Tier 4
+#	DisableDropSound
 
-Show  # Challenge leagues - Expedition - Artifacts - Grand |Disable
-	Class "Stackable Currency"
-	BaseType "Grand Broken Circle Artifact" "Grand Black Scythe Artifact" "Grand Order Artifact" "Grand Sun Artifact"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 255 45 175 # T2 drops color
-	MinimapIcon 2 Blue Diamond
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
+#Show  # Challenge leagues - Expedition - Artifacts - Grand |Disable
+#	Class "Stackable Currency"
+#	BaseType "Grand Broken Circle Artifact" "Grand Black Scythe Artifact" "Grand Order Artifact" "Grand Sun Artifact"
+#	SetFontSize 45
+#	SetTextColor 255 45 175 # T2 drops color
+#	SetBorderColor 255 45 175 # T2 drops color
+#	MinimapIcon 2 Blue Diamond
+#	PlayAlertSound 2 90 # A - Tier 4
+#	DisableDropSound
 
 Show  # Challenge leagues - Expedition - Ward items - Helmet |Disable
 	Class "Helmet"
@@ -3839,7 +3839,7 @@ Show  # ~Misc - Extras - Maps - Vaal and Zana's mods
 	Identified True
 	Class "Maps"
 	Rarity >= Magic
-	HasExplicitMod "Vaal" "Zana's"
+	HasExplicitMod "Vaal"
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
 	MinimapIcon 2 White Square
