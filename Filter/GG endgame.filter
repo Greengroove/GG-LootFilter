@@ -1354,11 +1354,12 @@ Show
 	Class "Stackable Currency"
 	BaseType "Orb of Unmaking" "Ritual Vessel" "Orb of Dominance"
 	SetFontSize 45
-	SetTextColor 0 0 0
-	SetBackgroundColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 0 Yellow Star
-	PlayEffect Green
-	PlayAlertSound 8 250 # A - Tier 1
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	SetBackgroundColor 44 44 44 # Map Background Color
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
 	DisableDropSound
 
 Show
@@ -2617,8 +2618,16 @@ Show
 
 # Bad Influenced items
 Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
-	HasInfluence Crusader Redeemer Hunter Warlord
-#	Rarity <= Rare
+	Class "Bow" "Claw" "Dagger" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Sceptre" "Staves" "Warstaves" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Wand" "Quiver"
+	HasInfluence "Crusader" "Redeemer" "Hunter" "Warlord"
+	SetFontSize 33
+	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
+
+# Bad Influenced items
+Show  # Endgame Filter (Disable for MF) - Rare items - Bad Influenced items
+	Class "Body Armour" "Boots" "Gloves" "Helmet" "Shield" "Amulet" "Belt" "Ring" "Quiver"
+	HasInfluence "Crusader" "Redeemer" "Hunter" "Warlord"
 	SetFontSize 33
 	SetBackgroundColor 0 0 0 170 # Lesser items
 	DisableDropSound
