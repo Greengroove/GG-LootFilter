@@ -1205,7 +1205,7 @@ Show  # Challenge leagues - Scourge - Tainted Jeweller's Orb
 
 Show
 	Class "Currency"
-	BaseType == "Tainted Mythic Orb" "Tainted Chaos Orb" "Tainted Blessing" "Tainted Orb of Fusing" "Cartographer's Seal" "Unshaping Orb"
+	BaseType "Tainted Mythic Orb" "Tainted Chaos Orb" "Tainted Blessing" "Tainted Orb of Fusing" "Cartographer's Seal" "Unshaping Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
