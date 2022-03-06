@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. Please note that the log is referring to the endgame filter.
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.17.1
+
+- Corrupted items now use MinimapIcon Red Diamond to differentiate from other drops.
+- Removed "Dying Anguish" from the bad divination card list.
+- Cleaned up the currency sections.
+
 ## 3.17.0b
 
 - Fixed an error with influenced maps.

@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------#
 #
-#               Greengroove's Endgame Loot Filter Script v 3.17.0
+#               Greengroove's Endgame Loot Filter Script v 3.17.1
 #
 #-------------------------------------------------------------------------------#
 #
@@ -66,6 +66,7 @@
 #   EXPLICIT MOD FILTER - RARE ITEMS
 #   EXPLICIT MOD FILTER - FLASKS
 #   SIEGE OF THE ATLAS + ARCHNEMESIS
+#   SCOURGE
 #	EXPEDITION
 #	ECHOES OF THE ATLAS + RITUAL
 #	HEIST
@@ -88,6 +89,7 @@
 #   LEGACY
 #   BREACH
 #   ESSENCE
+#   PERANDUS
 #   DIVINATION CARDS
 #   CURRENCY
 #   MAPS
@@ -217,6 +219,7 @@
 #       Divination cards:               MinimapIcon 2 Blue Square
 #       Heist contracts and blueprints:	MinimapIcon 2 Green Square
 #       Splinters:                      MinimapIcon 2 Blue Diamond
+#       Corrupted items:                MinimapIcon 2 Red Diamond
 #
 #       Racing offhand & caster items:  MinimapIcon 2 Green Diamond
 #       Racing linked items:            MinimapIcon 2 Green Triangle
@@ -356,7 +359,7 @@
 # //! SetOption $Separator
 # //! SetOption $Good_Divination_cards textarea ["Desperate Crusade" "A Stone Perfected" "Treasures of the Vaal" "The Rabbit's Foot" "Chasing Risk" "The Prince of Darkness" "The Catch" "Eternal Bonds" "Disdain" "The Scout" "Guardian's Challenge" "The Forgotten Treasure" "The Aspirant" "Lachrymal Necrosis" "Dementophobia" "Ambitious Obsession" "A Sea of Blue" "The Offspring" "The Price of Prescience" "The Mind's Eyes" "Terrible Secret of Space" "The Blessing of Moosh" "Costly Curio" "The Emptiness" "Winter's Embrace" "Broken Promises" "Deadly Joy" "The Eternal War" "Prejudice" "The Shortcut" "Haunting Shadows" "Society's Remorse" "Dying Light" "The Astromancer" "Keeper's Corruption" "Reckless Ambition" "Love Through Ice" "Draped in Dreams" "The Patient" "Brotherhood in Exile" "Fateful Meeting" "The Bitter Blossom" "The Gulf" "Triskaidekaphobia" "Unrequited Love" "Desecrated Virtue" "Brother's Stash" "The Tumbleweed" "The Hive of Knowledge" "Gift of Asenath" "A Note in the Wind" "The Greatest Intentions" "The White Knight" "Prometheus' Armoury" "The Sustenance" "Peaceful Moments" "The Awakened" "A Familiar Call" "The Long Con" "Succor of the Sinless" "Etched in Blood" "The Escape" "Divine Justice" "Squandered Prosperity" "The Chosen" "Azyran's Reward" "Nook's Crown" "Remembrance" "The Bargain" "The Damned" "The Demon" "The Eye of Terror" "The Price of Loyalty" "Void of the Elements" "Alluring Bounty" "Buried Treasure" "Burning Blood" "Dark Dreams" "Pride of the First Ones" "Alone in the Darkness" "Arrogance of the Vaal" "The Journey" "The Landing" "The Lord of Celebration" "The Mad King" "Monochrome" "Sambodhi's Vow" "The Seeker" "Seven Years Bad Luck" "The Sacrifice" "The Nurse" "Beauty Through Death" "Boon of the First Ones" "The Endless Darkness" "The Price of Protection" "The Twilight Moon" "The Wilted Rose" "Abandoned Wealth" "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Last Hope" "Left to Fate" "Lucky Deck" "Mawr Blaidd" "Perfection" "The Polymath" "Pride Before the Fall" "The Admirer" "The Artist" "The Breach" "The Brittle Emperor" "The Celestial Justicar" "The Celestial Stone" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Doctor" "The Dragon's Heart" "The Dreamer" "The Enlightened" "The Ethereal" "The Fiend" "The Formless Sea" "The Hale Heart" "The Hoarder" "The Hunger" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Master" "The Mayor" "The Obscured" "The Offering" "The Porcupine" "The Professor" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Sephirot" "The Soul" "The Spark and the Flame" "The Standoff" "The Thaumaturgist" "The Trial" "The Undaunted" "The Undisputed" "The Valkyrie" "The Vast" "The Void" "The Warlord" "The Wind" "The Wolf" "The Wolven King's Bite" "The World Eater" "Time-Lost Relic" "Wealth and Power"] # You want these. If empty default values will be used.
 # //! SetOption $EmptyLine
-# //! SetOption $Bad_Divination_cards textarea ["The Unexpected Prize" "The Journalist" "The Mountain" "Echoes of Love" "The Fool" "Dark Temptation" "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame filter. The [u][b]block switch[/b][/u] is in the leveling block. If empty default values will be used.
+# //! SetOption $Bad_Divination_cards textarea ["The Unexpected Prize" "The Journalist" "The Mountain" "Echoes of Love" "The Fool" "Dark Temptation" "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The King's Blade" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek"] # These Divination cards will be hidden in the endgame filter. The [u][b]block switch[/b][/u] is in the leveling block. If empty default values will be used.
 # //! SetOption $Separator
 ## //! SetOption $Alternate_quality_gems textarea ["Item Rarity Support" "Spark" "Clarity" "Animate Guardian" "Summon Skeletons" "Raise Zombie" "Convocation" "Feeding Frenzy Support"] # Good alternate quality gem list. Edit the list to your liking
 # //! SetOption $Useful_and_drop_only_gems textarea ["Added Chaos Damage" "Cast when Damage Taken" "Concentrated Effect" "Immortal Call" "Increased Area of Effect" "Increased Duration" "Less Duration" "Multistrike" "Phase Run"] # [u][b]Block switches[/b][/u] in the Leveling block. Useful for leveling and races.
@@ -1164,6 +1167,45 @@ Show
 Show
 	Class "Stackable Currency"
 	BaseType == "Oil Extractor"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
+	MinimapIcon 2 Yellow Circle
+	PlayEffect Green Temp
+	PlayAlertSound 7 160 # A - Tier 2
+	DisableDropSound
+
+#-------------------------------------------------------------------------------#
+# Section:  #	SCOURGE
+#-------------------------------------------------------------------------------#
+
+Show  # Challenge leagues - Scourge - Tainted Blacksmith's Whetstone / Armourer's Scrap
+	Class "Stackable Currency"
+	BaseType == "Tainted Blacksmith's Whetstone" "Tainted Armourer's Scrap"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Scourge - Tainted Chromatic Orb
+	Class "Stackable Currency"
+	BaseType == "Tainted Chromatic Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Challenge leagues - Scourge - Tainted Jeweller's Orb
+	Class "Stackable Currency"
+	BaseType == "Tainted Jeweller's Orb"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show
+	Class "Currency"
+	BaseType == "Tainted Mythic Orb" "Tainted Chaos Orb" "Tainted Blessing" "Tainted Orb of Fusing" "Cartographer's Seal" "Unshaping Orb"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
@@ -2856,17 +2898,42 @@ Show
 # Section:  #   HARBINGER
 #-------------------------------------------------------------------------------#
 
-Show  # Endgame Filter (Disable for MF) - Low currency - T4 Currency (Chaos Shard, Regal Shard, Binding Shard) |Disable
+#Disabled Block Start
+#Hide  # Leveling Filter (Enable for leveling and races) - Currency - Binding Shard |Disable
+#	Class "Currency"
+#	BaseType "Binding Shard"
+#	SetFontSize 45
+#	PlayAlertSound 2 90 # A - Tier 4
+#	DisableDropSound
+#Disabled Block End
+
+Show  # Endgame Filter (Disable for MF) - Low currency - Shards - Chaos Shard |Disable
 	Class "Currency"
-	BaseType "Chaos Shard" "Regal Shard" "Binding Shard"
+	BaseType "Chaos Shard"
 	SetFontSize 45
 	PlayAlertSound 2 0 # D - Leveling items 
 	DisableDropSound
 # //! AlertSound $Leveling_items
 
-Show  # Endgame Filter (Disable for MF) - Low currency - T3 Currency (Engineer's Shard, Horizon Shard) |Disable
+Show  # Endgame Filter (Disable for MF) - Low currency - Shards - Regal Shard |Disable
 	Class "Currency"
-	BaseType "Engineer's Shard" "Horizon Shard"
+	BaseType "Regal Shard"
+	SetFontSize 45
+	PlayAlertSound 2 0 # D - Leveling items 
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
+Show  # Endgame Filter (Disable for MF) - Low currency - Shards - Horizon Shard |Disable
+	Class "Currency"
+	BaseType "Horizon Shard"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	PlayAlertSound 2 90 # A - Tier 4
+	DisableDropSound
+
+Show  # Endgame Filter (Disable for MF) - Low currency - Shards - Engineer's Shard |Disable
+	Class "Currency"
+	BaseType "Engineer's Shard"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
 	PlayAlertSound 2 90 # A - Tier 4
@@ -3073,6 +3140,27 @@ Show
 	DisableDropSound
 
 #-------------------------------------------------------------------------------#
+# Section:  #   PERANDUS
+#-------------------------------------------------------------------------------#
+
+Show  # Challenge leagues - Perandus - Perandus Coin (Only 4+ stack) |Disable
+	Class "Currency"
+	BaseType "Perandus Coin"
+	StackSize >= 4
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
+
+Show  # Challenge leagues - Perandus - Perandus Coin (Any) |Disable
+	Class "Currency"
+	BaseType "Perandus Coin"
+	SetFontSize 45
+	SetTextColor 255 45 175 # T2 drops color
+	SetBackgroundColor 0 0 0 170 # Lesser items
+	DisableDropSound
+
+#-------------------------------------------------------------------------------#
 # Section:  #   DIVINATION CARDS
 #-------------------------------------------------------------------------------#
 
@@ -3133,7 +3221,7 @@ Show  # ~Misc - Extras - Good Divination cards
 
 Hide  # Leveling Filter (Enable for leveling and races) - @Bad divination cards
 	Class "Divination"
-	BaseType == "The Unexpected Prize" "The Journalist" "The Mountain" "Echoes of Love" "The Fool" "Dark Temptation" "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Dying Anguish" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek" 
+	BaseType == "The Unexpected Prize" "The Journalist" "The Mountain" "Echoes of Love" "The Fool" "Dark Temptation" "The Scholar" "The Gambler" "The Witch" "The King's Blade" "Struck by Lightning" "Doedre's Madness" "A Mother's Parting Gift" "Cartographer's Delight" "Death" "Destined to Crumble" "Her Mask" "Lantador's Lost Love" "Light and Truth" "Prosperity" "Rain of Chaos" "Rain Tempter" "The Carrion Crow" "The Doppelganger" "The Endurance" "The Flora's Gift" "The Hermit" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Scarred Meadow" "The Sigil" "The Surgeon" "The Twins" "The Web" "Thunderous Skies" "Turn the Other Cheek" 
 # //$ $Bad_Divination_cards
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
@@ -3185,41 +3273,6 @@ Show  # ~Misc - Extras - Divination cards
 #	DisableDropSound
 #Disabled Block End
 
-Show  # Endgame Filter (Disable for MF) - Currency - Tainted Blacksmith's Whetstone / Armourer's Scrap
-	Class "Stackable Currency"
-	BaseType "Tainted Blacksmith's Whetstone" "Tainted Armourer's Scrap"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Currency - Tainted Chromatic Orb
-	Class "Stackable Currency"
-	BaseType "Tainted Chromatic Orb"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Currency - Tainted Jeweller's Orb
-	Class "Stackable Currency"
-	BaseType "Tainted Jeweller's Orb"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 90 # A - Tier 4
-	DisableDropSound
-
-Show
-	Class "Currency"
-	BaseType "Tainted Mythic Orb" "Tainted Chaos Orb" "Tainted Blessing" "Tainted Orb of Fusing" "Cartographer's Seal" "Unshaping Orb"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
-	PlayEffect Green Temp
-	PlayAlertSound 7 160 # A - Tier 2
-	DisableDropSound
-
 Show  # Endgame Filter (Disable for MF) - Low currency - Wisdom Scrolls (Single)
 	Class "Currency"
 	BaseType == "Scroll of Wisdom"
@@ -3260,6 +3313,14 @@ Show  # Endgame Filter (Disable for MF) - Low currency - Jeweller's Orb |Disable
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
 
+Show  # Endgame Filter (Disable for MF) - Low currency - Orb of Transmutation |Disable
+	Class "Currency"
+	BaseType == "Orb of Transmutation"
+	SetFontSize 45
+	PlayAlertSound 2 0 # D - Leveling items
+	DisableDropSound
+# //! AlertSound $Leveling_items
+
 Show  # Endgame Filter (Disable for MF) - Low currency - Orb of Augmentation |Disable
 	Class "Currency"
 	BaseType == "Orb of Augmentation"
@@ -3273,14 +3334,6 @@ Show  # Endgame Filter (Disable for MF) - Currency - Glassblower's Bauble |Disab
 	BaseType == "Glassblower's Bauble"
 	SetFontSize 45
 	SetTextColor 255 45 175 # T2 drops color
-	PlayAlertSound 2 0 # D - Leveling items
-	DisableDropSound
-# //! AlertSound $Leveling_items
-
-Show  # Endgame Filter (Disable for MF) - Currency - Orb of Transmutation |Disable
-	Class "Currency"
-	BaseType == "Orb of Transmutation"
-	SetFontSize 45
 	PlayAlertSound 2 0 # D - Leveling items
 	DisableDropSound
 # //! AlertSound $Leveling_items
@@ -3327,7 +3380,7 @@ Show  # ~Misc - Extras - Cartographer's Chisel
 	DisableDropSound
 
 #Disabled Block Start
-#Hide  # Leveling Filter (Enable for leveling and races) - Currency - Orb of Alchemy (extra highlight)
+#Hide  # Leveling Filter (Enable for leveling and races) - Currency - Orb of Alchemy (extra highlight) |Disable
 #	Class "Currency"
 #	BaseType == "Orb of Alchemy"
 #	SetFontSize 45
@@ -3596,23 +3649,6 @@ Show
 	PlayAlertSound 8 250 # C - Mirror of Kalandra
 	DisableDropSound
 
-Show  # Endgame Filter (Disable for MF) - Currency - Perandus Coin (Only 4+ stack) |Disable
-	Class "Currency"
-	BaseType "Perandus Coin"
-	StackSize >= 4
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 170 # Lesser items
-	DisableDropSound
-
-Show  # Endgame Filter (Disable for MF) - Currency - Perandus Coin (Any) |Disable
-	Class "Currency"
-	BaseType "Perandus Coin"
-	SetFontSize 45
-	SetTextColor 255 45 175 # T2 drops color
-	SetBackgroundColor 0 0 0 170 # Lesser items
-	DisableDropSound
-
 #Show  # Endgame Filter (Disable for MF) - Currency - Bad sealed Prophecies
 #	Class "Currency"
 #	BaseType "Prophecy"
@@ -3860,7 +3896,7 @@ Show  # ~Misc - Extras - Maps - Corrupted maps
 	Class "Maps"
 	SetFontSize 45
 	SetBackgroundColor 44 44 44 # Map Background Color
-	MinimapIcon 2 White Square
+	MinimapIcon 2 Red Square
 	DisableDropSound
 
 # Low level maps in high level maps.
@@ -5249,7 +5285,7 @@ Show  # ~Misc - Corrupted items with mods - Rare Jewelry |Disable
 	SetFontSize 45
 	SetTextColor 215 25 0 255 # Corrupted items text
 	SetBorderColor 74 230 58 255 # T1 drops color / Quest items
-	MinimapIcon 2 Yellow Circle
+	MinimapIcon 2 Red Diamond
 	PlayEffect Green Temp
 	PlayAlertSound 1 100 # A - Tier 3
 	DisableDropSound
@@ -5260,7 +5296,7 @@ Show  # ~Misc - Corrupted items with mods - Any Rare item |Disable
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 215 25 0 255 # Corrupted items text
-	MinimapIcon 2 Yellow Circle
+	MinimapIcon 2 Red Diamond
 	PlayEffect Green Temp
 	PlayAlertSound 2 90 # A - Tier 4
 	DisableDropSound
