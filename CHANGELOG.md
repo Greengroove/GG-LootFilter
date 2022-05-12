@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file. Please note that the log is referring to the endgame filter.
 In detail information about the filter can be found [here](https://www.pathofexile.com/forum/view-thread/1566921).
 
+## 3.18.0
+
+- Added all new items and removed what was needed according to the [forum post](https://www.pathofexile.com/forum/view-thread/3265282).
+- Added all new divination cards and updated the list of good cards.
+
 ## 3.17.1
 
 - Corrupted items now use MinimapIcon Red Diamond to differentiate from other drops.
